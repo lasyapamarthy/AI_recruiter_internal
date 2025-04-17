@@ -40,6 +40,8 @@ merged_data <- rbind(treatment_group, control_group)
 
 # Dropping duplicates:all
 merged_data <- merged_data %>% group_by(email_id) %>% mutate(n = n()) %>% ungroup()
+# summarize
+merged_data %>% group_by(n) %>% summarize(n = n())
 merged_data <- merged_data %>% filter(n == 1) %>% select(-n)
 
 summary(merged_data$treatment)
@@ -352,10 +354,9 @@ cat(knitr::kable(result_table, format = "markdown"))
 ################################## Average treatment effect ##################################
 
 
-
-
 final_interview <- read.csv("/Users/emilpalikot/Research/AI-Recruiter/micro1-controll-experiment-EDA/top_candidates_interviewed.csv")
 
+final_interview %>% filter(email_id =="")
 # Degree of missmatch between the files:
 
 length(final_interview$email_id) - length(final_interview$email_id %in% merged_data$email_id)
@@ -365,22 +366,42 @@ final_est <- final_interview %>% select(Interview.Type, interviewer, Result, Gen
 
 # Analyze duplicates:
 length(unique(final_est$email_id))
+# Assign a differnet random number to the empty email_ids:
+final_est$email_id <- ifelse(final_est$email_id == "", 
+                            sapply(1:nrow(final_est), function(i) {
+                              if(final_est$email_id[i] == "") {
+                                paste0("random_", round(runif(1, 0, 1000000)))
+                              } else {
+                                final_est$email_id[i]
+                              }
+                            }), 
+                            final_est$email_id)
 final_est %>% group_by(email_id) %>% summarise(n = n()) %>% filter(n > 1)
 
 ## How often are the duplicates both in treatment and control?
 final_est$treatment <- as.numeric(ifelse(final_est$Interview.Type == "AI + Human Interview", 1, 0))
 final_est %>% group_by(email_id) %>% summarise(n = n(), groups = mean(treatment)) %>% filter(n > 1)
-
+final_est %>% filter(email_id == "")
 # Drop duplicates:
 final_est <- final_est %>% group_by(email_id) %>% slice_head(n = 1) %>% ungroup()
 final_est %>% summarise(n = n(), n_treatment = sum(treatment), n_control = sum(1-treatment))
 
 # Data prep:.
 final_est$outcome <- ifelse(final_est$Result == "Pass", 1, 0)
+final_est$outcome_2 <- ifelse(final_est$Result == "Pass", 1, ifelse(final_est$Result == "Fail",0,NA))
 final_est$male <- ifelse(final_est$Gender == "Male", 1, 0)
 final_est$age <- ifelse(is.na(final_est$Age..Years.), "Not shared", final_est$Age..Years.)
 
 ate_ols <- lm(outcome ~ treatment, data = final_est)
+ate_ols_2 <- lm(outcome_2 ~ treatment, data = final_est)
+stargazer(ate_ols, ate_ols_2, type = "text")
+
+mean(final_est$outcome[final_est$treatment == 1], na.rm = TRUE)
+mean(final_est$outcome[final_est$treatment == 0], na.rm = TRUE)
+
+# Number of observations across treatment groups:
+final_est %>% group_by(treatment) %>% summarise(n = n())
+
 ate_ols_cov <- lm(outcome ~ treatment + age+ Gender, data = final_est)
 
 stargazer(ate_ols, ate_ols_cov, type = "text")

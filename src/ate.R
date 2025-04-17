@@ -12,6 +12,7 @@ library(caret)
 library(stargazer)
 library(broom)
 library(kableExtra)
+library(gridExtra)
 
 # Figures directory:
 figures_dir <- "/Users/emilpalikot/Research/AI-Recruiter/src/figures"
@@ -157,7 +158,128 @@ education_df2 <- education_df %>%
   select(-clean_email)
 
 # Merge education_df with merged_data by email_id
+
 merged_data <- merged_data %>% left_join(education_df2, by = "email_id")
+
+# Completed and final interview:
+merged_data$is_completed <- ifelse(is.na(merged_data$is_completed) & merged_data$treatment == 1, 0, merged_data$is_completed)
+merged_data$final_interview <- ifelse(merged_data$email_id %in% final_interview$email_id, 1, 0)
+
+# Prepare summary statistcs for the paper:
+summary_stats_table <- merged_data %>%
+  # Select relevant variables for summary statistics
+  select(treatment, years_of_exp, age, gender, education_level, resume_score, React, JavaScript, CSS, is_completed, final_interview) %>%
+  # Convert to appropriate types
+  mutate(
+    years_of_exp = as.numeric(years_of_exp),
+    age = as.numeric(age),
+    resume_score = as.numeric(resume_score),
+    is_completed = as.numeric(is_completed),
+    final_interview = as.numeric(final_interview)
+  ) %>%
+  # Create dummy variables for education levels
+  mutate(
+    high_school = ifelse(education_level == "High School", 1, 0),
+    bachelor = ifelse(education_level == "Bachelor's", 1, 0),
+    master = ifelse(education_level == "Master's", 1, 0),
+    phd = ifelse(education_level == "PhD", 1, 0),
+    male = ifelse(gender == "Male", 1, 0),
+    # Calculate AI score
+    AI_score = ifelse(React == "Senior", 3, ifelse(React == "Mid-level", 2, ifelse(React == "Junior", 1, 0))) + 
+               ifelse(JavaScript == "Senior", 3, ifelse(JavaScript == "Mid-level", 2, ifelse(JavaScript == "Junior", 1, 0))) + 
+               ifelse(CSS == "Senior", 3, ifelse(CSS == "Mid-level", 2, ifelse(CSS == "Junior", 1, 0)))
+  ) %>%
+  # Replace NA in AI_score with 0
+  mutate(AI_score = ifelse(is.na(AI_score), 0, AI_score)) %>%
+  # Group by treatment
+  group_by(treatment) %>%
+  # Calculate summary statistics
+  summarize(
+    n = n(),
+    years_of_exp_mean = mean(years_of_exp, na.rm = TRUE),
+    years_of_exp_sd = sd(years_of_exp, na.rm = TRUE),
+    age_mean = mean(age, na.rm = TRUE),
+    age_sd = sd(age, na.rm = TRUE),
+    male_mean = mean(male, na.rm = TRUE),
+    male_sd = sd(male, na.rm = TRUE),
+    high_school_mean = mean(high_school, na.rm = TRUE),
+    high_school_sd = sd(high_school, na.rm = TRUE),
+    bachelor_mean = mean(bachelor, na.rm = TRUE),
+    bachelor_sd = sd(bachelor, na.rm = TRUE),
+    master_mean = mean(master, na.rm = TRUE),
+    master_sd = sd(master, na.rm = TRUE),
+    phd_mean = mean(phd, na.rm = TRUE),
+    phd_sd = sd(phd, na.rm = TRUE),
+    resume_score_mean = mean(resume_score, na.rm = TRUE),
+    resume_score_sd = sd(resume_score, na.rm = TRUE),
+    AI_score_mean = mean(AI_score, na.rm = TRUE),
+    AI_score_sd = sd(AI_score, na.rm = TRUE),
+    is_completed_mean = mean(is_completed, na.rm = TRUE),
+    is_completed_sd = sd(is_completed, na.rm = TRUE),
+    final_interview_mean = mean(final_interview, na.rm = TRUE),
+    final_interview_sd = sd(final_interview, na.rm = TRUE)
+  ) %>%
+  ungroup()
+
+# Create a formatted table for LaTeX output
+vars <- c("Years of Experience", "Age", "Male", "High School", "Bachelor's", "Master's", "PhD", "Resume Score", "AI Score", "Completed", "Passed to Final Interview")
+means_control <- c("years_of_exp_mean", "age_mean", "male_mean", "high_school_mean", "bachelor_mean", "master_mean", "phd_mean", "resume_score_mean", "AI_score_mean", "is_completed_mean", "final_interview_mean")
+sds_control <- c("years_of_exp_sd", "age_sd", "male_sd", "high_school_sd", "bachelor_sd", "master_sd", "phd_sd", "resume_score_sd", "AI_score_sd", "is_completed_sd", "final_interview_sd")
+means_treatment <- c("years_of_exp_mean", "age_mean", "male_mean", "high_school_mean", "bachelor_mean", "master_mean", "phd_mean", "resume_score_mean", "AI_score_mean", "is_completed_mean", "final_interview_mean")
+sds_treatment <- c("years_of_exp_sd", "age_sd", "male_sd", "high_school_sd", "bachelor_sd", "master_sd", "phd_sd", "resume_score_sd", "AI_score_sd", "is_completed_sd", "final_interview_sd")
+
+# Extract control group (treatment = 0) and treatment group (treatment = 1) statistics
+control_stats <- summary_stats_table %>% filter(treatment == 0)
+treatment_stats <- summary_stats_table %>% filter(treatment == 1)
+
+# Create the formatted table
+latex_table <- data.frame(
+  Variable = vars,
+  Control = paste0(
+    sprintf("%.2f", sapply(means_control, function(x) control_stats[[x]])),
+    " (", 
+    sprintf("%.2f", sapply(sds_control, function(x) control_stats[[x]])),
+    ")"
+  ),
+  Treatment = paste0(
+    sprintf("%.2f", sapply(means_treatment, function(x) treatment_stats[[x]])),
+    " (", 
+    sprintf("%.2f", sapply(sds_treatment, function(x) treatment_stats[[x]])),
+    ")"
+  )
+)
+
+# Add sample size row
+latex_table <- rbind(
+  data.frame(
+    Variable = "N",
+    Control = as.character(control_stats$n),
+    Treatment = as.character(treatment_stats$n)
+  ),
+  latex_table
+)
+
+# Generate LaTeX code - AER style (no colors, clean formatting)
+latex_output <- kable(latex_table, format = "latex", booktabs = TRUE, 
+                     caption = "Summary Statistics by Treatment Group",
+                     align = c("l", "c", "c")) %>%
+  kable_styling(latex_options = c("hold_position"))
+
+# Print the LaTeX code to the console
+cat("\\begin{table}[htbp]\n")
+cat("\\centering\n")
+cat(latex_output)
+cat("\\caption*{\\textit{Note:} Standard deviations in parentheses. AI Score is the sum of skill levels in React, JavaScript, and CSS (Senior=3, Mid-level=2, Junior=1, None=0).}\n")
+cat("\\end{table}\n")
+
+# Save the table to a file
+latex_file_path <- file.path(figures_dir, "summary_statistics_table.tex")
+cat("\\begin{table}[htbp]\n", file = latex_file_path)
+cat("\\centering\n", file = latex_file_path, append = TRUE)
+cat(latex_output, file = latex_file_path, append = TRUE)
+cat("\\caption*{\\textit{Note:} Standard deviations in parentheses. AI Score is the sum of skill levels in React, JavaScript, and CSS (Senior=3, Mid-level=2, Junior=1, None=0).}\n", file = latex_file_path, append = TRUE)
+cat("\\end{table}\n", file = latex_file_path, append = TRUE)
+
 
 ################################ Balance treatment and control groups ################################
 
@@ -229,8 +351,92 @@ cat(knitr::kable(result_table, format = "markdown"))
 
 ################################## Average treatment effect ##################################
 
+
+
+
+final_interview <- read.csv("/Users/emilpalikot/Research/AI-Recruiter/micro1-controll-experiment-EDA/top_candidates_interviewed.csv")
+
+# Degree of missmatch between the files:
+
+length(final_interview$email_id) - length(final_interview$email_id %in% merged_data$email_id)
+
+# Without matching to the main file; as i'm dropping to many candiates
+final_est <- final_interview %>% select(Interview.Type, interviewer, Result, Gender, Age..Years., Country, email_id)
+
+# Analyze duplicates:
+length(unique(final_est$email_id))
+final_est %>% group_by(email_id) %>% summarise(n = n()) %>% filter(n > 1)
+
+## How often are the duplicates both in treatment and control?
+final_est$treatment <- as.numeric(ifelse(final_est$Interview.Type == "AI + Human Interview", 1, 0))
+final_est %>% group_by(email_id) %>% summarise(n = n(), groups = mean(treatment)) %>% filter(n > 1)
+
+# Drop duplicates:
+final_est <- final_est %>% group_by(email_id) %>% slice_head(n = 1) %>% ungroup()
+final_est %>% summarise(n = n(), n_treatment = sum(treatment), n_control = sum(1-treatment))
+
+# Data prep:.
+final_est$outcome <- ifelse(final_est$Result == "Pass", 1, 0)
+final_est$male <- ifelse(final_est$Gender == "Male", 1, 0)
+final_est$age <- ifelse(is.na(final_est$Age..Years.), "Not shared", final_est$Age..Years.)
+
+ate_ols <- lm(outcome ~ treatment, data = final_est)
+ate_ols_cov <- lm(outcome ~ treatment + age+ Gender, data = final_est)
+
+stargazer(ate_ols, ate_ols_cov, type = "text")
+
+# GRF
+
+# change age to one-hot encodings:
+# Values from unique(final_est$age): "23-27" "28-32" "33+" "18-22" ""
+final_est$age_18_22 <- ifelse(final_est$age == "18-22", 1, 0)
+final_est$age_23_27 <- ifelse(final_est$age == "23-27", 1, 0)
+final_est$age_28_32 <- ifelse(final_est$age == "28-32", 1, 0)
+final_est$age_33_plus <- ifelse(final_est$age == "33+", 1, 0)
+final_est$age_not_shared <- ifelse(final_est$age == "", 1, 0)
+
+X <- final_est %>% select(age_18_22, age_23_27, age_28_32, age_33_plus, age_not_shared, male) %>% as.matrix()
+Y <- final_est %>% select(outcome) %>% as.matrix()
+W <- final_est %>% select(treatment) %>% as.matrix()
+
+tau_forest <- causal_forest(X, Y, W, num.trees = 1000)
+
+    # Average treatment effect:
+ate_grf <- average_treatment_effect(tau_forest, target.sample = "treated")
+
+# Table for the paper: Baselien value (mean in control group) and treatment effect both wiht standard errors and the number of observations for the three methods ols, ols with covariates and grf
+
+  # Calculate baseline value (mean in control group)
+baseline_value <- mean(final_est$outcome[final_est$treatment == 0], na.rm = TRUE)
+
+# Calculate treatment effect
+treatment_effect <- mean(final_est$outcome[final_est$treatment == 1], na.rm = TRUE) - baseline_value
+
+# Calculate standard errors
+se_baseline <- sd(final_est$outcome[final_est$treatment == 0], na.rm = TRUE) / sqrt(sum(!is.na(final_est$outcome[final_est$treatment == 0])))
+se_treatment <- sd(final_est$outcome[final_est$treatment == 1], na.rm = TRUE) / sqrt(sum(!is.na(final_est$outcome[final_est$treatment == 1])))
+se_effect <- sqrt(se_baseline^2 + se_treatment^2) 
+
+# Combine results into a table
+ate_table <- data.frame(
+  Method = c("Difference in Means", "OLS with covariates", "GRF"),
+  Estimate = c(coef(ate_ols)[2], coef(ate_ols_cov)[2], ate_grf[1]),
+  SE = c(summary(ate_ols)$coefficients[2, 2], summary(ate_ols_cov)$coefficients[2, 2], ate_grf[2]),
+  Baseline = c(baseline_value, baseline_value, baseline_value),
+  Baseline_SE = c(se_baseline, se_baseline, se_baseline),
+  Observations = c(nrow(final_est), nrow(final_est), nrow(final_est))
+)
+
+# Final table for the paper:
+ate_table <- t(ate_table)
+
+
+## method wiht matching
+
 final_interview <- final_interview %>% select(email_id, Result)
-final_interview$outcome <- ifelse(final_interview$Result == "Pass", 1, ifelse(final_interview$Result == "Fail", 0, NA))
+#final_interview$outcome <- ifelse(final_interview$Result == "Pass", 1, ifelse(final_interview$Result == "Fail", 0, NA))
+final_interview$outcome <- ifelse(final_interview$Result == "Pass", 1, 0)
+# we need to decide how to handle the NAs, I think it makes sense to treat them as fail; logically this means that the in the first round a candidate was selected that did not care
 
 final_interview <- final_interview %>% select(email_id, outcome) %>% na.omit()
 
@@ -242,7 +448,7 @@ final_interview <- final_interview %>% group_by(email_id) %>% slice_head(n = 1) 
 final_interview <- final_interview %>% left_join(merged_data, by = "email_id")
 
 final_interview$resume_score <- as.numeric(final_interview$resume_score)
-
+t.test(final_interview$resume_score[final_interview$treatment == 1], final_interview$resume_score[final_interview$treatment == 0])
 
 ate_ols <- lm(outcome ~ treatment, data = final_interview)
 ate_ols_cov <- lm(outcome ~ treatment + years_of_exp + age+ education_level + gender + resume_score, data = final_interview)
@@ -288,24 +494,128 @@ ate_estimates <- data.frame(
 # Print the table in markdown format
 cat(knitr::kable(ate_estimates, format = "markdown"))
 
+# Create a table with baseline values (control group) and treatment effects
+# First, calculate baseline values for the control group
+control_mean <- mean(final_interview$outcome[final_interview$treatment == 0], na.rm = TRUE)
+control_se <- sd(final_interview$outcome[final_interview$treatment == 0], na.rm = TRUE) / 
+              sqrt(sum(final_interview$treatment == 0, na.rm = TRUE))
+
+# Get number of observations
+n_control <- sum(final_interview$treatment == 0, na.rm = TRUE)
+n_treated <- sum(final_interview$treatment == 1, na.rm = TRUE)
+n_total <- n_control + n_treated
+
+# Create the academic-style table (AER format)
+aer_table <- data.frame(
+  Method = ate_estimates$Method,
+  Baseline = rep(sprintf("%.3f", control_mean), nrow(ate_estimates)),
+  `Baseline SE` = rep(sprintf("(%.3f)", control_se), nrow(ate_estimates)),
+  `Treatment Effect` = sprintf("%.3f", ate_estimates$Estimate),
+  `Treatment SE` = sprintf("(%.3f)", ate_estimates$SE),
+  Observations = rep(n_total, nrow(ate_estimates))
+)
+
+# Print the table in markdown format with AER styling
+cat("## Table 1: Treatment Effects on Interview Outcomes\n\n")
+cat(knitr::kable(aer_table, format = "markdown", align = c('l', 'c', 'c', 'c', 'c', 'c')))
+cat("\n\n")
+cat(paste0("*Notes:* Standard errors in parentheses. Control group mean: ", 
+          sprintf("%.3f", control_mean), ". Number of observations: ", 
+          n_total, " (", n_control, " control, ", n_treated, " treated)."))
+
+################################# Mechanisms #################################
+
+# Create a dataframe for plotting resume scores across different groups
+merged_data$resume_score <- as.numeric(merged_data$resume_score)
+
+overall_treatment <- mean(merged_data$resume_score[merged_data$treatment == 1], na.rm = TRUE)
+overall_control <- mean(merged_data$resume_score[merged_data$treatment == 0], na.rm = TRUE)
+
+# Calculate means for reference
+selected_by_ai <- mean(merged_data$resume_score[merged_data$final_interview == 1 & merged_data$treatment == 1], na.rm = TRUE)
+selected_by_human <- mean(merged_data$resume_score[merged_data$final_interview == 1 & merged_data$treatment == 0], na.rm = TRUE)
+not_selected <- mean(merged_data$resume_score[merged_data$final_interview == 0 & merged_data$treatment == 1], na.rm = TRUE)
+completed <- mean(merged_data$resume_score[merged_data$is_completed == 1 & merged_data$treatment == 1], na.rm = TRUE)
+dropped_out <- mean(merged_data$resume_score[merged_data$is_completed == 0 & merged_data$treatment == 1], na.rm = TRUE)
+
+# Create the first plot: Selection by AI vs Human
+plot1 <- ggplot() +
+  geom_density(data = merged_data %>% filter(final_interview == 1 & treatment == 1),
+               aes(x = resume_score, fill = "Selected by AI"), alpha = 0.6, adjust = 3) +
+  geom_density(data = merged_data %>% filter(final_interview == 1 & treatment == 0),
+               aes(x = resume_score, fill = "Selected by Human"), alpha = 0.6, adjust = 3) +
+  geom_density(data = merged_data %>% filter(final_interview == 0 & treatment == 1),
+               aes(x = resume_score, fill = "Not Selected"), alpha = 0.6, adjust = 3) +
+  geom_vline(xintercept = selected_by_ai, linetype = "dashed", color = "blue") +
+  geom_vline(xintercept = selected_by_human, linetype = "dashed", color = "red") +
+  geom_vline(xintercept = not_selected, linetype = "dashed", color = "darkgray") +
+  labs(title = "Resume Scores: AI vs Human Selection",
+       x = "Resume Score",
+       y = "Density") +
+  scale_fill_manual(values = c("Selected by AI" = "blue", "Selected by Human" = "red", "Not Selected" = "darkgray")) +
+  theme_bw() +
+  theme(legend.title = element_blank(),
+        legend.position = "bottom",
+        text = element_text(size = 24),
+        axis.title = element_text(size = 26),
+        plot.title = element_text(size = 28, face = "bold"))
+
+# Create the second plot: Completed vs Dropped Out
+plot2 <- ggplot() +
+  geom_density(data = merged_data %>% filter(is_completed == 1 & treatment == 1),
+               aes(x = resume_score, fill = "Completed"), alpha = 0.6, adjust = 3) +
+  geom_density(data = merged_data %>% filter(is_completed == 0 & treatment == 1),
+               aes(x = resume_score, fill = "Dropped Out"), alpha = 0.6, adjust = 3) +
+  geom_vline(xintercept = completed, linetype = "dashed", color = "green") +
+  geom_vline(xintercept = dropped_out, linetype = "dashed", color = "orange") +
+  labs(title = "Resume Scores: Completed vs Dropped Out",
+       x = "Resume Score",
+       y = "Density") +
+  scale_fill_manual(values = c("Completed" = "green", "Dropped Out" = "orange")) +
+  theme_bw() +
+  theme(legend.title = element_blank(),
+        legend.position = "bottom",
+        text = element_text(size = 24),
+        axis.title = element_text(size = 26),
+        plot.title = element_text(size = 28, face = "bold"))
+
+# Combine the plots into a single figure
+combined_plot <- grid.arrange(plot2, plot1, ncol = 2)
+
+# Save the combined figure
+ggsave(filename = "resume_score_distributions.png", plot = combined_plot, path = figures_dir, 
+       width = 25, height = 6)
+
 ############### Are people non-randomly dropping out? ###############
 
 treated_users <- merged_data %>% filter(treatment == 1)
-treated_users$dropped_out <- ifelse(is.na(treated_users$is_completed), 1, 0)
+treated_users$dropped_out <- ifelse(treated_users$is_completed, 0, 1)
 treated_users$resume_score <- as.numeric(treated_users$resume_score)
 treated_users$male <- ifelse(treated_users$gender == "Male", 1, 0)
 treated_users$high_school <- ifelse(treated_users$education_level == "High School", 1, 0)
 treated_users$bachelor <- ifelse(treated_users$education_level == "Bachelor's", 1, 0)
 treated_users$master <- ifelse(treated_users$education_level == "Master's", 1, 0)
 treated_users$phd <- ifelse(treated_users$education_level == "PhD", 1, 0)
+t.test(treated_users$resume_score[treated_users$dropped_out == 1], treated_users$resume_score[treated_users$dropped_out == 0])
 
 summary(treated_users$dropped_out)
+
+treated_users <- treated_users %>% filter(!is.na(resume_score))
+
 ols_dropped_out <- lm(dropped_out ~ years_of_exp + age + high_school + bachelor + master  + male + resume_score, data = treated_users)
 
 # Same with logit
 logit_dropped_out <- glm(dropped_out ~ years_of_exp + age + high_school + bachelor + master  + male + resume_score, data = treated_users, family = "binomial")
 
-stargazer(ols_dropped_out, logit_dropped_out, type = "text")
+stargazer(ols_dropped_out, logit_dropped_out, type = "latex")
+
+# no resume score:
+ols_dropped_out_no_resume <- lm(dropped_out ~ years_of_exp + age + high_school + bachelor + master  + male, data = treated_users)
+
+# Same with logit
+logit_dropped_out_no_resume <- glm(dropped_out ~ years_of_exp + age + high_school + bachelor + master  + male, data = treated_users, family = "binomial")
+
+stargazer(ols_dropped_out_no_resume, logit_dropped_out_no_resume, type = "latex")  
 
 # Give output in markdown format:
 cat(knitr::kable(stargazer(ols_dropped_out, logit_dropped_out, type = "text"), format = "markdown"))
@@ -334,6 +644,9 @@ ggsave(filename = "dropped_out_forest_plot.png", plot = dropped_out_forest_plot,
 
 #################### Who benefits from the AI vetting? ####################
 
+# Raw difference in resume scores
+
+
 treated_users <- merged_data %>% filter(treatment == 1)
 treated_users$AI_score <- ifelse(treated_users$React == "Senior", 3, ifelse(treated_users$React == "Mid-level", 2, ifelse(treated_users$React == "Junior", 1, 0))) + 
   ifelse(treated_users$JavaScript == "Senior", 3, ifelse(treated_users$JavaScript == "Mid-level", 2, ifelse(treated_users$JavaScript == "Junior", 1, 0))) + 
@@ -344,9 +657,124 @@ treated_users$AI_score <- ifelse(is.na(treated_users$AI_score), 0, treated_users
 
 # Percentilles of AI and resume score:
 treated_users$AI_score_percentile <- ecdf(treated_users$AI_score)(treated_users$AI_score)
+treated_users$AI_rank <- rank(treated_users$AI_score)
 treated_users$resume_score <- as.numeric(treated_users$resume_score)
 treated_users$resume_score <- ifelse(is.na(treated_users$resume_score), 0, treated_users$resume_score)
 treated_users$resume_score_percentile <- ecdf(treated_users$resume_score)(treated_users$resume_score)
+treated_users$resume_rank <- rank(treated_users$resume_score)
+# Regression with change in rank
+treated_users$rank_diff <- treated_users$AI_rank - treated_users$resume_rank
+treated_users$rank_diff <- ifelse(is.na(treated_users$rank_diff), 0, treated_users$rank_diff)
+
+# Add education level as a factor:
+treated_users$high_school <- ifelse(treated_users$education_level == "High School", 1, 0)
+treated_users$bachelor <- ifelse(treated_users$education_level == "Bachelor's", 1, 0)
+treated_users$master <- ifelse(treated_users$education_level == "Master's", 1, 0)
+treated_users$phd <- ifelse(treated_users$education_level == "PhD", 1, 0)
+
+#Male
+treated_users$male <- ifelse(treated_users$gender == "Male", 1, 0)
+
+# Regression with rank difference:
+rank_diff_reg <- lm(rank_diff ~ years_of_exp + age + high_school + bachelor + master  + male + resume_score, data = treated_users)
+
+# Add to the earlier stargazer output:
+stargazer(ols_dropped_out, logit_dropped_out, rank_diff_reg, type = "text")
+
+# Organize into three groups based on the change:
+
+treated_users$group_1 <- ifelse(treated_users$rank_diff > quantile(treated_users$rank_diff, 0.66), 1, 0 )
+treated_users$group_2 <- ifelse(treated_users$rank_diff > quantile(treated_users$rank_diff, 0.33) & treated_users$rank_diff <= quantile(treated_users$rank_diff, 0.66), 1, 0)
+treated_users$group_3 <- ifelse(treated_users$rank_diff <= quantile(treated_users$rank_diff, 0.33), 1, 0)
+
+treated_users$group <- ifelse(treated_users$group_1 == 1, "Benefits from AI", ifelse(treated_users$group_3 == 1, "Harmed by AI", "Not Impacted"))  
+
+summary_covariates <- treated_users %>% group_by(group) %>% summarise(mean_male = mean(male, na.rm = TRUE), sd_male = sd(male, na.rm = TRUE)/sqrt(n()),
+                                              mean_high_school = mean(high_school, na.rm = TRUE), sd_high_school = sd(high_school, na.rm = TRUE)/sqrt(n()),
+                                              mean_bachelor = mean(bachelor, na.rm = TRUE), sd_bachelor = sd(bachelor, na.rm = TRUE)/sqrt(n()),
+                                              mean_master = mean(master, na.rm = TRUE), sd_master = sd(master, na.rm = TRUE)/sqrt(n()),
+                                              mean_years_of_exp = mean(years_of_exp, na.rm = TRUE), sd_years_of_exp = sd(years_of_exp, na.rm = TRUE)/sqrt(n()),
+                                              mean_age = mean(age, na.rm = TRUE), sd_age = sd(age, na.rm = TRUE)/sqrt(n()),
+                                              mean_resume_score = mean(resume_score, na.rm = TRUE), sd_resume_score = sd(resume_score, na.rm = TRUE)/sqrt(n()))
+
+summary_covariates <- t(summary_covariates) %>% as.data.frame()
+
+# Use first row as column names:
+colnames(summary_covariates) <- summary_covariates[1, ]
+summary_covariates <- summary_covariates[-1, ]
+
+# Convert to numeric:
+summary_covariates <- summary_covariates %>% mutate_all(as.numeric)
+
+
+# Plot the heatmap:
+
+# Create a dataframe for the heatmap from summary_covariates
+df_heatmap <- data.frame(
+  covariate = character(),
+  avg = numeric(),
+  stderr = numeric(),
+  group = character(),
+  scaling = numeric(),
+  labels = character(),
+  stringsAsFactors = FALSE
+)
+
+# Get all the covariate names (removing the mean_ and sd_ prefixes)
+covariate_names <- unique(gsub("^(mean_|sd_)", "", rownames(summary_covariates)))
+
+# For each covariate, extract the mean and standard deviation for each group
+for (cov in covariate_names) {
+  mean_row <- paste0("mean_", cov)
+  sd_row <- paste0("sd_", cov)
+  
+  if (mean_row %in% rownames(summary_covariates) && sd_row %in% rownames(summary_covariates)) {
+    # Get values for all groups
+    means_across_groups <- as.numeric(summary_covariates[mean_row, ])
+    
+    # For each group
+    for (group_idx in 1:ncol(summary_covariates)) {
+      group_name <- colnames(summary_covariates)[group_idx]
+      avg_val <- summary_covariates[mean_row, group_idx]
+      stderr_val <- summary_covariates[sd_row, group_idx]
+      
+      # Calculate z-score for scaling (how far from mean in std dev units)
+      z_score <- (avg_val - mean(means_across_groups)) / sd(means_across_groups)
+      if (is.na(z_score)) z_score <- 0  # Handle case where all values are the same
+      
+      df_heatmap <- rbind(df_heatmap, data.frame(
+        covariate = cov,
+        avg = avg_val,
+        stderr = stderr_val,
+        group = group_name,
+        scaling = z_score,
+        labels = paste0(signif(avg_val, 3), "\n", "(", signif(stderr_val, 3), ")"),
+        stringsAsFactors = FALSE
+      ))
+    }
+  }
+}
+# Plot heatmap using the prepared data
+# Reorder the factor levels to put "Benefits from AI" at the top
+df_heatmap$group <- factor(df_heatmap$group, 
+                          levels = c("Benefits from AI", "Not Impacted", "Harmed by AI"))
+
+ai_heatmap <- ggplot(df_heatmap) +
+  aes(covariate, group) +  # Transposed x and y
+  geom_tile(aes(fill = scaling)) + 
+  geom_text(aes(label = labels), size = 4) +  # Increased text size
+  scale_fill_gradient(low = "#E1BE6A", high = "#40B0A6") +
+  theme_minimal() + 
+  ylab("") + xlab("") +
+  theme(axis.text.x = element_text(size = 14),  # Increased axis text size
+        axis.text.y = element_text(size = 14),  # Increased axis text size
+        text = element_text(size = 14),         # Increased general text size
+        legend.position = "none")  # Remove the legend
+
+# save the plot:
+ggsave(filename = "ai_heatmap.png", plot = ai_heatmap, path = figures_dir, 
+       width = 15, height = 6)
+
 
 # Group 1: benefits from AI vetting:
 treated_users$group_1 <- ifelse(treated_users$AI_score_percentile > treated_users$resume_score_percentile  + 0.1, 1, 0)
@@ -438,3 +866,30 @@ combined_plot <- grid.arrange(grobs = plots, ncol = 2)
 
 # Save the combined plot
 ggsave("ai_human_diff_characteristics.png", combined_plot, width = 14, height = 20)
+
+
+# The same but three groups:
+treated_users$diff_bucket_3 <- cut(treated_users$percentile_diff, 
+                                breaks = seq(-1, 1, by = 0.33),
+                                labels = paste(seq(-0.99, 0.99, by = 0.33), "to", seq(-0.66, 1.32, by = 0.33)))
+
+# Calculate means and standard errors by bucket for each characteristic
+
+bucket_stats_3 <- treated_users %>%
+  group_by(diff_bucket_3) %>%
+  summarise(
+    n = n(),
+    across(all_of(variables), 
+           list(mean = ~mean(., na.rm = TRUE),
+                se = ~sd(., na.rm = TRUE)/sqrt(sum(!is.na(.)))),
+           .names = "{.col}_{.fn}")
+  ) %>%
+  filter(!is.na(diff_bucket_3)) %>%
+  arrange(diff_bucket_3)
+
+# Create all plots and arrange them in a grid
+plot_titles_3 <- c("Gender (Male)", "High School", "Bachelor's Degree", 
+                "Master's Degree", "PhD", "Years of Experience", 
+                "Age", "Resume Score")
+
+plots_3 <- mapply(create_bucket_plot, variables, plot_titles_3, SIMPLIFY = FALSE)

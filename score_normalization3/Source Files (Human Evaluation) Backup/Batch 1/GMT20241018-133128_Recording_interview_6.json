@@ -1,0 +1,156 @@
+[
+    {
+        "skill": ".NET",
+        "conversation": [
+            {
+                "interviewer": "Can you tell me the difference between constant and read-only variables?",
+                "candidate": "Constant variables are values defined in the code and replaced during compilation. Variables have memory space and can be changed during runtime, but constants cannot. Constants have static values replaced before code generation."
+            },
+            {
+                "interviewer": "Can we change the value of read-only?",
+                "candidate": "No, after it is set. We can define the value when declaring the read-only variable or in the constructor method. After that, we cannot change it anymore."
+            },
+            {
+                "interviewer": "Can you tell me about how you do dependency injection on .NET 6 or more?",
+                "candidate": "I believe you are asking about ASP.NET Core. We define them when starting the application, in the startup file in previous templates, and in the current template, we do it in the program.cs file. We call the services collection and add dependencies there."
+            },
+            {
+                "interviewer": "Can you explain the difference between scoped, transient, and singleton?",
+                "candidate": "Singleton is the same instance for the entire application lifecycle. Scoped is similar but lives only during the HTTP request scope. Transient creates a new instance every time a service requires it."
+            },
+            {
+                "interviewer": "How do you inject other services into your application?",
+                "candidate": "We need to reference them in the project. If it's a NuGet, we set the import. If it's a DLL, we point to the physical file and use the using statement in the namespace. If we need to inject a service, we use dependency injection."
+            },
+            {
+                "interviewer": "Have you used NuGet package managers?",
+                "candidate": "Just the standard from Microsoft. In the past, we had an internal one, but it was messy to use."
+            },
+            {
+                "interviewer": "Can you tell me a bit about Entity Framework?",
+                "candidate": "I used Entity Framework in smaller projects, not in production products. In production, we mostly used Dapper due to legacy databases."
+            },
+            {
+                "interviewer": "What are the different approaches to using Entity Framework?",
+                "candidate": "I am not actively using it, just in smaller projects."
+            },
+            {
+                "interviewer": "How do you do migrations on your changes, entities?",
+                "candidate": "Each project was different. I had projects using Fluent migration, Redgate, and manual scripts. The last one used Fluent migration."
+            },
+            {
+                "interviewer": "What does a migration file include?",
+                "candidate": "It includes instructions for the database, like going up to a newer version or rolling back. It contains SQL instructions to create or destroy structures."
+            },
+            {
+                "interviewer": "Any experience in LINQ?",
+                "candidate": "Yes, but not for optimizing queries or dealing with big datasets. I use LINQ for collections a lot, more than for databases."
+            },
+            {
+                "interviewer": "Can you tell me the difference between IEnumerable and IQueryable?",
+                "candidate": "IEnumerable is an interface for collections in .NET, where LINQ is implemented. IQueryable is similar but represents the database until we perform a ToList to retrieve records."
+            },
+            {
+                "interviewer": "Do you know the difference between IList and List?",
+                "candidate": "List is the concrete implementation of an IList. It has methods to add, remove, and perform operations. IList is the interface, a contract for lists."
+            },
+            {
+                "interviewer": "Do you know what delegates are?",
+                "candidate": "Yes, but I never used them in production. They are pointers indicating where the method is and the value it retrieves."
+            },
+            {
+                "interviewer": "Do you know what Global Assembly Cache (GAC) is?",
+                "candidate": "Yes, it's a cache for assemblies for the entire runtime in .NET. It's where the runtime fetches the DLL first."
+            },
+            {
+                "interviewer": "Do you know how to create a DLL and publish to a GAC?",
+                "candidate": "I know how to create a DLL, but not how to publish to the GAC. I never did that."
+            },
+            {
+                "interviewer": "What's the difference between just-in-time compilation and ahead-of-time compilation?",
+                "candidate": "Just-in-time compilation creates a binary with an intermediate language compiled by the runtime during execution. Ahead-of-time compiles the application directly into machine code, similar to C++."
+            },
+            {
+                "interviewer": "Which one provides strong type checking?",
+                "candidate": "I would say both, as it's something from the .NET environment or C#. It's during development and compilation time."
+            },
+            {
+                "interviewer": "Do you know what Kestrel server is?",
+                "candidate": "Kestrel server is the implementation of the HTTP server in .NET web APIs. I don't recall if it's for .NET Core or .NET Framework."
+            },
+            {
+                "interviewer": "Have you used IIS server before?",
+                "candidate": "Yes, almost six or seven years ago, but not actively."
+            },
+            {
+                "interviewer": "Can you tell me what IHostedService interface is in .NET Core?",
+                "candidate": "It's the base interface for the application, providing basic methods and properties for hosting the application."
+            },
+            {
+                "interviewer": "What are different methods you have used in IHostedService?",
+                "candidate": "Just the common ones, like services for collections, configuration node, and adding services for configuring the application."
+            },
+            {
+                "interviewer": "Can you tell me what middleware is in .NET Core and its advantages?",
+                "candidate": "Middleware is a piece of code in the HTTP pipeline, for incoming or outgoing requests, to perform operations like authentication, authorization, or caching."
+            },
+            {
+                "interviewer": "Have you implemented logging in .NET for applications? What kind of logger have you used?",
+                "candidate": "Not directly, just using existing ones. Mainly using the ILogger interface and creating entries in AWS CloudWatch or text files."
+            },
+            {
+                "interviewer": "Do you know what a CQRS pattern is?",
+                "candidate": "It's a pattern where we split the command and the processor to retrieve the response, decreasing coupling across the application. MediatR library implements some of it."
+            },
+            {
+                "interviewer": "Coming to SOLID design principles, can you explain?",
+                "candidate": "I don't remember the acronyms, but it's a set of practices for creating reusable and maintainable applications, ensuring everything does what it should, and using interfaces to decrease coupling."
+            }
+        ]
+    },
+    {
+        "skill": "Angular",
+        "conversation": [
+            {
+                "interviewer": "Can you tell me what work you have done in Angular?",
+                "candidate": "Working with web apps, creating new screens, and services like fetching data from APIs. General maintenance role."
+            },
+            {
+                "interviewer": "Can you tell me how to do binding in Angular?",
+                "candidate": "We use the template in HTML with curly braces to indicate the direction of binding and consume variables from TypeScript."
+            },
+            {
+                "interviewer": "Do you know what structural directives are?",
+                "candidate": "We use directives to indicate output and input parameters or if parameters come from dependency injection."
+            },
+            {
+                "interviewer": "Are you actively working on Angular right now?",
+                "candidate": "No, the last project was React."
+            },
+            {
+                "interviewer": "How long ago did you last work with Angular?",
+                "candidate": "Six months ago, the project got canceled. Then I spent a year with React and two and a half years with Angular."
+            },
+            {
+                "interviewer": "Can you tell me how routing works in Angular?",
+                "candidate": "We define routes in the route module, create the route object, specify components, and import it into the application module."
+            },
+            {
+                "interviewer": "How do you use services from one module in another?",
+                "candidate": "We export classes in the module, import them into the new module, and then import services inside the class where needed."
+            },
+            {
+                "interviewer": "Can you tell me what observables are?",
+                "candidate": "Observables are unstructured, allowing subscription to changes, unlike promises which are not subscribed to changes."
+            },
+            {
+                "interviewer": "Have you used RxJS?",
+                "candidate": "I used it for transformations, but not actively. It was in a project with foreign clients in Brazil."
+            },
+            {
+                "interviewer": "Do you know what change detection strategy is?",
+                "candidate": "No, not by that name."
+            }
+        ]
+    }
+]

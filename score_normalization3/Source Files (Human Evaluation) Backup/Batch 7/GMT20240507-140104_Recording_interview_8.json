@@ -1,0 +1,55 @@
+[
+    {
+        "skill": "content marketing",
+        "conversation": [
+            {
+                "interviewer": "How many total years of experience do you have in content or digital marketing?",
+                "candidate": "Content marketing, I would say five years. And digital marketing is vast. Content marketing is part of digital marketing. So I have that experience. Plus, I am also getting experience with social media campaigns now because I'm working, as I told you, with a local coffee roaster and cafe. So I'm getting that bit of experience also. Plus, I used to maintain my own travel blogs. So when I did that around 2017-18, I taught myself to use WordPress. So I can use WordPress. I am proficient in on-page SEO, like meta tags, meta descriptions, headlines. Like on-page SEO, I can do a fairly good job for that."
+            }
+        ]
+    },
+    {
+        "skill": "digital marketing",
+        "conversation": [
+            {
+                "interviewer": "What would be the significance of market segmentation to improve or enhance the company's potential client engagement?",
+                "candidate": "Market segmentation is one of the basics of one of the key parts of marketing because if we are not clear about who we want to talk to about their pain points, about their behavior and their psychographics and demographics, then we cannot really, you know, without market segmentation, we'll be like throwing arrows in the dark. We have to have market segmentation too. And now in digital marketing, it's even easier now. Like you can do several avatars and HubSpot has a wonderful tool to do that. So for digital marketing, any marketing and especially digital marketing, absolutely necessary to have the market segmentation so that we know who we are targeting, who we are talking to."
+            },
+            {
+                "interviewer": "What is the importance of brand positioning in marketing?",
+                "candidate": "Yes, brand positioning is actually carving out a niche in the minds of your current and potential customers. So you have to occupy a position in their minds and hearts through brand positioning. And because for any product or service, you have to put it in a garb of a brand. It has to be like a person that your target customer would relate to, would listen to, would want to be seen with, or would want to use. So I would say brand is just like a person. So brand positioning is very important because you need to have certain values, a brand needs to have certain values, certain philosophy so that it resonates with your current and potential customers and they have a particular brand personification, a brand persona, a brand aura stuck in their minds through brand positioning so that they can relate to it and they can use it and develop long term relations with it."
+            },
+            {
+                "interviewer": "What are the key components of a digital marketing campaign?",
+                "candidate": "Digital marketing campaign, and I would say it would start with obviously the target audience, a detailed target audience, number one. Number two, understanding the product or the service that we want to promote. We need to understand the demographic, psychographics, behavioral aspects of our target audience. We need to pinpoint at which part of the consumer journey or sales funnel our target audience is in order to figure out whether we need brand awareness or we need to create interest or we need to get more leads or we need to convert those leads into successful customers and then build them into our customer loyalty platform. So I would say that yes, digital marketing starts off with what we are trying to promote and why, who are we targeting, at which stage of the consumer journey they are, at which stage of the sales funnel the client is. And then we get on the details, like in the execution details, like how we should target them, whether it's through blogs or through social media marketing or through email campaigns. Those are the execution level strategies."
+            }
+        ]
+    },
+    {
+        "skill": "CRM",
+        "conversation": [
+            {
+                "interviewer": "Have you used CRMs in your marketing?",
+                "candidate": "CRMs, not any platform as such. But I do know a fair bit about customer relationship management, because in advertising, I was in account management. And that meant I had to handle my clients' accounts. And through on-the-job training and through a lot of training from Ogilvy & Mather, you probably have heard their name. They're one of the biggest advertising agencies. And through them, yes, we learned on the job and we were trained to develop customer relationship management with our clients."
+            }
+        ]
+    },
+    {
+        "skill": "analytics",
+        "conversation": [
+            {
+                "interviewer": "What advanced analytics tools have you used to assess the campaign performance?",
+                "candidate": "Are you referring to digital campaigns or of digital campaigns I haven't had the opportunity much because you know you need to like Google Analytics some because like I told you I used to maintain my own travel blog so because of that I used to spend a very little bit of money of course and I had to discontinue it because I was short of money. But during my stint, when I was maintaining my own travel blog, I have very basic, some Google Analytics. And since I've been in content writing for the last five years, actually, I have not been tasked with analyzing campaigns as such because I've been doing content writing mostly. So as far as content writing is concerned, yes, I do check my clients' blogs, the ones that I've written. I check whether they're on SERP number one or not. Plus, I also use SEMrush, Ahrefs. I don't have paid accounts with them, so my search is limited with them. I have checked my clients' websites, whether they are going down or the visitors are going up or down. I have seen that."
+            }
+        ]
+    },
+    {
+        "skill": "funnel marketing",
+        "conversation": [
+            {
+                "interviewer": "Can you describe funnel marketing?",
+                "candidate": "Funnel marketing is basically it's a customer journey on one side and the sales funnel on the other side. So it's an amalgamation, I would say. So it starts with brand awareness. For example, if I am new in the industry, I will have to start by making my brand, keeping my brand out there so that customers are aware of it. And I'll follow the AIDA model, awareness, interest, desire, and action. That's the basis of any marketing or sales funnel. So I'll start off with creating brand awareness. Then I would go move to the next level to create interest. If somebody has shown any interest in my product or service, I'm going to move to the next level where I need to create interest by offering more information or offering comparison with other similar products or services in the industry. Then I'll move to the desire stage where I will give something, some hook that the client will want to fall for. For example, at the desired stage, you can offer gated content so that I get, in exchange for their information, I give them something, something which is free and valuable for them. And then that's lead generation. So I almost have them on board. And last but not least is I convince them to take an action. That's my last bit. That's my conversion or when I make sales. And my client buys something from me. And people say that's the end of the funnel. But I think that beyond that is customer relationship management. Once my customer is on board, that's not the end of it. We need to nurture our relationships with the customer. We need to upsell our products or services and we need to keep them happy and keep them loyal and offer loyalty memberships or other rewards so that they stay with us."
+            }
+        ]
+    }
+]

@@ -1,0 +1,131 @@
+[
+    {
+        "skill": "React.Js",
+        "conversation": [
+            {
+                "interviewer": "Great To Meet You, Emiliano! Here'S Your Challenge: How Would You Optimize A React Application With Heavy State Updates To Ensure Smooth Performance?",
+                "candidate": "I Would, First I Would Check All The States Just To Make Sure That We, Yeah, We, Yeah, Just To Make Sure That We, Yeah, Just To Make Sure That We Can Update Some States With Some Reps So That There Is A Constant Re-Rendering. Then I Would Also Check The Use Effects, Just To Make Sure That We Aren'T, Yeah. Re-Rendering Also The Application Unnecessarily. And I Would Also Use Mmo For Some Components, Just Make Sure That Again We Are Re-Rendering The App Unnecessarily. So The Dldr Is Just Make Sure And Prevent Unnecessary Re-Renders Where Needed."
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Approach! Let'S Dive Into Another Topic: How Would You Handle Error Boundaries In React To Make Your Application More Robust?",
+                "candidate": "Well, For One, To Give One Example, If It Was A Dashboard, I Would Set Up An Error Boundary For Each Block So That In Case That The Data Fetching Or Something Goes Wrong Within That Component, Make Sure That It Doesn'T Bubble Up Throughout The Whole Lot, Causing Nothing Like A, A Widescreen. And Then On Top Of That, I Would Also Make Sure That The Whole Application Has An Error Boundary So That We Don'T, Just So We Can Handle An Error More Gracefully And In A More User-Friendly Manner."
+            },
+            {
+                "interviewer": "Nice Approach With Error Boundaries! Let'S Jump To A New Topic: Can You Explain The Concept Of State Management In React And How You Might Approach It In A Complex Application?",
+                "candidate": "So State Management Is How We Make Sure That The Component Re-Renders Whenever Either A Props Or Pass Down From A Current Component To A Cell Component Changes Or When An Inner State Changes That It Also Updates. Within The Context Of A Complex Application, I Would Make Sure That We Are Using Custom Groups Whenever Needed Just So We Don'T Implicate The Logic And That There Is An Unnecessary Boilerplate Coat Just Like Everywhere And Lastly I Would Make Sure That They Be Sent On Unnecessary States Just Check Out Whenever We Can Remove A State Or Change It To A Rip I Would Also So."
+            },
+            {
+                "interviewer": "You'Re On The Right Track, But Could You Expand On How You Might Manage And Utilize State Effectively In A Complex React Application?",
+                "candidate": "Okay, Yeah, I Will Split Up The State Then As Much As I'Ve Needed, Just So That There Is, So That We Can Make Use Of Controlled Components And Then Also Use Context So That The State Is Shared Throughout The Component Tree And Not Just Basically Everywhere."
+            },
+            {
+                "interviewer": "Thanks For Expanding On Your Approach, Emiliano! Let'S Tackle Another Aspect Of React: How Do You Ensure Efficient Component Rendering In A Large-Scale React Application?",
+                "candidate": "Can You Expand A Little More In That Question?"
+            },
+            {
+                "interviewer": "Sure Thing! Efficient Component Rendering Involves Strategies To Minimize Unnecessary Re-Renders, But Let'S Move On To A New Topic. Can You Describe How You Would Implement Server-Side Rendering (Ssr) In A React Application To Improve Seo And Initial Load Performance?",
+                "candidate": "Well, For That There Are Meta Framework, For Example, Nets. So I Would Make Sure That, Well, Up Until React 18, What I Would Do Is That I Would Fetch The Data All The, The Fixed Data In The Server Site Component And Then Pass It Down To Client Components To Make Sure That The Load Time Is As Small As Needed And The Performance Is Big."
+            }
+        ]
+    },
+    {
+        "skill": "Node.Js",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Your Response! Let'S Explore Another Topic Together: How Would You Design An Api Using Node.Js That Handles A High Volume Of Requests Efficiently?",
+                "candidate": "I Would Use Events And Alerts And Then Also Maybe Use A Queue And Workers. So Something Like Goll & Fuel Would Be Great To Unload Some Of The Heavy Computations To An Number Of Workers And Also Using Redis To Cache Some Data. To Make The Requests, Though To Make The Response Time Faster."
+            },
+            {
+                "interviewer": "Noted Your Approach! Let'S Continue To Something A Bit Different: Can You Explain How You Would Handle Real-Time Data Updates In A Node.Js Application?",
+                "candidate": "Real-Time Updates. I Would Use Either Streams Or Web Suffice. So I Would Use Web Suffix To Do That So That Whenever The Data Is Updated In The Database, So That It Can Trickle Down To The Client In Real Time."
+            },
+            {
+                "interviewer": "Thanks For Your Thoughts On Real-Time Updates! Let'S Explore Something New: Can You Describe How Middleware Functions In Node.Js Work And How They Are Utilized In An Express Application?",
+                "candidate": "Sure, So Middleware Functions Is Code That Is Run Before The Logic From The Endpoint Is Run. And It'S Usually Used For Things Like Authentication And Things That Require Checking Data Or Anything Before The Logic Of The Endpoint Runs."
+            },
+            {
+                "interviewer": "Thanks For The Explanation! Let'S Dive Into A New Topic: How Do You Handle Asynchronous Operations In Node.Js, And What Role Do Promises Play?",
+                "candidate": "Asynchronous Is Basically The Heart Of Javascript. So They Are Used To Make Sure That The Code Can Run Efficiently And That The Code Can Continue To Run While We Wait For The Promise To Be Fulfilled Or Re- Ejected. And Then We Handle Both Cases. If It Was Fulfilled Or If It Was Removed."
+            },
+            {
+                "interviewer": "Appreciate Your Input! To Handle Asynchronous Operations In Node.Js Effectively, Understanding The Role Of Callbacks And Async/Await Could Be Beneficial. Let'S Shift Gears A Bit: Could You Discuss How You Would Implement Secure Authentication And Authorization In A Node.Js Application?",
+                "candidate": "I Would Write A Middleware Function Where I Would Check If The User Is Authenticated Or Not And Only After That I Would After That Promise Is Fulfilled Or Rejected Then Then Go Into The Logic Of The Endpoints."
+            },
+            {
+                "interviewer": "Thanks For Your Detailed Response! Let'S Move To A Different Topic: Can You Explain How Event-Driven Architecture In Node.Js Enhances Scalability And Performance?",
+                "candidate": "Event-Driven Architecture, You Know. I'M Very Familiar With Web Groups For This. So I Think This Is Great Because You Can Respond To Events. You Can Respond To Data As It Comes In Rather Than Having To Call For Data And For Use Other Not So Optimized Methods. So This Enhances The Performance And The Scalability Of An Application By Not Having To Wait For Things And Make It More Performance."
+            }
+        ]
+    },
+    {
+        "skill": "Javascript",
+        "conversation": [
+            {
+                "interviewer": "Nice Insight On Event-Driven Architecture! Let'S Dive Into Another Area: Can You Explain How You Would Optimize A Javascript Application To Ensure It Performs Well Across Different Browsers?",
+                "candidate": "I Would Use Cross Browser Testing In City. So Basically Whenever A Pull Request Is Ready To Go Into The Main Branch, I Would Check That It Performs Well Throughout The Most Popular Browsers."
+            },
+            {
+                "interviewer": "Interesting Approach! Let'S Explore Another Topic: How Would You Handle Caching Strategies In A Node.Js Application To Enhance Performance?",
+                "candidate": "Yep, I Would Use Something Like Redis And Then Just Connect The Node.Js Backend Application To Redis So That We Can Cache Data That We Use Very Frequently Throughout The Application So That We Don'T Have To Hit The Database Every Time Which Is A Lot Slower Than Actually Just Hitting Redis Or Any Cache. Thank You."
+            },
+            {
+                "interviewer": "Thanks For Your Response About Caching Strategies! Let'S Delve Into A Fresh Topic: How Do You Ensure The Security Of Data Transmission In A Node.Js Application?",
+                "candidate": "With Something Like Jwts And Checking The Signature Is Valid Against The The Key, The Private Key, So Basically I Check The Data, The Incoming Data Was Actually Signed With The Private Key That Is In The Backend."
+            },
+            {
+                "interviewer": "Noted Your Approach With Jwts! Let'S Dive Into A Fresh Topic: Could You Explain How Closures Work In Javascript And Give An Example Of Their Practical Use?",
+                "candidate": "Closures Is, If I'M Not Mistaken, It'S Very Related To Scope. And It'S Basically One Function Within Another Function And How The Parameters, How We Can Use The Data Defined In The Outer Function, In The Inner Function, So That We Can Execute A Function More Than One Time Once We Actually Oh, Me."
+            },
+            {
+                "interviewer": "You'Re On The Right Track With Closures, But There'S More To Them. Let'S Move On To A New Topic: How Do You Handle Memory Leaks In A Javascript Application Effectively?",
+                "candidate": "Memories. I Would Use A Profiler First To Make Sure That How, To Make Sure That The Memory Is On The Right Path And We Are Not Hitting Any Memory Leaks. And Then To Handle Them, I Would Debug Where We Have The Battle Next With A Debugger. And Yeah, Basically With A Debugger And The Profiler. Thank You."
+            },
+            {
+                "interviewer": "Interesting Approach With Profilers And Debuggers! Let'S Explore Another Topic Together: How Would You Implement A Responsive Design In A Javascript Application To Ensure It Adapts Well To Various Screen Sizes?",
+                "candidate": "With Media Queries, Making Sure That We Are Using Media Queries For The Most Popular Sizes. We'Re Using The Weeks Mostly. One For Small Phones, One For Media Phones, One For Tablets, One For Desktops, And One For Extra Large Desktops."
+            }
+        ]
+    },
+    {
+        "skill": "Aws",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Your Response On Media Queries! Let'S Explore A New Topic: How Would You Utilize Aws Services To Design A Scalable And Secure Backend Architecture For A Web Application?",
+                "candidate": "I Would Use Rds For The Database To Make Sure That We Don'T Get Any Bottlenecks. Then I Would Use E.C2 Probably With Auto Scaling To Get An Initial Sense Of What Is The Size Of The Backend, Like The Ram And The Memory Needed And All The Other Configurations. And Then Bomb Those To Like 30% So That It Can Scale. And Then Also Monitor This, How It Keeps Growing To Sending Notifications To Slack Or Something Like That So That We Can Make Sure That We Aren'T Hitting That Pressure. Or Something Like Data Dog. I Think They'Re Data About Alerts, Which Help To, So That When We Keep A Certain Threshold, We Get Notified."
+            },
+            {
+                "interviewer": "Noted Your Approach With Aws! Let'S Explore Another Topic: Could You Describe How You Would Use Aws Services To Implement A Cost-Effective Storage Solution For Large Datasets?",
+                "candidate": "Can You Expand On That? Do You Mean Like A Data Warehouse Or Something That We Need To Like A Olap?"
+            },
+            {
+                "interviewer": "Please Use Your Judgment To Give Your Best Shot.",
+                "candidate": "Okay. Storage Solution. I Would Use One Of Their, Like Rds, If We Want To Use Anything Relational Or If You Want To Use Something Like Nosql, I Would Use Their Nosql Solution. I Don'T Know Their Name, Honestly. But Yeah, I Would Also Put That Configuration In Auto Scale So That We Can So That We Can So That It Can Scale Automatically."
+            },
+            {
+                "interviewer": "Thanks For Your Insights On Storage Solutions! Let'S Explore Another Topic: How Would You Leverage Aws Services To Enhance The Security And Availability Of A Web Application?",
+                "candidate": "For Security, I'M Not Sure To Be Honest, And For Availability I Would Do Something Like Route 53 To Make Sure That It'S As Available As Possible."
+            },
+            {
+                "interviewer": "Thanks For Your Response On Security And Availability! Let'S Shift Gears And Discuss A Different Topic: Can You Explain The Concept Of Infrastructure As Code (Iac) And How It Can Be Utilized With Aws Services?",
+                "candidate": "Sure. Infrastructure As Code Is Something That Is Used By Basically Defining All The Services That You Need And Its Configuration In One File, Like A Manual File For Example, And Then Deploying That To Aws So That It Can, So That All The Resources Can Be Set Automatically Without Having To Go Into The Dashboard And Having To Particular Our Service."
+            },
+            {
+                "interviewer": "Got It, Emiliano! Let'S Explore A Different Topic: How Would You Leverage Aws Services To Implement A Reliable And Scalable Data Analytics Workflow?",
+                "candidate": "I Don'T Know The Names Of The Services In The U.S. But What I Would Do Is I Would Do Something Like An Epl Job That Extracts The Data Transforms And Loaded Through A Data Warehouse, Where Then We Can Use That As An Olaf To Further Analyze The Data Admitted."
+            },
+            {
+                "interviewer": "Thank You For Sharing Your Thoughts On Leveraging Aws For Data Analytics! Let'S Dive Into A Fresh Topic: How Would You Implement A Disaster Recovery Plan Using Aws Services To Ensure Business Continuity?",
+                "candidate": "It Depends At What Level. If It'S In The Database, I Would Use Something Like Database Snapshots. And Then If It'S In The Back End, I Would Do. I Don'T Know If There'S A Configuration For This In A.W.S. But Basically Something That, Like, If There'S An Error And It Crashes, That It Automatically Restarts, Something Like A Leader-Cullower Architecture."
+            }
+        ]
+    },
+    {
+        "skill": "Custom_Question_0",
+        "conversation": [
+            {
+                "interviewer": "Tell Us More About The Project You Are More Proud Of, Programed End-To-End With Node.Js?",
+                "candidate": "Sure Thing. The One That I'M Most Proud Of. I Think It'S A Backend That Connects To Whatsapp, Instagram, And Facebook Messenger That Then Connects To Chat Gpd To Answer Messages. It Wasn'T That Easy Also Because, Well, Connecting To Those Api'S Apis By Itself Was Not A Difficult Part, But The Documentation For Meta Was Definitely A Bit Of A Pain. And Then To Import The Listings On A Project, I Had To Do A Q And A Worker Kind Of Architecture Using Bull And Q To Pull The Data Reliably. And Also Respecting The Rate Limiting From The Apis That I Was Pulling The Data For. So,"
+            }
+        ]
+    }
+]

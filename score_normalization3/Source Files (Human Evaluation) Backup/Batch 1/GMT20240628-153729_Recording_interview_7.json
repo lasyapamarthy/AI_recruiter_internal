@@ -1,0 +1,86 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "How many years of experience do you have in Python?",
+                "candidate": "From when I joined as a junior data engineer till now, I have been working in the Python domain itself. But there are a few requirements where I need to work on the frontend also. So, yeah, you can say two years and six months."
+            },
+            {
+                "interviewer": "Can you tell me what decorators are in Python?",
+                "candidate": "Yeah, a decorator is used to add more functionality to the existing function. We write it with the '@' symbol. It is used to add more capabilities to the existing function."
+            },
+            {
+                "interviewer": "Have you written any custom decorators?",
+                "candidate": "Yeah, I have written. Let's say we want to validate the email of the users in our current application. We wrote that the email should not contain special characters. It should contain only a dot and the '@' symbol. If other than that is included, it will throw an error to the UI."
+            },
+            {
+                "interviewer": "Do you know what generators are?",
+                "candidate": "Yes. Let's say I want to prepare a statement for each customer. I need to create a header for that customer like name, email, phone number, etc. It is not useful to create a function to return all those things in one go. We use the 'yield' keyword for that."
+            },
+            {
+                "interviewer": "Have you done any asynchronous programming in Python?",
+                "candidate": "I have read about asynchronous functions. I used multiprocessing for a churn model to be deployed and to run efficiently. We used the 'multiprocessing' library for that."
+            },
+            {
+                "interviewer": "Do you know how to handle exceptions in Python?",
+                "candidate": "Let's say I want to read data to ensure that in the request, we want to get a number. In the response, it should sum all the numbers. I will write a try-except block where I will read it. If the input is not a number, I will throw an exception like a value error."
+            }
+        ]
+    },
+    {
+        "skill": "AWS",
+        "conversation": [
+            {
+                "interviewer": "Any experience in AWS?",
+                "candidate": "Yes."
+            },
+            {
+                "interviewer": "What AWS services have you worked with?",
+                "candidate": "I have worked with ECS for containerization, CloudWatch, and RDS database."
+            }
+        ]
+    },
+    {
+        "skill": "Kubernetes",
+        "conversation": [
+            {
+                "interviewer": "Any experience in Kubernetes?",
+                "candidate": "Yes. For deployment, we use Kubernetes and Docker."
+            },
+            {
+                "interviewer": "Did you set up Kubernetes or just trigger the deployment?",
+                "candidate": "I just triggered it."
+            },
+            {
+                "interviewer": "Can you tell me how Kubernetes works?",
+                "candidate": "Kubernetes manages images and reroutes requests. We define our own load balancer. If we define a round-robin structure, it will route requests to containers in a queue manner."
+            }
+        ]
+    },
+    {
+        "skill": "FastAPI",
+        "conversation": [
+            {
+                "interviewer": "Coming to FastAPI, do you know what Pydantic is?",
+                "candidate": "Yes, Pydantic is a validator for the request body or response body. We define it based on requirements and set constraints for different types of user-facing APIs."
+            },
+            {
+                "interviewer": "Can you tell me how to achieve dependency injection in FastAPI?",
+                "candidate": "Can you explain a bit about dependency injection?"
+            },
+            {
+                "interviewer": "Do you know the concept of dependency injection?",
+                "candidate": "No."
+            },
+            {
+                "interviewer": "Have you implemented authentication and authorization in FastAPI?",
+                "candidate": "Not in FastAPI, but I have done it in Django. There were predefined functionalities for authentication and authorization."
+            },
+            {
+                "interviewer": "Do you know how to run background tasks in FastAPI?",
+                "candidate": "Yes, we create some threads. We need to write an async function for that and create something to check whether the task is completed or not."
+            }
+        ]
+    }
+]

@@ -1,0 +1,90 @@
+[
+    {
+        "skill": "Qa",
+        "conversation": [
+            {
+                "interviewer": "Hello Yaritza! Impressive Experience! How Do You Prioritize Test Cases In A Large-Scale Project With Tight Deadlines And Limited Resources?",
+                "candidate": "To Prioritize Test Cases In Large-Case Scale Projects With Tight Deadlines And Limited Resources, I Would Say The Biggest Thing Is To Go By The Priority Of The User Stories, Dependencies, Of Course, Evaluate According To The Project Management Methodology The Team Is Using, And The Different Opinions Of Leadership And Other Stakeholders Of Which Snrs Are Most Critical For The Application To Succeed If Launched."
+            },
+            {
+                "interviewer": "Great Approach! How Do You Ensure Test Coverage Completeness In Such Projects?",
+                "candidate": "In Such Projects, It Is Important That The Stories Are Well Defined By The Acceptance Criteria And Definition Of Don'T. It Is Important That The Test Cases Are Traceable To The User Stories And The Bugs That Are Discovered Are Traceable To The Test Cases. This Ensures A Good Analysis By The Qa And A Good Tracking Of The Progress. To Make Sure That Coverage Is Completed. Also, A Good Idea Is To Do What'S Called A Test Switch To Prove Common Test Cases That Share A Common Functionality And Are Dependent Of Each Other For Various Management."
+            },
+            {
+                "interviewer": "Solid Points On Test Coverage! How Would You Approach Ensuring Quality In A Rapidly Evolving Codebase?",
+                "candidate": "So In An Evolving Code Base, It Is Important To Have Deadlines And Also Be Very Clear Any Communication With The Development Team To Know What Are The Dates That Code Will Be Having Changes So That As Qa We Can Implement Regression Test Techniques To Ensure New Functions. Is Not Breaking Existing Functionality, But Also To Have Clear Timelines Of When It'S The Best Time To Test, And Also To Update Automation Scripts As Soon As Possible Without Compromising Quality And Without Having To Do Much Unnecessary Work On The Qsn."
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Insights! Let'S Dive Into Another Topic: How Do You Ensure Effective Communication And Collaboration Between Qa And Development Teams In An Agile Environment?",
+                "candidate": "By All Means Possible. The Good Thing About Agile Is That It Provides Several Items For Communication With Standards, Planning, Retrospectives, Sprint Reviews, But Also It Is Important To Have The Time To, If Needed, Go Through A Quick Ad Hoc Meeting If A Bug Is Not Clear Enough For The Developer, Also Making Sure The Bugs Are Of Course Well Documented Using Chat Applications, Email Applications, And Every Technology Tool The Company Has Available For Communication Is Important."
+            },
+            {
+                "interviewer": "Good Points On Communication! How Do You Handle Conflicts Between Qa And Developers?",
+                "candidate": "I Would Say I Try Not To Take It Personal. I'Ll Just Remind The Developer That Work Working Towards The Same Goal On The Team And If There'S Anything That'S Not Clear, I'M Willing To Explain As Many Times As Necessary And To Actually Help So That Everything Is Understood And Any Conflicts Are Solved."
+            }
+        ]
+    },
+    {
+        "skill": "Agile",
+        "conversation": [
+            {
+                "interviewer": "That'S A Thoughtful Approach! Let'S Explore A New Topic: How Do You Handle Changing Customer Requirements In An Agile Environment?",
+                "candidate": "So For An Agile Environment, It Is Important For The Business Analyst Or Product Owner To Also Keep In Mind The Rules Of The Agile Framework They Are Working With, But Also Understand That The Philosophy Of Agile Is That The Customer Comes First. So With That In Mind, It Is Important To Evaluate The Impact That The Change Is Going To Have On The Project. If It Is Something That Was Already Worked On And It Needs To Change, Then You Need To Analyze What The Impact Will Be In Terms Of Cost And Money, That The Project Might Be Delayed And To Try To Communicate That Effectively To The Cost But Also Plan Out If That New Feature Is Going To Affect Other Existing Requirements And How Much Rework The Team Is Going To Do. And Also If The Sprint Has To Be Canceled To Start A New Planning Session Immediately And Then Of Course Start A New Subsequent Sprint Working On These New Features."
+            },
+            {
+                "interviewer": "Interesting Approach To Handling Changes! How Do You Balance Maintaining Agile Principles With The Need For Documentation?",
+                "candidate": "Always Come. Well, I Would Say The Customer Always Comes First In That Regard, But At The Same Time, It Is Important To Remember That Documentation Is Important Because With So Many Things Changing In An Adult Environment, It Is Important To Have A Point Back To Reference To, Especially If New People Are Going To Be Onboarding On The Project. It Is Useful For Them To Have Documentation, Also To Have Reference If There Is Any Issue It Is Nice To Have Supporting Documentation To Go Through But At The End Of The Day Having The Customer Satisfied Is Really The Most Important Thing While Having An Acceptable Level Of Documentation"
+            },
+            {
+                "interviewer": "Thanks For Your Detailed Response! Let'S Explore Another Topic: How Do You Integrate Continuous Feedback From Customers And Stakeholders In The Agile Process?",
+                "candidate": "Well, For That, I Would Say The Sprint Review Meetings Are Very Useful And Also The Sprint Planning Meetings Because It Gives The Opportunity To Consumers And Stakeholders If They Wish To Be A Participant In Things That They Want To Improve In The Case Of Sprint Reviews For Their Product And In The Case Of Planning Them To Give Input Directly To The Team On What Features They Want To See Or Things That They Want To Improve."
+            },
+            {
+                "interviewer": "Great Insights Into Sprint Meetings! Could You Expand On How You Maintain Agile Values While Incorporating Customer Feedback Continuously?",
+                "candidate": "Well, So It Is Important To Remember That The Developers Are Independent And At The End Of The Day They Take A Lot Of Decisions Based On What The Customer Wants, But At The Same Time One Of The Agile Values Is That Customer Over Rigorous Processes Or Rigorous Documentation. So I Would Say It Is Possible To Maintain Agile Values While Also Incorporating Customer Feedback. You Just Have To Make Sure That Your Sprint Is Not Being Derailed By Constant Changes That At The End Of The Day Would Put The Project Into Jeopardy."
+            }
+        ]
+    },
+    {
+        "skill": "Project Management",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Sharing Your Thoughts! Let'S Delve Into A New Area: How Do You Approach Risk Management In Project Management?",
+                "candidate": "So Risk Management In Project Management I Approached It By Reading Internally Into Similar Projects That Have Been Done By The Organization And What Risk They Face. Also Talking To People That Are Experts In Their Field, So In My Case Would Be The Developers To Understand What Risk The Project May Have. Have Also For Qa, What Risks Will Happen During Testing And Trying To Incorporate That Info Into The Project Plan For Risk And Also Into The Easter Stories And Making Sure That The Qas Understand Those Risks As Well When Working On Their Test Cases So They Know How To Properly Prioritize As Well."
+            },
+            {
+                "interviewer": "Thanks For Your Detailed Approach To Risk Management! Let'S Explore A New Topic: Could You Discuss How You Handle Project Scope Changes During Execution?",
+                "candidate": "So That Needs To Be Analyzed Depending On The Project Management Methodology. It Varies. If It Is Agile, Then The Request Potentially Can Be Put Into Another Sprint If It Is For A New Feature For Planning. But If It'S Something That Completely Changes The Sprint, That It'S Been Worked On. Worked On Or If The Features That Are Being Worked On Are Going To Be Unnecessary At The End Of The Day Then The Project Manager Can Bring Into The Potential That The Spring Will Be Cancelled Due To Those New Features So It Really Depends For More Waterfall-Based Approaches Something That It'S Traditionally Done Is That A Shutter Gets Made Where It Is Specified The Process That Will Happen If Changes Were To Be Made For Some Projects For Some Organizations That Is Not Acceptable For Others It Has To Go Through The Project Manager'S Office Review Before Accepting It Or Not And What The Impel Would Be So It Really Depends On Methodology"
+            },
+            {
+                "interviewer": "Thanks For Your Explanation On Handling Project Scope Changes! Let'S Explore A New Question: How Do You Prioritize Tasks And Manage Resources Effectively In A Project With Conflicting Demands?",
+                "candidate": "For That, I'D Like To Make Sure I Understand From The Different Stakeholders And From The Organization I'M Working In. What Is The Topmost Priority? What Has The Potential For More Profit Or What Solves The Biggest Issue As Well? And Also Consider The Risk Of Executing A Task Or First Versus The Other And That Will Depend What Resources Will Be Assigned To Which Project Or Not."
+            },
+            {
+                "interviewer": "Interesting Approach To Task Prioritization! Let'S Explore A New Question: How Do You Ensure Alignment Between Project Goals And Organizational Objectives?",
+                "candidate": "Also, I Would Say The Project Goals Should Be Aligned To Organizational Objectives First And Foremost."
+            },
+            {
+                "interviewer": "That'S An Essential Point About Aligning Goals! How Do You Handle Timeline Adjustments In Project Management When Unforeseen Challenges Occur?",
+                "candidate": "Well, You Have The Option To Assign More Resources, Either Money, Materials, Or People, Or The Option To Set That Change As It Is And Add More Time With The Potential Of The Losses That May Occur, Or As It Happens In A Lot Of Projects, Then The Project May Get Paid. Get Cancelled. So It Depends On What The Stakeholders And The Team Have As Their Plan For Orphan-Seeing Circumstances And If There Is A Budget For Allocated For Risks As Well."
+            }
+        ]
+    },
+    {
+        "skill": "Sql",
+        "conversation": [
+            {
+                "interviewer": "Good Considerations On Handling Timeline Adjustments! Let'S Explore Another Area: Could You Explain How Normalization And Denormalization Work In Database Design?",
+                "candidate": "So For Normalization Versus The Normalization On Database Design, I Would Say That Normalization Is The Process Of Organizing The Database To Reduce Redundancy And Improve Data Integrity. So It Eliminates Redundant Data, It Ensures Data Integrity, It Simplifies The Data, And You Have Various Normalization Forms. The First Normal Form Eliminates Duplicates, The Second Meets Out The Requirements Of The First Normalization, And Then Moves Data That Is Only Dependent On Part Of A Primary Key To Another Table. Then We Have The Term Normalization Form, Which Is Out Of The Requirements Of The Second One, And Also Remote Columns That Are Not Dependent Upon The Primary Key. Then The Normalization Is The Process Of Combining Normalized Tables To Reduce The Number Of In Queries And That Improves The Width Performance At The Expense Of Data Redundancy. So The Approach To That Is To Add Redundant Data Across Tables, To Avoid Joints, And Pre-Compute Aggregation. So Restore Aggregate Data That Otherwise Would Require Computational Overhead During Query Times."
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Thoughts On Normalization! Let'S Shift Gears And Discuss A New Topic: Can You Explain The Concept Of Indexing In Sql And How It Impacts Query Performance?",
+                "candidate": "Sure, Simple Indexing Is A Technique Used To Improve The Speed And The Performance Of Data Retrieval Operations In A Renautational Database. It Creates A Data Structure, Usually A B Or A B3 Or A Hash Table On One Or More Columns Of A Table Which Helps The Database Engine Fine Grows More Quickly The Impact On Performance Is That It Provides Faster Data Retrieval Improves Sorting And Searching And Enhances Joint Performance The Disadvantage On Performance Is Increase The Storage Space Space, A Slower Ride Operations, Maintenance Overhead, And Risk Of Over-Indexing."
+            },
+            {
+                "interviewer": "Interesting Explanation On Indexing! Let'S Dive Into Another Topic: Can You Describe How You Would Implement A Sql Query To Find Duplicate Records In A Table?",
+                "candidate": "So To Find Duplicate Records In A Table, You Can Use The Rub-Back Costs Along With The Having Costs. So For Example, You Have A Table Named Employees With The Following Structure. Id, First Name, Last Name, Email Department. You Will Select First Name, Last Name, Email, Count Asterisk For All From Employees, Group By First Name, Last Name, Email Having Count For The Asterisk With More Than Or, Sorry, With Larger Than One. So The Group By Have The Same Values In The Specified Columns, For Example, With The First Name, Last Name, Email, The Count Counts The Number Of Rows In Each Group, And The Having Count Larger Than One, Filters Groups To Show Only Those In More Than One Record, Meaning The Duplicates."
+            }
+        ]
+    }
+]

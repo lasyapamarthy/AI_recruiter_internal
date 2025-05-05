@@ -1,0 +1,132 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "Can you tell me what are decorator functions in Python?",
+                "candidate": "Decorator functions in Python are like functions within a function. You can encapsulate a function within another function. When you call that particular function, it first goes into the decorator function, and then it returns the inner function. The inner function does all of the computations."
+            },
+            {
+                "interviewer": "What is the advantage of using decorators?",
+                "candidate": "You can abstract any kind of logic separately from the function. For example, if you want to do division but check if it's zero, instead of doing that check in the function itself, you can pass them as a decorator to make sure it's safe."
+            },
+            {
+                "interviewer": "Have you done any custom decorators before?",
+                "candidate": "Yes, I have."
+            },
+            {
+                "interviewer": "Give me one good example where you have written your own custom decorator.",
+                "candidate": "In an API, it had to go through the authentication process. Instead of handling the authentication within the endpoint function, I created a decorator to handle that authentication. I get the token key from the header, and if it matches, then I return the function to do the next steps. I also use decorators for caching."
+            },
+            {
+                "interviewer": "Do you know what a generator is?",
+                "candidate": "A generator is something that yields values rather than storing the values in memory. It yields the values as needed."
+            },
+            {
+                "interviewer": "How does it help?",
+                "candidate": "It is more memory efficient because it's not computed right away."
+            },
+            {
+                "interviewer": "What happens if it reaches the end of the list?",
+                "candidate": "If it reaches the end of the list, you get an exception saying that you cannot enumerate more. I forget what the exception actually is."
+            },
+            {
+                "interviewer": "Have you done any asynchronous programming in Python?",
+                "candidate": "I've done a little bit using FastAPI, which has async and await keywords built-in. I haven't used asyncio or any other package, but I know about it."
+            },
+            {
+                "interviewer": "Do you know what are context managers?",
+                "candidate": "I'm not familiar with that."
+            },
+            {
+                "interviewer": "Do you know what is the Global Interpreter Lock?",
+                "candidate": "It's like the new thing in Python that has come out, right? It doesn't have the GIL, but I don't know all the details to answer that question satisfactorily."
+            },
+            {
+                "interviewer": "Have you done any centralized exception handling instead of having try and except everywhere?",
+                "candidate": "Centralized exception handling, like for example, what exactly do you mean?"
+            },
+            {
+                "interviewer": "Basically, if you have any functions, if there is an exception happening there, instead of you doing try and except blocks everywhere, can you define a centralized location where it goes and handles for everything?",
+                "candidate": "You can do that in a decorator. Or, if you have a main function and you're calling each of those functions right there, you can do a try and except block at the start of the program."
+            },
+            {
+                "interviewer": "Can you tell me how to achieve dependency injection in FastAPI?",
+                "candidate": "You can use the depends keyword. They have that depends keyword there, so it depends, and you can do the type annotation of what you want and then the function that you want to depend on."
+            },
+            {
+                "interviewer": "Do you know what is Pydantic and why it is useful?",
+                "candidate": "It's for a typing module to make sure it's like schema validations on a request or response or any kind of function calls. If you want to define the type of the arguments that you want to get, you can use the Pydantic module."
+            },
+            {
+                "interviewer": "Have you used background tasks in FastAPI?",
+                "candidate": "Yes, I have used it in one of the methods. I had to go clean up a temporary file, so I used a background task."
+            },
+            {
+                "interviewer": "Have you implemented authentication and authorization in FastAPI?",
+                "candidate": "Yes, I've implemented two types. One is the API key type authentication, and the other is a JWT token-based authorization."
+            },
+            {
+                "interviewer": "Can you tell me on a high level how you implemented JWT?",
+                "candidate": "FastAPI is like an OAuth 2 schema. You can define what type of schema you want, either a header API key type of OAuth schema or a token-based schema. For each of the functions, you can use dependency injection to decode the JWT token and get the user information."
+            },
+            {
+                "interviewer": "Do you know what is a WSGI server?",
+                "candidate": "Yes, web server gateway interface."
+            },
+            {
+                "interviewer": "Why do we use that?",
+                "candidate": "To create an HTTP server. It's like a gateway interface to HTTP services."
+            }
+        ]
+    },
+    {
+        "skill": "AWS",
+        "conversation": [
+            {
+                "interviewer": "Any experience in AWS?",
+                "candidate": "Yes, I have some experience in AWS."
+            },
+            {
+                "interviewer": "What all services have you used and for how many years?",
+                "candidate": "I've used EC2 instances, Amazon Cloud, and Fargate. I think that's pretty much it."
+            },
+            {
+                "interviewer": "Any experience in Kubernetes?",
+                "candidate": "I have used Azure Kubernetes Services (AKS) at my first job. Although I wasn't hands-on involved in doing the AKS because the DevOps team was handling that, I have some experience with YAML files, helm charts, and kubectl."
+            },
+            {
+                "interviewer": "AWS, how many years should I take?",
+                "candidate": "Maybe you can take like two, three years."
+            },
+            {
+                "interviewer": "Let's dwell on some of the AWS services. So you have used mostly S3 and?",
+                "candidate": "I've used S3, Fargate, ECR, IAM stuff, and EC2 instances. I've also spun up a SQL database on AWS."
+            },
+            {
+                "interviewer": "When I have one question on S3, I have an image file uploaded to S3 bucket. When I click on that, the URL is getting downloaded, but I wanted to get it previewed.",
+                "candidate": "When you say it's being downloaded, what do you mean?"
+            },
+            {
+                "interviewer": "When you click on the link, the file is getting downloaded, but I want it to be previewed on the browser.",
+                "candidate": "That's a browser configuration, isn't it?"
+            },
+            {
+                "interviewer": "No, it's not a browser configuration.",
+                "candidate": "I don't think I know the answer, but I would think maybe it's an S3 thing that you could change."
+            },
+            {
+                "interviewer": "It's when you upload any image file, the default content type is an octet-stream. So it will download by default. You need to set the content type explicitly like image/jpeg to be previewed.",
+                "candidate": "I see. I didn't know that. Thank you."
+            },
+            {
+                "interviewer": "Can you tell me on EC2 instance, how can we upgrade the volume of an instance?",
+                "candidate": "I think they give you a configuration somewhere to increase the volume. I haven't tried that actually, but I've seen an option to increase the volume there."
+            },
+            {
+                "interviewer": "Can you tell me what work you have done with Kubernetes AKS?",
+                "candidate": "At my previous company, we had a DevOps team to do most of the stuff. We had to migrate most of our applications over to AKS. We had a template configuration file, and we had to change configurations like environment variables, service names, and app names. Then we would push it into the AKS cluster and make sure things are running smoothly. I've used kubectl to check the status of the pods."
+            }
+        ]
+    }
+]

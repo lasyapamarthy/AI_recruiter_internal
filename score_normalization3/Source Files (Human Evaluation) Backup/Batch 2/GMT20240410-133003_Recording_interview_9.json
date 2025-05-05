@@ -1,0 +1,78 @@
+[
+    {
+        "skill": "data science",
+        "conversation": [
+            {
+                "interviewer": "Could you please let me know your experience and what are your primary skills?",
+                "candidate": "I have two years plus experience in the data science field. Currently, I'm working as a junior data scientist at Aramax. It's basically a logistics chain company to contribute on how to deliver fast delivery of shipment and to make algorithms. And also work on the cloud side to deploy the model on SageMaker."
+            },
+            {
+                "interviewer": "So basically you're a data scientist?",
+                "candidate": "Data scientist, yes."
+            }
+        ]
+    },
+    {
+        "skill": "python",
+        "conversation": [
+            {
+                "interviewer": "What are your key programming skills?",
+                "candidate": "Mainly work on Python. Out of 10, I would rate myself a 9. Basically, data science and a little bit of R also."
+            },
+            {
+                "interviewer": "Are you comfortable in solving data structure and algorithm-based questions?",
+                "candidate": "Yes."
+            },
+            {
+                "interviewer": "Yes, the screen is visible.",
+                "candidate": "Can you see my screen?"
+            },
+            {
+                "interviewer": "You need to count the binary gaps and return the maximum.",
+                "candidate": "Okay. Sorry, can you repeat?"
+            },
+            {
+                "interviewer": "Read the question. It is already there.",
+                "candidate": "Okay. I assume you are asking for the maximum length of zeros between ones in a binary number."
+            },
+            {
+                "interviewer": "How much time did you take to solve these kinds of questions?",
+                "candidate": "This is not a proper data structure-related question. This is a logical question."
+            },
+            {
+                "interviewer": "Total, how much time you took to solve 600 LeetCode questions?",
+                "candidate": "In my college time, 2-3 years. Starting from the second year. First, I learned Java, then started."
+            }
+        ]
+    },
+    {
+        "skill": "data structures",
+        "conversation": [
+            {
+                "interviewer": "What is the difference between a doubly linked list and a singly linked list?",
+                "candidate": "A singly linked list means you know the chain a, b, c. But a doubly linked list has both forward and backward pointers. You can return from b to a."
+            }
+        ]
+    },
+    {
+        "skill": "algorithms",
+        "conversation": [
+            {
+                "interviewer": "I have one more question. If you're okay to try, but it is very short duration. I'm not sure you can complete that in 15 minutes. It's a hard LeetCode question. Give it a try.",
+                "candidate": "Okay."
+            },
+            {
+                "interviewer": "Did you solve this earlier?",
+                "candidate": "Yes, this is a LeetCode question and I have already solved 600 LeetCode questions."
+            },
+            {
+                "interviewer": "Please go ahead.",
+                "candidate": "This is my profile."
+            },
+            {
+                "interviewer": "I just, because whatever the code you have written, it is the same code present.",
+                "candidate": "I already solved 600."
+            }
+        ]
+    }
+]

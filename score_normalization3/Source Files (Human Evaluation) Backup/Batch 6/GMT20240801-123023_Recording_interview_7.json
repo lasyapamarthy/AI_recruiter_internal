@@ -1,0 +1,90 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "Let's start with some of the fundamental concepts around Python. What is your experience with FastAPI?",
+                "candidate": "Currently, I'm working with FastAPI. In recent working organizations, I have hands-on experience with FastAPI."
+            },
+            {
+                "interviewer": "What are decorators, and how have you used decorators before?",
+                "candidate": "Decorators are used to modify your existing method. They modify the existing behavior of a method. For example, in FastAPI, app.get is a decorator that helps connect your method with the routing mechanism or endpoint."
+            },
+            {
+                "interviewer": "Tell me about generator functions in Python.",
+                "candidate": "Generators are used to not occupy much memory. They are a kind of iterator. We implement generators using the yield keyword, allowing us to take one value at a time instead of loading all data at once."
+            },
+            {
+                "interviewer": "Why would I use a generator function instead of a regular iterator?",
+                "candidate": "Generators give you value on the go. You haven't loaded all your items. Once you get the first value, if you go for the yield, it will pick the next item."
+            },
+            {
+                "interviewer": "Have you worked with context managers in Python?",
+                "candidate": "Yes, context managers handle scenarios at once. Using the with block, you can open a file, and it will automatically close it for you. It handles entry and exit points."
+            },
+            {
+                "interviewer": "What do you understand by parallelism and concurrency in Python, and how do you achieve those?",
+                "candidate": "Parallelism means running two tasks at the same time, whereas concurrency means two tasks are working but not necessarily at the same time. Parallelism can be achieved with multiprocessing, and concurrency can be achieved with async and await."
+            },
+            {
+                "interviewer": "How does asynchronous nature happen in Python?",
+                "candidate": "Asynchronous programming means not blocking your main thread. You shift your work module into another thread. Python can process multiple requests in a concurrent manner, not sequentially."
+            }
+        ]
+    },
+    {
+        "skill": "FastAPI",
+        "conversation": [
+            {
+                "interviewer": "How is FastAPI different from Flask or Django?",
+                "candidate": "FastAPI is fast because it uses type hints for validation. It has data validation with the Pydantic model, integrated Swagger docs, and supports asynchronous behavior."
+            },
+            {
+                "interviewer": "What is dependency injection in FastAPI?",
+                "candidate": "Dependency injection configures your method or block to work only when a specific part is loaded. For example, ensuring a DB cursor object is available before proceeding."
+            },
+            {
+                "interviewer": "Have you built any authentication or authorization system using FastAPI?",
+                "candidate": "I haven't received tasks for authentication and authorization, but I have knowledge of how they work."
+            },
+            {
+                "interviewer": "What are the differences between JWT and OAuth?",
+                "candidate": "JWT provides tokens, so there's no need to hit your DB repeatedly. OAuth involves integration with third-party vendors like Google API."
+            },
+            {
+                "interviewer": "How do you handle background tasks in FastAPI?",
+                "candidate": "We can handle background tasks using Celery or libraries like concurrent.futures with multithreading."
+            }
+        ]
+    },
+    {
+        "skill": "AWS",
+        "conversation": [
+            {
+                "interviewer": "What kind of work have you done with EKS?",
+                "candidate": "I don't have hands-on experience with EKS. I know it's related to Amazon Kubernetes, handling scaling and load balancing."
+            },
+            {
+                "interviewer": "Have you worked with S3 and EC2?",
+                "candidate": "Yes, I've worked with EC2 and S3. We use S3 for file uploads and Voto3 for connections in Python."
+            },
+            {
+                "interviewer": "How would you build a file system on S3 and a basic upload system?",
+                "candidate": "I would create a bucket and store files as objects. We can use presigned URLs for accessing files and save the URL in a database for future access."
+            }
+        ]
+    },
+    {
+        "skill": "General Feedback",
+        "conversation": [
+            {
+                "interviewer": "Any feedback for improvement?",
+                "candidate": "I mean, any kind of feedback you want to put in so that I can improve for future?"
+            },
+            {
+                "interviewer": "Spend more time with FastAPI and AWS. Learn about deployments, Kubernetes, Docker, and other backend systems.",
+                "candidate": "Got it. Thanks for your time and feedback."
+            }
+        ]
+    }
+]

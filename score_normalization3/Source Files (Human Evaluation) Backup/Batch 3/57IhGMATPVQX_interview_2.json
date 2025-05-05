@@ -1,0 +1,107 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "Nice To Meet You, Abhishek. How Do You Approach Optimizing A Complex Python Script For Both Performance And Readability In A Production Environment?",
+                "candidate": "First Of All, I Will Try To Analyze The Python Script If It Is Already Being Deployed On Production Environment. So I Will Try To Bring The Component Into Different Functions And I Will See If It'S A If Many Functions Is Been Reused Multiple Times Then I Will Try To You Know Implement The Oops Trap Whoops From Concept To Reduce The Rate Density Of The Same Function And Also We Know Like For Time Complexity And Space Complexity Loops Are Not A Good Idea So I Will Try To Implement Data Frames With Maybe It'S Pandas Or Spark Data Frame To Process Huge Set Or Huge Datasets Into The Data Frame And It Will Be Much More Faster. So That Would Be My Approach And It Also Depends On What Exactly The Problem Statement Is. Depending On That I Will Try To Optimize The Script In A Much More Performance And Readability Optimized Way."
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Approach. Could You Explain How You Might Handle Exceptions And Error Logging In A Production Python Script For Enhanced Performance And Readability?",
+                "candidate": "Yeah, So I Will Use The Tri-Accept Block First Of All. And Within Tri-Accept, Again, If I Know Like Some Issues Which Might Alter Some Known Issue, Then I Will Handle Those Errors In Accept Block And I Will Pass The, Those Errors As Information Or Warning. If It'S An Unknown Error, Then I Will Learn. I Will Fail The Job And Also For The Loading Purpose I Will Use There Are Multiple Packages But I Generally Use Laudered Package For The Loading Package For The Yeah Obviously The Loading Of Failures And Exceptions"
+            },
+            {
+                "interviewer": "Got It. Let'S Move On To A New Topic. Can You Explain The Concept Of Decorators In Python And Discuss Their Typical Use Cases?",
+                "candidate": "Detorators Are Basically Suppose A Function You Are Trying To Implement On A Particular At A Particular Line So There These Detriters Are Helpful You Can Just Define Our Function Anywhere And Within Another Block You Can Just Use That Function As A Single Line And Pass The Parameters And That That Function Will Be Applied On That Link."
+            },
+            {
+                "interviewer": "You'Re On The Right Track About Decorators, But Could You Explain How They Can Be Used For Modifying Or Extending The Behavior Of Functions Or Methods?",
+                "candidate": "A Detourters Can Be Used. As Of Now, I Couldn'T Think Of Any Possible Example. So I Won'T Be Able To Answer That."
+            }
+        ]
+    },
+    {
+        "skill": "Aws",
+        "conversation": [
+            {
+                "interviewer": "I Understand. Let'S Explore Another Topic Together. How Do You Handle Cost Optimization When Working With Aws Services, Especially For Large-Scale Deployments?",
+                "candidate": "So For Aws, Which I Check Whether It'S Development Environment Or Production Environment. So For Development Environment, We Generally Don'T Use Much Of The Aws Features Like Auto Stealing Or High Compute Ac2 Instances Or High Memory Servers Or Anything Like That. We Use Very Basic Structure. For Protection Deployment, We See What Is The Exact Requirement Of Our Business. If Something Can Be Managed On Serverless, So We Generally Use Amr Serverless, Glue, Lambda, These Are Basically The Huge Aws Resources For Serverless Which Will Save Us A Lot Of Money. But For The Project Switch Needs Specific Servers Attached To Them, Then We Will Go Ahead With Ec2 Instances And We Will Use Terraform As Infrastructure Deployment Code For Deploying The Confederating Different Infrastructure For Dev And Broad And For The Deployment Purpose."
+            },
+            {
+                "interviewer": "Interesting Insights On Aws Cost Optimization! Could You Discuss The Various Aws Pricing Models And How They Impact Cost Management Strategies?",
+                "candidate": "A.W.S Pricing Models, Yeah, Most Of The Services Are Based On Paid To Use And Most Are, And Many Are Like We Can Schedule Or Reserve The Instances And On Top Of That They Charges. Like A Lambda Services. So Lambda Pricing That Depends On The Number Of Times Lambda Functions Are Called Or In One. Or In What. In S3 We Are Charged On Top Of The Storage Or The Api Or The Objects, The Number Of The Objects In On S3 Is Being Told Using Api. The Server, The Blue And Amr Serverless They Have Been Charged On Top Of These Number Of Spark Codes And Drivers We Are Using And The Storage We Are Using And The For The Amount Of Time It'S Been Running. Ac2 Are Being Used On Different Models Like It Can Be Reserved And It Can Be On Spot So We Have To Pay For The Time For The Amount Of Time We Are Using The Instances So Yeah These Are The Basic Models On Top Of Which The Cross Are Been Calculated In Aws."
+            },
+            {
+                "interviewer": "Thanks For Your Explanation. Let'S Dive Into Another Question: Can You Explain The Significance Of Aws Iam (Identity And Access Management) And How It Helps In Managing Access To Aws Resources?",
+                "candidate": "Yeah, Sure. So Iams Are Basically A Very Useful Feature Of Aws. It Helps In Security Of Resources And The Account. So In Im Two Types Of Access We Can Enable. One Is Resource Access And One Is Users Access. So In Users We Can Define Virtual Users Can Access Virtual Resources Of A Particular Aws Account. And Resource Access, We Can, In Im Resource Access, We Can Provide That Which All Resources Of Aws Can Perform Which All Accents. Let'S Say A Lambda Can Read From S3 Or Not. A Lambda Can Invoke Maybe A Blue Job Or A Email Or Less Job Or Not. Lambda Can Pass Sms To S2S Or S2S Or S2S. Can Send A Message To Glue Or Not. So These Are Resource Accents Which We Can Take. Define Using Iam Resource And The Virtual Users Can Access Which All You A Ws Resource That We Can Define Using Users Role In Iam."
+            }
+        ]
+    },
+    {
+        "skill": "Fast Api",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Sharing Your Insights On Aws Iam. Let'S Explore Another Topic: How Do You Ensure The Scalability And Performance Of A Fastapi Application In A Production Environment?",
+                "candidate": "I Am Not Familiar With Fast Api Technology, Kindly Move To The Next Section."
+            },
+            {
+                "interviewer": "I See, Let'S Move On To A Different Topic! Could You Discuss How You'D Approach Designing A Data Pipeline Using Aws Services For Efficient Data Processing And Transformation?",
+                "candidate": "Yeah Sure. So For A Data Pipeline First We Have To Check From Where The Data Is Coming From Maybe It'S An External Source And Through Api If It'S Coming Then We Can Write To A Serverless Job And We Can Schedule That Serverless Or Maybe It'S An Emr Serverless Or Glue Job To Fetch The Data Into Data Late After Data Late Has Seen S3 After Fetching The Data From The Remote Server To Our St Rotation Then We Will Process That Data As Per Our Business Purpose And We Will Store It In A Different Market Or Location After Transforming The Data In The Required Format"
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Thoughts On Designing A Data Pipeline. Let'S Explore Another Topic Together! Could You Explain What Strategies You Might Use To Ensure Data Security And Privacy When Handling User Data In Cloud-Based Applications?",
+                "candidate": "So Yeah, For Data Security And Privacy Obviously First Of All We Are Don'T, If It'S On Aws We Are Going To Use Im So Not All Users Can Access All The Resources Or Data. Seton Of All We Will Use The Kams Tree To Encrypt The Pi Data Or The Personal Information Identifiable Data Of The Customers In Encrypted Format. Encrypted Format Again While Processing The Records We Will Never Decrypt And Print Those Records In Because The The This Matrix Is Been Captured By Cloud So We Should Not Decrypt It Anywhere And Printed All These Processings Would Be Done In Memory These Are The Top Things Again For For Phageing Or You Know For Api While Sending The Data Through Api We Should Always Use The Aws Trees For Encrypting Data In Transit So That While Transition Data Will Not Be Readable If It Been Accessed By Some Unauthorized Third Party. So These Are The Major Security And Data Privacy Thing Which We Will Implement."
+            }
+        ]
+    },
+    {
+        "skill": "Web Sockets",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Sharing Your Thoughts On Data Security And Privacy. Let'S Shift Gears To A New Question. Could You Discuss How Websockets Work And Their Typical Use Cases In Modern Web Applications?",
+                "candidate": "I Am Not Familiar With Websortlets Application."
+            },
+            {
+                "interviewer": "I See, Let'S Shift To Another Topic! Could You Explain How Websockets Facilitate Real-Time Communication In Modern Web Applications And Their Typical Use Cases?",
+                "candidate": "The"
+            },
+            {
+                "interviewer": "I Appreciate Your Response. Let'S Explore A Different Question: Could You Discuss How You Would Design A Scalable Messaging System Using Websockets In A Microservices Architecture?",
+                "candidate": "I Am Not Familiar With Web Sorted Applications. Kindly Move To Next Section."
+            },
+            {
+                "interviewer": "Understood, Let'S Explore Another Topic Together! Could You Describe How You Might Approach Implementing An Efficient Caching Strategy For A Web Application To Enhance Performance?",
+                "candidate": "I Can Use Elastic Trash Switch, A Service Which Is Being Offered By Aws. So It Is A Pretty Efficient Service For Storing The Trash Value And Also The Testing The Sessions Of A Particular User. So Yeah, That I Can Implement."
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Thoughts On Caching. Let'S Dive Into Another Topic: Could You Discuss The Role Of Websockets In Enabling Real-Time Features In Web Applications?",
+                "candidate": "I'M Not Familiar With Web Sorted."
+            },
+            {
+                "interviewer": "I See, Let'S Shift To Another Topic! Could You Explain How You'D Ensure The Security And Integrity Of A Microservices Architecture?",
+                "candidate": "I Don'T Have Experience In Microservices Architecture."
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Response. Let'S Explore Another Topic: How Would You Handle Asynchronous Communication Between Services In A Distributed System?",
+                "candidate": "I Will Orchestrate The Different Resources Using Orchestrations Like Aws Provide A Step Functions. So I Will Define Different Resources Which Are Defined In The Distributed System At Different Steps. And Irrespective Of What Is The Status Of One Resource, Other Will Keep On Running. So Yeah, I Will Outstretched It Using Awcstif Function."
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Approach! Let'S Explore A New Topic Together: Could You Describe The Benefits Of Using Websockets Over Traditional Http Methods For Real-Time Data Updates?",
+                "candidate": "I Don'T Know About Web Sorted."
+            },
+            {
+                "interviewer": "Thanks For Your Response! Let'S Dive Into A Different Question. Could You Explain How You'D Approach Designing A Robust Logging And Monitoring System For Cloud-Based Applications?",
+                "candidate": "I Will Enable Cloud Match Metrics For The General Loading Purpose. For Monitoring Purpose, I Will Build Dashboards On Top Of The Data Which We Are Processing And All."
+            }
+        ]
+    },
+    {
+        "skill": "Custom_Question_0",
+        "conversation": [
+            {
+                "interviewer": "Do You Have Experience In Production Deployment? Explain",
+                "candidate": "Yes, I Have Experience In Production Deployment. I Use Telephone As Infrastructure Code Deployment For Deploying My Resources On Prod. I Built Monitoring System On Top Of The Data Which We Have In Our Data Later Data Warehousing Tables So That We Will Monitor The Daily Interim Data And If There Is Anomalies Or Sudden Failures. So We Will Have Clear Insights Of How The Data Is Coming Into Our Data Lake."
+            }
+        ]
+    }
+]

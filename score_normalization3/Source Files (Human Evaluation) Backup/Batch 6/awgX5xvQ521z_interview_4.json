@@ -1,0 +1,63 @@
+[
+    {
+        "skill": "Javascript",
+        "conversation": [
+            {
+                "interviewer": "Great Experience, Ritika! How Would You Optimize Javascript For Large-Scale Applications?",
+                "candidate": "To Optimize The Javascript For The Large-Based Application, So Basically I Check The Performance Of The Website. And I Actually Focused On Some Metrics, Basically One Of The Performance And Then Security. And Another One Is, You Know, How I Can Make It Responsive In Every Platform. So That Is One Thing That I Check To Make The Javascript Applications For The Last Scale Applications. And Also For The Optimization, I Would Say I Checked Like How Much Time It Is Taking To Load Whenever We Are Entering Or Whenever We Load The Website First Time. So Basically I Use The You Know That I Check The Time To Live Of The Time To Live The Content Of The Website And How The Website Is Interacting And Whenever We Are Switching From One Screen To Another Screen Then Also I Check How It Is Behaving And Based On That I Check The Apa'S Response And How The Images Are Taking Time To Load And I Try To To Improve That Speed From The Front End Side. Thank You."
+            },
+            {
+                "interviewer": "Thanks For Sharing, Ritika! You'Re On The Right Track, But Could You Elaborate On Techniques Specifically For Optimizing Javascript Performance In Large-Scale Applications?",
+                "candidate": "So One Of The, You Know, That Technique That I Use, Like Whenever I Have A, I Need To Search Something And I Need To Search In A Infinite Web Page, Then I Usually Use The Devouncing And Where, You Know, That It Will Wait For The Air. P.I. To Be Lowered Whenever The Scroll Has Been Stopped. And Before That, I Also To Optimize This, My Application That I Use The Code Splitting. So In Code Splitting, Basically, It Split The Code And The Code, And We Can Reuse The Code Again And Again. So As I Am Working On Right Now I Working On The React Application So I Worked On The Component Reusability Also And Because It Has The You Know That Lot Of Stairs That Can Be A Stain Simultaneously Then I Use The Redux In The Application To Manage The State And Also Whenever It Is Needed If It Is A Real-Time Application Then I Use The You Know Know At The Events Like Ssc Events Or The Web Sockets Yes So These Are The Things That I Use To Optimize The Javascript Performance I Will Add Here That For The Images The If We Have A Large Images Then I Try To You Know That Make The Height And Width Of Images According To The Device Heightened Width And Also For The Images I Use A Lazy Loading Too Yes Thank You"
+            }
+        ]
+    },
+    {
+        "skill": "React",
+        "conversation": [
+            {
+                "interviewer": "Thank You, Ritika, For That Detailed Response! Let'S Explore Another Topic. How Do You Handle State Management In React Applications, Especially When Dealing With Complex Data Structures?",
+                "candidate": "So For To Maintain The State In The React Application, So If Our Application Is Very Small, Then It Is A One-Page Application, Then To Manage The State, We Can Go With The Context Api Also, Which Is Basically For The, You Know, The Small Applications. But If Our Application Is Large Based Application, Then Where The State Can Be, You Know, The State Can Be Changed, You Know, That From One Component To Another Component And From One Component'S Effect To Another Component, Then We Can Use The Redux. Redux Basically Is Used For The Large-Based Applications. And Also In The Data Structure Like We Have We Are To Maintain To Manage The State Like You Know That We Have We Have The Objects That We Managed And That Can Be Easily Managed In The Redux And Also In The Inbuilt Hooks Of The React That Like A You State And In The Use State Also We Can Manage The Data Structure Of Any Data Structure Like Array Or Object Or A Set Or Hash Map Too So So Yeah Thank You"
+            }
+        ]
+    },
+    {
+        "skill": "Html5",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Your Response, Ritika! Let'S Dive Into Another Area. Can You Explain The Significance Of Semantic Html5 In Web Development?",
+                "candidate": "Yeah, Sure. The Semantic Html 5 Basically Helps The Users, Those Users Who Are Not Accessible To The Features Of The Web Development. So Basically, If We Write The Code In Semantic Html, So It Will Help The Non-Accessible Person And, You Know, That The Screen Readers Basically They Can Easily Check The Html 5 Elements Like If They Write In Semantic Html 5 And It Will Be Help The Known Accessible Person Also The Semantic Htmls Are Useful When We Wanted To When We Wanted To Rank Our Website In The Google Search Engine Basically, It Helps In The Seo Also. So It Makes Them, It Is Easy To Read The Website Content For The Search Engine Boards. So Yeah, Thank You."
+            },
+            {
+                "interviewer": "Thanks For Your Insights On Semantic Html5, Ritika! Let'S Shift Gears And Discuss Another Topic: Can You Explain The Concept Of Responsive Web Design And Its Importance In Modern Web Development?",
+                "candidate": "Yes, Sure. So Responsive Web Design Basically It Is Used Whenever You Know We Are Switching From One Device To Another Device. Suppose I Am Using The Tablet, Another One Using The Iphone For The Same Website. The Website'S Content And The Css Should Be Visible Or The User-Centric. It Should Not Be. Know That It Is Working Fine In The Website But It'S Not Working Fine In The Mobile Or Or The Tablet So Responsive Web Design Meant That It Should Be Generic In All Devices In Case Of In All Cases On All Devices So That In That Case We Write The Media Queries In The Csss And And Most Of The Developers Nowadays Using The Mobile First Approach And Then They Do The Changes In The According To The Tech Stop So These Are The Some Changes Basically Helps The Have The Website To Be Generic In Every Platform Thank You"
+            }
+        ]
+    },
+    {
+        "skill": "Css",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Sharing Your Thoughts On Responsive Web Design, Ritika! Let'S Switch Topics And Discuss Something Different. Can You Explain How Css Preprocessors, Like Sass Or Less, Enhance The Development Process?",
+                "candidate": "Sass And Les Actually It Is The Part Which Is The Superset Of The Css Only But The Thing Is That The Sass Or Less Both Provide The Lot Of Features In The Css. For Example, They Provide The Mixings And The Mixings Basically We Can Work As The Component Css Component. Css Component And We Can Use The Same Component Into The Another Block Of The Css. It Has The If And Else Condition In The Css So We Can Render The Css Based Upon The Conditions And Then Further It Has Even The Four Loop Feature Also In The Css Which Also Helps The In Many Ways. So Basically, The Sas Or Less Gives More Advanced Features. And Again, It Is The, As I Told, It Is A Superset Of The Css. Again, It Is Converted In The Backend Side. But It Is Easy To Write The Code And, You Know, That It Is Easy To Make, It Is Easy To Change The Css Based Upon The Conditions. Respond To These Features."
+            },
+            {
+                "interviewer": "Understood, Ritika! Now, Let'S Explore Another Topic Together. Can You Explain The Concept Of Css Grid And How It Differs From Flexbox In Web Layout Design?",
+                "candidate": "The Css Grid Basically Provides The Templates. It Gives The You Know That How And The Rows And Columns Should Be, And How Many Rows We Need It And It Divides Basically Rows And Columns Into The Fragment On That Time Only. So Basically We Can Provide That Template Of The Html In The Css Grid. While The Flex Box Is A Slightly Different From The Css Grid It Does Not Have The That Functionality To Be In Template It Actually Uh It Works Uh The Flex Box Has The Another Features Like If We Wanted Uh If We Have Uh If We Have The Blocks That We Wanted To If We Have The Blocks That We Wanted To Divide According To Uh According To Our Customization And So In The Flex Box Has Also You Know That Different Features Like You Know That The Flex Direction So Are We Wanted To Be Direction In The In The Row Side Or In The Column Side And So While The Css Grid Does Not Have These Features And The Both Of Css Grid And The Flex Box Actually Used To Design The Blocks But The Only Thing The Css Grid Is Much Smaller Better Than Because Of Its Template Feature While In The Flex Box We Need To Create It From The From The Basic"
+            }
+        ]
+    },
+    {
+        "skill": "Typescript",
+        "conversation": [
+            {
+                "interviewer": "You'Re On The Right Track, Ritika! However, Could You Delve Deeper Into How Css Grid And Flexbox Handle Content Alignment And Distribution? If You'D Like, We Can Explore Another Topic As Well.",
+                "candidate": "The Yes, Basically In A Css Grid, It Has The Flex Box Basically It Is In The Flex Box Basically It Is In The It Aligned, In Default It Aligns The Content Vertically While The Css Grid, The Default Functionality Is. Horizontally It Align The Content Horizontally So In The Alignment This Both Are The Are The Different And It We Can Add The Gap Between The Flex Books While In The Css Grid We Can We Cannot Add A Gap Basically In The Css Grid But I'M Not Very Sure Right Now About The Difference, But I Know In Css Grid We Can Add The Templates And We Can Divide The Every Column And Every Row Based Upon The Fragment. While In The Flex-Bos, We Don'T Have This Type Of Functionality, Only That Alignment We Can Change, But The Default One Is Vertical And We Can Change Is To Be Horizontal."
+            },
+            {
+                "interviewer": "Thank You For Sharing Your Thoughts, Ritika! Let'S Explore Another Fascinating Topic. Can You Explain The Benefits Of Using Typescript In Large-Scale Web Applications?",
+                "candidate": "Typescript Basically Gave The Structure For The Request And Response Of The Apis And Also For The Components To The Parameters Also. So Basically Typescript Is Something In Which We Knew That Like What Response Could Be, What Request Could Be And What Type Of The Request. And If We Suppose If We Passing Any Parameter Into The Function So We The Function Knew That The Parameter What Will Be The Type Of The Parameter Like If We Are Passing The Name To The Function Any Function Then We Know That Name Parameter Has That Type Of String And Same Goes With Api'S It Same Goes With You Know That Any State Management In The Reactor Also So It Helps Actually To To Make It More To Make It More Optimized And Performance And Also The It Is A It Is A Less Error On I Think Thank You."
+            }
+        ]
+    }
+]

@@ -1,0 +1,102 @@
+[
+    {
+        "skill": "Java",
+        "conversation": [
+            {
+                "interviewer": "Impressive Background, Nirav! How Do You Ensure Efficient Team Collaboration When Implementing Java-Based Microservices In A Distributed System?",
+                "candidate": "So First Of All You Have To Make Sure Which Tools You Are Using For Code Review Code Commit So That Teams Are Individually Work On The Different Different Part Of The Code As Well As They Can Commit Individually And You Can Merge All Of The Things Together And Review It And Do The Unit Test Properly And Then You Can You Know Deploy Those Things Plus You Can Meet 15 Minutes Or 20 Minutes The Whole Team They Can Give You The Status What Are The Dependencies Is What Are The Challenging They Are Facing If Someone Can Help Them And Then You Can You Know Try To Collaborate And Try To Solve The Problem If Someone Has Worked On That Situations They Can Help Them If They Didn'T Help They Didn'T Work Then We Have To Give The More Time To The Team To You Know Explore And You Know Find The Solution For That"
+            },
+            {
+                "interviewer": "Thanks For The Detailed Response! Let'S Shift Gears And Discuss Another Topic. Can You Explain The Role Of Dependency Injection In Java Applications And Its Advantages?",
+                "candidate": "Sure. So, Dependence Injection Is Nothing But If Let'S Say If I Would Say A Equal To New A, Let'S Say Class A Is Defined And I Wanted To Create A New Object Of It. So I Just Say Class A Equal To New A. Every Time I Wanted To Use That Class And Their Methods, I Wanted To Create That Class And Class Objects And I Want To Use That Methods Anywhere I Want To Use. Now, Instead Of That, We Have The Containers, Right? Now I Can Use The Singleton Class. I Can Single Greens Available In Spring. I Can Just Auto Wire Those Green Beans And I Can Use Any Of Their Methods. But That'S What The Dependence Injection Is And Its Advantages It'S It'S Highly Maintainable Like At One Time I Can Create Another Thing There Is Some Problem In The Class Or Independency It Won'T Match It Will Directly Throw Out An Error While The Starting Of The Application So I Don'T Need To Wait Till The Runtime Another Thing Is Like Only It Will Be Managed By The Container So I Don'T Need To Create The Class Every Time I Wanted To Read It Right Also Some Of Times You Have Dependencies Conflict That Time You Can Use The Auto Wire To Resolve Those Conflicts And That'S How You Can You Know Use The Dependence Injections I Can You Either You Can Use This Heterobus Injection Or Either You Can Use The Constructor Based Injections And That'S How You Can You Know Uh Benefited From The Dependence Injections"
+            },
+            {
+                "interviewer": "Thank You For Your Response. Let'S Explore Another Topic Together. Can You Discuss The Benefits Of Using Java Streams In Data Processing?",
+                "candidate": "Sure. So Java Stream Is An Api, Java.Total. Api. Util Package Where You Can, So Stream Is A Kind Of Functions Where You Can Just Say You Can Work On This List, Map And Set Or Any Of The Collections, Not Streams. And It Will Try To, You Know, Give The Output In The Terms Of The Streams Only. If You Wanted To Get Some Output, It Has To Be In, You Have To Make It A Terminal Operations. So Stream Supports Three Kinds Of, Of Operations One Is Intermediate Operations Other Is The Terminal Operations So Stream Doesn'T Change Any Data But What It Does Is It Will Work On The Data And Create A New Data Set Out Of It So That'S How The Stream Works So It Is A Lazily Loaded Also So Whenever You Say Street List Dot Stream It That Point Of Time It Will Start Evaluating Or It Not Evaluating Start Loading The Data Into The Memory Okay Not Before That So It Is A Lazily Loaded As Well So It Is Good. That'S A Benefit Of It Actually."
+            }
+        ]
+    },
+    {
+        "skill": "Apache Spark",
+        "conversation": [
+            {
+                "interviewer": "Got It! Let'S Dive Into Another Area. Could You Explain The Role Of Resilient Distributed Datasets (Rdds) In Apache Spark And How They Contribute To Fault Tolerance?",
+                "candidate": "Okay, Rds Is The File System Of The Datasets Which Supports The Cloud Era Hadoop, Clouddera Spark. And What It Does Is It Distributed Data Sets. So If One Of Got Failed, Another Got Useful Instead Of The Other One. So It Will Be A Resilient So That If One Go Down, Other One Will Be, You Know, Give The Dataset Of It. So It Will Maintain The Copy Of It Everywhere And Then You Can Use It In Case Of Failure Or Defaults. So Your Data Will Always Be Secure And Safe."
+            },
+            {
+                "interviewer": "I See Your Point About Rdds, But There'S More To Cover. Let'S Move On To A Fresh Topic. Could You Explain How Apache Spark Handles Data Shuffling And Its Impact On Performance?",
+                "candidate": "So Data Shuffling At Spark Is You Know Either We Use The Spark Streams Or The Spark Clusters So There We Can You Know Use Those Data Shuffling And Data Shuffling Will Be Done At The You Know The Level Of The No Odds We Can Say So That It Would Be A Lesser Impact But Yeah Data Poising Would Be More Impact So If We Won'T Punch There Won'T Impact But If We Are Trying To Push Those Data It Will Be A Bigger Impact."
+            },
+            {
+                "interviewer": "Thanks For The Explanation. Let'S Switch Gears A Bit. Can You Describe The Difference Between Transformations And Actions In Apache Spark?",
+                "candidate": "So Transformation Is What Is The Question? Different Transformation And Actions. Okay, So Transformation Is Something You Can Do The Data. Let'S Say I Have The Data Which You Wanted, The Data Is Coming In The Form Of Json And Now You Wanted To Json And In Some Of The Fields You Wanted To Add Or Some Of The Fields You Wanted To Delete And You Wanted To Do Some Transformation On The Data That You Can Do Via Rds Or The Available Apis In This Part. Valuable Apis In This Park And The Actions Is Something Which You Perform At The End And To Look At The Results Of It Which Is The Actions"
+            },
+            {
+                "interviewer": "You'Re On The Right Track With Transformations And Actions, But There'S More To It. Let'S Explore A New Topic: Can You Discuss How Apache Spark Manages Memory To Optimize Performance?",
+                "candidate": "I"
+            },
+            {
+                "interviewer": "Let'S Proceed To A New Question, Nirav. Could You Explain The Role Of Spark Sql In Apache Spark And How It Integrates With Other Spark Components?",
+                "candidate": "Yeah, So Spark Sql Is Something Kind Of You Can Use The Structured Query Language Out There And It Will Integrate It With Your Database Or Any Of The Memory Manage And If You Want To Do The Data Or Query The Data Within That Memory Or The Ramps You Can Use Those Sparks Sqls And It Will Integrated Via You Know Available Apis You Can Also Use The Spark Rest Scala Rest Or Spark Rest To Use It I'M Going To"
+            },
+            {
+                "interviewer": "Acknowledged! Let'S Switch Gears And Explore Another Aspect Of Apache Spark. How Does Spark Streaming Handle Real-Time Data Processing?",
+                "candidate": "How Does Spark Handling? Real-Time? No, I Don'T Know. I Didn'T Work On That. I Have Worked With Spark Batches, Not On The Real-Time Beta Processing, But If I Get A Chance To Work, It Would Be Better. I Learn It Quickly For That."
+            },
+            {
+                "interviewer": "Thank You For Sharing Your Thoughts On Batch Processing! Let'S Explore A New Topic: Could You Discuss The Significance Of The Catalyst Optimizer In Apache Spark?",
+                "candidate": "The"
+            }
+        ]
+    },
+    {
+        "skill": "Technical Team Management",
+        "conversation": [
+            {
+                "interviewer": "Let'S Move On To Another Intriguing Topic, Shall We? Could You Explain The Concept Of Partitioning In Apache Spark And Why It'S Important For Performance Optimization?",
+                "candidate": "Of Course, So Partitioning In The Spark Would Be, Let'S Say If You Have A Data, Larger Data Sets, You Want To Do The Processing On, You Can Do The Clustering On The Database Or Partitioning On The Database So That Whenever The Data Will Come Or The Query Will Come, That Will Go To That Partition, You Won'T Scan All The Data, All The Things Available, It Just Go To That Partitions, Go To The Only Things Which Is Required And It Will Impact Or Improve The Performance Drastically. That Partitioning Is Always A Better Thing To Do."
+            },
+            {
+                "interviewer": "Got It! Your Explanation Of Partitioning In Spark Touches On The Basic Idea, But Let'S Explore A New Question. How Important Is It For A Technical Team Manager To Understand Cloud-Native Design Principles?",
+                "candidate": "So When It Comes To The Technical Manager We Have To Understand Each And Every Portion Of The Technical Design Whether It Is A Cloud Native Or It Is Not A Cloud Native It Is How We Have Designed So That We Can Help The Team Wherever They Are Stuck Another Thing Is If They Are Going On The Wrong Side We Have To Tell Them That This Is Not The Design Of The Architecture We Have Decided We Have To Go With This Way So That You Can Make Application Resilient You Can Make The Application For Fault You Can Make The Proper Circuit Breaker Patterns You Can Make The Proper Scaling Of The Applications So That It Is Better To Have A Cloud Native Design Principles So That You Can Also Try To Optimize The Cost Of The Infrastructures Whenever You Don'T Need The Infrastructures You Can Close Down Or You Know Use The Light Switch So That It Will You Know Scale Down Scale Up Based On The Requires"
+            },
+            {
+                "interviewer": "Thank You For Your Insights On Cloud-Native Design Principles. Let'S Transition To Another Topic: Can You Discuss The Significance Of Effective Communication Within A Technical Team And How It Impacts Project Outcomes?",
+                "candidate": "So First Of All Communication Is The Super Important Thing. If You Can'T Able To Communicate The Team What We Actually Try To Achieve, Then There Is No Setting Of The Goals And Everyone Tries To Achieve Their Own Goal Instead Of The Team Goal. So Communication Should Be Perfect And Effective Otherwise It Would Be A Problem To Achieve The Proper Goal Or The Proper Project Delivery Goals. That Is The One Thing. Second Thing, Other Thing, If The Communication Is Proper. Can You Know Predict Like When We Are Able To Finish What Are The Challenges We Are Come Across What We Need To Do Next Time So That We Are Not Across This Kind Of Situations Or The Difficulties If Those Kind Of If The Communication Is Not Effective We Are Not Able To You Know Judge Or Predict Or Know The Behavior Of The Projects"
+            },
+            {
+                "interviewer": "Thank You For Sharing Your Views On Effective Communication Within A Team. Let'S Delve Into Another Topic: In Your Opinion, What Are The Key Qualities That Make An Exceptional Technical Team Manager?",
+                "candidate": "First Of All We Have To Understand Team Development Capability. We Know For Which Problem Which Developer Is Suitable And How To Groom If New Member Is There, How You Can Groom That New Member To The Team So That He Can Quickly Pick Up And Able To Deliver The Things. Then If The Team Came Across Any Of The Difficulty Situations, Dependencies Or Any Other Things, You Have To Be There To Handle And Help Them. And We Have To Communicate With The Team Effectively Solve That. Team Effectively So That We Can Try To Achieve Deliverers On Time If They Are Not Aware The People Not Aware The Technologies They Can Also Tell Us So That We Can You Know Arrange Just Technical Sessions Or The Pair Programming Or Whatever We Can Do To You Know Hands On On Them To Achieve The Required Stuff"
+            },
+            {
+                "interviewer": "Thank You For Your Insights On Team Development Capabilities. Let'S Explore Another Aspect: How Do You Prioritize Tasks And Manage Time Effectively Within A Technical Team To Meet Project Deadlines?",
+                "candidate": "Alright, So To Meet The Deadlines First Of All And Prioritize The Task, So Whatever The Task Will Have The Priority. It Has To Be Done Finished First Of All. There Is No Impact. If There Are Tasks Around It Which Are Dependent On The, You Know, Prioritize Tasks, We Have To Finish Those On Or Before The, You Know, Taking The Priority Task On Hand. So First You Have To Define The Priorities, Assign The Task To The Priority And Then Take Those Tasks Into The Print Or The Whatever The Format We Are Using. And Then Try To Deliver Within That Sprint. If It Is Spill Over, We Have To Make Sure That It Has To Be Communicated Why It Got Spilled Over So That Next Time In The Retrospective We Can Identify Why It Got Spilled Over, What Are The Reasons? So That Next Time We Can Make Sure That It Should Not Be Happened Or It Should Be Happened. Then We Should Be Aware Of It That This Is Going To Happen And This Is The Remediation Of It."
+            }
+        ]
+    },
+    {
+        "skill": "Aws",
+        "conversation": [
+            {
+                "interviewer": "Thank You For Your Detailed Approach To Prioritizing Tasks. Let'S Change Direction A Bit. Could You Discuss Your Approach To Incorporating Cloud Security Best Practices In Aws Deployments?",
+                "candidate": "Okay, So Now It Depends On Which Deployment You Are Doing. If You Are Doing Ac2, You Have To Make Sure That Only Those Mini Roles Is Required To Give The Deployment You Can Give To The Deployer, Deployment Manager Or The Release Manager, Whatever You Can Say. Apart From That, If You Are Doing The Eks Or Other Releases, You Have To Have Make Sure That They Have The Rights And The What Are The Components You Are Deploying, Those Components Have The Rights Or The Ia Policies, Iam Policies Would Be, You Know, Support, You Those Deployments That They Have To Those Accessing Of Those Components So That You Can Easily Deploy And The Cloud Basically Is The Least Privilege You Know You Cannot Give All The Privilege You Can Give The Privilege To The Guys So That They Can Work On It"
+            },
+            {
+                "interviewer": "Got It! Thanks For Your Insights On Cloud Security Practices. Let'S Dive Into A Different Topic Now: How Does Cost Management Play A Role In Aws Cloud Deployments, And What Strategies Do You Use To Optimize Costs?",
+                "candidate": "So First Of All I Can Identify What Is The Load Time So That At That Time I Can Use Scale Up And Scale Down Of My Ports Or The Resources Which Is Not Required And Any Time It Is Required I Can Use Scale Up Via Apis Or Any Other Things Available Or Cpu Utilization Or Memory Utilization Whatever We Have Apart From That I Can Use Jenkins Or The Outside Pipeline So That I Can Not Depend On The Amazon One To Deploy My Applications To The Amazon That I'Ll Make Sure That Whenever Those Resources Are Not Used It Has To Be Forced Into The Mode Of Down Or You Can Use The Light Switch So That They Can You Know Scale Up And Scale Down Whenever It Is Required So It'S A Set At A Sunday I Can Make Sure That It Should Be Down So That I Cannot So Amazon Cannot Build Us On That Components And On The Monday Morning When The Team Will Come So That Time Day Clusters Or Whatever The Required Cluster Should Be Up So That We Can You Know We Save The Cost On That Front As Well"
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Approach To Cost Management. Let'S Discuss Another Interesting Topic: Could You Explain The Concept Of Infrastructure As Code (Iac) And Its Importance In Cloud Environments, Particularly In Aws?",
+                "candidate": "Sure. So Without Infrastructure As A Core Which Is Currently We Are Using As A Terraform, You Cannot Proceed To Aws. Otherwise We'Ll Mess Up Into A Higher Environment. Let'S Say I Have Taken Eks Here. Now I Wanted To Go To The Promote That To The Higher Environment So That Aws Id Would Be Different. So I Cannot Go And Create Those Components Into Aws New Id As It Is A New Higher Environment. So I So First It Is Via Terraform Scripts So That My Efforts Will Be Saved. I Wanted To Write Once And And It Will Be Deployed Or Run It Many Times Across The Platforms. Though It Should Be Configured So That It Will Be Changed The Id And I Can Use It Everywhere. Also That Resources Modules And Everything Would Be In A Dependent, If It Is In A State Where I Can Use Resource Modules In A Dependable Manner So That It One, They Are One Another Dependent Modules Can Be, You Know, Also Downloaded At The Time. So Without Infrastructure Code You Cannot Deploy Aws Or Aws Components. Thank You."
+            },
+            {
+                "interviewer": "Acknowledged! Let'S Tackle A New Topic. Could You Explain The Role Of Aws Iam (Identity And Access Management) In Securing Aws Resources?",
+                "candidate": "Of Course, So That Is The Part Of The Security, Identity And Access Management Im. So Whenever We Create Any Of The Resources, We Have To Protect Their Resources. So For Protecting That Resources We Have Im, We Can Either Give Them Authorization Or Authentication. So Here It Comes To The Authorization So That If It Is Authorized User, Then They Will Be Able To Allow. So If Let'S Say I Am Using Sqs And I Wanted To Send The Message To My Eks, So That Sqs Has To Be Able To Be Allowed, To Be Allowed On E.K.S. Via Iam Policies, Like That Arns And Everything Has To Be Allowed So That They Can Interact With Each Other Where Iam Policies. Otherwise, They Won'T Be Allowed Or They Won'T Be Recognized That I Have To Use Those Iam Roles Or Not. Or I Wanted To Allow This Sqs To Use That Eks Or Not, Or Echs To Allow Ecs Or Not."
+            },
+            {
+                "interviewer": "Thank You For Your Thoughts On Aws Iam, Nirav. Let'S Explore A New Topic Together: Could You Discuss The Benefits Of Using Aws Cloudformation For Managing Infrastructure As Code?",
+                "candidate": "Okay, So I Never Used The Cloud Formation As A Managing Infrastructure Support. I Use The Terra Form. In The Terra Form, We Are Giving The Main .Tf File Where We Are Defining All The Aws Component, Modules, Resources Like Sqs, Then Whatever Things, Whatever They Available, Like Their Ids, Their Private Subnets, Their Subnets, Everything We Are Defining Out There. All Things Should Be Configured Able And Whenever I Wanted To Move It To The Higher Environment, I Just Change The Aws Id And Run That Script And It Will Create All The Components For Me In Atws Infrastructure So I Didn'T Use The Cloud Formation But I Have Used The Data Form As A Part Of Infrastructure As A Code"
+            }
+        ]
+    }
+]

@@ -1,0 +1,94 @@
+[
+    {
+        "skill": "JavaScript",
+        "conversation": [
+            {
+                "interviewer": "What are event loops?",
+                "candidate": "So, in the context you're asking about, since JavaScript is kind of event-driven, when an event happens, you're able to access that event, process it, and move on. If you mean in terms of React, when a state gets updated, that's an event that happens, and the event lifecycle goes through whether an event happens and a component gets updated based on what has changed in the events document object model."
+            },
+            {
+                "interviewer": "Do you know Node.js is single-threaded, right? Can you tell me how Node.js handles multiple requests at a time, though it is single-threaded?",
+                "candidate": "So you mean kind of like the way it has event blocking and handles when an event happens? It happens very asynchronously in a lot of ways where it'll run an event, wait for something to happen, and then move on. You can control that loop through the asynchronous await paradigm in Node.js."
+            },
+            {
+                "interviewer": "Do you know what is microtask queue and microtask queue?",
+                "candidate": "I'm not entirely sure on what that definition is, but if I were to refer based on the definition, it is just a queue that is based on smaller, maybe hierarchical events. Then queues have much larger subprocesses, subtrees attached to it."
+            },
+            {
+                "interviewer": "Do you know what closure functions are?",
+                "candidate": "Yeah, closure functions are functions that are created that... Closure functions."
+            },
+            {
+                "interviewer": "Do you know what is variable hoisting?",
+                "candidate": "Yeah, variable hoisting is when all of the variables that are defined in a function are hoisted to the top of the function itself. So you can define variables throughout the function, and they'll always be hoisted to the top once you enter that function."
+            },
+            {
+                "interviewer": "Do you know what are promises and how different they are from async or wait?",
+                "candidate": "Okay, so a promise is really just a promise of a return of a variable. So when you receive a promise, that's not necessarily a specific value that you may get from an await call. An await call will actually return a value because it'll wait for the actual asynchronous process to complete. But a promise will return that function as if it has not necessarily returned a value yet. You can use that promise to wait on it like async or wait for it to return a value, but really it's not an actual value that you get back."
+            },
+            {
+                "interviewer": "Do you know what's the difference between promise.all and promise.race?",
+                "candidate": "Promise.all will return an entire array list of promises. There are other promise prototype functions that may return the promise if all of them succeed or if just one of them succeeds as well. I'm not clear on what those different calls are, but there are some differences in terms of how those promise functions work."
+            }
+        ]
+    },
+    {
+        "skill": "Node.js",
+        "conversation": [
+            {
+                "interviewer": "Do you know what are middlewares in Node.js?",
+                "candidate": "Middlewares are kind of extensions, almost, that handle libraries that connect to the Node.js process. It usually will be something that will maybe go through a process where it's transforming data or just sanitizing data or something through that process to be able to integrate or connect with other services."
+            },
+            {
+                "interviewer": "Do you know what is SQL injection and how to prevent it?",
+                "candidate": "So I know that in terms of specific code, I know more about making sure in React, for example, if you have any code or stuff that's trying to get injected into a component, then you can have a safe way to process HTML, for example. So you're not injecting any bad characters or bad code and only valid stuff. That's my reference there for how to prevent any injections of stuff that you're not intending to process and display front end."
+            },
+            {
+                "interviewer": "Have you used any ORMs in Node.js?",
+                "candidate": "I... Oh, object relation mappers. ORMs, yeah. So I have used, in terms of kind of like database and stuff like that, I've used MongoDB and kind of recently, more recently than anything, yeah."
+            }
+        ]
+    },
+    {
+        "skill": "React",
+        "conversation": [
+            {
+                "interviewer": "Can you tell me the difference between useEffect and useCallback?",
+                "candidate": "Yeah, so useEffect is a hook that you use to update any side effects in a React application. You can define certain dependencies or certain state variables that you look at to have changed. From that, you can use some sort of logic inside the useEffect. With useCallback, it's a similar thing only with functions. UseCallback will evaluate whether a specific return value of a function has changed and put logic inside of that."
+            },
+            {
+                "interviewer": "For state management, what do you have used?",
+                "candidate": "I have used a lot of stuff. I used Redux in the far way past. I used a little bit of a library called Zustand and React Context in some situations as well, simpler situations."
+            },
+            {
+                "interviewer": "Any experience with Redux?",
+                "candidate": "I have had a little bit of experience, yes, in the past. I haven't used it as much since some of the upgrades of React, and I use a lot of Next.js for development as well. I just find that it's easier to integrate with things like React context or Zustand."
+            },
+            {
+                "interviewer": "Do you know what is useRef, when we will use useRef?",
+                "candidate": "So if you want to create a reference to a specific node in the document object model, I may have a div tag, for example, that I want to useRef. Have that reference and maybe evaluate the context of it, maybe the document object model status of it, then I could use a useRef on that node and then be able to evaluate its attributes and values."
+            },
+            {
+                "interviewer": "And form validation, how do you form validations in React?",
+                "candidate": "So you can do form validation in a few different ways. You can have an onChange event for the form element itself, even input element, do it in onChange in React. That will trigger the event. You could have a function that will process what to do when you get that value. You can disable a form if the input is not valid."
+            },
+            {
+                "interviewer": "Do you know what is lazy loading of components?",
+                "candidate": "Lazy loading allows you to kind of an optimization technique, especially if you have a lot of longer lists. In the context of React, for example, if you're scrolling a page, and you have a list of elements that you are displaying, you may only display the first 10 elements in that list. As you scroll down, it'll progressively load more of that list as you go along."
+            }
+        ]
+    },
+    {
+        "skill": "General",
+        "conversation": [
+            {
+                "interviewer": "Can you tell me the difference between CommonJS and ECMAScript?",
+                "candidate": "The main difference is, I know that the type would be module for ECMAScript, I believe, in your package.json. There's definitely some other syntax differences in terms of using requires versus using imports maybe in your loading dependencies."
+            },
+            {
+                "interviewer": "Do you know what is Webpack?",
+                "candidate": "Yeah, Webpack is a library that helps to optimize your builds of specific node packages that you may have. If you have an application with a lot of dependencies on it, Webpack will help build that in the most performant way."
+            }
+        ]
+    }
+]

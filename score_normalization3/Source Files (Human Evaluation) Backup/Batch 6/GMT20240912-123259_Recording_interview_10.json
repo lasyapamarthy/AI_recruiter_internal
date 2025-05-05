@@ -1,0 +1,44 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "What's the total years of experience working with Python, FastAPI, and any sort of framework in Python?",
+                "candidate": "Python, it's four years."
+            },
+            {
+                "interviewer": "Let's start with some of the fundamentals around Python and FastAPI. Feel free to answer the questions based on your experience. Starting with decorators in Python, what are decorators according to you? How would you explain it based on your experience?",
+                "candidate": "Decorators are something when we define a function as a decorator, we can use that function's decorator in any other function. It promotes code reusability."
+            },
+            {
+                "interviewer": "What kind of decorators have you created so far?",
+                "candidate": "I've created one decorator for the DB calls and I'm using that object wherever I'm making a DB call, initializing a DB object, and using the decorator across all the functions wherever it's required."
+            },
+            {
+                "interviewer": "I'll proceed with the next question. Do you know that?",
+                "candidate": "No, we can go ahead with the next one."
+            },
+            {
+                "interviewer": "What do you understand by the concept of context managers and in what regards you might have used context managers in Python?",
+                "candidate": "I have no idea on that."
+            },
+            {
+                "interviewer": "The concept of async and await does not exist in Python unless you import it using an external tool, right? Yet the concept of concurrency happens. So that's a bad example and that's a bad definition.",
+                "candidate": "Yeah, I mean we'll use this kind of await keywords and all, right? So we'll create thread pools for handling different requests using async keys."
+            }
+        ]
+    },
+    {
+        "skill": "FastAPI",
+        "conversation": [
+            {
+                "interviewer": "Talk to me about your experience working with FastAPI. What kind of backend have you created using FastAPI? Why did you choose FastAPI over, let's say, Flask or Django?",
+                "candidate": "The code is already written in FastAPI, so I just built on top of that. There is this orchestration engine we built. As I've mentioned, we work in the integration stream where we integrate DMS and OEMs. Previously, we used to have this monolith service where we used to write all DMS and OEMs."
+            },
+            {
+                "interviewer": "So Pydex is nothing in FastAPI, first of all. Second of all, I can use async programming in Django itself if I import an async IO library. So why would I use FastAPI then?",
+                "candidate": "FastAPI is used when we want to do asynchronous programming, right? And it also gives inbuilt API documentation using PyDicts."
+            }
+        ]
+    }
+]

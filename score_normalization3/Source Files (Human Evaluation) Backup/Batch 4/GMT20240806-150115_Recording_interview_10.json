@@ -1,0 +1,122 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "What's the total years of experience when it comes to Python?",
+                "candidate": "Python, it's like around six years."
+            },
+            {
+                "interviewer": "Can you explain decorators, how you might have worked with it, how to create a custom decorator?",
+                "candidate": "In layman terms, a decorator is a normal function which accepts another function as its argument. We can then add some functionality to the core function which is being passed on as a parameter. For a basic example, let's say I want to time some function. Instead of going to the actual function and then maybe writing a logic to time that function, I can create a decorator which accepts a function. Then at the beginning, I can just start a timer, call the function which was passed in the arguments. After the result from that function is achieved, I can just calculate the execution time and then print it out or do whatever I want. So in this way, I'm enhancing the functionality of a function without changing the core business logic of that function."
+            },
+            {
+                "interviewer": "So what kind of custom decorators have you created so far?",
+                "candidate": "Mostly in FastAPI, I have created for logging functionality. To pass a contextual logger, I created a decorator. Whenever a request comes in initially from the middleware, it is just adding a request ID and then using this decorator passing that logger to the underlying API view function."
+            },
+            {
+                "interviewer": "What are generator functions?",
+                "candidate": "First, I think we should start with iterables and iterators. Anything which we can loop on is an iterable object. An iterable which has a next function and that iter function, those are called iterators. A generator is a special subset of an iterator which has a special syntax. It helps us create iterators with a special syntax. I can write a normal function, use a yield instead of return in that function, and then it becomes a generator. What it does under the hood is Python is basically creating a function and a function as well so that it becomes an iterator. How it helps us is if I'm using a simple iterable, for example, a list, that list is being stored in memory. If the object is very large, let's say the list has one lakh items, then that memory consumption will be in the RAM itself. Whereas if I'm using a generator, those values will be generated on the fly. I will not be storing all those one lakh items in the memory, but I will be generating it whenever it is needed. So let's say I'm using it in a for loop. Whenever that next function is being called in the generator object, I will be creating that value and returning it. So that can be processed in that for loop."
+            },
+            {
+                "interviewer": "Can you give me some live example where you might have created generator functions?",
+                "candidate": "In the past, there was a very huge chunk of a CSV file which we wanted to read. So in there, I've used a generator instead of reading all the rows and storing it into a list. I used a generator object there."
+            },
+            {
+                "interviewer": "Have you ever worked with context managers in Python? If yes, can you explain what are context managers?",
+                "candidate": "A context manager is a feature in Python. It helps us, for example, when we are opening a file. There are some resources being acquired when we are reading from a file. We need to make sure whenever the business logic is executed, we need to close that file as well so that there are no memory leaks. One way to do it is to have a try and finally block. Inside the try, open that file object, read from that file, and in the finally block, make sure whether the business logic is executed or there is an exception occurred, in both cases, the final block will execute and we will be closing that file resource. Another way is to use the context manager. Python has this with keyword, so any context manager is used with the with keyword. When I'm opening a file with this with, the context manager starts, and it is basically giving me the file object, and whenever that with block exits, it will call the exit of that open function and will close the resource."
+            },
+            {
+                "interviewer": "What are the differences between parallelism and concurrency in Python? How do you implement these things in Python?",
+                "candidate": "There are two ways: multithreading and multiprocessing. Multithreading is when I am doing some IO kind of operations where I don't need the core CPU power. I can use multithreading. For example, let's say I am connected to a database or maybe I'm calling a third-party API. In that case, I can open maybe 100 threads and call those APIs in parallel. Whereas if I need some computing power, maybe I'm reading a file and then doing some mathematical operations on that, in that case, I need the core CPU. I would be running multiple processes so that, let's say my system has eight cores, all the cores will be used by the process. I can run eight processes and each process will be consuming one core."
+            },
+            {
+                "interviewer": "Give me an example based on your experience where you might have used multi-processing or multi-threading.",
+                "candidate": "For multi-threading, let's say we are building a scraper. I want to get the raw HTML of that page or those websites. I can use multi-threading here. I will be calling that get endpoint on that website and I will be reading the HTML. For multiprocessing, say we are dealing with some CSV data and the CSV has some financial records and we want to compute some average, mean, those kinds of things. In that case, we will be using multi-processing."
+            },
+            {
+                "interviewer": "How is FastAPI different from other frameworks of Python like Django or Flask? What are the advantages of using FastAPI?",
+                "candidate": "FastAPI is built on async IO. It uses an event loop, so it is out of the box. The base has been built upon that only. It uses a Starlette framework under the hood, which is again using this ASGI server implementation. How it benefits from Django or maybe Flask is, if I am creating a website, let's say I have hosted a Django application and I have hosted a FastAPI application. When a request comes in from a user and let's say I have a single worker of that Django application as well as FastAPI running, when the request is being handled by the Django server, what will happen is when we are accessing the database or maybe some other third-party API, that request will still be consuming the Django application. If a new request comes in, it has to wait for the first request to be completed. Whereas in a FastAPI application, as soon as we have called that database operation or that API operation, the event loop gets free and it can listen on the second request and partially process the second request as well. When the response for the DB operation comes in for the first request, it can respond back to that as well. In this way, we can handle much more requests as compared to a Django or Flask application."
+            },
+            {
+                "interviewer": "When you mentioned event loop, what is an event loop and how does it help?",
+                "candidate": "Async IO applications use an event loop. The single thread which is running a main process is called an event loop. Whenever a function or a coroutine is being executed, it will be picked by the event loop. It will execute it line by line, and whenever it sees an await statement, it will know there is some operation which can be deferred to some background process or a thread. That thread will then execute that API call or a database API call. Now that event loop can look for some other coroutine which needs to be processed, and then it can pick it."
+            },
+            {
+                "interviewer": "What's your experience working with Pydantic in FastAPI and for what purposes do you generally use Pydantic?",
+                "candidate": "Pydantic helps us define the schemas for our API, like body as well as the output responses. We can define schemas. It supports inbuilt types from Python. We can add our custom validators as well on the field. If I have a normal body and I'm getting the input in the JSON format, and those have simply the type of string, number, and all those things, I can just define a Pydantic model. I can define, okay, this is ID, this will be int. There's a field called name, it will be string. I can define the model and in that API view where I'm having the business logic, I can in the parameters of that function just take, okay, this is the body and the type will be the Pydantic model. Whenever a request comes in, it will automatically validate the schema of that payload."
+            },
+            {
+                "interviewer": "Will it be handling the error based on whatever is missing in the payload?",
+                "candidate": "Yes, it will return a 422. FastAPI will return by default 422, and it will return the proper response as well. This field is missing or the type is invalid. Like it expects a string and maybe your password and that kind of a thing."
+            },
+            {
+                "interviewer": "There is a concept of dependency injection in FastAPI, which we tend to use a lot more.",
+                "candidate": "Dependency injection in FastAPI allows us to define a function and pass it on as a dependency. For example, let's say I have a DB connection. I can define a normal function and then use the DI in FastAPI to pass that connection object inside my view handler."
+            },
+            {
+                "interviewer": "Any experience working with background tasks in FastAPI?",
+                "candidate": "No, no production experience. I know what it is, but mostly we've used Celery in case we want some heavy background processing."
+            },
+            {
+                "interviewer": "Any experience working with WebSockets?",
+                "candidate": "A little bit, not much."
+            },
+            {
+                "interviewer": "What do you understand by type hints in FastAPI? How does it help? How might you have used it?",
+                "candidate": "Type hints basically tell us what kind of different parameters a function expects. Let's say I'm defining a function core, and I'm adding some parameters inside that. I can tell, okay, this A, it will be integer, B will be like a string. How it helps us is in our editor IDE, it helps us. If I'm passing some invalid type, it can give me an error. Again, we have to use some other tools like mypy to get those errors. On runtime, there is no impact of type hints. It will not stop the function from execution. It is generally a kind of help or maybe documentation kind of a thing which helps a developer or the IDE to autocomplete or to find these kinds of silly mistakes in Python."
+            }
+        ]
+    },
+    {
+        "skill": "AWS",
+        "conversation": [
+            {
+                "interviewer": "What's your work experience working with AWS in general like EKS, ECS?",
+                "candidate": "Here in BetterWorks, we are using AWS for infrastructure and all of our services are deployed on EKS. If it's a front-end service, it is deployed on an S3 bucket. So almost three years working on AWS."
+            },
+            {
+                "interviewer": "Explain to me what kind of architecture you have used in AWS? What components of AWS have you worked with?",
+                "candidate": "In AWS, I've worked with EC2s, EKS, SSM for debugging purposes, CloudWatch. Databases are hosted on RDS, but that is mainly handled by the DevOps team to create those RDS instances or maybe if memory is needed, allocate more memory, all those things. Apart from this, we are doing a little POC in which we are using EventBridge and Lambdas as well. So these are the various services I've worked on AWS. Our cluster service is deployed on EKS. All our services are there. I have worked with S3 as well. That React plugin that we created was hosted on an S3 bucket. We had an ingress rule in the EKS so that it is re-routing those requests to the S3."
+            },
+            {
+                "interviewer": "What's your experience working with Lambda? How do you set up? If you can explain in detail.",
+                "candidate": "Lambda has different runtimes. We can upload our code. We can have maybe a GitHub repository. We can have a code there as well and then create a zip and upload that source code as well. Or maybe we can directly go to that Lambda AWS console UI and write the function there itself. While working with Lambda, you have to make sure there are some limitations, like resource limitation, the RAM that is being allocated for each execution, the number of minutes it gets so that the function should be executed in that number of minutes. Otherwise, that Lambda will be halted in between. You need to make sure you are not overstretching those constraints. You have to work within those constraints. On the working end, like I told you, we have started doing a POC. In this, we are using Lambda. We are having an event-based architecture for which we are using EventBridge. To compute the logic whenever an event happens, we are triggering these Lambdas. It is still in a POC phase. We haven't deployed it in production. I can't tell you much about the different caveats that you get to find when you start deploying your source code to production. Usually, it happens when you deploy something, you know some other things as well, which you initially miss in the document. So I haven't gotten that far in the Lambda stage."
+            },
+            {
+                "interviewer": "In terms of EKS, how is EKS different from a traditional Kubernetes framework?",
+                "candidate": "In traditional Kubernetes, we need a server. There will be some hardware where that EKS cluster should be deployed. It has nodes in it. Nodes are also being run on a server or on EKS. It is being executed on the EC2 instances as well. In EKS, it helps us better provisioning of those nodes. If there is maybe a software upgrade for the EKS, we want to upgrade the Kubernetes version. In those scenarios, EKS gives us a little bit of ease to do those things and manage those nodes. Again, I haven't worked directly on these things. The DevOps team handles this infrastructure in BetterWorks. But I know a little bit here."
+            },
+            {
+                "interviewer": "Do you have experience working with configurations and secrets in EKS, FES? How do you do that?",
+                "candidate": "Usually what we do is we are using Helm chart and Helm files here. Whenever we want to deploy a service, we create our own Helm files and then we deploy it. How secrets should be created and what are the different deployments that need to be done, those kinds of things we handle."
+            }
+        ]
+    },
+    {
+        "skill": "Docker",
+        "conversation": [
+            {
+                "interviewer": "What's your experience working with Docker?",
+                "candidate": "I've worked with Docker almost from the beginning of my career. For local development, we are using Docker and Docker Compose. Any new service we are creating or any existing service that we have, we usually use Docker Compose to mimic the behavior like we need Postgres, we need Redis, all those things. So we usually use Docker Compose."
+            },
+            {
+                "interviewer": "How do you optimize the Docker image for better performance?",
+                "candidate": "Start with the base image. There are Alpine versions of images as well. Instead of directly using maybe one image, use the Alpine images so that you use the very least number of third-party applications that are being installed in one image. One way is to start with a very basic image like an Alpine image. After that, make sure you are not installing anything extra. If you want something for your development or maybe a build process is involved, you can use multistage Docker files. You can install a lot of libraries or maybe tools in one base image, create that build in that, and then just use that build part, like build resource itself and copy it to the second stage of that image. In that way, whatever was being needed, additional things, what is being needed for building your maybe an output file or a binary file. Once that binary is available, you don't need all those build libraries, so you can just dump that."
+            }
+        ]
+    },
+    {
+        "skill": "SQLAlchemy",
+        "conversation": [
+            {
+                "interviewer": "What is your experience working with SQLAlchemy in general and what kind of work have you done?",
+                "candidate": "SQLAlchemy, I have used in one of my past projects earlier when I was working with deported software. We had a Flask-based application there, and we were using SQLAlchemy to interact with the Postgres DB. For migration part, we were using Alembic library for migrations. Other than this, I mostly use Django ORM or with FastAPI, we were using the tortoise ORM. So again, had this same API set as of Django ORM."
+            },
+            {
+                "interviewer": "How do you handle joins particularly based in an ORM? If I ask about tortoise or if I ask about SQLAlchemy.",
+                "candidate": "In Django ORM or tortoise ORM, what usually happens is when we are fetching an object, those are lazy set. It just fetches when we actually try to access that object, it will just then fetch the data from the database. Inside that, when we are trying to access a related object, it will try to load it when we again only try to access that object. What we can do is, if you want to optimize it, we can, while writing that ORM query, tell it to fetch it in the beginning itself. For example, Django ORM supports this select related thing. I can tell select related, and then it will fetch the related objects itself as well in a single query using the join operations. SQLAlchemy also supports this. There are different kinds of loading strategies. For this join, I think there was select loading strategy, join strategy. Select loading makes a separate query to fetch the related objects. The join one uses the same kind of single query. It writes the join as well and fetches the related objects as well."
+            }
+        ]
+    }
+]

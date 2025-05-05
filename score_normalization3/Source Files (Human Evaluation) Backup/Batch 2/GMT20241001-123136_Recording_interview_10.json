@@ -1,0 +1,204 @@
+[
+    {
+        "skill": "React",
+        "conversation": [
+            {
+                "interviewer": "Let's start with some of the fundamentals around JavaScript and React. React works on a fundamental principle called a virtual DOM, right? Explain this to me. What is virtual DOM? How does it help?",
+                "candidate": "Yeah, so basically, what is virtual DOM, right? It's just a copy of the actual DOM. So whenever you are making some changes or your state is updated, instead of traversing the whole DOM to find the node and update the changes, in virtual DOM, it keeps the node information in the form of a hash. It knows where you are updating, so it goes to a particular node and applies the patches or any kind of change or update there."
+            },
+            {
+                "interviewer": "So when we talk about making a change and the change reflects in virtual DOM, how does the communication happen between virtual DOM and real DOM?",
+                "candidate": "So it's just a copy, right? It will apply the changes in your virtual DOM. Whatever changes you are doing in state and it links to a node, that node will be compared with the actual DOM and it will be changed in your actual DOM. So that node will be only changed in your actual DOM, updating the UI in that case."
+            },
+            {
+                "interviewer": "But no, so you're not getting it. My point is, virtual DOM is a copy of a real DOM. I got it, right? Any change you're going to make in virtual DOM, it's going to happen in real DOM, right? So I'm not making it in real DOM directly.",
+                "candidate": "Because in virtual DOM, the diffing algorithm takes care of where we have to make the changes. In actual DOM, you can write the complete logic, whatever the diffing algorithm is written to work on that copy of that."
+            },
+            {
+                "interviewer": "I care about, you can talk about any algorithm. My point is, if I can update virtual DOM, and then virtual DOM would update real DOM, I would rather update real DOM. What is the point of having virtual DOM then?",
+                "candidate": "Because the update will be faster and you have a copy of that. You can just compare the changes with the actual DOM in that case, because you have to compare somewhere. Either you can keep the two and just compare."
+            },
+            {
+                "interviewer": "I mean, like, why do I need to compare? I can just change the nodes directly in real DOM.",
+                "candidate": "So you should know where the changes are going to happen. Because if in your tree, there are thousands of nodes, right?"
+            },
+            {
+                "interviewer": "Yeah, Angular does it. Angular knows. Angular used to update in real DOM directly.",
+                "candidate": "But as far as I remember, they also shifted to virtual DOM, right?"
+            },
+            {
+                "interviewer": "That I'm asking. Based on your explanation, there is so far no explanation of why we need a virtual DOM. Why would I compare? I don't want to compare.",
+                "candidate": "Okay, then maybe I'm not able to recall that concept right now."
+            },
+            {
+                "interviewer": "When we work in React, I'm assuming you have worked with functional and class-based components, right? Talk to me about the lifecycle management for a functional component. How do you handle the mounting of a component and mounting update?",
+                "candidate": "In functional components, you can use hooks for your component lifecycle. There's a useEffect. In useEffect, you can call any functions or whatever you want. If you pass an empty array, it will be considered as a render one time. So whatever function you're calling, it will be called once. You can pass parameters in that array based on the changes. If you want to, that will be kind of your componentDidUpdate, I can say, if you're passing anything and you're comparing with the previous value."
+            },
+            {
+                "interviewer": "I just didn't understand this. Let's go one by one. Let's start with mounting.",
+                "candidate": "Yeah, mounting is basically just passing an empty array."
+            },
+            {
+                "interviewer": "What happens if I pass no array versus an empty array?",
+                "candidate": "No error. Basically, it will be calling, it can call multiple infinite times actually. So better you pass, you know, sorry."
+            },
+            {
+                "interviewer": "Why will it do it multiple times to infinite?",
+                "candidate": "That I'm not sure."
+            },
+            {
+                "interviewer": "Okay. So let's move on to update.",
+                "candidate": "Update, yeah, update, you can use, you can pass the params in that empty array to update it. So if there is any update, you can update your state using the useState hook. So there will be a setter, you can call the setter to update it."
+            },
+            {
+                "interviewer": "Mount I've already mentioned, right, so...",
+                "candidate": "Unmount, so in useEffect, you can call a return inside the function you can call and write the logic. Suppose you have attached an event listener, if you want to remove that listener which is attached, you can just call remove."
+            },
+            {
+                "interviewer": "There are two other hooks as well, which we tend to use specifically around optimizations. UseCallback, useMemo, right? What are they? What is the difference between them? In what scenario would you use which one?",
+                "candidate": "UseCallback is like if you're defining any function and you want the references to be intact, you can use useCallback and pass that so it will not be initializing and it will return the same copy of it. UseMemo is for memorizing your data. If it is returning similar data, you can call useMemo and return two things with the same thing. Mostly, I think both work in a similar way. UseCallback we can call for functions."
+            },
+            {
+                "interviewer": "Any experience working with custom hooks in React?",
+                "candidate": "Yeah, I've written, yeah."
+            },
+            {
+                "interviewer": "Give me an example of a custom hook. What is the syntactical context of it? What are the things of React that you include while writing a custom hook?",
+                "candidate": "Let's take the example of a fetch call. I can write a useFetch custom hook where I can pass the URL and return data and any kind of function, which is again, I'm going to call or maybe I can just pass the URL in that and return the data. I think that can be a simple custom hook. Inside that, I can update the state."
+            },
+            {
+                "interviewer": "Let's say we are working on an application where we are fetching some sort of data and that data will be used to render a few things on the dashboard, right? Two ways of doing it. Number one, I can write an exportable function and that function will call the data, will call that function in the component level itself and the data will be there and we can render the dashboard. Number two will be adding a custom hook. That custom hook will take care of how the data will be called. We'll use that custom hook in the component and use the data from the custom hook to render the dashboard. Which one is a better approach and why?",
+                "candidate": "Using a custom hook can be a better approach if you're going for caching. If it is a GET call and it is related to the content, maybe a blog post, in that case, when I'm requesting a certain URL, and based on that, content will be the same. It will be changing hardly. So in that case, I can go with the custom hook because it can store the data based on your key. The key can be your URL in that case, and you can store it in that hook."
+            },
+            {
+                "interviewer": "Hold on. Do you think useMemo adds a caching layer? Like where does it store the cache? How do you call the cache?",
+                "candidate": "Based on your parameter, whatever you're passing, it creates the keys of it and against that, it stores the data."
+            },
+            {
+                "interviewer": "So let's say I'm calling an API which is returning simple data. How does useMemo work? Does it create a key around that and save it somewhere?",
+                "candidate": "The references will be the same. So every time we're requesting, it will be getting the same."
+            },
+            {
+                "interviewer": "So can we write a useMemo for a function right there? And you can show me that.",
+                "candidate": "Yeah, I'll try to implement useMemo inside that. I'll be comparing whatever the parameters you are passing in, and based on that, I'll be creating the object and storing the values against it."
+            },
+            {
+                "interviewer": "So tell me about, there is a concept called prop drilling in React. We tend to avoid it. Talk to me about it. What is prop drilling? How do you avoid it? What are the solutions you have used so far?",
+                "candidate": "Prop drilling is like you're sending props from parent to child and there are more children. You are just passing that at the leaf level. If you're writing 10 components and they are dependent on that prop, which is getting passed from the parent, you have to write it again and again in all the components. Instead of that, you can use Context API to use the value at any level."
+            },
+            {
+                "interviewer": "Let's say I have a chain where I have three different components and I'm using prop drilling, right? All three components require that prop. In order to optimize it, what I did.",
+                "candidate": "So your props are changing, right? All the components will be updating, re-rendering. If you are using context also, if you have subscribed to that, those will also be changing."
+            },
+            {
+                "interviewer": "What are your ways to optimize a React application? Let's say we are working on a stock exchange. We are building a stock exchange. Now you know that stock exchange needs to have a very high throughput, a very low latency in a way that the ticker has to be updated every second for multiple stocks on a different screen, right? What are the ways you will optimize this kind of thing?",
+                "candidate": "You have to check that there are no multiple re-renders happening based on no change in the values. You have to make sure. Whenever on the route, you are dynamically loading your component instead of loading it on the homepage every time. Whenever there is a need, you do the lazy loading and all those things."
+            },
+            {
+                "interviewer": "What do you understand by server-side rendering?",
+                "candidate": "When you're building, maybe I can take the example of Next.js. When you're building a Next.js project, certain components, server components, can be pre-rendered. They can fetch the data in the backend only, and when you're requesting, they can render the pre-rendered pages. You don't have to push the data on the client side and update your UI. Data can be fetched in the backend."
+            },
+            {
+                "interviewer": "How would I change the data? Let's say we are building a server-side application. It's a form that has dynamically loaded. How would you manage the state? How would you manage any sort of changes that have been done?",
+                "candidate": "In the case of a form, if you want some kind of pre-filled form, you can render it from the backend. You can fetch the data, maybe if it is some keys and all, sensitive information. You can use server-side rendering, and after it is loaded on the client, you can use your client-side APIs to attach listeners and call the APIs you need at runtime when you are running in the browser."
+            },
+            {
+                "interviewer": "What is the difference between Next.js and React.js?",
+                "candidate": "React is a library, Next is a framework. If you're going with React, you have to use state management libraries and routing. For routing, there is a routing library you have to use. Instead of that, you can directly go with Next.js and use the full-fledged framework for client and server both."
+            },
+            {
+                "interviewer": "You said for React I need to manage a routing library. Can you explain that?",
+                "candidate": "If you have to go on a different route and load a different page, you'll be using routing. For that, you need a library. The React DOM router is there, that I have used in the past. You have to use that. At your root component, you have to attach all the routes to that."
+            },
+            {
+                "interviewer": "What else?",
+                "candidate": "Server-side rendering is... I'll give you one perspective that I follow. I've been in the industry for a good amount of time to understand how frameworks work or what design patterns to follow. My point is if a new thing cannot optimize the current thing for me, I won't be using it. Optimization can be anything, it can be very lightweight. I'm not sure if you've heard of it, there's a library called Letho, which we tend to use for mobile application development. Nobody was using it, we were the first in a way to use that because it was very thin and light, yet extremely responsive. So my point is, if you're selling me Next.js, I will only be using Next.js if it can give me a certain level of optimizations at any particular level. It can be a code optimization, it can be a package optimization. Now tell me what kind of optimization your Next.js offers that React cannot."
+            },
+            {
+                "interviewer": "And depending upon a library, your thing is like a comparison between Flask and FastAPI. FastAPI comes with async and Flask, we have to add a module to async. That doesn't matter. Both are capable of async.",
+                "candidate": "There are different methods, like image optimization is there, so you can use the image component in Next.js. When you are using server components, your load time will be faster because you have already pre-rendered HTML or pages which you can directly show to the client. That is the benefit you are getting out of the box."
+            },
+            {
+                "interviewer": "What is C optimization?",
+                "candidate": "Search engine optimization, you know, whatever you're attached to. SEO."
+            },
+            {
+                "interviewer": "Any sort of experience you have with WebSockets, WebHooks?",
+                "candidate": "Yeah, I've used WebHooks as well and WebSocket."
+            },
+            {
+                "interviewer": "What do you understand by the concept of short polling versus long polling in WebSocket?",
+                "candidate": "In WebSocket, short polling is like you're calling the APIs and waiting for the data. If data is available, it will send you the data. At regular intervals, you're calling the APIs. Long polling is like you are waiting for the APIs, you open a connection, and it will be waiting. Once it receives the data, it can send it to you, or you can just time out the request. If you have set a 60-second timeout, if you are getting the data, you can just send it, and it will reset the counter and start the request again. It will be waiting for 60 seconds and will send the data."
+            },
+            {
+                "interviewer": "When will you be using short polling and when will you be using long polling?",
+                "candidate": "It depends on the use case. Maybe if I'm not going for the WebSocket, then for the stock API, for getting the data in real-time, I can use short polling and even long polling as well. I will be waiting for the data, and data will be available, and I'll be getting it. The only thing is that long will be working because it will be cutting out the request, and it won't be just calling and extending."
+            },
+            {
+                "interviewer": "I want to understand how you implemented, what was the challenge that you were trying to solve?",
+                "candidate": "I've never, like, I just worked on my hobby project, not in real-time that I have used WebSocket."
+            },
+            {
+                "interviewer": "We were talking about context in React, right? For state management. What state management libraries have you worked with?",
+                "candidate": "Worked with Redux."
+            },
+            {
+                "interviewer": "Number one challenge while working with context is let's say we have 10 different contexts or 12 different contexts and you have to bind the app, the JS, and a context tree. How do you optimize that tree? How do you decide? Two questions: How do you decide which context should be on top of the current context, the priority of the context? And how do you decide which one? How do you optimize that tree? Because it gets very weird after a point in time.",
+                "candidate": "For that, basically, I use a higher-order component. Suppose there is a global context, and a component is specific, or maybe a component rate. There are three components dependent on that particular context. After that, I edit that. I see if some data can be shared, so I was just using the global context only. Based on the pages, if it is going on a different page, I was using a different context. Based on routing, I handle it like when I'm on slash home, I'll be using this context. I'll be initializing only that because that is required for that particular page. If I'm going on a different page, I was using a different context based on the routing."
+            },
+            {
+                "interviewer": "I have 10 different contexts. One context, let's say I'm working on an app that has five different screens and each screen has completely different data. So I have to create five different contexts to maintain those screens. Apart from that, there is an authentication context where the user's information is there. How do you use an HOC to handle all?",
+                "candidate": "In that case, according to your use case, at my root component of each page, I can create the context there only and bind the context at that level only. It will be linked to that particular page I'm using this context. I can go and install the context inside that."
+            },
+            {
+                "interviewer": "Unless and until you won't be wrapping app.js, which is the final, which is the outer, unless and until your context will not be wrapping app.js, you won't be able to use it. My point is you can create a context right there in that file. But the idea for context is that it should, if we expand our projects to a scenario, we might have to use the data from screen one to screen four, we should be able to do it.",
+                "candidate": "And that is why we create a global context. Suppose there is a theme, right? Theme context. We pass it to the app level where all your renders are happening, all the route level handling. But a particular route, if you want a context that will be handling the data of it, then you can create it in that particular component where you have initialized the router."
+            },
+            {
+                "interviewer": "I am completely lost. I mean, I am not able to understand.",
+                "candidate": "In your app file, you might have created a global context which you have bound to that app at the outer level component, and you pass as a provider. Suppose there are five routes, and the components are linked to it. I can go in the route and create a context there whenever I'm shifting to that particular page."
+            },
+            {
+                "interviewer": "Yeah, that's what I don't want to do. I'm not putting a specific context for a specific screen because I won't be able to use the content of that screen further in the development.",
+                "candidate": "Exactly. So you don't want, right?"
+            },
+            {
+                "interviewer": "I want. That's what I'm saying. You're not getting it. That's what I want.",
+                "candidate": "Then you can use the global context only, right? Which we have defined already."
+            },
+            {
+                "interviewer": "What will be the content of your global context?",
+                "candidate": "You just create an object and link whatever the route. At that particular route, if you want to use some data, then you can just use... We have five different contexts for five different screens and you will also create one global context."
+            },
+            {
+                "interviewer": "Will the global context be created out of these five contexts or will it be created completely as a separate file?",
+                "candidate": "You can create a separate file means you are attaching it, right? I will be creating it at the app level only, and it will be a single file there. I will be showing all the data."
+            },
+            {
+                "interviewer": "So you are going to create one global context which will contain all the data for five different contexts and then based on what route is active you will supply that context data, correct?",
+                "candidate": "Right."
+            },
+            {
+                "interviewer": "Don't you think it will be a too large file to maintain if there are multiple things on each screen? That's why we modularize the code, right? You are going back again to a monolithic structure.",
+                "candidate": "Yeah, I can use an event emitter. Maybe I can create a global event emitter, just following the pub-sub pattern. I can pass the data using that emitter, and I can subscribe in any component and use the data."
+            },
+            {
+                "interviewer": "So you work with Redux, right? Talk to me about what you understand by actions and reducers.",
+                "candidate": "Actions are like, so you dispatch, right? Suppose there is an API call. You dispatch an action to call the API, that we call effect. In the reducer, you can write based on what action you're going to call. Suppose there is a fetch API call. You can dispatch that action and it will call the API. In actions, you can maybe have an action.js file. There you'll be writing whatever the payload you're passing from your component based on action, and you can pass it to your, if maybe if you're using Redux Saga, I've used Redux Saga with Redux. You can dispatch the event and action, and you can call the API. Again, if you're getting the data in your reducer, you can write based on whatever action you have dispatched. Once you return the response, you can return that data in the reducer. You can merge the state and return it. That is what the role of reducer and action is."
+            }
+        ]
+    },
+    {
+        "skill": "JavaScript",
+        "conversation": [
+            {
+                "interviewer": "In terms of JavaScript, if I ask you, JavaScript uses a concept called hoisting. Can you explain what is hoisting, why it is required?",
+                "candidate": "Hoisting is like when you define functions. There is variable hoisting and function hoisting. If you declare a variable and don't define it, all the variables and functions will be hoisted on top. Whatever the variable you have declared, that will go on top of your execution context. After that, when you're calling it or checking what is the value there, it should be available in the context. That's why you can execute it. Suppose take the example of a function. If you have defined two functions, xyz and abc, if you have defined using function, both will be hoisted on top. In the execution context, whenever you're calling after that, anytime, even if you're calling on top, you'll be able to call the function. But using variable function definition, if you're trying to call the function before the definition, you'll be getting an error because that function is not defined. It will be because it's kind of a variable, so variables won't be hoisted. It will be declared, going on top, but the definition will be coming at the exact location after the calling is happening. That is how hoisting works."
+            },
+            {
+                "interviewer": "What is currying?",
+                "candidate": "Currying is a concept of closure. You're calling a function inside a function. That is a closure, and you can store the values or the outer function is returning, and you can use that in your inner function, the value of it."
+            }
+        ]
+    }
+]

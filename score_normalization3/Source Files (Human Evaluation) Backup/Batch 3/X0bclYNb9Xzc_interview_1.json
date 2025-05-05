@@ -1,0 +1,71 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "Great To Meet You, Dhanapal! How Would You Design A Scalable Api Using Fastapi To Handle High Concurrency While Ensuring Data Integrity?",
+                "candidate": "Scalable Api I'M Using Python Packages Post Api To Deploy The Model"
+            },
+            {
+                "interviewer": "Thanks For Sharing That. Let'S Dive Into Another Topic. How Do You Ensure The Security Of Apis Developed Using Fastapi In A Production Environment?",
+                "candidate": "First Deep B.A. And Uh... Okay So For Protections We Can Use Sttps For Encrypt The Communication Between The Client And Api Api And Http Request Then One You We Can Use For Ssl Certificate Which Is Obtained From The Trusted Authority Of Encryption So The Second Things We Need To Enable For Authentication On Authorization So We Use Oath To For Json Web Tokens Files For The Secure Authentication Services So The Use Of This Authentication Is Realistic To Access Sensitive Endpoints And Limitation Permits Each User Recording Their Needs. Then Implementation Rating Limits To Protect Api From Using Dos Attacks And Limit The Number Of Requests To A Client Can Make Over The Time Period. So Then Real Rate Of Limiting Library We Can Use For A Fast Api In That Slow Api. Api For Configuration Limiting In Your Web Service Using For That Is Like Ninja"
+            },
+            {
+                "interviewer": "Got It, Let'S Explore Another Topic Together. How Do You Handle Data Validation And Error Handling In Fastapi Applications?",
+                "candidate": "Data Validation And Error And Handling In Fosta Api, Right? So That Is The First, Always The Fosta Is The Secure Applications Compared To The Other Applications. So For Data Validation, We Use Pitandic Models, Library To Validate For The Incoming Request To Data Automatically To Hollows The Expected Fields Data Types And Even Constant Length Ranges For That Integrity And The Examples Of We Can Use Usernames A.G.M. Then We Can Custom Validation For With Using Pythonic Validators. So The Pythonic Validates Is A Wonderful Library For Model For The Python. Then Error Only For We Can Use Http Exceptions For That Error Handling For In The Past Efa So In That Case If The For Example The Invalid Item Underscore Id Is The Functions The Rise Exceptions So With A For With A Four Hundred Status Code Error Message So This Is A Global Error Handling With Exception Handling We Can Use That Both Two Types Of Handlings That For That We Can Use The Request Validations Error Method For The Custom Validation Response Then Data Validation For Inquiry Parameters Power Parameters And Headers For Those Things Are Specific Types Of The Pipe Specific Types We Are Using For The Pythonic Library So This Api Is This Api Is Custom Error And Links And Helpful Feedback For Users The First Api Pythonic Based Validation Built In The Exception Handling And Based On The Make It For The Efficient Managing Error And Validation While Keeping Code Error"
+            }
+        ]
+    },
+    {
+        "skill": "Fastapi",
+        "conversation": [
+            {
+                "interviewer": "You'Re On The Right Track, But Could You Also Delve Into How Fastapi Handles Response Validation And Provides Tailored Error Messages?",
+                "candidate": "Post Under Response Validation So The Post Api Is A Pos Api Is The Post Api Is One Of The Better Thing To Handle For That In This Error Validation While Executing Or Deploying The Python Models. So The Thing Is Post A.A. Handle Response Validations For Using The Pythandic Models And Python Models For The Patent Models For The Validate To Validate The Response Data And Similar How It Is Validate The Request Data So We Can Specific Response From The Model So Our End Point To Enforce To The Structure Type Of The Written To The Data'S For Examples The End Point Is Like Item Underscore Id The Specific Is Specified For The Response Underscore Model Of Item So That Is An Example Then Second Thing The Automatic Error Response Will Validation File When The Post Api Executing In This Response Doesn'T Match The File Specific Response Underscore Model Then First Api Generate The Error For The Detailed Error Message Like For Instances Required Field Is Missing Or Something Wrong Type So There Is A Response Error Will Be Http Error Http 500 Error With The Details About The When What We What It Is Went Wrong Then Other Option We Can Use All Optional Fields And Union For The Types Of Response Models"
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Insights. Let'S Delve Into Another Area. How Does Fastapi Facilitate Asynchronous Programming, And What Are The Benefits Of Using It In A High-Performance Application?",
+                "candidate": "So Fast Faa Is Designed To Support For The A.Synchronized Program And Which Allows To Handle Many Requests Concurrently Without Blocking. That Is The Purpose Of Using."
+            },
+            {
+                "interviewer": "Thanks For Your Response! Let'S Explore A Different Topic. Could You Elaborate On How Fastapi Integrates With Other Libraries To Enhance Its Capabilities, Particularly Focusing On Database Interactions?",
+                "candidate": "Post-Upiterate With Other Libraries Other Libraries On Particular Focus On So Database Introduction For A Database Okay So The First If I Integrated Smoothly And The Wide Ranges Of Library Of Library Especially Those Needed For The Database Integrations Due To The Async First Design For The Dependency Injection System So The Relational Database System Like Mysql Or Else Sql Postgres Sql For This Supports Synchronized Codes By Default So But While Using For Async Cpg Or A Mysql Libraries The Fast Api Can Integrate Asynchronous With The Postgres Or Mysql Database. For Example, We Can Install Using The Install Methods, Mysql As Asynchronous Database. So Relational Database For Supporting For A Couple Of Database And It Will Support Also For The Noise Scale Database Like Mongodb And Other Noise Skill Drivers For The Async Process Model."
+            }
+        ]
+    },
+    {
+        "skill": "Llm",
+        "conversation": [
+            {
+                "interviewer": "Interesting Response! Let'S Shift Gears And Dive Into Another Topic. How Do You Manage Version Control And Model Lifecycle When Working With Machine Learning Models In A Production Environment?",
+                "candidate": "So Manage Version Control And Model Lifecycle. So In Machine Learning Models For We Using For The Dvc Data Version Controls For The Managing The Dvc For The Derivation And We Can Use Ml Flow For The Model Versioning To Control What Are The Models And Tracking The Models And All For Model Lifecycle We Can Use More Ml Steps Like 010 Or 3 Like Data Collections Training Models And Cicd Pipelines Then Deployment So Modern Version Control For We Can We Use It For The Components Of Model Artifacts And Mater Data On Dependencies For The Model Version Control Then We Use It For The Dvc And Ml Flow For This As Well As The Git For The Orchestration We Use It For The Q Flow Then Managing Ml Life Cycles For Our Data Ingessions Data Preparations And Model Training And Model Registry For The Versionings In This Include For The Model Stages And Up To Well Work Flow Then Model Deployments In The Model Deployment Deployment Strategies Or Serving Platforms Then Our Next Step For The Model Monitoring And Maintenance It Will Detect For The Model Performance Monitoring Drift Detection And Alerting Then Retaining Them A Life Cycle Automations Using For The Cicd Pipeline System Then We Can Use Ml Flow For Complete Model Lifecycle Management For Experiment Tracking Model Registry Model Deployments And Monitoring Retraining And All Those Things And Life Cycle Model My Life Cycle Model Cycle Management We Use A Standard Size Standardize A Pipeline System Using Adapting For The Tfx Or Else Cubic Flow Reusable Frame Then Implementation Or Implement To The Automations Then Document We Have Need To Document Everythings"
+            }
+        ]
+    },
+    {
+        "skill": "Rag-Based Bot Development",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Providing That Detailed Response! It Looks Like You Covered Quite A Bit On Version Control And Model Lifecycle Management. Let'S Explore Another Fascinating Area. How Do You Ensure The Ethical Use Of Ai Models In Production Environments, Considering Aspects Like Bias, Fairness, And Accountability?",
+                "candidate": "Productions Bias Furnace Bias Firmis Okay, So For This Ethical, We Used For The Bias And Fairness. Bias Is When Occur, The Ais Systems Produced The Results Systematically, Unfair Words To Certain Groups Or Individual Thing. So Bias Can Rise The Various Stages Of Aisi By Artificial Intelligent Pipeline Including During The Data Collections Feature Engineering Model Training And Post Deployment For Example Bias Is Data Might Reflect The Historical Historical Intratives Or Also Stereotypical Lead To Unfair Decisions And Based On The Hiring Algorithm And Biospacial And Fairness Is Fairness Is Ensure That Uh A Artificial System Decision Are Equal And Such Just For The Treating Individual Groups Of Fairly So Regardless For Sensitive Attributes That Example Like Gender Or Uh Uh Race The Fairness Is Is Often Contextual And May Involve Balancing Trade-Off Such As Fairness Or Accuracy. So In The Production'S Bias And Understanding The Mitigation Of Bias, Bias Features, Bias Models And Bias Data. Bias Data Is For Instance, Bias Data Might Confirm, Come From This Skewed Data And Historical Data Understanding For The Certain Group. For Bias Features For That, The Model Also Introduced. Use The Bias For Instance It'S Model Zic Code For Futures And It Makes Various"
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Insights, Dhanapal! Let'S Shift Focus And Dive Into A Different Topic. Could You Explain How Retrieval-Augmented Generation (Rag) Enhances The Performance Of Language Models In Providing Contextual Responses?",
+                "candidate": "Sure, The Rac Model Is Nothing But A Literal Argument Process. So It Will Use For The External Data Source Connecting And The Help Of The Llm To Produce The Exact Precise Answers. So How It Works? So First The Answer Is First The Document Loading. The Document Loading Is Converted To The Data Into The Tanks, Just An Embedding Model Store In The Db Of Vector Db For The Storing Purpose. Then It Will Come To The Right-Hand Side Of The User Query. As The User Has Also Converted As In Through Embeddings Like Embedding Has Stored Into The Database To Went Into Search In The Way Database To The Similarity Search Will Happen Causing Similarity Then Retrieve The Similar Answers Then It Will Produce The Top 5K Answers Then It Will Re-Rank The Models Then Adapt Map Into These Contextual From The So Contextual And For The Query Query Embeddings Then It Will Send It To The Embedding Model Llm Models This Contractual Is Generated Using This Contextual And Mapped Answers That The Llm Models Produce Answers For The Precisely And Send It To The User Bond"
+            },
+            {
+                "interviewer": "Thank You For Your Response! Let'S Explore Another Topic. Could You Describe How Rag-Based Models Address The Challenges Of Data Sparsity And Retrieval Precision In A Large-Scale Knowledge Domain?",
+                "candidate": "The"
+            }
+        ]
+    },
+    {
+        "skill": "Custom_Question_0",
+        "conversation": [
+            {
+                "interviewer": "Do You Have Experience Doing Production Deployments? Please Explain Your Previous Experience With This.",
+                "candidate": "Yeah, Sure. In Previous Production Deployment, We Used For Aws Cloud System To Deploy The A.A.A.A.A.A.A.A.A.A.A.A.A.A. When The Model Is Developed And Stored In The Artifact, We Have To Take From The Uri From The Artifacts, Then Create A Converted As A Image. Then Image Needs To Deploy Into The Production. Before The Sending Data Deployment, We Have To Validate The Models Compared To The Image. Previous And Current One Existing One And Current One Which Model Is The Best Option Then We Use For The Ab Testing For The Identify Those Accuracy Then Once Done This Process Then We Have To Send The Staging Areas So Once Get The Staging Area Up To Well Then We Need To Create Rec2 Instance And Create For The Deployments Then We Use The Python Library Called The Past Api To Here Deploy Model Into The Production Systems Once Deployed In The Productions Then We We Have To Monitor The Model Activity And Data Activity. For The Performance Accuracy, We Use Metrics And Kps. For Those Things, We Use The Aws Component Of Cloudwatch Systems And Prometheus And Grafana For The Model Monitoring And Model Activities Things."
+            }
+        ]
+    }
+]

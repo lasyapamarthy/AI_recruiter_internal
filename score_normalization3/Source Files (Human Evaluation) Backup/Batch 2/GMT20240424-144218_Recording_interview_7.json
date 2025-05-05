@@ -1,0 +1,170 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "Can you tell me what are decorator functions?",
+                "candidate": "Decorator functions are used to add extra behavior to a Python function. For example, you can define an uppercase or lowercase decorator."
+            },
+            {
+                "interviewer": "Have you written any other custom decorators?",
+                "candidate": "Apart from this, I'm unable to think of any."
+            },
+            {
+                "interviewer": "Do you know what are generators?",
+                "candidate": "Generators are iterative functions that can be called multiple times. They process one object at a time and return a generator object."
+            },
+            {
+                "interviewer": "Have you used it in real time?",
+                "candidate": "In real time, I have used it while returning a function."
+            },
+            {
+                "interviewer": "What does yield signify? What's the difference between return and yield?",
+                "candidate": "Yield stops the propagation and whenever we call the next function, it starts from the next line of the yield."
+            },
+            {
+                "interviewer": "Have you done any asynchronous programming in Python?",
+                "candidate": "Yes, I did asynchronous programming in Python."
+            },
+            {
+                "interviewer": "Have you used any library called asyncio or how you did it? Can you give me one such example?",
+                "candidate": "Yes, we can use the await keyword to stop the execution."
+            },
+            {
+                "interviewer": "Which package in specific have you used, or have you used any framework in specific to do that?",
+                "candidate": "I used the asyncio package."
+            },
+            {
+                "interviewer": "Do you know how it works?",
+                "candidate": "It helps us to stop the execution. It internally uses coroutines and the await keyword."
+            },
+            {
+                "interviewer": "Do you know what is the get_event_loop function in asyncio? What does it do?",
+                "candidate": "I'm currently not able to recall."
+            },
+            {
+                "interviewer": "Do you have any experience in multiprocessing?",
+                "candidate": "I have worked with a future object to handle multiprocessing in Python."
+            },
+            {
+                "interviewer": "Do you know how to run the tasks in multiprocessing? How to join the threads?",
+                "candidate": "Join the tasks."
+            },
+            {
+                "interviewer": "Do you know what are context managers?",
+                "candidate": "Context managers are a way to manage resources. They allow working with resources in a clean and efficient way, making the code more readable and less prone to errors."
+            },
+            {
+                "interviewer": "Can you give me one example where you have used a context manager?",
+                "candidate": "We can create it whenever we want to access a file. We can handle exceptions and use context managers with decorators as well."
+            },
+            {
+                "interviewer": "Which keyword do you use here?",
+                "candidate": "It's the with keyword."
+            },
+            {
+                "interviewer": "Do you know what is Pydantic?",
+                "candidate": "Pydantic is a package that helps with data manipulation. It helps define a data validation process."
+            },
+            {
+                "interviewer": "Can you share your screen? Let's do a task on Python.",
+                "candidate": "Okay."
+            },
+            {
+                "interviewer": "Use the multiprocessing module to take an array of numbers and find the square root of the number using multiprocessing. Run four tasks.",
+                "candidate": "Okay. I'll make a note of it."
+            },
+            {
+                "interviewer": "Use the multiprocessing library and concurrently run four processes to compute the square of a number in a given array.",
+                "candidate": "So in the given array, I have to take an array of like 2, 3, 4, 5, 6."
+            },
+            {
+                "interviewer": "And when those processes are executing, just print which process is running at a particular point of time and what it is computing.",
+                "candidate": "Okay."
+            },
+            {
+                "interviewer": "How many threads should I be using?",
+                "candidate": "Yeah, I don't know."
+            },
+            {
+                "interviewer": "Take four processors.",
+                "candidate": "Like four, OK."
+            },
+            {
+                "interviewer": "If you are not able to make it, then we'll continue with React.",
+                "candidate": "Okay, I'll go to that question and if there's time, I would like to come back."
+            }
+        ]
+    },
+    {
+        "skill": "React",
+        "conversation": [
+            {
+                "interviewer": "Can you tell me what's the difference between useCallback and useEffect?",
+                "candidate": "Do you know what is useMemo?"
+            },
+            {
+                "interviewer": "Do you know what is the Context API?",
+                "candidate": "Yes."
+            },
+            {
+                "interviewer": "Have you used Redux?",
+                "candidate": "Yes, I did."
+            },
+            {
+                "interviewer": "Tell me how Redux works.",
+                "candidate": "On a high level, what are components of how and how it will work."
+            },
+            {
+                "interviewer": "Have you done any form validations in React?",
+                "candidate": "Yes."
+            },
+            {
+                "interviewer": "Can you explain how you did form validations? Have you used any libraries in specific or how you did?",
+                "candidate": "Okay, so form validations."
+            },
+            {
+                "interviewer": "Do you know what is lazy loading of components?",
+                "candidate": "No, I'm not able to recall."
+            },
+            {
+                "interviewer": "Do you know what is React Query?",
+                "candidate": "React Query, yeah, reduce, but..."
+            }
+        ]
+    },
+    {
+        "skill": "GCP",
+        "conversation": [
+            {
+                "interviewer": "May I know what all services you have used?",
+                "candidate": "Computing, BigQuery, cloud storage, App Engine."
+            },
+            {
+                "interviewer": "Can you tell me the difference between App Engine and Cloud Runner?",
+                "candidate": "App Engine is like a fully managed platform."
+            },
+            {
+                "interviewer": "What is the difference between Compute and App Engine?",
+                "candidate": "Compute provides virtual machines. App Engine is a completely managed platform."
+            }
+        ]
+    },
+    {
+        "skill": "MongoDB",
+        "conversation": [
+            {
+                "interviewer": "How familiar are you with MongoDB?",
+                "candidate": "I worked with it for around two years."
+            },
+            {
+                "interviewer": "Do you know what are projections?",
+                "candidate": "Projections are a way to restrict the fields returned by a query."
+            },
+            {
+                "interviewer": "Have you used aggregations projections?",
+                "candidate": "Yes."
+            }
+        ]
+    }
+]

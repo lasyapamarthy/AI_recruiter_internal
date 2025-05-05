@@ -1,0 +1,89 @@
+[
+    {
+        "skill": "C++",
+        "conversation": [
+            {
+                "interviewer": "What is your total experience with Windows development and networking?",
+                "candidate": "Yes, I have great experience in Windows development, TCP connections, multi-threading, Windows APIs, Win32 SDK I have used extensively. I have also used many things like sockets between processes, inter-process communication. I built many Windows services. I built WBF applications, Windows Forms applications, .NET Core, .NET Framework, all this. I have good experience in it."
+            },
+            {
+                "interviewer": "What are some of the issues that you normally encounter while developing a native client? How do you identify and troubleshoot them?",
+                "candidate": "Yes. You mean native like C++? Yes. Basically in C#, which is easy, I have managed to code that throws me exceptions and I can look them in a file or I can simply open the Windows, which is called the error registry or something like that. It's called event. Yes, event viewer. This shows me the crashes. Yes, event viewer. I can even more advancedly, as you see, I can hook events and hook exceptions to get any exception while it is throwing and log it to a file."
+            }
+        ]
+    },
+    {
+        "skill": "C#",
+        "conversation": [
+            {
+                "interviewer": "Let's start with your introduction.",
+                "candidate": "Yes, my name is Ibrahim Mustafa. I was born in 1992, and I got my college education. I graduated from Egypt University in 2014, computer science. And since then, I have 10 years of experience in programming in C++, C#. My basic experience is actually in C# and WPF and all these things."
+            },
+            {
+                "interviewer": "What is the difference between Windows services and regular applications?",
+                "candidate": "Okay, Windows services, basically the main purpose is to serve other applications, so it doesn't have GUI. It has a simple service that listens for communication using probably socket pipes, and also maybe HTTP requests or something like that. It doesn't directly serve the user, but it serves other applications. The application, on the other hand, is facing the user and displaying contents for him, possibly using a service in the background."
+            },
+            {
+                "interviewer": "What's your experience with Windows services? What kind of Windows services have you created? What's the most complex one that you have ever created?",
+                "candidate": "Yes, I created many Windows services for collecting RFID readings and sensor readings in the background. It allows me to efficiently get the looks and also, the client application can display the readings from it using pipes. This is the most complex service I created. It is also responsible for getting sensors from the local network and submitting it to a cloud server for further processing."
+            },
+            {
+                "interviewer": "What is your testing process for Windows applications? What tools or technologies have you used?",
+                "candidate": "Yes, basically I used NUnit for unit testing and I built a Windows library using it before DLL library. It was tested using NUnit to test every function separately. This is what I used to test."
+            },
+            {
+                "interviewer": "Do you have any experience working with Rust?",
+                "candidate": "Very basic experience recently starting in Android operating system. I started developing it in the internals of Android operating system. I found some application creating music Rust and I listened. It is a very safe memory language that puts the security of the memory and the safety in number one."
+            },
+            {
+                "interviewer": "Will you be using C# or C++?",
+                "candidate": "Basically, I love C# more because it's... Absolutely."
+            },
+            {
+                "interviewer": "Have you ever created an installation script for a Windows service?",
+                "candidate": "Basically, I use the project installer component added to the Windows service. Then I can create just a batch file which executes .NET registration using this installer."
+            }
+        ]
+    },
+    {
+        "skill": "Networking",
+        "conversation": [
+            {
+                "interviewer": "What are the differences between TCP and UDP and in what scenario would you use which one?",
+                "candidate": "Yes, sure. TCP and UDP are different networking protocols used for different purposes. TCP is used for single packets or small packets networking where not big data is sent in every packet. But in UDP, it is a big packet sent every time. So the traffic of the network becomes more light because the initiation of the request and the ending of the request will be simpler because we don't have to send the request many times in a small amount. We send in a bucket. This is UDP. So it is optimal for large streaming or large video, something like that. But TCP is specialized in small things like HTTP, like socket programming, like these things."
+            },
+            {
+                "interviewer": "In what scenario would you use UDP?",
+                "candidate": "UDP, for example, I would use it for something like video streaming or camera streaming, something like that. It will be better than TCP because it allows sending packets."
+            },
+            {
+                "interviewer": "How do you see the three-way handshake in TCP? What are some of the issues with TCP?",
+                "candidate": "Okay, TCP basically needs, as you said, handshaking, and it needs also confirmation of the message is received or not. It has many, many things internally that make it complex, but it's more suitable for slow connections. It is more suitable for small things that send one request and get the result back."
+            },
+            {
+                "interviewer": "How does the OSI model differ from the TCP/IP model?",
+                "candidate": "TCP/IP model is where you connect using the IP and port, as I know. So you specify the endpoint using IP and port. But OSI model, I forget what is meant about, but I listened about it before."
+            },
+            {
+                "interviewer": "What is the concept of subnetting in networking? What's your experience with subnetting?",
+                "candidate": "Subnet networking is used to share a group of networks together so they can bring each other and access each other with possibly VLAN or directly switching, something like that. This is the subnetting. It allows grouping many networks together so they can access each other."
+            },
+            {
+                "interviewer": "How do you implement inter-process communication (IPC)?",
+                "candidate": "Yes, basically there is a stream in a built-in internet that allows me to open a socket using a string name of the pipe. And the client and server must have the same name and to be secure and not share this name with everybody. Basically, I made some security using handshaking like sending a password at the beginning of the connection and validating the other side."
+            },
+            {
+                "interviewer": "Any idea around how shared memory helps to create IPC mechanics?",
+                "candidate": "Yes, shared memory can be useful for sharing a region of memory in the system, so two processes can access each other, and they can use semaphores to synchronize the access between them and protect from damage. Because one process can damage the contents while the other is reading, so they must wait for each other."
+            },
+            {
+                "interviewer": "Can you explain what exactly is a semaphore?",
+                "candidate": "Semaphore is a lock using the process level. It is in the process level looking to synchronizing processes, access to some resource such as some file, some memory, something like that. They are using semaphore for inter-process synchronization."
+            },
+            {
+                "interviewer": "How would you implement a concept of packet filtering in Windows app environment?",
+                "candidate": "Like you filter some packets in the application and discard the others. So I can basically open a UDP connection and start getting the packets according to the underlying protocol, which protocol is specifying me the length of the packet, what is the start and the end of it, how to validate it, is there any checksum like that. Then I filter the wanted ones and discard the other ones and I can use queues for this task and the queues will use the consumer-producer relationship between the threads to notify the consumer thread about an incoming packet."
+            }
+        ]
+    }
+]

@@ -1,0 +1,70 @@
+[
+    {
+        "skill": "React",
+        "conversation": [
+            {
+                "interviewer": "Thank You, Somashekar. How Do You Handle State Management In Large-Scale React Applications?",
+                "candidate": "Okay, We Can Handle By Using Something Known As Redux. It Is A Global State Management Where The Whole State Will Be Kept At One Particular Place And It Is Based On The Provider-Consumer Principle. Like Whatever You Want The State To Directly Pick It Up From The Redux Store And Then We Put Them Into Actions And The Actions Will Be Sent To The Reducer Function And In The Function All The Logic And The Operation That We Need To Do Will Be Present And With The Help Of That Reduzer Function I Will Be Handling The Whole State Management."
+            },
+            {
+                "interviewer": "Got It, Somashekar. Let'S Dive Into Another Topic: Could You Explain The Concept And Advantages Of Using React Hooks In Modern Web Development?",
+                "candidate": "Basically, React Is A Normal Function Which Is Given By The React Community. It Is Used To Add The Functionality To The React Application Like Usestate, Useeffect, Useparams, Usecontext, Usereducer And We Can Also Build Custom Hooks. Custom Hooks And Hooks Are Very Important Like We Build Day-To-Day Applications Using The State Management And Iterating The Iap Using The Max.Js Library And The Main Advantage Of The React To Hooks Is Its Minimalistic Approach Towards The Applications And It Gives The Easier Access To Manipulate The Virtual Dom And We Can Directly Interact With The Virtual Dom And It Will Update The Dom Which Is Very Fast."
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Thoughts On React Hooks. Let'S Explore A Different Topic: How Do You Ensure Code Reusability And Maintainability In A Large React Application?",
+                "candidate": "We Use, You Know, We Build Reasonable Components In React Where The Components Once Will Be Written, Will Be Used By Many Other Adplaces Using The Properties, We Pass The Properties And Then We Use According To Our Requirements And We Also Optimize The React Hooks I Mean Application Using Like Lazy Loading And We Maintain The Whole Application Using The Higher Components"
+            }
+        ]
+    },
+    {
+        "skill": "Next.Js",
+        "conversation": [
+            {
+                "interviewer": "Thank You For Sharing That. It Seems Like You'Re On The Right Track, But Could You Elaborate On How You Ensure Consistent Styling And Logic Across Components In A Large React Application?",
+                "candidate": "For The Styling, We Can Also Use Inline Styling As Well. Or We Can Use Separate Libraries Such As Material Ui And Element Css. If Not, We Can, I Mean, We Should Have Only One Styling. Either Inline Styling Or The Entire Application Or We Can Keep All The Styling In One Place In The Code And We Can Import That Whenever We Want It. That Is The Second Thing. But It Should Be The Same In All The Pages And We Can Also Use The Third Party Library Like Material Ui And Element Css Which Will Enhance The Design Approach And Ux Approach."
+            },
+            {
+                "interviewer": "Thank You For Your Response. Let'S Explore A New Topic: How Does Next.Js Improve The Performance And Seo Of A Web Application?",
+                "candidate": "Because It Provides Ssr, Which Is Called Southside Rendering, And It Also Provides The Url Structure Of The Particular Application, And Can Use Them In Matter, Text And Data Subjects. And We Can Use The Ssg, Static Site Generation. And It Uses A Very Important Feature Called Automatic Code Splitting. If It Is A Larger Application, It Automatically Converts The Code Into Multiple Pieces And It'S Also Used To The Prefetching."
+            },
+            {
+                "interviewer": "Interesting Points! Let'S Delve Into Another Topic: What Is The Role Of Api Routes In A Next.Js Application?",
+                "candidate": "Api Routes Provides Us An Answer To Build Apis With Next.Js And Any File Inside The Folder Api Is Mapped To The Api Slash Star And It Will Be Treated As An Api Endpoint Instead Of A Page Basically Built On The Like Rendering And Yeah For Example If You Uh I Mean If The Api Is Uh Okay It Gives An I Mean It Gives The Json Response With The Code Of 200 If The Api Has Any Issues, It Gives The Status As 4.04 Error. And If The Api Has Any Internal Issues Or Internal Server Error, It Gives The Status Of 500."
+            },
+            {
+                "interviewer": "Good Explanation! Could You Discuss How Next.Js Handles Static And Server-Side Rendering?",
+                "candidate": "Yeah, I Mean Like You Can Implement Server-Side Entering Using The Getserversidepops Function. In The Example, It Is Used To Fetch Server-Side Data During Each User Request. I Mean, It Ensures Real-Time Display Instead Of Like Uh Already Display I Mean Uh In This Case Uh Like Whatever You Want To I Mean Whatever You Want'T Change Frequently Frequently It Is Already A Separate Place"
+            }
+        ]
+    },
+    {
+        "skill": "Typescript",
+        "conversation": [
+            {
+                "interviewer": "You'Re On The Right Track With Server-Side Rendering, But Could You Also Elaborate On How Next.Js Handles Static Rendering Alongside Server-Side Rendering?",
+                "candidate": "Static-Side Rendering Allows To Render Pages At The Build Time. This Approach Generates Static Html For The Pages And This Is Used For The Automatic First Request Of The Html. Whenever The Content Doesn'T Change Frequently, You Can Use This Telestate Rendering And It Will Generate Html File For The Build Process And After That They Are Converted To The Client Side Rendering And They Are Moved To The Client Side Whenever Required. You Can Also Use Get Static Pub Function To Apply This Functionality."
+            },
+            {
+                "interviewer": "Thank You For Your Response. Let'S Proceed To A New Question: How Does Typescript Enhance The Development Experience Compared To Javascript, Especially In Large-Scale Applications?",
+                "candidate": "Hello Yeah Static Typing I Mean The First Thing Is The Static Typing Uh Um It Prevents Any Bugs Related To The Typings Such As Passing Of The Round Types Or The Round Data To The Function Variable Uh If You Use The I Mean If You Provide The Particular Data Type, It Will Be Very Helpful. And Also Like Early Error Detection Will Be, Would Be Helpful Here. And Improved Id Support, Like Whatever The Id We Are Using, It Will Be Helpful For The Application. And Also The Maintainability And Scalability Of The Application, The Next Application. It Will Be Helpful With The Help Of The Interfaces And Interfaces Have All The Classes Which Has To Be Passed From One Computer Another Component And After That We Can Use Enhanced Code Readability Like Whatever The Code We Read We Can Document The Code And We Can Keep It A Separate Place For Them I Mean For The Next Approach And Type Inference Is The One Thing And The Ico Statement All Tools"
+            },
+            {
+                "interviewer": "Thank You For Your Response On Typescript. Let'S Explore Another Topic: How Do You Handle Error Boundaries In React Applications, And What Role Do They Play In Improving Application Robustness?",
+                "candidate": "Handling Of The Runtime Errors. I Mean, It Allows The Developer To Read Early Errors In The Code. Like, What Was The Error We Catch? It Will Be Different To The Ui. And Whenever We Have A Parent-Child Hierarchy, Whatever The Error Is There In That Hierarchy Will Be Easily Automatically Reacted. Whenever We Catch The Errors, It Will Be After During Rendering Or During The Initial Phase We Can Create The Error Boundaries Using Component Did Get And Static Get Derived Test Perm Error Using In React Like Um Like Using The Error Boundaries We Can Easily Improve The Application Robustness Increasing The Data To Data To You Know Like Uh Get Corrected Whenever Required And Fallback We Can Use We Can Use The Custom Ofback Ui. Whatever We Give The User, The Ui, It Will Be Displayed."
+            }
+        ]
+    },
+    {
+        "skill": "Axios",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Sharing That. Let'S Explore A New Topic: How Do You Optimize Axios Requests In A React Application?",
+                "candidate": "We Can Optimize Access Request Using The Debouncing And Throttling Request. Suppose If The User Has Multiple Applications Of The Keyboard, We Can Apply Debouncing Functionality To Do That Like Whenever The User Stops The Pressing Of The Keyboard Then Only The Ap Will Be Called And Like By You Can You Can Cancel The Unnecessary Request We Have And We Can Use Loading On That And After That We Can Use Like Whatever The Access Request Are There You Can Memorize Them Like Like Um If The Data Perhaps Doesn'T Update Uh It Won'T Make An Ap Call And After That Um You Can Batch The Request Like Whatever The Requests Are There We Can Send Them Through Batches And Optimizing With Fetching Conditionally Like If The Particular Condition Is True Only We Can Fetch The Api If Not Not Required And We Can Use The Address Configuration To You Know Like Optimize The Request"
+            },
+            {
+                "interviewer": "Thanks For Your Insights On Optimizing Axios Requests. Let'S Explore Another Topic: Can You Describe How You Would Manage Api Error Handling In A React Application Using Axios?",
+                "candidate": "Okay, The Basic Is That We Can Use The Commies And All The Issues Will Be Attached Using A Trackhead Block With An Async Of It. By Default, Access Catches Network Error And By Http Request Like 404 200 Or 500 It Will Get And Then You Can Combine Them With The Nand Tag Block And Also With The Async Await Function That Is Also We Can Do And Like Retry Fails Request Like If You Go Like Npm Install Access Retry It Will Again Retry The Fails Request And After That Like Handling Particular Http Code Request Like Uh If You Handle Particular Http Request Like 404 You Should Handle A Particular Http Request And After That Uh Like Like The Like The I Mean Like The Error Logs And Also Using The Handling Time Of Functionalities To Store Responses. I Mean, Like Authentication For Error Handling And Also We Can Use The Return Mechanisms On Unnecessary Api Request."
+            }
+        ]
+    }
+]

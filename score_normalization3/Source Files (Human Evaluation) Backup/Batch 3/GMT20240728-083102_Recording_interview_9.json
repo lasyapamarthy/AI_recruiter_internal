@@ -1,0 +1,123 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "Can you tell me about decorator functions?",
+                "candidate": "If we have to modify or provide a way to wrap one function into another function, we'll use this. If we need to modify any function without permanently changing anything, we can make simple changes by wrapping one function in it. That process is called a decorator."
+            },
+            {
+                "interviewer": "Have you written any custom decorators?",
+                "candidate": "Yeah, I've used a wrapper before."
+            },
+            {
+                "interviewer": "Can you give me some examples of where you have used?",
+                "candidate": "We use the scraping functions to get all the screenshots from the publicly available data. For that, I've used the decorator function."
+            },
+            {
+                "interviewer": "Do you know what are generators?",
+                "candidate": "Yeah. If you are writing any classes, like a function where Python allows us to iterate it. If we have data to use repeatedly, we can use generators. If we need to store an entire sequence of data in memory at once, then we can use generators."
+            },
+            {
+                "interviewer": "What's the difference between generators and iterators?",
+                "candidate": "So, the generator and iterators... okay. An iterator is basically when an object is created."
+            },
+            {
+                "interviewer": "Do you know what are context managers?",
+                "candidate": "Context managers. Yeah. We create this entry, enter, and exit, right? To like a file stream, if we had to do a specific definition, like to allocate any resources, precisely what they have to do, then we will use this context manager. For example, if we are reading a file, we use this with statement, like whether we have to open it in a read format at an entry point, what it should be done at an exit point, what it should be done, we'll pre-define it. It will open at an entry point, we'll define an exit point, whether the file should be closed, and then we write the functionality. Initially, the enter functionality will be called, then whatever the function that we had to do, and automatically the exit will be called. What we write in enter and exit and the functionality, that's the context manager."
+            },
+            {
+                "interviewer": "Have you written any context managers?",
+                "candidate": "Yeah, I mean, that's basic how we start writing it in any function that I write."
+            },
+            {
+                "interviewer": "Have you used async IO? Have you used asynchronous programming?",
+                "candidate": "Yeah."
+            },
+            {
+                "interviewer": "Can you tell me what is the get event loops function in async IO?",
+                "candidate": "Get, get what?"
+            },
+            {
+                "interviewer": "Event loops, get event loops.",
+                "candidate": "Get event loops. Yeah. Okay. So, like, we will create a task inside it. If we create a get event loop function inside it, we have a default function module, like a loop.run. We will specify how it should be run. We'll create a coroutine inside it. Once the functionality of that loop is done, then we can close the loop. So async run, like in what I have done, is we will define an async, we'll create any functionality to it. Once the specific functionality that we await this async IO for a specific duration to stop and then rerun it. So I use that sleep to do that."
+            },
+            {
+                "interviewer": "Do you know what does the gather function do?",
+                "candidate": "I haven't used it, but is it like... okay, no issues."
+            }
+        ]
+    },
+    {
+        "skill": "AWS",
+        "conversation": [
+            {
+                "interviewer": "And AWS?",
+                "candidate": "AWS, I have four years of experience."
+            },
+            {
+                "interviewer": "What all services you have used in AWS?",
+                "candidate": "I've used ECS, EC2, Lambda. Just a few things on AWS IoT."
+            }
+        ]
+    },
+    {
+        "skill": "FastAPI",
+        "conversation": [
+            {
+                "interviewer": "Any experience in the fast API?",
+                "candidate": "Yes."
+            },
+            {
+                "interviewer": "Fast API, how many years?",
+                "candidate": "Fast API, I think for three years."
+            },
+            {
+                "interviewer": "Can you tell me what is Pydantic?",
+                "candidate": "So basically, Pydantic is a library, like it's a web framework that we use to build. For any kind of data validation, we use that. Like what kind of type of data we'll use and we can define any constraints to that data. So for that, we use Pydantic. If we have any automatic appraising to do, like when we're using JSON data in our Python, we can create a data parsing so that it can, I mean, that functionality can be done by the Pydantic in FastAPI."
+            },
+            {
+                "interviewer": "Do you know how to do dependency injection in FastAPI?",
+                "candidate": "So, what I have done is, it can allow us to, like, we have many dependencies, and we can manage it. The way it is arranged or cleaning the dependencies, specifically in FastAPI, we used to declare the dependencies to our endpoints, making our code easy for testing."
+            }
+        ]
+    },
+    {
+        "skill": "Kubernetes",
+        "conversation": [
+            {
+                "interviewer": "Any experience in Kubernetes?",
+                "candidate": "Yes."
+            },
+            {
+                "interviewer": "One year. Did you set up or you have just used?",
+                "candidate": "No, I have used it."
+            },
+            {
+                "interviewer": "Do you know everything about setup?",
+                "candidate": "Yes."
+            },
+            {
+                "interviewer": "Can you tell me what are config sets and helm charts?",
+                "candidate": "Kubernetes, yeah. Do you know what are helm charts? Yeah, so it's basically the fundamentals that we use in Kubernetes, like the Helm charts. We have sets, like the status, the stateful sets that we use. Kubernetes defines a state of an application and its particular dependencies, and we can configure it. We have a YAML file where we define it. We have an element where we have an API version that we defined. We have the metadata that we provide, the actual data, the keys. If we have to encrypt it, I mean, if we are actually using any kind of username passwords, we can use the token-based encryption as well."
+            }
+        ]
+    },
+    {
+        "skill": "Multiprocessing",
+        "conversation": [
+            {
+                "interviewer": "Have you done any multi-processing?",
+                "candidate": "Yeah."
+            },
+            {
+                "interviewer": "Can you explain how multi-processing works?",
+                "candidate": "So, it provides a similar to a threading module, but uses a process instead of threads. Each process runs its own Python interpreter and has its own limitations. Let's consider if we have one process, like an independent sequence of execution, as its own memory usage. A continuous process thread means a queue of threads will be in an exchange of information between these processes. In what I have used, we have the library, like multi-processing library, I imported that and used it."
+            },
+            {
+                "interviewer": "How many number of processes, how you define, like how many number of processes you need to run?",
+                "candidate": "For that, when we import that multi-processing, we use that process multiprocessing CPU count, right? So based on that count, we can define how many processors should be used."
+            }
+        ]
+    }
+]

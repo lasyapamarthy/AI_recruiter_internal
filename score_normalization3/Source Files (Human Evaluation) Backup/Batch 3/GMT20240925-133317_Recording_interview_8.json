@@ -1,0 +1,76 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "Let's start with some of the fundamental concepts around Python and FastAPI. Starting with, let's say decorators in Python, how would you explain decorators in Python? What kind of work have you done? What are the custom decorators that you've written so far?",
+                "candidate": "Decorator is basically an essential function which adds behavior to our existing functions. Suppose if I wanted to add some features, I had already the decorator called login. So the login functionality I wanted to implement in every function-based view or class-based view. I use the authentication called login and there will be one login function. We check the token at one function and after that, we implement the login everywhere where the function has been used. Login means the token we are checking there and after that token has been successfully verified with our database and everything, then it will go into the upper function where the decorator has been used."
+            },
+            {
+                "interviewer": "When we work with large datasets in Python, we use something called generator functions in Python. Can you say how you might have used them?",
+                "candidate": "Generator function is basically a simple function, but it has iterable objects which can be resumed and paused with the keyword yield. In my case, there is a large dataset if I want to use it in pandas for manipulating the data. After dividing the data into chunks, what I do is, after the chunks, we resume those tasks after calculating those data into one part. And after that, we can save all the data into one single file."
+            },
+            {
+                "interviewer": "How would a generator function work on a large file or database with, let's say, 100,000 records?",
+                "candidate": "If you wanted to give the large file at a single time, it would be difficult to process those data at a single time. So what I did basically, I divided it into chunks. After the iteration of those chunks, we call the generator function. I have divided those 100,000 data into chunks of 25,000. The data will iterate and manipulate those data. After that, we have to store it in memory, not like saving it into the file system."
+            },
+            {
+                "interviewer": "With a generator, I won't be needing to chunk the data, right?",
+                "candidate": "No, what I mean is basically a generator is an iterable object which can resume the object using the keyword yield. In my application, I have to distribute the chunks of data and manipulate data by once."
+            },
+            {
+                "interviewer": "You're not getting it. You never need to chunk the data with a generator. The whole point of using it is to avoid that.",
+                "candidate": "I'm not doing the chunks with the generator. I'm manipulating those data which have been received after iterating."
+            },
+            {
+                "interviewer": "What is the difference between a for loop and a generator function?",
+                "candidate": "For loop is not iterating through all of the objects. I can declare a global index. Using that variable inside the for loop, I can iterate it, stop it anytime I want, and restart it from any point I want."
+            },
+            {
+                "interviewer": "But the memory allocation is higher than the generator.",
+                "candidate": "You are storing or even if you are storing a chunk and running a for loop over it, then passing it to the generator function to process it. If you are running the for loop over a chunk, you're storing that chunk in memory."
+            },
+            {
+                "interviewer": "I will rather not use a for loop then. Since I'm storing the chunk in memory, I'll use the for loop to process the data.",
+                "candidate": "So what I did there, like if basically... I'm not looking for what you did there. I'm asking what you will do right now. Because your explanation is faulty and that's what I'm telling you."
+            },
+            {
+                "interviewer": "Talk to me about your experience with parallelism and concurrency in Python. What is parallelism and what is concurrency? How are they different? And how do you implement these concepts in Python?",
+                "candidate": "Parallelism and concurrency, in basic terms, come to concurrency. I implemented using multi-threading and parallelism using multi-processing. Multi-threading uses the thread between its own memory and multi-processing will do the processing into different memory spaces. In multiprocessing, parallelism is a process that communicates between two cores, like two processes, which run into different instances, different memory spaces."
+            },
+            {
+                "interviewer": "Is parallelism possible in Python?",
+                "candidate": "Parallelism is possible in Python using the module called multiprocessing. Python is a single-threaded language, but we have two different cores and different memory allocations. We can allocate those different processes in different memory cores, then we can achieve that."
+            },
+            {
+                "interviewer": "How does GIL work in Python?",
+                "candidate": "Global Interpreter Lock (GIL) works in multi-threading. It restricts those code blocks which have to be executed at once. It will restrict one thread at a time."
+            },
+            {
+                "interviewer": "Based on what you just explained, what is asynchronous programming and how is it possible in Python?",
+                "candidate": "Python has provided asynchronous programming with async and await. They are the concept. Python comes with async and await. FastAPI comes built with async and await."
+            },
+            {
+                "interviewer": "When you now write a function called, when you now define an asynchronous function and you await a response, what happens in the compiler?",
+                "candidate": "In Python, if I wanted to write the function, that is basically the concept that comes into the coroutine. They follow what we discussed regarding concurrency. There is one task. Suppose there is a line. After the line, there is a line, there is one task between 0 to 1 and another task will be starting from 2 to 3 or 2 to 4. In a compiler, in the backend, this task will await until the second task is completed. After all the tasks are completed, then it will be given as a return."
+            }
+        ]
+    },
+    {
+        "skill": "FastAPI",
+        "conversation": [
+            {
+                "interviewer": "Are you currently working in FastAPI?",
+                "candidate": "Yeah, I have worked on FastAPI."
+            },
+            {
+                "interviewer": "FastAPI uses something called ASGI, right? Flask and Django use WSGI server.",
+                "candidate": "Yeah, but we can implement ASGI in Django using the channel. It will be possible."
+            },
+            {
+                "interviewer": "What is the difference between ASGI and WSGI?",
+                "candidate": "ASGI means asynchronous, it will run the gateway between the asynchronous task and WSGI is basically the web server gateway integration. In Django, that is the entry point of our HTTP communication. In asynchronous, this is the full duplex channel, that is why we are using it for full duplex communication. There will be bi-directional acknowledgment. In a WSGI, it will be terminated after the request is completed like HTTPS and all."
+            }
+        ]
+    }
+]

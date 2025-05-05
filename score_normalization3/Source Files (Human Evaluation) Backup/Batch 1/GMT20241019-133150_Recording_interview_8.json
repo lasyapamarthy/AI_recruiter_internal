@@ -1,0 +1,81 @@
+[
+    {
+        "skill": "React Native",
+        "conversation": [
+            {
+                "interviewer": "What's your total years of experience working in React Native?",
+                "candidate": "3.7 years."
+            },
+            {
+                "interviewer": "Let's start with some of the fundamentals around React Native and React in particular, starting with virtual DOM. How would you define the concept of virtual DOM in React Native?",
+                "candidate": "OK, virtual DOM. DOM stands for Document Object Model. It's basically a tree-like structure for the HTML element. Whenever we do any update in our component, the whole tree gets updated, and the whole CSS will recalculate, and the whole UI needs to be updated. Virtual DOM is just a copy of the real DOM. Whenever we do any changes in our file, those changes first get reflected to the virtual DOM. After that, the virtual DOM and real DOM get compared using a diffing algorithm, and only the changes are reflected to the real DOM. Not the whole tree gets updated, and not the whole CSS will recalculate. This is the advantage of using the virtual DOM."
+            },
+            {
+                "interviewer": "How do you take care of the lifecycle of a functional component? Like how do you take care of mounting, unmounting, and updating?",
+                "candidate": "Each component has some lifecycle like mounting. Mounting means the first time our component loads on the screen. In the case of a functional component, to achieve the lifecycle method, we use the useEffect hook. The syntax of useEffect is like the first argument is the callback function, and the second argument is the array of dependencies. If the array of dependencies is empty, then that effect will run as a component didMount. If we pass any state or props in that array of dependencies, then that effect will run when that state or prop value changes. It will work as a component didUpdate. For componentWillUnmount, we can do some cleanup operations to avoid memory leaks by using the return statement inside useEffect."
+            },
+            {
+                "interviewer": "There are two other hooks as well, right? There is a hook called useCallback and useMemo. Explain.",
+                "candidate": "Suppose I have created a functional component. Inside that component, I have written some function. Whenever my component re-renders, that function will recreate each time, leading to performance issues. To avoid this, we can wrap our function in useCallback. The first argument is the function we want to wrap, and the second argument is the array of dependencies. If the array of dependencies is empty, that function will create only at the first time, at the mounting phase. If we pass any state or prop value in that array of dependencies, then if that state or prop changes, only then will that function recreate. UseMemo has the same syntax. If I'm doing some heavy calculation, I can wrap that calculation in useMemo to avoid recalculating each time the component re-renders."
+            },
+            {
+                "interviewer": "In terms of React Native, how do you set up a push notification system?",
+                "candidate": "We are using Firebase. We create a project on Firebase and then create multiple applications in that project, one for Android and another for iOS. For Android, we write the package name found in the Android manifest.xml file. Firebase gives us the GoogleServices.json file, which we put in our app-level build.gradle. For iOS, it requires a bundle identifier name used in Xcode. Firebase gives us the GoogleServices-info.plist file, which we push to our project iOS folder. In our repo, at the root level, we write some listeners that will listen whenever any notification comes. We install libraries like react-native-firebase messaging, react-native-firebase app, and notify library. We add listeners like messaging.onMessage, messaging.onNotificationOpenedApp."
+            },
+            {
+                "interviewer": "How do you take care of notification being received on the application when the application is in a closed state?",
+                "candidate": "I'm not getting the exact listener name, but some listener we have to add."
+            },
+            {
+                "interviewer": "How do you set up deployment environments in the context of iOS development?",
+                "candidate": "We maintain different branches. The main branch contains the production code, the develop branch contains the test environment code, and the staging branch contains the staging environment code. On Firebase, we create three different projects for test, staging, and production. We set up accordingly on those branches."
+            },
+            {
+                "interviewer": "What do you understand by schemas in iOS development?",
+                "candidate": "I don't know."
+            },
+            {
+                "interviewer": "How do you add a capability in an iOS application, specifically building in React?",
+                "candidate": "In Xcode, I go to the target sections. In target sections, we have a capabilities tab. By using the plus icon, we can add capabilities."
+            },
+            {
+                "interviewer": "Any idea around working with contacts in React and iOS development?",
+                "candidate": "I have done that part, but I did not remember the exact library name that I have used at the time."
+            },
+            {
+                "interviewer": "How would you define, what do you understand by the concept of flat list?",
+                "candidate": "If we have an array of small data, we can use the scroll view. But if the array size is large, like 100 or 1,000 items, using a simple scroll view will lead to performance issues. FlatList comes into the picture to avoid this. By using FlatList, we can add pagination. We can maintain how many items we want to show initially on the screen. When the user scrolls, we do the API call again, fetch the data, and append it to our list locally."
+            },
+            {
+                "interviewer": "How do you take care of the performance of an application or the build of a React Native application, and how do you create an iOS and Android copy?",
+                "candidate": "For Android, if I am uploading on the Google Play Console, I create a bundle file. If I want to give that APK file to my testing team or use it locally, the process is different. We can use Android Studio or the command line. I go to the Android folder and run the command gradle bundle release for the APK file. For the test build, I use assemble release. For iOS, I update the version, clean the build, create an archive, and export it to TestFlight. On TestFlight, we can add multiple groups for internal testing and clients. If the client approves, we upload the build to the App Store for the review process."
+            }
+        ]
+    },
+    {
+        "skill": "JavaScript",
+        "conversation": [
+            {
+                "interviewer": "Do you want to use Axios if you don't know how to work with fetch?",
+                "candidate": "Yes, I can use Axios."
+            },
+            {
+                "interviewer": "Why are you giving skip and limit?",
+                "candidate": "The reason is that I have to display it by using the flat list. It is saying total 194 data. If I display all the data in a single go, it will give me the... Just worry about getting the data for the first 30."
+            },
+            {
+                "interviewer": "Just do that only. Don't worry about limit and skip.",
+                "candidate": "Okay, okay."
+            }
+        ]
+    },
+    {
+        "skill": "General Development",
+        "conversation": [
+            {
+                "interviewer": "Any feedback for me?",
+                "candidate": "No, nothing in particular. I think you did good. I feel that you are good in terms of development. You know what needs to be done, how it needs to be created. But I think you should work on two things: number one, how to distribute the application and how to create a CI/CD and deployment kind of thing."
+            }
+        ]
+    }
+]

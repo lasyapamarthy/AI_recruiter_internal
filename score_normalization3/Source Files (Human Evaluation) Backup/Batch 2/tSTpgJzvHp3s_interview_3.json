@@ -1,0 +1,75 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "Hello Shiv! Impressive Background. How Would You Design A Scalable Microservice Architecture Using Python, Focusing On Inter-Service Communication Patterns?",
+                "candidate": "Designing A Scalable Microservice Architecture. First Of All We Have To Focus On Architecture Designing. Our Internal Architecture Should Be Very Efficient And Then Only We Can Scale It. First Of All We Can Look Into The Code Structure. We Have To Follow A Design Structure Or Design Pattern. We Can Follow The Mvc Pattern, Model View Controller Or Any Other Architecture But There Should Be Some Architecture Decided Before Even Developing Or Before Writing Any Code That'S The First Requirement After Writing The Code The Second Thing We Have To Focus On That Whatever The Service We Are Writing Which Should Be Uh Parallelly Running That Means Like Uh Let'S Say We Write A Rest Api In Fast Core In In Fast Api These Apis Should Not Be Like It Should Be Asynchronously Running In Our Python Code And That Means Like Even If There Are Multiple People Or High Uh Traffic Is There So It Won'T Be Like Lagging In This Case And And And Most Important Thing After Developing Everything We Have To Use Aws Because Aws Provides Our Uh Process Micro Service Architecture So That Microservice Architecture We Can Use To Scale Our Product In Python As Well."
+            },
+            {
+                "interviewer": "You'Re On The Right Track. Could You Elaborate On The Specific Inter-Service Communication Patterns You Would Consider For A Scalable Microservice Architecture In Python?",
+                "candidate": "Okay, So For Inter-Service Communication Better Let Me Think Think Of An Event Service Here Can You Elaborate More Like What Do You Mean About This Inter-Service Communication? What Do You Expect Me To Tell About It?"
+            },
+            {
+                "interviewer": "Please Use Your Judgment To Give Your Best Shot.",
+                "candidate": "Okay, So I'M Assuming We Have Let'S Say We Have Microservice Architecture. We Have Different Services. So We Should Have A Common Medium To Communicate Between. So The One Thing Is We Can Use Caching, Redis Cache We Can Use. Database Is Also There. We Can Have A Common Database And That Can Be Used To Track The Information Between Two Services And And Websocket Is Also There Because Websocket Is Like A Two-Way Pipeline Which Is Which Can Be Used For Real Sending Messages In Real Time Two Ways So That Is Also Can Be Used Ap Is Also One Form Like We Can Create Some Apis And These Apis Can Be Triggered From Any Of The Service To Communicate Each And Like Between Services So One Is Caching Database Or Apis Or Web Sockets And Any Custom Protocol If You Design That Also Can Be Used So There Are Multiple Ways Since The Question Is Not Specified So I Just Given All These Ways Which I Can Think On Thank You So Much"
+            }
+        ]
+    },
+    {
+        "skill": "Fastapi",
+        "conversation": [
+            {
+                "interviewer": "You'Ve Provided A Comprehensive Overview Of Potential Inter-Service Communication Methods. Let'S Dive Into Another Topic. How Would You Ensure That Your Fastapi Application Remains Secure, Particularly In A Microservices Environment?",
+                "candidate": "Okay, So First Of All To Ensure Any Api Which Is Secure We Have To Ensure That This Api Should Be Communicated With Https Protocol Because If We Use Http Protocol That Is Non Encrypted Transfer Protocol So If We Use That One That Can Be Like Capture That Packets Can Be Captured Anywhere So We Have To Use Htt Https First Of All And The Second Thing Is All These Tokens And Any Sensitive Information That Should Be Encrypted From End To End Because If We Reveal The Keys Or Sensitive Keys Or Database Key Anything Or That That Is Like That That Can Be Steal From The Icos And Let Me Think One More So One Is Ht Related To Fast Api Api But Yeah In The Microservice Environment We Microsoft Environment We Can Define Security Groups To Block Unnecessary Ports And Only Allow The Ports Which Is Used For Api Or Necessary Ports Only So That We Can Avoid Unwanted Authorization In Our Application."
+            },
+            {
+                "interviewer": "You'Ve Covered Some Essential Security Measures For Apis. Let'S Explore Another Topic. How Do You Handle Scalability Challenges In Fastapi Applications?",
+                "candidate": "Okay, So Scalability Challenges. Yeah So First Of All, We Have To Follow A Strict Architecture I Already Told Like We Have To Stick To One Of Our Design Patterns Either We Choose Mvc Pattern, Model View Control And Model View Template Anything Like We Have To Stick On Our Architecture First Is That Second Thing Is That Our Application Should Be Modular Enough So That It Can Be Used Anywhere And It Can Be Reused Wherever We Want And Third Can Be Yeah Let Me Click On This Third Is Whenever We Write The Code And The Apis Code In Api, It To Follow Drive Method Like Do Not Repeat Yourself. The Second Is The Code Should Be Modular And It Should Follow Some Design Patterns. And Fourth Is To Scale Our Fastapi Application We Have To Divide Into Multiple Services So That We Can Use Microservice Architecture Here. Because If Code Is Not Modular Definitely We Can'T Divide In Multiple Services So That Is Also The Thing"
+            }
+        ]
+    },
+    {
+        "skill": "Web Sockets",
+        "conversation": [
+            {
+                "interviewer": "You'Ve Highlighted Some Crucial Aspects Of Scalability, But Let'S Proceed To A Different Question. How Do Websockets Differ From Http In Terms Of Communication Patterns And Their Use Cases?",
+                "candidate": "Http Doesn'T Maintain A State And Http Can Only Be Used From Client To Server Communication. Server Cannot Communicate To Client, Only Client Can Communicate To Server. Whenever A Request Comes From Client, Server Processes This Request And Response The Required Data But In Case Of Web Sockets It'S A Two-Way Communication Like Any Two Clients Can Communicate Between And This Communication Server Will Be In Midway Of These Two Like The Client Number Of Clients Can Be Anything But Server Will Be Midway For These Clients So Websocket Is A Real-Time Communication Between Multiple Clients Or Server Also But Http Is Not Real Time It'S A State Stateless Communication Between Like Client And Server So We Use Websocket When We Have To Communicate In Real Time And Http Is Used When Like When We Want Any Required Data From Server"
+            },
+            {
+                "interviewer": "You'Ve Captured The Essence Of Websockets Versus Http, But Let'S Explore Another Topic. How Would You Handle Error Handling And Logging In A Websocket-Based Application To Ensure Reliability And Maintainability?",
+                "candidate": "Websocket Is Having Inbuilt Functions Or Inbuilt Events Which Will Be Triggered In Case Of Any Error In The Websocket. I Am Giving You An Example. So When We Get Any Messages From Our Websocket, Ownmessage Event Will Be Triggered. In Case Of Error, Ownerror Method Will Be Triggered. In Case Of Warning, There Is Separate Method Is There. So These Type Of Events Is Inbuilt Part Of Websocket And That Can Be Immediately Triggered Whenever There Is Any Error In Websocket."
+            }
+        ]
+    },
+    {
+        "skill": "Aws",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Your Insights! Let'S Turn Our Attention To Another Topic. Can You Discuss How You Would Leverage Aws Services To Enhance The Scalability And Performance Of A Microservice Application?",
+                "candidate": "To Scale Any Microservice Application, I Would Divide My Application. It Is Already Microservice, That Means My Application Is Already Divided Into Services. I Will Use Ecs, Aws Ecs For Creating Multiple Services. After Creating Multiple Services, I Will Define Task Definition For Each And Every Service. After Defining Task Definition I Will Deploy My Each And Every Service In Those Task Definition And In The Task Definition I Have To Decide How Much Ram It Is Required, How Much Cpu Power It Is Required, Environment Variables Everything I Will Define Everything In Task Definition And Then I Attach My Task Definition To Particular Service So There Will Be Multiple Ecs Services And These Services Can Be Used To Scale Our Microservice Application. And That Is Like Ecs Service Is Very Fast. So In The Performance Wise, It'S Also Very Good."
+            },
+            {
+                "interviewer": "You'Re On The Right Track With Using Aws Ecs For Scalability. Let'S Proceed To A Different Question. How Would You Use Aws Lambda To Enhance The Functionality Of Your Microservices Architecture?",
+                "candidate": "Aws Lambda Will Be Used To Run A Code In The Aws Environment. To Enhance The Functionality Of Microsoft'S Architecture, I Will Define My Standalone Code Into Aws Lambda. These Codes Will Be Run Into Aws Lambda To Give More Support To My Microsoft'S Architecture. And These Codes, It'S Like A Separate Function Or Separate Service Which Actually Gives Help To My Microservice Architecture."
+            },
+            {
+                "interviewer": "Thank You For Sharing Your Thoughts On Aws Lambda. Let'S Shift Gears And Explore Another Topic. Could You Describe The Key Considerations When Setting Up A Ci/Cd Pipeline For A Microservices Architecture On Aws?",
+                "candidate": "For Setting Up The Ci-Cd, First Of All We Have To Make Sure That We Have All The Environment Variables Handy And These Environment Variables We Have To Define Our Ci-Cd Pipeline Code And Second Thing Is We Have To Define Our Ci-Cd Variables In Our Jit Lab Or Jit Hub Repository And These Variables Will Be Used To Get The Information Of Microservice Applications Like What Is The Name Of The Application And What Is The Main Database Of That Application And Yeah So Required Information Of Application Can Be Used From Ci-Cd Variables And Environment Variables So First Thing Is Using Ci-Cd Variables And Environments Second Is Create A A Tag Out Of Your Branch. So Let'S Say If The Main Branch Is Stable Branch We Have To Create A Tag. Tag Can Be Like A Version Like V1.0, V2.0. So That Version We Have To Define. And Then We Have To Create Triggers Like When We Have To Start Our Pipeline. So Triggers We Have To Define And Then We Have To At The Last We Can Create A Form In The Form We Can Define Like What Type Of Version You Want To Deploy Or What Type Of Database Name Or What And Ready Sketch What Type Of Ready Sketch We Want To Use Then Form Will Take These Inputs And Perform A Deployment"
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Thoughts On Ci/Cd Pipeline Setup. Let'S Explore A Different Aspect Of Aws. Could You Discuss How You Would Use Aws Cloudformation To Manage And Deploy Infrastructure For A Microservices Architecture?",
+                "candidate": "To Manage And Deploy A Project. This Question Properly But Yeah From My Best Assumption Uh We Have To Uh We Will Use Ec2 For Cloud Server In The Ec2 We Can Deploy Our Front-End Applications And And And We Will Use Ecs For Deploying Our Back-End Applications Like It Is It Can Be Like Fast Api Or Any Any Back-End Application And We Will Use Our Load Balancers To Get Communication Between This Ec2 And Ecs And All Are Together Connected. So This Type Of Cloud Formation We Can Form Like Load Balancer Will Be There, Ecs Will Be There, Ec2 Will Be There And There Can Be Like Radius Server And Multiple Things Which Can Be Used For Our Microservice Application."
+            }
+        ]
+    },
+    {
+        "skill": "Custom_Question_1",
+        "conversation": [
+            {
+                "interviewer": "Do You Have Experience Doing Production Deployments?",
+                "candidate": "Yes, I'M Having Experience In Production Deployment. I Used To Deploy In Production In My Aws Account. I'M Having A Production Account Access In The Aws. I'Ll Give You The Steps Which I Follow. So To Deploy A Front-End, I Use My Ec2 Cloud Server. I Log In Through My Ssh And Then I Deploy My Dist File That Is Like Stating Javascript Files There And To Deploy Backend I Use My Ecs Service So In There I Have To Deploy My Latest Code In My Task Definition I Have To Perform All The Micrances Related To Database And After Deploying My Backend Code In Task Definition I Used To Restart My Task In That Particular Service Which I Deployed. After Restarting, My Code Is There. Database Is Migrated, Code Is Deployed For Backend And Code Is Deployed For Frontend As Well. So These Three Steps I Used To Follow In Case Of There Is No Error. In Case Of There Is An Error, I Try To Debug The Error Through My Ecs Logs And That'S The Process."
+            }
+        ]
+    }
+]

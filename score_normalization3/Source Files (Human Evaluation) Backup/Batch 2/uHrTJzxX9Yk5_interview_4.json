@@ -1,0 +1,117 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "Great To Meet You, Vybhava! How Would You Optimize A Python Application That Experiences Intermittent Spikes In Memory Usage?",
+                "candidate": "Some Ways To Optimize A Pipe. Application Memory Usages Use Appropriate Data Structures Use Data Structures That Are Suited To Leap To The Task Such As Six Instead Of Lists For Large Data Sets With Two Pickets Use Specialized Libraries Use Memory Mapped Files Use Generators Use Memorization And Code Chip And Use Profiling Tools Such As Python Models Like C Profile And Memory Profiler To Analyze Time, Complexity And Track Memory Usage. And Use Lots, Clear Large Objects And Memory Usages. That'S It."
+            },
+            {
+                "interviewer": "You'Re On The Right Track. Could You Elaborate On Techniques For Managing Memory Allocation In Python Applications?",
+                "candidate": "Memory Memory Allocation Can Be Defined As Allocation A Block Of Space In The Computer Memory To A Program In Python Memory Allocation And Delocation Method Is Is A Memory Memory Allocation Automatic As The Python Developers Create A Garbage Collector For Python So That The User Does Not Have To Do Manual Garbage Collection. Thank You."
+            },
+            {
+                "interviewer": "Thank You For Sharing Your Thoughts On Memory Allocation In Python. Let'S Explore Another Topic Together. How Does Python'S Global Interpreter Lock (Gil) Affect Multithreading In Applications?",
+                "candidate": "Actually I Don'T Know Much About This But I Can Try Answering This. Limits, Actually Global Interpreter Log, Gil, Limits The Benefits Of Multi-Threatting In Applications By Only Allowing One Thread To Execute Python By Decode At A Time Like Cpu, Like Cpu Board Task, Input Output On One Task, Etc."
+            },
+            {
+                "interviewer": "Your Explanation Touches On The Gil Well. Let'S Dive Into Another Topic. Can You Discuss The Differences Between Shallow And Deep Copying In Python?",
+                "candidate": "The Shallow Copies Stores The Copy Of The Original Objects And Points The References To The Object. Deep Copy Stores The Copy Of The Original Object. The Original Object And Recursively Copies The Object Fashion"
+            }
+        ]
+    },
+    {
+        "skill": "Jenkins",
+        "conversation": [
+            {
+                "interviewer": "Noted, Vybhava! Let'S Explore A New Topic. How Would You Utilize Jenkins For Automating Deployment Processes In A Ci/Cd Pipeline?",
+                "candidate": "Actually, It'S Unkins Come Under Divorce. The Divorce, First Of All, Cicd Stands For Continuous Integration Or Continuous Deployment. First, Let Us Try To Understand That A Pipeline Is Computing A Prime. Set Off Stages Of Our Processes Linked Together From A Processing System. So, Automating Deployment Processing, Cicd Pipeline, First We Need To Code It, Like Just Code And Build, Push Repository, Deploy The Server And Then It Runs."
+            },
+            {
+                "interviewer": "Thanks For Your Response, Vybhava! Let'S Navigate To Another Topic. Can You Explain How Jenkins Plugins Enhance Its Functionality In A Ci/Cd Pipeline?",
+                "candidate": "The The Red Shows, So... Because It'S The Yankee, I'M Talking About. Don'T Know. Thank You."
+            },
+            {
+                "interviewer": "Alright, Vybhava! Thanks For Your Unique Take On Things. Let'S Switch Gears And Explore Another Topic. How Does Jenkins Support Distributed Builds In A Ci/Cd Pipeline?",
+                "candidate": "It'S Right? It'S Right? It'S Right? It'S Right. It'S Right To Go To The Side Of This. Jenkins Supports Distributed Or Builds In The Ai Of Cd Pipeline Assigning Tasks To Different Machines Using Virtualization User Infrastructure Adding Extra Machines Dynamically When It Comes To Assigning Tasks To Different Machines Jenkins Can Delegate Tasks To Different Machines Based On Their Capabilities For Example, One Machine Can Compile Code, Another Can Run Test And Another Can Deploy. Where Each Systems Or Machines Will Perform A Design Functions At A Time Using Virtualization Infrastructure Jenkins Can Run Multiple Agents Instances On A Single Lawn. Physical Mode Using A Virtualization Infrastructure Like A Kernel-Based Virtual Machine Giving Them Adding Extra Missions So Thine And Kelly Jenkins Can Go And The Need Of The Bird Back Since This Can Land It"
+            }
+        ]
+    },
+    {
+        "skill": "Kubernetes",
+        "conversation": [
+            {
+                "interviewer": "Interesting Take On Distributed Builds! Let'S Explore Another Topic Now. How Would You Use Kubernetes To Manage Application Scaling Effectively?",
+                "candidate": "To Effectively Use Kubernetes To Manage Application Scaling We Can Monitor Our Applications, Keep An Eye On Our Interactions And Modes Of Memory Usage. Use Cloud Providers. Most Cloud Providers Offer Auto Scaling Functionalities That Uses Metrics To Deal. To Determine When They Went To Start And To Stop Instances. Set Scrawling Metrics. Choose The Right Matrix For Scaling Based On Your Applications, Characteristics And Requirements. Test And Validate. In This, Before Deploying Auto-Scaling Policies In Production, Test Them In Staging On Deployment Environments Like We Need To Test Them. Before Doing Anything Using Scaling Approaches There Are Two Types Of Approaches Like Primary Approaches To Scaling Horizontal Scaling And Vertical Scaling In Auto Scaling Solutions There Are Many Like Some Common Solutions In These Are Kubernetes Environments Interments Vertical Board Oposcalors Cluster Opiscaler"
+            },
+            {
+                "interviewer": "Thanks For Your Insights On Kubernetes Scaling, Vybhava! Let'S Tackle Another Area. Can You Explain The Role Of Kubernetes Namespaces In Resource Management And Isolation?",
+                "candidate": "Yes, Kubernetes Namespaces Are Used To Isolate Resources And Manage Them With The Cluster. Isolation When It Comes To Isolation. Namespaces Isolate Groups Of Resources Within A Cluster From Preventing Resources In One Namespace From Interfering With Those In Another. In Another For Example Different Teams Can Deploy Applications With The Same Name In Their Own Namespaces Without Conflict Resource Management Name Space Allows You To Enforce Resource Management Security And Governance Requirement We Can Use Role-Based Access And To Define Permissions At The Namespace Level."
+            },
+            {
+                "interviewer": "You'Re On The Right Track With Kubernetes Namespaces, Vybhava, But There Might Be A Bit More To Explore. Let'S Dive Into Another Topic: Can You Explain How Kubernetes Ensures High Availability In A Cluster Environment?",
+                "candidate": "Kubernetes Uses A Multi-Layered Approach To Ensure High Level In A Cluster Environment. This Includes A Board Relation, Replication. Replica Sets Ensure That A Particle Power Replicas Run At The Same Time Which Improves Fault Tolerances And Availability If A Port Fails The Replica Set Automatically Launches A New Replica Nod Level Redundancy When A Node Fails Its Work Is Automatically Reassigned To Other Nodes Service Discovery And Load Balancing These Features Help Distribute The Traffic Across The Cluster Persistent Volumes And State Through Seats, These Help Ensure That Data Remains Accessible Even If One Shortage Not Fails. One Storage Not Fails Also Which Is Able To Access Leader Election Processes. These Ensure That Only One Instance Of The Controller Manager Or Scheduler Is Active At A Time. Graphic Distribution Control Plane Nodes Should Be Distributed Across Different Data Centers To Avoid Latency Issues."
+            }
+        ]
+    },
+    {
+        "skill": "Docker",
+        "conversation": [
+            {
+                "interviewer": "You'Ve Shared Some Valuable Insights On Kubernetes' High Availability! Let'S Explore Another Area: How Can Docker Be Used To Simplify The Deployment Of Microservices?",
+                "candidate": "Developers Actually Use Dockers In Various Ways During Software Development, Testing And Deployment. From Breaking Down Applications Into Microservices And Streaming Ci Or Cd Pipelines To Simplifying Software Testing And Ensuring Apps Run Smoothly Across Different And Different Images."
+            },
+            {
+                "interviewer": "Got It, Vybhava! Let'S Shift Gears And Explore Another Topic. Can You Explain The Role Of Docker Compose In Managing Multi-Container Docker Applications?",
+                "candidate": "Docker Compose Is A Tool That Helps Manage Multiple Container Docker Applications Centralizing Configuration, Defining The Application In A Single Ym File Called Composed Or Ym Yml Centralizes Configuration And Simplifies Management, Streaming Workflows, Reducing Setup Time And Making It Easier To Create, Manage And Deploy Applications, Ensuring Consistent Environment Ensuring That The Same Environment Are Used Across Development And Testing And Production. Managing Services, Networks And Volumes Making It Easy To Manage These Components In A Single Configuration File. Running Commands Using A Single Command To Create And Start All The Services From The Configuration File."
+            },
+            {
+                "interviewer": "Interesting Take On Docker Compose! Let'S Explore A Different Topic Now. Can You Explain How Docker Networking Works And Its Significance In Containerized Applications?",
+                "candidate": "It Works By Manipulating Ip Tables Rolls To Route Traffic To Your Containers."
+            },
+            {
+                "interviewer": "Noted! Let'S Explore A New Topic: Can You Discuss How Docker Swarm Manages The Orchestration Of Containers Across Multiple Hosts?",
+                "candidate": "Dockoswam Manages Containers Across Multiple Hosts By Using Overlaying Networks, Load Balancing And Other Features To Ensure Containers Are Scheduled And Distributed Efficiently."
+            }
+        ]
+    },
+    {
+        "skill": "Ci/Cd",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Sharing, Vybhava! Let'S Move On To Another Topic: How Can You Leverage Terraform In A Ci/Cd Pipeline For Infrastructure As Code?",
+                "candidate": "Terrafam Can Be Used In A Cicd Pipeline For Infrastructure As Goals By Following The Workflow That Includes The Following Steps, Write, Initialize, Plan, Apply. Here Are Some Additional Tips Also For Telephone In A Cic Loop Pipeline Using A Secret Manager Or Mark Sensitive Data Review Code Applying The Principle Of Least Privilege."
+            },
+            {
+                "interviewer": "Great Insights On Terraform, Vybhava! Let'S Explore Another Topic: How Can Ci/Cd Principles Enhance The Security Of A Software Development Lifecycle?",
+                "candidate": "The I'M Going To Be. I'M Going To Be. I'M Going To Be."
+            },
+            {
+                "interviewer": "Let'S Explore Another Topic Together, Vybhava. Could You Explain The Concept Of \"Immutable Infrastructure\" In The Context Of Ci/Cd?",
+                "candidate": "Immutable Infrastructure Is A Software Management Model That Prevents Changes To Production Work Loads Such As Update Security Patches Or Configuration Changes Or Configuration Changes. I'M"
+            },
+            {
+                "interviewer": "Thanks For Your Response, Vybhava! Let'S Explore Another Topic Now: Can You Explain How Continuous Integration Differs From Continuous Deployment In A Ci/Cd Pipeline?",
+                "candidate": "Ci Focuses On Preparing Code For Release Like Build Or Test, Whereas Cd Inverse The Actual Release Of Code."
+            }
+        ]
+    },
+    {
+        "skill": "Custom_Question_0",
+        "conversation": [
+            {
+                "interviewer": "What Is Your Expected Monthly Salary In Usd?",
+                "candidate": "No Response"
+            }
+        ]
+    },
+    {
+        "skill": "Custom_Question_1",
+        "conversation": [
+            {
+                "interviewer": "How Many Year Of Experience You Have In Kubernetes ?",
+                "candidate": "Today I Have Done My Course Of Six Months. I Have The Experience Of Given It'S Only In That. I'M A Fresher. My Expectation Is 30,000."
+            }
+        ]
+    }
+]

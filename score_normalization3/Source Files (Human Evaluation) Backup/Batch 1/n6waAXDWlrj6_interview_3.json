@@ -1,0 +1,99 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "Great Experience, Chinimilli! How Does Python Manage Memory Internally?",
+                "candidate": "Okay, So Python Managed Memory Internally, Could You Please Give Me Some More, You Know, Insight Into The Question Because I Am Not Getting It."
+            },
+            {
+                "interviewer": "Python Manages Memory Using A Private Heap Space For All Python Objects And Data Structures. It Includes Built-In Garbage Collection To Recycle Unused Memory Automatically. Now, Let'S Switch Gears. Could You Explain The Concept Of Decorators In Python And Their Typical Use Cases?",
+                "candidate": "Sure, I Can Explain About The Use Of Decorators. Decorators Are Something Like Methods That Users Can Define And They Can Make Use Of Those Decorators You Know As A Built-In Function For The Remaining Code That We Can Write. So Let Us Suppose I Want To Create One Predefined Method And I Want To Use That In Multiple Cases In My Code. So In That Case I'Ll Create A Decorator And I Will Use That Method. As A Decorator To The Other User Defined Methods That I Use In My Code."
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Thoughts On Decorators. Could You Also Discuss How Decorators Can Enhance Functionality Without Modifying The Original Function'S Code?",
+                "candidate": "Sure, So It Is Not Required To Change The Original Functionality Of The Code In The First Place. So We Can Create Some User Defined Method And We Can Name, You Know, We Can Use That As A Decorator And We Can Use That For Our Remaining Functions Which We Want To Write In Our Code. So Let Us Suppose I Have A Method And I Want To Make Use Of It In, You Know, Multiple Times In My Code. So In That Case I Will Create A Decorator For That And I Will Use At The Rate Of Symbol And The Decorator Name On Top Of My Function To Make Use Of That Functionality Over The Code."
+            },
+            {
+                "interviewer": "Interesting Take On Decorators! Let'S Delve Into A New Topic. Can You Explain The Concept Of Python'S Global Interpreter Lock (Gil) And Its Implications On Multithreaded Programs?",
+                "candidate": "Okay So Multi-Threaded Programs Are Like They Run On Multiple Threads So They Are Independent Of One Thread Over The Another So Let Us Suppose I'M Executing A Program Um One Program Can Run On One Thread And They Can Perform The Operations Simultaneously Like Let Us Suppose I Have Four Threads And I Want To Perform The Operation So I Can Make It Using Multi-Threaded Programs So That All Four Of Them Will You Know Work Simultaneously I Mean Process Simultaneously And The Outputs Can Take You Know Outputs They Can Return Back So Global Interpreter Lock Is Something Like We Are Performing A Operation On Different Threads So One Operation Will Perform On One Thread And There This Global Interpreter Lock Is Something Like We Will Process One Program Per One Log So The Global Interpreter Lock Is Used For Threads In That Way."
+            },
+            {
+                "interviewer": "Thanks For Your Response! Let'S Explore A Different Topic. How Does Python Handle Exceptions, And What Are The Benefits Of Using Them In Your Code?",
+                "candidate": "Okay, So Exception Handling Is Very Important In Writing Any Form Of Code Either In Python Or Other Programming Languages. So In My Experience We Use Try-Exet Blocks To Catch The Error That Have Occurred And We Will, You Know, Raise Exceptions In The Except Block. So Try-Exet Blocks Are Generally Used For Runtime Errors To Handle The Runtime Errors. And In My Experience We Use Try Accept Blocks So Very Extensively. So Let Us Suppose If There Is Any Error Occurring In The Middle Of The Code During The Runtime. So In That Case We Will Write An Except Block So That We Can Either Raise An Exception From That And Then We Can Return The Response To The User That Some Exception Has Occurred During The Execution Of The Program. So That This Is A Good Way To Let The User Know That Something Has Happened Wrong In The Back End. Thank You."
+            }
+        ]
+    },
+    {
+        "skill": "Aws",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Sharing Your Thoughts! Let'S Dive Into A New Topic. Can You Explain The Purpose Of Aws Iam Roles And How They Differ From Iam Users And Groups?",
+                "candidate": "Okay, Aws Iam Rules Are, You Know, Can Be Attached To Any Other Resources Like Aws Lambda. So Let Us Suppose If I Want To Fit Some Data From An S3 Bucket Or I Want To Push Some Data Into Sqsq. So In That Case, I Will Create An Iam Role And I Will Give Necessary Permissions To That Iam Role To Fetch The Data From The S3 Object Or To Put The Messages Into The Sqsq. So Those Kind Of Permissions, I'Ll Create An I Am Policy And I'Ll Attach That Policy To The Policy To The S3 Object. The Iam Role And That Iam Role Will Be Attached To The Aws Lambda So That Lambda Will Be Able To Do The Specified Operations On Top Of The Resources That I Have Mentioned Either The S3 Or The S2S And Iam Users Are Something Like It It Is A User Kind Of Thing In Person So Let Us Suppose I Am A User So I Can Become A Iam User And There Can Be Iam Groups As Well So You Can Give Permissions To Iam Users By Creating A Group And Then Giving The Permissions To That Group And Adding The Iam Users To That So That All The Users Of That Iam Group Will Get Permissions Whatever You Have Specified In The Group."
+            },
+            {
+                "interviewer": "Thanks For Your Response! You'Re On The Right Track, But Could You Elaborate On How Iam Roles, Users, And Groups Function Differently Within Aws?",
+                "candidate": "Okay, So Let Us Suppose If We Want To Give Permissions To A Resource In The Aws Itself, Then We Will Make Use Of Iam Roles. But If We Want To Give Permission To A User In Person, Like A Physical Entity, In That Case We Will Make Use Of Iam Users. And Iam Groups Are Something Like They Hold The Iam Users And If We Want To Give Permissions To A Group Of People At A Time. Without Attaching The Commissions To The Am Users Separately, We Will Provide The Permissions To The Group And Then We Will Add Users To The Group So That All The Users Of That Group Will Get Permissions To Access The Entities That Are Present In The Aws."
+            },
+            {
+                "interviewer": "Thanks For Elaborating On Iam Roles, Users, And Groups. Let'S Dive Into A Different Aspect Of Aws. Could You Explain The Concept Of Amazon Ec2 And Its Primary Use Cases?",
+                "candidate": "Okay, Amazon Ec2 Is Like It Is An Elastic Compute Cloud. It Is A Compute Service. It Is Similar To Aws Lambda. So This Is Something Like Providing An Instance To Run Our Code On The Server. So Let Us Suppose If We Have Written Some Code And If We Want To Run It On The Server, In That Case We Will Create An Ec2 Instance And Then We Can Deploy Our Code On That Ec2 Instance So That It Will Take Care Of The Compute Cover And Whatever All The Requirements. Required Necessities To Run Our Code So All Of That Will Be Taken Care By The Amazon Ec2 Instance That We Have Created For That We Have To Mention Or Specify The Instance Type And The Required Necessities Before Creating The Ec2 Instance Itself"
+            },
+            {
+                "interviewer": "Thanks For Explaining Amazon Ec2! Let'S Dive Deeper Into Aws. Could You Describe The Concept Of Aws Elastic Load Balancing And Its Significance In Architecture?",
+                "candidate": "Sure, Elastic Load Balancing Is Something Like If You Have Two Or Three Applications Running, Or Two Or Three Instances Running, And You Want To Distribute The Traffic Based On The Load That Each Of The Instance Is Carrying. So Let Us Suppose One Instance Is Carrying A Lot Of Traffic Load And You Want To Distribute That Over To The Combining Two Instances As Well. In That Case Elastic Load Balancing Is Used So Elastic Load Balancing Is Mainly Used For Distributing The Traffic Over The Instances And Making The Service Or The Application Available For The End Users You Know Without Throttling"
+            }
+        ]
+    },
+    {
+        "skill": "Fast Api",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Sharing Your Thoughts On Elastic Load Balancing! Let'S Explore Another Topic. Could You Describe The Role Of Fastapi In Building Web Applications, And What Advantages It Offers Over Other Frameworks?",
+                "candidate": "Sure, Fast Api Is A Framework That We Extensively Use And We Write The Code Using The Fast Api Framework And Fast Api Provides An Unbuilt Pidan Tech Library That Is Useful For Making The User Input Validations. We Can Write Pidan Tech Models To Validate The Input Payload That We Receive From The Ui. And It Is Relatively Fast When Compared To The Other Frameworks. This Is Something I Have Observed From My Research. Fast Api Also Provides Authentication And It Also Has Built-In Swagger Docs Capability So That We Can Get The Swagger Docs We Can Make Use Of The Swagger Docs Functionality. It Is A Built-In Functionality For Fast Api."
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Thoughts On Fastapi! Let'S Dive Into Another Topic. Could You Describe The Concept Of Asynchronous Programming In Python And Its Advantages?",
+                "candidate": "Sure. Asynchronous Programming Is Something Like You Don'T Have To Depend On The Responses From Other Programs. So Let Us Suppose If Two Programs Or Two Methods Are There In Your Code, One Program Response Is Not Dependent On The Other. In That Case, Asynchronous Programming Would Help. So It Is Like Two Programs Can Run Parallelly Without Depending On The Responses From The Other One. So That Is How Asynchronous Programming. In Python And Its Advantages Are Like We Can Cut Down The Response Time And Our Processes Will Become Faster By Using The Synchronous Programming. So Those Are The Advantages Of It. I Can Give An Example From A Real Life, Something Like If You Are Cooking In A Kitchen And Cutting The Vegetables And Then Boiling The Water Are Two Different Tasks. So One Is Not Dependent On The Other. In That Case, One Can Work Independently On The One Can Work, I Mean One Portion Of It Can Work Independently Without Depending On The Other One. So Without Depending On The Response From The Other One. So That Is Called Asynchronous Programming. That Could Be A Best Example For This."
+            },
+            {
+                "interviewer": "Thanks For Your Thoughts On Asynchronous Programming! Let'S Explore Another Topic. Could You Discuss How Fastapi Supports Asynchronous Programming And Its Benefits Within The Framework?",
+                "candidate": "Sure, Fast Api Also Supports Asynchronous Programming. Its Syntax Could Be Like We Can Prefix The Method Name With The Sync Keyword And Then Fast Api Would Support The Asynchronous Programming. Like One Method If We Have Written In Python Using The Sync Tef And We Can Write The Different Methods Like For Put Endpoint We Can Write One Method For Post Endpoint We Can Write One Method In Such A Way And One Api Call Would Work Asynchronously Without Depending On The Another Api Call. So In That Way We Can Make Use Of The Asynchronous Programming And Fast Api Framework."
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Thoughts On Fastapi'S Asynchronous Support! Let'S Delve Into Another Topic. Could You Explain How Fastapi Handles Request Validation And Its Benefits?",
+                "candidate": "Sure, Fast Api Handles Request Validation Using Pydenic Library. So We Can Create Our Own User Models And We Can Validate The User Input Based By Creating Pythintic Models. So There Is A Predefined Base Model And We Can Import That Into Our Phydantic Class Models And Then We Can Define Our Own User Models And We Can Validate The User Input Based On The User Models That We Create. So And Fast Api Has Something Like, You Know, It Will Return Back The Response With The Status Code Of 422 When There Is A Validation Error. So Pydenetic Returns A Pre-Built Message Based On The User Model That We Create. In That Case, We Don'T Have To Very Much About The Response Messages Because Fast Api Handles It. And, Um, Uh, Uh, So The Program Execution Will Stop There Whenever There Is A Validation Error And It Will Return Back The Error Message And The Response Code Back To The User. In That Way, Request Validation Could Help Us In Fast Api."
+            }
+        ]
+    },
+    {
+        "skill": "Web Sockets",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Explaining Fastapi'S Request Validation! Let'S Explore Another Topic. Could You Discuss The Role And Benefits Of Websockets In Real-Time Web Applications?",
+                "candidate": "Sure, Websocket Apis Are Mainly Useful For Chat Applications. So Let Us Suppose If I Have Created A Chat Application, Something Like Whatsapp And Whenever I Said The Request To That I Will Get Response Back From That. So Websocket Apis Are Mainly Used For Creating The Chat Applications And In Those Cases Whenever We Need A Response From The Server Side Also, In That Case We Use Websocket Endpoints In Real Time."
+            },
+            {
+                "interviewer": "Thanks For Your Input On Websockets! Could You Elaborate On How They Contribute To Real-Time Data Synchronization In Applications Beyond Chat, Like Collaborative Editing Or Live Updates?",
+                "candidate": "Of Course, Websocket Apis Are Useful For Collaborative Editing Or Live Updates As Well. So Let Us Suppose If I Have Provided Some Input To The Api, I Will Get Some Response Back From The Websocket Api. So This Is Something Like It Can Be Useful In Synchronizing The Information That We Have Provided And Also The Information That We Get Back From The Server. So This Is How The Websocket Apis Are Used In Reality."
+            },
+            {
+                "interviewer": "Thanks For Your Explanation On Websockets! Let'S Explore A New Topic. Could You Explain The Concept Of Load Balancing In Cloud Computing And Its Significance?",
+                "candidate": "Sure, Load Balancing Is Very Useful In Cloud Computing. Let Us Suppose I Have One Application And Three Instances Are Running To Banish That Application. In That Case, The Traffic Will Be More At Some Specific Amount Of Time. In That Case, At Specific Point Of Time, If The Traffic Is Flowing To Only One Instance, Then The Instance May Not Be Able To Handle That Amount Of Huge Amount Of Traffic. In That Case, Load Balancers Are Very Useful. They Will Distribute The Traffic Over All The Three Instances That I Have Created And They Will Make Sure That The Application Is Running Smoothly And The Responses Are Going Back To The User In A Proper Way."
+            },
+            {
+                "interviewer": "Thanks For Your Thoughts On Load Balancing! Let'S Shift Gears And Discuss Another Topic. How Do Websockets Maintain A Persistent Connection, And What Are The Benefits Over Traditional Http Requests?",
+                "candidate": "Websackets Will Maintain A Persistent Connection. They Do And There Are Many Benefits Over The Traditional H.U.T.P Requests. If We Want Some, If We Make Some Request And Then We Just Want The Response From Back From The Api. So Then In That Case H2P Requests Are Used But A Web Sockets Or Something Like They Maintain The Connection From The Starting To The Ending. And We Will Receive Some Response From The Server. From The Server That Are You Still There To The Users That This User Is Still Want To Make Use Of The Application Or He'S Done With His Questions Or If He Or She Wants More Answers From The Server. In That Case We Can Use Websocket Apis And This We Can Generally Observe In Something Like A Live Update Sessions Or In Chat Boards. Then We Can You Know See This Behavior In Wsss."
+            }
+        ]
+    },
+    {
+        "skill": "Custom_Question_0",
+        "conversation": [
+            {
+                "interviewer": "Do You Have Experience In Production Deployment? Explain",
+                "candidate": "Yeah, I Have Experience In Deploying The Applications To The Production Environment. We Use Cicd Pipelines To Write The Stages And Then We Will Create The Merge Request And Then It Will Be Get Approved By The Product Manager And After That We Will Deploy Them Using The Scalar Workspace By Running The Pipelines Like Terraform Plan And Apply. So That Is How We Deploy Our Applications To The Production Environment."
+            }
+        ]
+    }
+]

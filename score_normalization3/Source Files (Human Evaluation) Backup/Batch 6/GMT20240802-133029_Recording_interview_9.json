@@ -1,0 +1,64 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "Let's start with some of the fundamental concepts around Python. We'll be talking about your experience around Python FastAPI in general. Anytime, any problem statement, any questions you have for me, feel free to drop.",
+                "candidate": "My Python FastAPI, I have more than two years of experience. My whole Python experience is three years. My whole career is in Python."
+            },
+            {
+                "interviewer": "Let's start with decorators. Whenever we work with any sort of framework, whenever we try to create an API in general, we use something called decorators, right? Any idea what decorators are?",
+                "candidate": "The decorator is a small function that takes the behavior of another function or method. The syntax of decorators is at the, we will write some name, decorator name like that we will be using. The new function wraps the original function. That's the main point of the decorator. We use decorators for login, access control, authentication, caching like that."
+            },
+            {
+                "interviewer": "Can you give me some example of any custom decorator that you've created so far?",
+                "candidate": "Decorator used, system decorator used for login, login site, login authentication time, authentication for login users, time session will be like that. We will be using that thing. Most probably, we will be giving at the decorator function, it will be there. We add the rate, some decorator name, for example, decorator underscore name. We will be writing the function under it and we will be using that thing. Actually, wrap the original function. It's the main function of the decorator. I think it's clear."
+            },
+            {
+                "interviewer": "So based on what you just told me, if I ask you around, so whenever we work with large data sets in particular, we use something called generator functions in particular. Can you explain to me what generator functions are? How do they work?",
+                "candidate": "Yeah, so a generator is a simple Python function. When it wants to generate a value, it will probably use the yield keyword rather than using return. That's a generator function. Generator function will be using one by one simple way to create iterates. We can say a simple way to create iterate is the generator. For example, we are saving values in the memory. It will save the whole value. Using that, it iterates the set of values one at a time. That's the main advantage of using a generator without storing the entire set in memory."
+            },
+            {
+                "interviewer": "So let's do around generator when you say that it has a yield value it returns on some things and then you said that it's more like an iterator so my question is that we already have iterators in python we have like for loop while loop iter tools in python that we can iterate up and yield is nothing i think it's primarily working similar to return statements for a regular function right so i can always use the combination of an iterator be it like for loop along with a function to um to basically um make sure that my requirement is complete why do i need to use the generator functions instead why",
+                "candidate": "Uh maybe the iterators elements like forever we can see that more memory efficiencies we can use generators. Generators will be sending one by one for local sources what will it be looping up right. Then we can say generate main function my keyword one we'll use is generates a lazy evaluation. Then generator can maintain their state between iteration without using additional variables that's the advantage. Then improved we can improve using generators can improve readability complex."
+            },
+            {
+                "interviewer": "So it's the first two points that it is lazy evaluation my question is how number two when you say you don't have to necessarily keep another variable to track it so let's say when we define a for loop it will always be let's say working on an index let um let's say we defined a for loop with i right so anytime you are iterating over a document for a million rows for ten thousand rows however the data i will always be keep on updating so you anyways don't have to make sure that there is a um any other variable that you need to declare your for loop is taking care of it so that part is okay but what do you mean by lazy evaluation um how does generator helps in lazy value",
+                "candidate": "Uh, actually, the generator is very useful in lazy evaluation. We can say that the entire sequence is not needed upfront or maybe infinite like that. It's not in their sequence is not needed like that. We will be giving a range of things in the for loop right for something like for i is equal to like that we will be giving and generator probably produce usually produce values only when needed which can lead to performance improvement in the system."
+            },
+            {
+                "interviewer": "What do you understand by the concept of context managers and what kind of work you have done in terms of context managers?",
+                "candidate": "I can say that a context manager is actually an object that properly manages the setup and teardown of resources set up the system we use properly. I don't remember actually where I used it. Conducts, actually definition for conducts management is the way to manage resources such as file stream, network connections, and lock ensuring they are properly acquired and released. For me, for my projects, I have used it somewhere but I won't remember right now I think."
+            },
+            {
+                "interviewer": "What do you understand by the concept of parallelism and concurrency in python and like how do you um it always is break what you said so what is the difference what do you understand by the concept of parallelism and concurrency in python how do you differentiate between them how do you implement them in python",
+                "candidate": "Parallelism is literally a device in which parts of a sequence are diagrammatically the same or similar in constructions sound or so like that which enhance the readability provide a rhythm to the system creating pattern or like that. Concurrency is literally refers to the secret plan made by a group of things. I don't know I don't getting the valid point remember the thing."
+            },
+            {
+                "interviewer": "So, Python being a single-threaded language, how does asynchronous happen in Python?",
+                "candidate": "Asynchronous is actually happening in FastAPI frameworks. I can say that Python uses actually the question is asynchronous in Python is how it's implementing. I mean I want to understand how asynchronous happens in Python. Asynchronous programming in Python uses async and await keywords and an event loop and libraries like asyncio to manage and run concurrent tasks efficiently. Asynchronous is particularly useful for I/O-bound tasks where waiting for operations to complete can be done while other tasks are processed."
+            },
+            {
+                "interviewer": "Hold on, Akshay, what you are reading out, what I'm trying to say is, you are reading out the points which FastAPI does, right? I'm asking how FastAPI does that? What goes underneath? So when we talk about asynchronous, how does it do that? If you're not clear, let's skip it. Move on to the next question.",
+                "candidate": "I don't actually know the first asynchronous thing how it works. But I'm not sure how, why Python, I never, some packages or something maybe we use it."
+            }
+        ]
+    },
+    {
+        "skill": "FastAPI",
+        "conversation": [
+            {
+                "interviewer": "In terms of your work experience alongside FastAPI, what makes FastAPI different from traditional frameworks such as Flask and Django?",
+                "candidate": "FastAPI is a high-performance thing. Comparing to FastAPI, it's asynchronous, actually. It won't wait for one API to complete the task to do another API call. It won't wait. Meanwhile, FlaskAPI is an asynchronous framework. In that, if one process is complete only, then the next process will be done. This is the main difference of Flask and Flask. Flask KPA is a micro framework. Flask KPA, you are mainly used for small applications like things will be used. Flask KPA is actually for high-performance thing. FastAPI automatically generates interactive API documentation like that. Then other frameworks documents usually require additional tools or manual to set up like that we want to do. Then FastAPI provides a building data dependency in the injection system. In other frameworks, usually dependency injection is typically less integrated. There is a built-in APS with built-in APS there's open a and JSON schemas can be used in a FastAPI. In other frameworks, we need some libraries or other tools for making it out. That's why it's mainly high performance and asynchronous is the main thing we can say sit out in the thing."
+            },
+            {
+                "interviewer": "What's your experience working with Pydantic models in FastAPI? What kind of work you have done using Pydantic? Can you explain?",
+                "candidate": "Pydantic model experience I can say is that I'm creating that for models pages like for FastAPI with DB site connections where DB model model will be remodels page we'll be writing the DB sting column names like that we'll be writing the dynamic models there. We will import base model field will be imported from the Pydantic model. I'll be using the projects where certification parts we have used for QR code printing site I have used, I remember. In my project, I have used in that in certification or some side there's a smart printing pages there in that calculation spots we are used to that model like how should we go like that we are using like that."
+            },
+            {
+                "interviewer": "What do you understand by the concept of dependency injection in FastAPI and like how does it work? Give me examples of what kind of work you have done using dependency injection.",
+                "candidate": "Dependency injection is a function or class that can be used to perform common tasks or provide reusable components. In FastAPI, I used Depends for small functions. In my projects, I have used, for example, in evaluation parts, we will be using the same CGP marks or something like that. In the medical industry or recruitment management system, we'll be using that data fetching. Sometimes we'll be using connecting the API classes from inside a class. We'll write a class like that nested."
+            }
+        ]
+    }
+]

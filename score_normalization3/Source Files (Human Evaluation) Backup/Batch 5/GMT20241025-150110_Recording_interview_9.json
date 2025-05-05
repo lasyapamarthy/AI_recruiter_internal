@@ -1,0 +1,53 @@
+[
+    {
+        "skill": "Vue.js",
+        "conversation": [
+            {
+                "interviewer": "Explain to me what is the reactivity system in Vue.js?",
+                "candidate": "So basically, when we work in any PHP or other languages, if we enter any name in a name property, then we use AJAX or submit a form, we need AJAX to submit the data and reload that. In Vue.js reactivity system, if there is a first name property, we enter the first name. Two-way data binding means the data is bound, and if we change any data, it directly updates the view parts. This is the reactivity; we don't need to reload our full page."
+            },
+            {
+                "interviewer": "What do you understand by the concept of directives in Vue.js?",
+                "candidate": "There are some directives like v-model, v-if, v-else. These directives help us easily, like v-model for two-way binding. We can also create our custom directives."
+            },
+            {
+                "interviewer": "How would you, in terms of Vue.js, if I ask you, there's a concept of higher-order component. Any idea around higher-order component?",
+                "candidate": "Higher-order component is related to JavaScript. A higher-order function either takes another function as an argument and returns a function or both. This function is common in functional programming and allows more abstract and flexible code, like reusable codes."
+            },
+            {
+                "interviewer": "In terms of a component in Vue.js, how do you manage the lifecycle for a Vue component?",
+                "candidate": "There are four main steps: creation, mounting, updating, and destruction. In creation, there are two: beforeCreate and created. BeforeCreate is called right after the instance is initialized; data and events are not available here. After it is created, it is called immediately after the instance is created. Events are set up, but the component is not loaded or mounted. After that, mounting: there are also two, beforeMount and mounted. BeforeMount is called right before the initial rendering begins. The DOM has been created but not added to the real page. After it is mounted, at this point, we can access the actual DOM. After that, updating: there are two, beforeUpdate and updated. And destruction: beforeDestroy and destroyed. I use beforeDestroy to destroy any third-party object or anything."
+            },
+            {
+                "interviewer": "How do you manage state in Vue.js?",
+                "candidate": "For managing the state, we use Vuex. This is a special library for managing the state in Vue.js. There are three to four main things like store. First, we create a store in Vuex where our whole state will be managed, meaning data is managed there. Then we create actions, so whenever we dispatch the action from our components, we update our DOM. The best practice is not to directly call mounted from the components, so we dispatch the actions and then call the mounted."
+            },
+            {
+                "interviewer": "Any idea around the concept of lazy loading in Vue.js?",
+                "candidate": "Yes, in one of my projects, I had the responsibility to optimize the code. It was already a three-year-old project, so the company was getting more. At that time, I optimized the website using lazy loading. Lazy loading is generally used for routes. Instead of static import, we dynamically imported the component. So whenever a user clicks on routes, this component will load, making the initial rendering fast."
+            }
+        ]
+    },
+    {
+        "skill": "JavaScript",
+        "conversation": [
+            {
+                "interviewer": "If I ask you in terms of JavaScript, JavaScript uses a concept called hoisting. Any idea on what is hoisting in JavaScript?",
+                "candidate": "Yes, if you use a variable, we first initialize and then declare. Hoisting will first put a variable to a declaration first and then initialize it. So it is hoisting."
+            },
+            {
+                "interviewer": "How would you explain the concept of closures in JavaScript?",
+                "candidate": "A closure happens when an inner function remembers and can use the variable from an outer function even after the outer function is done. Let me give one example: there is a function counter, and we have a return function. The closure function remembers the environment in which it is created even after the outer function has finished, so the inner function can use the variable of the outer function. This allows variables from an outer function scope to be used in an inner function."
+            }
+        ]
+    },
+    {
+        "skill": "Nuxt.js",
+        "conversation": [
+            {
+                "interviewer": "What do you understand by the concept of middlewares in Nuxt and what kind of middleware do you use?",
+                "candidate": "Middleware is used for authentication in Nuxt. Middleware functions execute before entering a route. There are three types of middleware: global middleware, named middleware, and middleware functions that receive the context object as their argument, which includes details about the current route, store, request, response, etc. We define middleware in the middleware directory and add it in the nuxt.config.js file. Commonly, we use it in authentication to redirect unauthorized users to the login page and restrict access to users based on their roles."
+            }
+        ]
+    }
+]

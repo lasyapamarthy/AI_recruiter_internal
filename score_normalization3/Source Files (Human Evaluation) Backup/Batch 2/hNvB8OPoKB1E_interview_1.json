@@ -1,0 +1,102 @@
+[
+    {
+        "skill": "Llm",
+        "conversation": [
+            {
+                "interviewer": "Hazz, Impressive Background! How Do You Ensure Efficient Memory Management And Performance Optimization In Python When Automating Large-Scale Tasks?",
+                "candidate": "So The Key Is To Choose Algorithms With The Lowest Time Complexity. And Obviously We Need To Make Sure The Variables Are Isolated When It Comes To Initializing The Input Values. But Then Efficient Use Of Function, Code Readability When It Comes To Abstraction And Encapsulation, Usage Of Functions. I Think A Bunch Of These Considerations Need To Be Taken Seriously When It Comes To Memory Management While Automating Large-Scale Tasks. Additionally, I Feel Like Using The Right Inputs, A Lot Of The Packages Need To Be Vetted Because Vetting The Packages And Going Through The Documentation Will Allow You To Know What Sort Of Time Complexity And Space Complexity Is Required For This. And A Careful Consideration Of These Factors Will Ensure The Best Possible Outcome When It Comes To Automating Large-Scale Tasks."
+            },
+            {
+                "interviewer": "You'Re On The Right Track! Could You Delve Deeper Into How Python'S Memory Profiling And Garbage Collection Can Play A Role In Optimizing Performance For Large-Scale Automation Tasks?",
+                "candidate": "So When It Comes To Large Scale Automation Tasks Even Every Second Saved Counts So Garbage Collection And The Allocation Of Memory Is A Crucial Role As Soon As A Variable Or A Particular Unit Of Memory Is No Longer Required That Needs To Be Deallocated You Need To Have Try And Accept Cases As Well To Ensure That During The Deallocation Process Nothing Else Gets There'S This No Interference When It Comes To Any Other Functionality Of The Code And As Long As You'Re Doing This Regularly During The Code Creation And Making Sure The Code Is Written Clearly So That You Will Know When Where The Garbage Collection Happens I Feel That Is Pretty Important"
+            },
+            {
+                "interviewer": "Thanks For Your Insights On Garbage Collection, Hazz. Let'S Explore Another Topic: Could You Explain How Language Models Use Attention Mechanisms To Improve Understanding In Nlp Tasks?",
+                "candidate": "Absolutely. Attention Models Are Pretty Important When It Comes To Improving Nlp Tasks. We Need To Make Sure That A Lot Of The Natural Language Processing Is Reactive To The Nlp Input. So Obtaining The Right Input, Analyzing It, Transcribing It, And Creating A Natural Language Response Is Very Important. And The Attention Mechanisms Needs To Isolate The Core Input From The External Inputs. So The Core Input Needs To Be Isolated. It Needs To Be Processed. Then The Innate Algorithms Of The Nlp Needs To Be Used To Generate The Output That Is Actually Beneficial For The Customer In The Backend."
+            },
+            {
+                "interviewer": "Thanks For Your Insights On Attention Models, Hazz. Let'S Shift Gears For A Moment: How Do Transformer Models Differ From Traditional Rnns In Processing Sequential Data?",
+                "candidate": "Transformer Models Are Actually Trained On A Very Large Amount Of Text. Generally, When We Talk About Llms, We Refer To Pages Using Textual Data From A Variety Of Sources. A Lot Of It Is Unstructured. A Lot Of It Is Taken From A Variety Of Different Places, Unless You'Re Training On Specialized Models. Whereas A Recurrent Neural Network Is A Bit More Specialized Uh The Inputs Are More Or Less Carefully Curated And It Is It Is Not And It Is Probably More Accurate When It Comes Compared To Nlps And An Llm Sorry"
+            }
+        ]
+    },
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Your Response, Hazz. Let'S Dive Into Another Topic: Can You Discuss Some Key Differences Between Multi-Threading And Multi-Processing In Python, And When You Would Prefer One Over The Other?",
+                "candidate": "Yeah, I Would Absolutely Love To Do That. Multi-Processing And Multi-Threading Are Two Very Important Concepts In Python And They Do Require Processor Load, Especially When It Comes To Multi-Threading. Multi-Threading Involves Allocating Different Cpu Compute Units For Certain Use Cases And Multi-Processing Is Actually More Of An Internal Segmentation Of The Python Workflow Which Can Actually Be Documented And Dictated By The Developer. I Feel Like Multi-Threading Is A Little More System-Based And I Feel Like The Developer Can Actually Use Certain Algorithms Or Use Certain Hardware To Optimize Multi-Threading While Multi-Processing Is More Hands-On And Probably Relatively Comparatively Better."
+            },
+            {
+                "interviewer": "Thanks For Your Thoughts On Multi-Threading And Multi-Processing, Hazz. Let'S Explore Another Intriguing Concept: How Does Python'S Gil (Global Interpreter Lock) Affect Multi-Threading, And What Are Some Strategies To Work Around It?",
+                "candidate": "Yeah, So The Gil Is Pretty Important When It Comes To Multi-Threading. I Mean, If You Do Your Gil Wrong, You Won'T Get The Desired Output. What Are Some Strategies? You Can Probably Disable Gil And You Can Try Executing The Code. So You Will Not Be Executing The Code Line By Line Per Se, But That Is An Interesting Approach And It Needs To To Be Explored But You Will Lose Some Of The Core Functionality Of What Makes Python Python"
+            },
+            {
+                "interviewer": "You'Re On The Right Track, But The Explanation Seems Incomplete. Let'S Look Into Another Interesting Aspect: What Are Some Common Pitfalls To Avoid When Managing Dependencies In A Python Project?",
+                "candidate": "I See A Number Of Amateurs Creating Python Projects Without Creating A Dedicated Virtual Environment. And The Thing With Python Is That All The Packages Are Being Updated All The Time. You'Re Constantly Getting Changes To The Functionality. And Even The Key Phrases When It Comes To Using, For Example, You Used To Have Pd.Merge, Pd.Append For Appending Data Frames Or Appending Rows To Data Frames Within That Code Discontinued And You'Re Using Pd.Concat. Pd Is Basically Pandas.Concat. So It Is Critical To Ensure That Certain Memory Is Segmented For This Virtual Environment And You Need To Have A Requirements.Txt File Specifying The Exact Version Like Like If It Is Python 3.12.6, For Example. So If You Can Mention Specifically, Very Clearly, What Packages And What Specific Version Of Those Packages Need To Be Installed In A Requirements.Txt File, And Then You Can Probably Execute It With Pip Slash R Requirements.Txt In The Virtual Environment, That Would Be Pretty Good."
+            },
+            {
+                "interviewer": "Great Points On Virtual Environments! Let'S Explore Another Topic: Could You Discuss How Decorators Work In Python And Provide Some Use Cases Where They Might Be Particularly Beneficial?",
+                "candidate": "See Decorators, I Don'T Personally Use Decorators A Lot In My Work, But They Have Some Benefits. But I Mean, You Could Use Enumerate, You Could Use Certain, There Are Workarounds Around It. So I Wouldn'T Say It Is Absolutely Essential."
+            },
+            {
+                "interviewer": "Acknowledged. Let'S Dive Into Another Fascinating Topic: How Do You Leverage Python'S Built-In Data Structures To Efficiently Manipulate And Analyze Data?",
+                "candidate": "Python Gives You A Number Of Really Good Data Structures You Have Lists You Have Dictionaries You Have Tuples You Have Sets But Uh I Particularly Find A List And Dictionary Is Very Very Useful Lists Are Essentially Like Vectors In C Plus Plus But Then It Is Mutable And You Can Actually Append A List Infinitely You Don'T Have To Define A List In Python Like You Do In C Plus Plus Or Some Some Other Object Or In The Programming Language This Allows You Flexibility When It Comes To Increasing And Decreasing Uh The The Size The Size Of The Memory Allocated To The List Additionally When It Comes To Using Dictionaries The Fun The You Can Actually Use Key Value Pairs And The Key Value Pairs Can Be Very Are Very Dynamic You Can Actually Have The Key As A String And The Value As A List So The Possibilities Are Endless And You Can You Can Do So Much With This There'S So Much Flexibility The Limitations Are Not Uh Not Annoying In The Sense That You'Re Not Oftentimes You Can Pretty Much Do A Lot Of The Things That You Can Do In Python Which Will Be A Little More Difficult In Other Object Oriented Languages Dictionaries Can Be Used For Example Uh But Like For Example If You Want To Take A Column And Then You Have Certain Codes In A Column In A Data Frame And Then You Have A Key In An Excel Store Somewhere You Can Actually Take The Excel And Then You Can Use That Excel Key And Then Keep It As Key Value Pairs And Then You Can Compare The Column Names Of Of The Data Frame And Find The Key Use A Corresponding Value To Replace A Column Name Uh That Is One Use Case That We Can Use Dictionaries For For Example"
+            }
+        ]
+    },
+    {
+        "skill": "Aws",
+        "conversation": [
+            {
+                "interviewer": "Interesting Insights On Python'S Data Structures, Hazz. Let'S Explore Another Aspect: How Do You Design And Implement Efficient And Scalable Architectures Using Aws Services?",
+                "candidate": "For Small Scale Deployments, You Can Actually Use Aws Lambda Because It Is Essentially Serverless And You Don'T Really Have To Maintain For Quick Executions And Quick Workflows. You Can Actually Do It And You Will Get Build For The Execution Time Only. But If You Want Greater Control Over The Compute And Memory, You Can Actually Use An Ec2 Instance For Compute And You Can Use Ss3 Or Some Sort Of Other Storage Management Solution Which Gives You Customizability In Aws."
+            },
+            {
+                "interviewer": "You'Re On The Right Track With Aws Lambda And Ec2. Let'S Tackle Something Different: How Do You Manage And Secure Sensitive Data In Aws To Ensure Compliance With Industry Standards?",
+                "candidate": "Yeah, So This Is Where Identity And Access Management Systems Come Into Place. Only The People Who Absolutely Need To Use A Particular Data Or A Particular Resource Needs To Have Access To It. And You Need To Have A Hierarchy And A Chain In Command. And Only The Users In The Hierarchy Or The Tier Above Have The Authority To Allocate Permissions And Access To The Data Under Them. This Will Ensure That Only The Right People Get To Use The Right Data Or Have Access To The Right Data"
+            },
+            {
+                "interviewer": "You'Re On The Right Track With Iam Systems! Let'S Explore Something Else: Could You Describe How Aws Cloudformation Can Be Used To Automate Infrastructure Deployment?",
+                "candidate": "One Of The Greatest Features Of Aws Is The Auto-Skilling Feature Where Instances Can Be Allocated And Deallocated Depending Upon The User'S Needs And Thresholds. For Example, Under Certain Peak Hours, Even If You Take A Content Delivery System, When You Release A New Episode Of Stranger Things, I Mean, You'Re Going To Have A Lot Of Traffic On Their Content Delivery System. Let'S Say Netflix, For Example, Aws What'S Gonna Happen Is The Auto Auto Scaling System Will Automatically Adjust Add Instances And Will Actually Work In Real Time To Meet The Needs Of The Of The User That Particular Point In Time"
+            },
+            {
+                "interviewer": "Thanks For Your Thoughts! Let'S Shift To Another Topic: How Do You Ensure High Availability And Fault Tolerance In Aws Architectures?",
+                "candidate": "Availability Zones Is Really Important. Making Sure You'Re Actually Having A Number Of Zones And It Has Attachments To Zones Nearby. For Example, If A Particular Zone, Let'S Say You'Re Deploying An Application In London, So You Should Have Essentially Maybe Two To Three Servers Or Availability Zones There. So In Case There Is An Issue With Zone One, Zone Two And Zone Three Are Always Reliable To Afford That Availability To The Customers. And If You'Re Working On A Global Scale, For Example, If You'Re Deploying An Application Globally, You Could Probably Have A Zone In Asia, A Zone In Each Of The Different Continents, And Then You Can Have Sub Zones. Intelligent Management Of These Zones And The Distance Between Them Are Critical To Ensure That Customers Are Getting The Required Bandwidth And Accessibility To The Particular Service Or Product."
+            }
+        ]
+    },
+    {
+        "skill": "Fast Api",
+        "conversation": [
+            {
+                "interviewer": "Interesting Take On Availability Zones! Let'S Try Something New: How Do You Leverage Fastapi To Build High-Performance Apis, Especially In Comparison To Other Frameworks?",
+                "candidate": "Yeah, I Mean, Fast Apis Are Allows You To Develop Apis In Very Short Time. If You'Re Familiar With Python, It Is A Natural Choice. You Can Build An Application With Flask And Fast Api And You Can Quickly Get Something Running For A Prototype. And Then If You Want To Go All In, You Can Probably, You Know, Propose Other Architectures And Go Into It, Maybe A Rest Api Or Something Else. But Then Fast Api Will Help You Prototype Very Quickly."
+            },
+            {
+                "interviewer": "Interesting Take On Fastapi And Its Prototyping Capabilities! Let'S Explore A Different Topic: How Does Fastapi Use Asynchronous Programming To Enhance Api Performance And Scalability?",
+                "candidate": "Asynchronous Programming Is Obviously Better When Compared To Synchronous Programming, Right, When It Comes To Api Performance And Scalability. So It Is A Natural Choice. And Foss Api Leverages It To Its Benefit. I Completely Agree."
+            },
+            {
+                "interviewer": "I See Your Point! Let'S Dive Into Another Topic: How Do You Handle Authentication And Authorization In Fastapi To Ensure Security And Efficiency?",
+                "candidate": "Yeah A Fast Api Ensures Security And Efficiency By Leveraging The The Security Policies Are In In Fast Api Given You Have Client Id Server Id Token Ids And You Can Only Execute An Application If You Have These Client Secrets So Without The Client Secrets You Can Actually You Cannot Execute The Application And Even If And If An Api Call Is Made That Is That Is Being Tracked So You You Are Well Aware Of The Usage Of The Api And Where That Usage Is Coming From"
+            },
+            {
+                "interviewer": "Thanks For Your Response On Fastapi'S Security Features, Hazz. Let'S Explore A New Topic: How Do You Optimize Database Interactions In Web Applications To Enhance Performance And Scalability?",
+                "candidate": "So How Do You Optimize Database Interactions And Web Applications To Enhance Performance And Scalability? The Right Kind Of Database Needs To Be Used. I Feel Like If You Use A Postgresql Over A Mysql Database, I Feel That Will Give You Greater Scalability. There'S Also Open Source. So That Is Definitely An Additional Advantage. Choosing The Right Database And The Right Storage System. For Example, If You Have A Lot Of Unstructured Data, You Might Use An S3 Instance For Unstructured Data For Objects. Whereas If You Want A Relational Database Or Some Sort Of Structured Data, You Will Have To Go With The Postgresql Or Mysql."
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Thoughts On Database Optimization, Hazz. Let'S Shift Gears And Explore Another Intriguing Topic: How Do You Approach Testing And Maintaining Fastapi Applications To Ensure Long-Term Reliability And Performance?",
+                "candidate": "Yeah This Is Pretty Important We Need To Ensure That A Number Of Uh Measures To Be Taken We Need To Have Like A Automation Testing Team On On Standby To Test Why The Developer Works On You Know Bug Fixes And Other Stuff So Having A Testing Team That Breaks And Tries To Break The Application Is Very Important And We Need To See What Sort Of Uh Counter Measures That We Can Take To Ensure That The Application Break Does Not Happen"
+            },
+            {
+                "interviewer": "Thanks For Highlighting The Importance Of A Testing Team, Hazz. Let'S Explore A Different Topic: Could You Explain How You Would Ensure Efficient Error Handling And Logging In Fastapi To Maintain Application Reliability?",
+                "candidate": "Logging Needs To Be Done At Every Step Of The Way, Every Execution Of What Is Happening. Each Process Needs To Be Recorded. And If Each Process Is, If There Is Actually An Exception, You Obviously Need To Have The Try-Except Cases. And Whenever There'S An Exception, That Exception Needs To Be Captured. So That Needs To Be Explicitly Mentioned In The Logs, That Exception Is This, And Happened At This Particular Point In Execution. So Whenever There Is An Issue, You Can Actually Go To The Logs And Figure Out What Went Wrong And Then Isolate That Particular Aspect And See What Can Be Done Over There."
+            },
+            {
+                "interviewer": "Thanks For Your Thoughts On Error Handling And Logging, Hazz. Let'S Explore A Different Topic: How Do You Ensure Scalability And Performance When Deploying Fastapi Applications In Production Environments?",
+                "candidate": "So You Need To Be Very Aware Of The Kind Of Load That You Will Be Experiencing, Like How Many Api Calls Per Minute, What Is The Size Of The User Base And How Available It Needs To Be At The Same Time. Based Upon This, You Need To Keep All These Considerations In Mind While Building The Infrastructure, Whether It Is An Is, A Paas Or A Saas."
+            }
+        ]
+    }
+]

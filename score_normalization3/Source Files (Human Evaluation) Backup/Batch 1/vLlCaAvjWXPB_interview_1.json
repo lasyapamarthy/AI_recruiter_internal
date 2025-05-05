@@ -1,0 +1,71 @@
+[
+    {
+        "skill": "3D Point Cloud Annotation",
+        "conversation": [
+            {
+                "interviewer": "Hello, Rohit! It'S Great To Meet You. With Your Experience As A Process Executive And Background In Data Annotation, I'M Eager To Dive Deeper Into Your Expertise. Here'S A Question For You: \n\nCan You Discuss A Situation Where You Had To Maximize Accuracy In Labeling Objects Within A 3D Point Cloud For An Autonomous Vehicle Project? What Was Your Approach And How Did You Ensure That The Bounding Boxes Were Correctly Applied And Validated?",
+                "candidate": "Yeah, Like In My Current Job, Like Cloud Point Are Available In Data Data, Like It'S Image Processing, So That'S Why There'S A Number Of Frame Content In The Same Track Line, Like, Uh, If There Are Moving Vehicle Like A Frame By Frame The Cloud Point Has Been Changes We Need To Adjust The Polygon Or According To The Track Line And Point Available In The Track Line If You Move Forward Forward The B Box Continuously Move According To Track Line By One By One Frame Position Is Continuously Changes If The Cloud The Colorful Cloud Point Is Beyond That Data We Need To Adjust B Box And Position Correct We Need To Check Where Position Is Correctly And Match Refer By Matching The Camera View And Radar View And Both Match Exactly So We Thus We Need To Label Data And Occurrent Of A Cloud Point In My Current Job Thank You. The"
+            },
+            {
+                "interviewer": "Thank You For Sharing Your Approach. It Sounds Like You'Re On The Right Track With Your Focus On Aligning The Data From Different Sensors. However, Could You Elaborate On How You Ensure The Accuracy Of The Bounding Boxes Themselves? \n\nIf This Is Still Not Complete, We Will Move On To A New Topic Together.",
+                "candidate": "Yeah, Accuracy Of Move On B Box Like We Need To Check The Data All The Data Point Cloud Point Are Inside Inside The Data No There Is No Lose Marking We Need To Check For Those Marking And And Tight Marking Like Sometimes Data Tightly Marks On B Box Points Are About The B Box And Some Are Below The B Box You Should Need To Maintain Accuracy Like Exact B Box According To Their Shape And Shape All Point Must Be Inside A B Box And Touching To The Line Of That. The Square Polygon. Thus We Check The Accuracy Of Data. I'M Tracking. Thank You."
+            }
+        ]
+    },
+    {
+        "skill": "Lidar Data Processing",
+        "conversation": [
+            {
+                "interviewer": "Thank You For Your Detailed Response. It Seems Like You'Re Focusing On Ensuring That All Data Points Are Accurately Within The Bounding Box, Which Is Important. However, Since The Response Is Still A Bit Incomplete, Let'S Explore A New Topic Together.\n\nCould You Explain The Process Of Removing Obvious Noise From Lidar Data And Why It'S Essential For Preparing Datasets?",
+                "candidate": "Yeah, Obvious Noises In Later Data Like Sometimes One Object Is Marked Multiple Times Because Of The Complexity Of The Frame Like We Are Detects. The People In The Frame There Are Lots Of People Present It Difficult To Target One People If You Change Move By One By One Frame Like It Moving Box Like It Will In Some Cases The Camera View Is Not Sufficient To Get A Later Data At Exact Point That Time Sometimes We Need To Sometimes Because Of The Duplicate Like One Label Is Marked Like Two Two Three Times We Need To Remove That Duplication Data We Need To Check By Camera View And We Need To Check The Polygon Present For One Annotation Like Removing The Duplicate Value And Check A Track Line And Exact Position By Comparing The Camera View And The Later Data So We Can Remove The Noises From The Data By Using This Technique For Data Preparation We Also Use For Like By Using Main Mode Video We Can Set The Target Value Like Sometimes The Sale Value Is Larger Than We Decided Like A Normal Range We Need To Fill The Missing Value By This Technique We Can Easily Find Out"
+            },
+            {
+                "interviewer": "Thank You For Your Response. It Seems Like You'Re Addressing The Complexity Of Noise In Lidar Data, But There Are Some Gaps In The Answer Regarding Specific Noise Reduction Techniques And Their Importance.\n\nLet'S Dive Into Another Topic. How Do You Handle The Challenge Of Working With Large Lidar Datasets, Ensuring They Remain Manageable And Effective For Analysis?",
+                "candidate": "Yeah, For Large Data Set We Can Divide Into Subpart Like 10 To By Using The Cross Validation Technique We Can Divide It Into The Different Different Part. So We Can Handle Easily By Using Like Probability Like If The Value Are Too Large Is It Too Large. Too Large Is Difficult To Get Output We Can Use The Probability Technique Like Ab Testing Technique We Can Use This Type Of Technique We Can Use For Large Data Set Thank You."
+            }
+        ]
+    },
+    {
+        "skill": "Sensor Fusion Techniques",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Sharing Your Approach. While Your Response Touches On Some Relevant Techniques, It Seems A Bit Off-Topic For The Question About Managing Large Lidar Datasets. \n\nLet'S Explore A New Topic Together. Could You Explain The Fundamental Importance Of Temporal Synchronization In Sensor Fusion, Especially When Combining Data From Lidar And Cameras?",
+                "candidate": "Like My Current Project, There Is An Autonomous Driving Vehicle. Autonomous Driving Vehicle Contains Lots Of Data Like People Detection, Radar Data, Camera Sensor. There Is A Different Different Part Or Overable. We Need To Detect People. We Need To Detect The Signal. Detect Signals, We Need To Detect The Obstacle, We Need To Defect Traffic Object. And Ladder Data, It'S Also They Have The Ladder Data Image Of The Particular Image. We First We Need To Announce All The Thing And Merge Into Integration Part. We Need To Integrate All The Available Data We Are Mark On That Particular Image And The Last We Need To Integrate. So Our Model Can Give The Best Accuracy For Future. It'S Very Important Thing To Integrate That Data."
+            },
+            {
+                "interviewer": "Thank You For Your Response. It Appears That You'Re Discussing Your Project And The Importance Of Integrating Data, But The Specifics About Temporal Synchronization In Sensor Fusion Were Not Addressed.\n\nLet'S Shift Gears A Bit And Delve Into A New Topic Together. Can You Describe How You Might Approach Ensuring Data Consistency When Aligning Lidar And Camera Data For Sensor Fusion?",
+                "candidate": "Like We Need To Radar Camera There Is A Pixel Like Coordinate Available On Image And Data Sensor We Need To Integrate That Coordinate X Y X X X X X So We Can Easily Synchronize That Also Indicate That Radar Data To The Camera Sensor"
+            },
+            {
+                "interviewer": "Thank You For Your Response. It Seems Like We'Re On A Bit Of A Different Track With Your Answer. Let'S Move On To A New Topic Together. Could You Describe The Role Of Calibration In Sensor Fusion When Integrating Lidar And Cameras, And Why It Is Crucial?",
+                "candidate": "Sensor Fusion Is Important To Integrate Ladar And Camera Data We Need To Define The Exact Position Of The Object We Need To Find Out The Accuracy Of Detecting The Exact Position By Using These Two Data We Need To Integrate The Integration Is The Important Part Between The Radar And Camera Data Because This Is Very Important To Get Accuracy And Exact Position Of The Object It Will Improve Our Productivity And The Other Parameters Depend Upon That Integration Part It Will Give You The Good Result For Good Result And Good Accuracy It'S A Crucial Part For Integrating The Ladder And Camera Data"
+            }
+        ]
+    },
+    {
+        "skill": "Spatial Coordinate Systems Knowledge",
+        "conversation": [
+            {
+                "interviewer": "Thank You For Your Response About Sensor Fusion. It Seems Like There Are Still Some Gaps Regarding The Role Of Calibration In Sensor Fusion. Let'S Explore A New Topic Together: \n\nCould You Explain How Coordinate Transformation Is Used In Aligning Lidar And Camera Data, And Why It Is Essential?",
+                "candidate": "Like, Coerate Transformation Is Always Important. Like Sometimes We Have Noise Data, Like In The Radar There Are Coordinates Are Present. Like We Need To Address The Exact Position Of The Object. In The Radar Data Sometimes Because Of The Obstacle Did Not Give The Exact Radar Point Or Coordinate Point On The Ladder Data Sometimes It Is Visible On Camera Because Of The Coordinate It Will Give You The Good Accuracy Exact Position Of That Data On The Later Data. Later Data Has Some Limitation Because Of That Limitation Sometimes Object Is Not Detected Properly But Take The Help Of The Camera View. We Can Easily Find Out Because Of The Obstacle, Ladder Is Not, The Radar Image Is Not Processed On The Data Data. For This Part, We Definitely Integrate The Integration Between The Radar Data And The Image. For This Because Of The Coordinate Is The Most Important Thing. We Can Increase Our Accuracy And The Exact Position Of The Project We Can Find Out By Using This."
+            },
+            {
+                "interviewer": "Thank You For Your Response. It Seems Like Your Answer Has Some Relevant Points But Doesn'T Fully Address How Coordinate Transformation Specifically Helps In Aligning Lidar And Camera Data. Let'S Explore A Different Topic Together: \n\nCould You Describe How Understanding Spatial Coordinates Is Crucial When Interpreting 3D Data Structures, Particularly In Autonomous Systems?",
+                "candidate": "The"
+            },
+            {
+                "interviewer": "Thank You For Your Response. Let'S Explore Another Interesting Topic Together: \n\nCould You Explain The Significance Of Coordinate System Transformations In Ensuring Accurate Data Integration For Autonomous Systems?",
+                "candidate": "Like A Coordinate Is An Important Thing We Need To Integrate On By Basis Of The Coordinate In 3D System, 3D System, However X, X, Y, Xx. We Need To Integrate On Later Data And The Camera Process. It'S An Important Part. It'S A Very Important Thing To It."
+            }
+        ]
+    },
+    {
+        "skill": "Custom_Question_0",
+        "conversation": [
+            {
+                "interviewer": "Could You Describe The Platform Or Software You'Ve Previously Used When Working On Lidar Annotation?",
+                "candidate": "Human Loop Ai For I Work In For Nvidia In Data Annotation Department At That Time I Use Human Loop Gtash, Ladder, Top View Ladder Data Data And Segment Labeling This Type Of Software I Use While Labeling The 3D Data Data Annotation"
+            }
+        ]
+    }
+]

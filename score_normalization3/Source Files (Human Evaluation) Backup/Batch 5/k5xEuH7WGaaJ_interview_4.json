@@ -1,0 +1,63 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "Impressive Experience, Vaibhav! How Would You Approach Optimizing Memory Usage In A Python Application That Processes Large Data Sets?",
+                "candidate": "Icon Application That Gosser Says. The I Sorry How Do I Approach In Optimizing Memory Usage In Python So There Are Various Ways And Some Ways Are Like We Can Use Efficient Data Structures Like Instead Of Using Directly Using Pandas We Can Use Pyspark Or Other Other You Know Data Processes That Works In Parallel And And Chunks On Ensuring Memory Efficient Processing Which Ensure The Memory Efficient Processing So What We Can Do We Can Do The You Know This Is A Sort Of A Memory Management Process So We Will Either Perform The Chunk Loading Or We Can Perform The Lazy Evaluation And Also Side By Side What We Can Do We Can Do We Can Do The You Know Parallel Distribution And Side By Side We Can Perform Split Operation You Know Filtering Or Grouping It Or There Are Many But Right Now I Can You Know Remember About This Much"
+            },
+            {
+                "interviewer": "Thank You For The Detailed Response! Let'S Dive Into A New Topic: How Would You Handle Concurrency In Python Applications, Considering Python'S Global Interpreter Lock (Gil)?",
+                "candidate": "Python Applications Considering Python'S Global Interpreter Law. First Of All, Uh, Uh, Uh, So This Is A Kind Of A Little Tricky Question For Me. For Me But The Strategies To Handle Concurrency In Python Is Through Input Output Bounding Tasks And Multi-Threading For Input On Foot Bounding Tasks Which Request The File So It Will Request This File And It Will Spend Time Waiting For External Resources So Multi-Threading Can Help Improve Performance Despite The Gil And Also Multi-Processing For Cpu Bound Task And Means Everything Is Kind Of A Parallel Processing If You Divide Each Each Task Parallelly Side By Side And You Know So It Will Work It Will Be Easier For Us To You Know Do This So In Short I I Can Say I.O Bound Task That Is The Multi-Threading Which Uses Multi-Threading. Cp. Boundars Which Uses Multiprocessing And Yeah That'S True."
+            }
+        ]
+    },
+    {
+        "skill": "Llm",
+        "conversation": [
+            {
+                "interviewer": "You'Ve Identified Some Strategies For Handling Concurrency In Python. Let'S Explore Another Topic Together: How Do You Ensure The Ethical Use Of Ai Models In Real-World Applications?",
+                "candidate": "So, Actually Yesterday I Was Going Through About This Particular Topic. So To Ensure The Ethical Use Of Ai Models In The Real World Applications Is I Was Going Through, I Was Reading About This, It Was Based Out Of Transparency To Ensure That The Model Decision Making Process Is Explainable By Incorporating Interpretability Tools Like Lates, Lyme And Sharpe This Makes The System Behavior And Understandable For Both And Developers As Well As Users And The Another One Which I Am Remembering Is Data Privacy And Security So In This We Are It Complies With The Regulations Such As Gdpr Or Another One Is There Which Uses Our Personal Data And Enforcing Data Encryption And Uses Privacy Techniques Some Privacy Techniques And Also The Last One Which I Think Is Continuous Monitoring I Implement Mechanism For Monitoring Model Performance In Production Allowing For Quick Detection Of Drifts Or Unethical Outcomes Followed By Corrective Actions Also Human In The Loop Is Another Way So If The Humans Are Involved It Will Be Easier For You Know To It Won'T Be Completely Hand Over To The App Or Ai In That Way"
+            },
+            {
+                "interviewer": "Great Insights, Vaibhav! Let'S Shift Gears A Bit: How Can Language Models Be Fine-Tuned To Improve Their Performance On Specific Tasks?",
+                "candidate": "So Recently I Had A Chance To Work On This Particular Fine-Tuning Project Where I Did Several Methods. So In That What I Did Was I Used The Adapters Q Lora Lora Adapters In That. Right From The Start If We Can Say We Can You Know Curate A Label Data Set Tailored To The Specific Task So So That Is The First Step And Then The Fine Tuning Is The Next Step Sort Of Train The Pre-Train Model On The Task Specific Data Set Using Supervised Learning This Helps Your Model To You Know Adjust To The Task While Leveraging Its General Knowledge From Pre-Training So Also Another Basic Technique It'S Like You Know Adjusting The Hyper Parameters Optimizing The Learning Rate Bad Size And The Number Of Epochs To Ensure The Model Learns Effectively Without Overfitting And This Is My Mindset This Is What I Have Felt Till Now The More The Training The Better The Model Outcome Is So And Also The Far The Evaluation Steps Evaluation Step Is Also Important You Know Evaluating The Model Performance On Our Validation Data Set And You Know Refining The Training Approach Based On Metrics Like Accuracy F1 Score Etc So These Are The Steps Which We Can Follow To Fine Tune Or You Know Improve The Performance On Specific Tasks"
+            }
+        ]
+    },
+    {
+        "skill": "Aws",
+        "conversation": [
+            {
+                "interviewer": "You'Re On The Right Track With Your Insights On Fine-Tuning Language Models, But There Are Still Some Aspects To Explore. Let'S Switch Things Up: How Do You Manage Cost Optimization For Aws Services In A Large-Scale Deployment?",
+                "candidate": "So, To Be Honest, I Have Learned About It, I Have Not Implemented Anywhere, Anywhere About Using Aws Services In Last Scale Deployment, I Have Been Using Google Collapse. But, So I Guess One Of The Approach Was Auto Scaling And So, So, So, The Approach Was Auto Scaling. It Is Completely Based Out Of Instances, So Running Instances Based On What Actual Traffic Is And Avoiding Over Provisioning. It Is One Of The Way And So Storing The Data, So Where We Are Storing The Data. So, S3 Storage Optimization, It Is Also Another Way. So Using S3 Storage To Store Infrequently Access To Data At A Lower Cost This Is The Another Way And And One Of The One Of My Senior Told Me About This Recently That Optimized Data Transfer Cost So Minimise Data Transfer Between Regions And Use Cloud Front For Content Delivery To Reduce Data Transfer Fees So And I Guess That'S It This Are The Cost Of Optimization Techniques I Can I Have Read About"
+            },
+            {
+                "interviewer": "You'Ve Covered Some Good Points On Cost Optimization In Aws, Vaibhav. Let'S Explore Another Topic Together: How Would You Architect A High-Availability Application On Aws To Ensure Minimal Downtime?",
+                "candidate": "How Would You Architect A High Availability Application On Aws To Ensure Minimal Downtime? Again I Feel Like One Is The Monitoring, What I Have Done Is The Monitoring And What I Have Done Is The Monitoring And The Deploying The Applications Across Multiple Zones Using Services Like Classic Load Balancer To Distribute Traffic And Ensure Failover Capacity And With The Help Of Monitoring We Will Be Able To Know That It Is Running End-To-End And Another Technique Which I Mentioned About Earlier It'S Auto Scaling So To Dynamically Add Or Remove Instances Based On The Demand Ensuring The Application Can Handle That Much Amount Of Traffic Right So That Is The Another Process Auto Scaling And Also Also So If We Monitor We Can You Know Go Through The Health Check Or Any Failures That Is Going Through While Deployment Or You Know Any Stops And Is Happening And Then And Then Also Means During My Data Engineering Workload I Used To Deal With This And And And And At That Time I Used To Make Sure That I, If Just In Case If Any Issue Happens, So Backup And Recovery Kind Of Thing. So Regularly Backing Up Your Data Using Amazon S3 Buckets So That You Know, You Are Safe. You Don'T Have Any Issues When There Is Any Outrages Or Something. So That Is One Of The Thing. So This Much I Am Aware Of Currently."
+            }
+        ]
+    },
+    {
+        "skill": "Fastapi",
+        "conversation": [
+            {
+                "interviewer": "You'Ve Provided A Comprehensive View On Deploying High-Availability Applications On Aws. Let'S Delve Into Something New: Can You Describe The Role Of Dependency Injection In Fastapi Applications And How It Enhances Application Design?",
+                "candidate": "So Recently Only I Started Working On The Fast Api And Dependency Injection Is Fast Api. It Allows You Know For The Decoupling Of The Components By Managing Different Dependencies In A Clean Way. So Fast Api Actually Handles The Injection Of Required Dependencies Into A Root Function Making The Code Base More Maintainable Or Testable So So It Simplifies The Code Instead Of Creating And Managing Dependency Manually Fast Api Manages The Whole Lifecycle Of Dependencies And Injects Them Wherever It'S Needed And It Is One Of The Advantages And Also We Can You Know Use That Dependency You Know On A Multiple Routes Or Multiple Components Which Also Is And You Know Which Is Sort Of Reducing The Redundancy As Well And It Is Good For Testing It It Reduces The Means It Makes Your Testing Easier And Allows You To Do Unit Test Without Affecting The Rest Of Applications And Depending There Also Yeah This Much I'M Aware Of"
+            },
+            {
+                "interviewer": "Thanks For Your Input On Fastapi! Let'S Explore A Different Topic: How Do You Ensure Secure Api Authentication And Authorization In Fastapi Applications?",
+                "candidate": "How Do You Ensure Secure Api Authentication And Authorization In Fast Api? So There Is A, Which Is Very Basic One Is Jwt, That Is Json Web Tokens And It Is A Secure Token Based Authentication. So Jwt Are Issued Upon Successful Login And They Are Included In Requests To Authentication Or Authenticate Users So It'S An Encrypt Kind Of Thing Encryption Decryption Kind Of Thing And The Another Way Which I Have I Can Think Of Us Since I Used To Dilvade Postman And I Since My Mcdonald Was The Client And So User Authentication We Used To Do Password Hashing Kind Of Thing So We Used To Secure The Store User Password By Hacking Them Using Libraries Like I Guess Bi Crypt Be Crypt Sorry B Crypt And Ensuring That The Passwords Are Never Stored In Plain Text And Once It Is Accepted On The Other End It Has Been Decrypted And And Yep I Guess And And And And And And And I Guess Something Related To Sttps Always I Guess Use Sttps Which Encrypts The Protect Data Transmitted Between The Client And Server. So This Is Another."
+            }
+        ]
+    },
+    {
+        "skill": "Custom_Question_0",
+        "conversation": [
+            {
+                "interviewer": "Do You Have Experience Doing Production Deployments?",
+                "candidate": "Yes, I Have Experience Doing Production Deployments. When I Was In Cap Gemina, I Used To Deploy The Applications On Jenkins, Cicd Pipelines. Also, I Have Deployed Applications Using Aws, Gcp Servers, Including Ac2, Bean, Stock, Lambda, And Kubernetes. And As I Mentioned, I Have Set Up Cid Cd Pipelines Using Jenkins And Gitlaps Ci. Also Docker For Containerization And Have Implemented Monitoring Logging Using Tools Like Gafana And Cloudwatch To Ensure That The Deployed Applications Are Stable And Secure. So Yes, I Have It."
+            }
+        ]
+    }
+]

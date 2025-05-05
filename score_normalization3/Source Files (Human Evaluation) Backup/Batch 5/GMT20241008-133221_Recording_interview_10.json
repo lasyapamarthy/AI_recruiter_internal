@@ -1,0 +1,85 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "Starting with decorators in Python, explain to me what are decorators in Python? What kind of work have you done using decorators?",
+                "candidate": "A decorator in Python is used to change the behavior of an existing function. This can be used for purposes like authentication or logging. We can create a decorator function that accepts a function, and we can use this decorator function with the '@' symbol. For example, '@my_decorator' is a function name, and this will modify the result of my functions, like logging details before or after."
+            },
+            {
+                "interviewer": "So basically you created an authentication decorator, right? What do you understand by the concept of generator functions in Python and how you might have used it?",
+                "candidate": "A generator function is an iterable form of a function, so it is more memory optimized and yields the response rather than storing all the data and giving the result."
+            },
+            {
+                "interviewer": "Give me some example.",
+                "candidate": "We can use this in reading large files or streaming data. Instead of storing all the data first and then displaying it, we can use generator functions for huge files."
+            },
+            {
+                "interviewer": "Are you reading it from somewhere?",
+                "candidate": "No, sir. Are you sure?"
+            },
+            {
+                "interviewer": "So now just tell me what exactly is a generator function based on your experience. I want to understand how you might have used a generator function.",
+                "candidate": "A generator function iterates over objects and yields the result one by one."
+            },
+            {
+                "interviewer": "Right. So how is it different from a for loop? Let's say there is data for 10,000 records, right? A generator function will also iterate over that data one by one, right? A loop will also do that one by one.",
+                "candidate": "A for loop is a way of iteration, I agree, but a generator function returns something. It can be a part of functions."
+            },
+            {
+                "interviewer": "I'm writing, let's say I've defined a function that takes some data and returns something, right? I've used that function in my for loop. So now the for loop will bring data one by one from my sheet. The function will process it and it will return it. What is the problem?",
+                "candidate": "Okay. I think so. I'm not able to..."
+            }
+        ]
+    },
+    {
+        "skill": "FastAPI",
+        "conversation": [
+            {
+                "interviewer": "You have worked with FastAPI, right? Explain to me what you understand by the concept of asynchronous processing in FastAPI.",
+                "candidate": "Async processing does not depend on the server to process. At once, we can process multiple tasks."
+            },
+            {
+                "interviewer": "Are you reading it?",
+                "candidate": "Sir, I'm not reading it. Why do you feel so that I'm reading it?"
+            },
+            {
+                "interviewer": "Explain to me the concept of asynchronous processing.",
+                "candidate": "We can have multiple processes rather than depending on other processes. It does not depend on other resources, so we can have parallel execution."
+            },
+            {
+                "interviewer": "What does that mean?",
+                "candidate": "An async process can be used like it does not depend on other resources. If we call an API and one function takes three seconds, the other function takes five seconds, the five-second function executes first, but it will not wait for the five-second function to be completed."
+            },
+            {
+                "interviewer": "Will you be able to explain it in Hindi?",
+                "candidate": "Async process."
+            },
+            {
+                "interviewer": "What does this mean that it does not depend on any resources?",
+                "candidate": "One is input, IO bound, and the other is CPU bound."
+            },
+            {
+                "interviewer": "Look, if it doesn't come, you'll say it doesn't come.",
+                "candidate": "I'm sorry that I'm not able to explain, but it somehow does not block the resources."
+            }
+        ]
+    },
+    {
+        "skill": "General Feedback",
+        "conversation": [
+            {
+                "interviewer": "You said one thing again and again in the interview that I am not able to explain it. You are not able to explain it because you are having a problem in speaking. Do a lot of work on this.",
+                "candidate": "I'm sorry if I'm not able to explain properly. Might be that I'm not able to explain as expected."
+            },
+            {
+                "interviewer": "Communication is very important. It is very important. You will write the code very well. I am ready to agree. But if you can't explain that code, then there is no point.",
+                "candidate": "I mean, I'm struggling with this. And like, you were a little stricter than other interviews. But you were cool as well."
+            },
+            {
+                "interviewer": "Work on communication, my friend. Everything will improve. Your confidence level will be 6 times higher. But you work on communication.",
+                "candidate": "There is one issue, I think, sir. That things are not explained properly. Although I know that I have implemented it."
+            }
+        ]
+    }
+]

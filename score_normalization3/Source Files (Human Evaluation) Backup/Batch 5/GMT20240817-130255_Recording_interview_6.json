@@ -1,0 +1,81 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "What's your total years of experience when it comes to Python and FastAPI?",
+                "candidate": "So if you talk about Python, it is almost five years. I started it from the time spent over here, almost 1.5 years. I was also working with Python over there. Python plus Spring Boot are now in delivery. I've been working in Python along with Node.js. So more than 80% of projects are in Python. And we are not using FastAPI."
+            },
+            {
+                "interviewer": "Let's start with some of the concepts around Python and FastAPI. Whenever we work with APIs in particular, we use something called decorators a lot more time. Can you explain what are decorators, what kind of work you have done with decorators?",
+                "candidate": "OK, so a decorator is a design pattern. If I explain what it really does, it's a wrapper over some function, you can say. So whenever you use an annotation, let's say you create a decorator for authentication, validation, authorization, and you put it over a request or you put it over some function. Whenever that function gets called, the request will go to that decorator and then it will pass on to that function. It wraps over that. You can apply multiple decorators on the layer of on top of that actually so let's say first you have applied authentication layer authentication decorator then you have applied the schema relation and then you come to you can say authorize or then you can actually go to your home site so it goes it goes like this so if like if I say in simpler it's a design pattern actually."
+            },
+            {
+                "interviewer": "Have you worked with large data sets? So my point is that whenever we work with large data sets in particular, we use something called generator functions in Python. Generator functions, like what are those? How you might have worked with them?",
+                "candidate": "Yeah, OK. When it comes to a large data set, we cannot just load it to the RAM directly, or you can see it in memory. So here it comes, the generator function. It is kind of an iterator function, but it loads the next, let's say, when you call it next. And then returns it or it's not just for returning data you can create an any you can create an any generator function which gives you the next value whenever you want when you call next it will execute that function and return to the return the next value."
+            },
+            {
+                "interviewer": "So when you say it behaves like an iterator and works on a next thing. So my point is that we can always use something called a for loop, which is a regular iterator. It will also have an index. We can track the next thing. There's a difference between using a for loop kind of a thing rather than using a generator function.",
+                "candidate": "Okay, there's a difference in generator function and the for loops. As I said, it is not loading, it is not loading the whole data in memory."
+            },
+            {
+                "interviewer": "What do you mean it's not loading the data from memory, where it's getting the data from?",
+                "candidate": "OK, so let's say you have a CSV of, let's say, 5 GB. You don't want to load all the data at one time. So what you can do, you can get it in a batch, or you can just get one row. So it will just load one at a time in this case. And along with that, you can also use like, what you can do, like you can just load the whole data in one time and then start over. But that system will get really slow in that case. So here we can take the advantage of generator functions in that scenario."
+            },
+            {
+                "interviewer": "Any idea around the concept of context managers in respect of file handling ever got a chance to work with context managers?",
+                "candidate": "Context measure like I'm no no like I will say I've worked with the file handling obviously but you know this is this isn't we create and then create a connection on the closed connection but no context."
+            },
+            {
+                "interviewer": "If I ask you around Python, one of the two of the most core concepts around Python is like parallelism and concurrency. Can you explain what are these things how are they different from each other and like how you might have used these things before?",
+                "candidate": "Okay, so when it comes to concurrency, concurrency doesn't really mean the request will be handled parallelly. So it just means it is doing multitasking or it is handling multiple tasks together. So maybe the CPU is a single core CPU and then it can still perform concurrency. It can handle multiple tasks concurrently. So when I say concurrently, how will it be? So it will do time-slicing over the CPU. So let's say we have a CPU clock, we have set a CPU clock for one second, then it will execute the one task for the one second, then will hold it, then goes on to second, and it will execute all those tasks until all are done so this is a concurrence actually but when we say it is when we come to the parallelism that means two tasks are getting processed at the same time so it can be achieved only when we have multiple codes. So those two processes are processing those two events at the same time. Doesn't mean they are. So obviously, we can do both in a system. Concurrence and parallelism together, you can combine it."
+            },
+            {
+                "interviewer": "What happens when a Python application, when you write a concurrent code? So my point comes from the fact that let's say we are working on asynchronous operations. What happens at the back of the compiler when something asynchronous happens? So how does Python compiler deals with asynchronous, Python being a single-threaded language?",
+                "candidate": "Yes, so it will take the request. And let's say one first process, if we are processing, and it goes for some IO person, or if it goes for some, let's say, where the CPU is not being utilized. So it will move to the next track, then it will start executing it. That's how Python utilizes the call currency. So whenever it is waiting for the IO or something, then it will start processing the second time, then let's continue the IO process, what the first process was."
+            }
+        ]
+    },
+    {
+        "skill": "FastAPI",
+        "conversation": [
+            {
+                "interviewer": "What do you think is the differences between FastAPI and like, let's say Flask?",
+                "candidate": "Actually, as I said, I have not used Flask in our deliver, but whatever I've done is read or explored online. So the things I know that the FastAPI is, as the word comes with the Fast, so it's a very lightweight. And whenever it comes to the Flask and FastAPI, fast API framework is built on, you can say, a single person just to handle, to deal with the concurrency and to handle large number of requests concurrently. So the major difference is the asynchronous handling of tasks."
+            },
+            {
+                "interviewer": "So apart from that, there is no difference?",
+                "candidate": "No, there will be a difference. They will definitely have, there definitely would be differences like dependency injection and what we call it."
+            },
+            {
+                "interviewer": "So what is dependency injection? Talk to me about it.",
+                "candidate": "Dependency injection is like, let's say dependency is something you have dependency on some library or something. You can say module or let's say let's say this now you can see it needs an object of something like a database or repository or assume something so whenever uh like instead of creating the instead of creating the object internally uh so we will provide it externally so it will be handled by uh framework itself so in that case dependency injection like you can you can you can provide a you can provide an object of that dependency directly using a constructor or sector method or something directly to the framework or to the request, you can say. And then we can utilize that dependency of object or whatever we can call it."
+            },
+            {
+                "interviewer": "Any idea around the concept of background tasks? Like what are background tasks? How you might have used them before?",
+                "candidate": "I'm not really getting like if you are talking about something up in FastAPI, I really don't know about that."
+            },
+            {
+                "interviewer": "Any experience working with Pydantic model for model validations and things like that?",
+                "candidate": "No, no, no I don't think no no I would do it. I read a little bit about it. Maybe you can say today only."
+            }
+        ]
+    },
+    {
+        "skill": "EKS",
+        "conversation": [
+            {
+                "interviewer": "Any idea around the concept of EKS? Have you ever worked with Amazon EKS in particular?",
+                "candidate": "Yes. So we are at EKS, obviously, Elastic Operator Service. We have been directly using the infrastructure of EKS in our delivery across all the projects. So we are creating like we are creating pipelines for deployment and build images and then deploying in the Kubernetes environment so we are not creating an infrastructure if you are asking about that like in EKS but we are like setting auto scaling and maintaining like how should auto scale and then when should it down scale the parameters all those things we have been managing by ourselves."
+            },
+            {
+                "interviewer": "In terms of EKS, like working with EKS in particular, how do you set up configurations and secrets in an EKS cluster?",
+                "candidate": "So, when we say, like, if you're talking about the configuration, you mean the environment variables or something?"
+            },
+            {
+                "interviewer": "The variables are different. When I'm saying configuration, so for a Kubernetes cluster, I want to basically say the cluster configuration. So when an API is going to come, how it's going to route, at what point, at what pod it will go, and how would it take care of it? We set up configurations in that scenario, right?",
+                "candidate": "OK, as I said, I'm a developer. There's a DevOps team for doing it. But I can say how the request is coming to our pod directly. So I can tell you how is it coming. So whenever the request is coming, any DNS .. Whenever we have an API on some URL, then it will go to obviously DNS, then API Gateway or something .. Then API Gateway will pass it to the, what we call it, in target group, actually. So in a target group, the request comes to the load balancer, actually, after API Gateway. Then load balancer puts it to the API target group. Inside target group, there are rules of where it should be get routed. And all those pods are getting registered on that target group. And so the target of dealing with all those things, like if the port is down or port is up, and then the target group sends the request to that individual port. And then on that port, our server or whatever the consumer it is, it can deal with it."
+            }
+        ]
+    }
+]

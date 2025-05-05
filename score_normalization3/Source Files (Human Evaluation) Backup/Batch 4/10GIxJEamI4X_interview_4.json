@@ -1,0 +1,70 @@
+[
+    {
+        "skill": "Product Management",
+        "conversation": [
+            {
+                "interviewer": "Hello Neha! It'S Impressive To See Your Extensive Experience Across Various Industries And Your Depth In Agile And Product Management. Let'S Dive Into A Question Tailored For You: \n\nCan You Describe A Time When You Had To Pivot A Product Strategy Due To Unexpected Changes In Market Conditions Or Technology Advancements? What Approach Did You Take To Ensure The New Strategy Was Aligned With The Company'S Goals And Stakeholders' Expectations?",
+                "candidate": "So, In My Previous Company, Mclaren'S Strategic Venture, We Were Trying To Develop A Compliant Regulated Wallet As A Service On Blockchain. So Initially What We Have Decided, Stakeholder Decided To Let'S Go With The Solana Blockchain. But Due To Availability Of The Resources Of The Solana, That The Rela Developer, We Decided To, We Have To Change The Technology, Blockchain Layer, To Manage And Improve Our Product And In Their Timeline And Goals. So That'S Why We Changed Our Technology And We Went To Use The Blockchain Layer Evm, Ethereum Virtual Machines. And By This Way, We Change The Technology With The Technology Advancement Of Market Conditions. And To Ensure The Product Would Be On Time, What We Have Decided, Let'S Build The Mvp Wallet, On-Chain And Option Wallet, And Then We'Ll Move Forward With The. Full-Fledged Wallet As The Service. By This Way We Have Got The Funding Based On Our Mvp And We We Were On Track In Terms Of The Roadmap And The Launch Product Launch By This Way We Resolve The Issues."
+            },
+            {
+                "interviewer": "Thank You For Sharing Your Experience. Let'S Explore A Different Aspect Of Your Expertise: \n\nHow Do You Prioritize Features In A Product Backlog When Working With Limited Resources And Time Constraints?",
+                "candidate": "To Prioritize Our Product Backlog, I Generally Use To Moscow, Must Have, Should Have, Could Have And Develop Methodology To Prioritize My Product Backlog. And With The Limited Time And Limited Resource, That Technology, That Methodology Helped Me A Lot Because We Have The Feature List Which Should Be Must Have. And It Should Be Market Ready With The With The With The Should Be Aligned With The Product Roadmap So By This Way I Used To Pick Up The Must Have Feature First And Then The Could Have And Then The Should Have Then By This Way My Product Backlog Would Be Prioritized And Then My Product Would Be On My Time To Market"
+            }
+        ]
+    },
+    {
+        "skill": "Agile Methodologies",
+        "conversation": [
+            {
+                "interviewer": "Thank You For Your Response. Let'S Explore Another Concept: \n\nCan You Explain How Agile Methodologies Facilitate Continuous Improvement In A Project?",
+                "candidate": "Agile Mythology Facilitate The Continuous Improvements In Our Project By This Way Because With The Help Of Agile We Generally Get A Feedback And With The Help Of A Sprint Retro We Are Getting A Daily Feedbacks I Mean Say Sprint-Wise Feedback Session And With The Help Of The Agile Methodology And Their Frameworks We Are Getting Continuous Feedback And The Changes With The Changes Of Market And The Time And By This Way It Will Help Our Product Or A Project To Improve And It Would Be Ready Best Of In Best Of Time And As Per The Market And As For The Market"
+            },
+            {
+                "interviewer": "You'Re On The Right Track. Could You Elaborate On How Agile Methodologies Incorporate Iteration And Collaboration To Further Facilitate Continuous Improvement?",
+                "candidate": "Actually, Yes, We Can Say That Agile Methodology Incorporates Iteration And Collaboration. Because With The Help Of Collaboration Means The Team, Their Feedback And I Can Say Proactive Feedbacks On Each Sprint Release, On Each Feature Release. It Helps Us To Continuous Improvement And Their Iteration Because Whenever We Are Getting. A Feedback Then There Would Be Iteration Whenever We Are Doing The Testing There Would Be Iteration That Help Our Sprint Our Feature Would Be The Market Ready And It Should Be It Should Be Ready Without Any Bugs"
+            },
+            {
+                "interviewer": "Thanks For Your Input. Let'S Explore A New Topic: \n\nHow Do Agile Methodologies Handle Changes And Uncertainties In Project Requirements?",
+                "candidate": "Actually, To Handle The Changes And The Uncertainities In The Project Requirement, We Need To Do The Due Diligence. We Need To Do The Complete Research. That'S Why There Is A Session Called The Requirement Gathering And Solicitation. In That Session, A Product Team Or A Business Analyst Team Needs To Do The Complete Research And Do The Complete Analysis On All Changes And The Uncertainties. We Can'T Say Uncertainties. The Changes We Can Say That The Changes Of Whatever We Are Getting From The Stakeholders We Need To Do The First The Due Diligence Is That Changes Based On Our Aligned To Our Goal And The Product Roadmap If It Is Required Or It'S Based On It Should Be Aligned With The Goal And The Roadmap Then We Need To As A Product Team We Need To Do The Diligence We Need To Do The Complete Analysis Then We'Ll Check Our Already Planned Sprints And The Product Back A Sprint Backlog And Then Based On The Priority We Need To Put Into The Sprint By This Way We Use To Handle The In Our Communities"
+            }
+        ]
+    },
+    {
+        "skill": "Product Lifecycle",
+        "conversation": [
+            {
+                "interviewer": "Thank You For Your Detailed Response. Let'S Explore A New Topic Together: \n\nCan You Discuss The Role Of Stakeholder Management Throughout The Product Lifecycle And How It Impacts Product Success?",
+                "candidate": "Yes, Actually The Role Of Stakeholder Management Is The Major Thing In The Product Life Cycle. In The Stakeholder Management, We Need To Identify Who Would Be The Stakeholders And That Will Impact Our Product Success, Directly Impact The Product Success. If We Will Not Align A Po, A Product Owner, A Product Manager, A Right Person Or A Correct Person, Then The Product Success Would Be Directly Impacted. And If The Scrum Master Is Not Doing Their Work Properly, Then Definitely It Will Impact Our Product Success. So Identifying The Team Member Or A Stakeholders Is The Major Thing In The Product Is Directly Proportional To The Product Success."
+            },
+            {
+                "interviewer": "Thanks For Your Insights On Stakeholder Management. Let'S Shift Gears And Dive Into Another Aspect: \n\nCould You Discuss How You Ensure Product Quality Throughout The Product Lifecycle?",
+                "candidate": "Yes, I Make Sure The Product Quality Or I Ensure The Product Should Be, My Features Should Be Tested And It Should Be Smart Ready. With The Help Of Continuous Testing On Every Specific, First Testing We Used To Do The Pr Testing Now. First Testing Would Be Done From The Developer'S Side. That Will Be The Definition Of Done And Then We'Ll Do The Peer Testing Then The Uat And Then The Second Level Of Uat Then Testing On The Staging And Then The Testing On Release To The Stakeholder Testing And Then That Means The Uat For The Stakeholders By This Way Our Product Market Ready And With The Help Of Sprint Retro We Also Get The Feedbacks And Will Incorporate Into The Our Product And The Features."
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Approach To Ensuring Product Quality. Let'S Explore A New Topic Together: \n\nHow Do You Effectively Handle Communication And Alignment With Cross-Functional Teams During The Product Development Process?",
+                "candidate": "With The Daily Team Meeting And The Scrum Meetings, I'Ll Ensure The Team Communication And The Cross-Functional Team Alignment."
+            },
+            {
+                "interviewer": "Thanks For Your Response. Let'S Dive Into Another Topic: \n\nHow Do You Approach Risk Management Throughout The Product Lifecycle To Mitigate Potential Challenges?",
+                "candidate": "At The Time Of Project Elicitation, A Requirement Elicitation, We As A Product We Used To Identify The Potential Risks And Do It Can Be A Functional, It Can Be A Technical, It Can Be Anything Related To The Product, Then We'Ll Do The Research And Identify The Solution. And If We The Risk Mitigation With The Potential Risks With The Help Of Research And Solutioning During The Phase Of Elicitation Will Discuss And Will Identify The Solution"
+            }
+        ]
+    },
+    {
+        "skill": "Team Management",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Sharing Your Approach. Let'S Explore A New Topic Together: \n\nCould You Describe How You Foster A Culture Of Collaboration And Innovation Within Your Team?",
+                "candidate": "Yeah, Actually Whenever We'Ll Identify Any Risk And That The New Thing, Our Team Hasn'T Never Done That Kind Of Topic And A Feature. What We Have, I Used To Do, I'Ll Spread Out That Thing And Get The Team And Whomever Is Interested And I'Ll Do A Sort Of Reward And Recognition Program For That Topic And And Then Certain Mvp And All, By This Team Have Upskill, What Say, They Didn'T Never Work, Front And Team Never Work, They Always Work On Html And Css, And They Never Worked On The React G.S And Javascript. Then I, I'M Motivated Them, Let'S Try Something New, Let'S Build Something New. And Then There'S A Sort Of Task On Hackathon, I Can Say The Internal Hackathon. We Arrange A Hackathon. But They Learned That Thing And By The Skill Their Talent And Will Help Us In Our Next Project"
+            },
+            {
+                "interviewer": "Thank You For Sharing Your Approach To Fostering A Culture Of Collaboration And Innovation. Let'S Delve Into Another Topic: \n\nHow Do You Handle Conflicts Within A Team To Ensure Productivity And A Positive Working Environment?",
+                "candidate": "To Handle A Conflict Inside The Team, First Thing, I Will Take An Individual Meeting To Understand Their Issues. First Of All, Whenever We'Ll Understand Their Issues, Then I Try To Explain The Situation. And Whenever The Situation Has Been Explained, Then I'Ll Figure About The Issue And They'Re Their Problems And Then I'Ll Identify The Solution And I'Ll Try To Give The Solution At My End I Can Otherwise I'Ll Talk To My Stakeholders And Managers And The Solution Give Them The Solution By This Way I Always Handle The Conflict To Have A Individual Meeting To Understand Their Problem And Then Then All The Issues"
+            },
+            {
+                "interviewer": "Thank You For Sharing Your Approach To Handling Conflicts Within A Team. Let'S Explore Another Topic Together: \n\nHow Do You Ensure Team Motivation And Engagement During Long Projects?",
+                "candidate": "I'M Sure The Team While I Recognize Them To Them In The Meetings Arrange Some Reports Terms Of The Good Goodies Some Detail Some The Judging National Recognition If If Worked Hard Then The Cop Any Kind Of Recognition Rewards I'M Sorry That The Rewards And The Recognition During The Team Meeting During The Team Town Halls I Recognize Them They Have Done A Fundamentalist Job Are Changing Written Recommendation Of The Clients And The Stakeholders By This Way I Used To Motivate The Team"
+            }
+        ]
+    }
+]

@@ -1,0 +1,107 @@
+[
+    {
+        "skill": "3D Point Cloud Annotation",
+        "conversation": [
+            {
+                "interviewer": "Hello Smritikana! It'S A Pleasure To Have You Here Today. Based On Your Experience, Could You Describe A Specific Instance Where You Had To Ensure High Accuracy In Labeling Objects Within A 3D Point Cloud? What Steps Did You Take To Maintain Precision, And What Was The Outcome Of Your Efforts?",
+                "candidate": "In The Last One Year, I Do Many More Projects, I Do Three Projects Mainly. One Of The 3D Vehicle And One Is The Traffic Sign And One Is Free Space. In 3D Vehicle I Do Only 4-Wheeler Vehicle. First Of All, I Capturing A Recall In 2D Bounding Box In 2D, Then 3D, I Create 3D Bounding Box. In Tsr, I Capturing Traffic Sign, Types Of Various Types Of Traffic Sign. And In The Free Space, I Capturing All The All The, All Of The, Object Like Physical Barrier, Houses, Trees, Pedestrian Road, Etc."
+            },
+            {
+                "interviewer": "Thank You For Sharing Your Experience! Could You Elaborate On How You Ensured Accuracy In Labeling As Per The Project Requirements?",
+                "candidate": "Thank You Very Much. As Far As The Project I Ensured Accuracy In Leveling In The 3D Vehicle I Do In The 3D Vehicle I Do Email I Do Email I Do I Am I I I Do I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I I Do Working Image And In The Tsa I Do Working Video It'S A 20 Frame Of Video And In The Tsa In The Free Space I Do Four Frame Five Frame Of Five Frame Of Video Our Project Requirement Is In The 3D Vehicle Part Day Capturing Minimum 420 Vehicle In 2D 3D And In The Tsr Our Project Requirement Is Maximum 16 Maximum 16 Maximum 16 Maximum 1300 Traffic Sign That'S It."
+            }
+        ]
+    },
+    {
+        "skill": "Lidar Data Processing",
+        "conversation": [
+            {
+                "interviewer": "Thank You For Your Response! Let'S Explore Another Facet Of Your Expertise. How Do You Typically Manage And Process Lidar Datasets To Ensure They Are Free From Obvious Noise And Adequately Prepared For Analysis?",
+                "candidate": "The Door, No, No, Up, Up There, Up There'S Just A Little Bit Of We Have Been Able To Sit There."
+            },
+            {
+                "interviewer": "It Seems Like There Might Have Been A Mix-Up Or Miscommunication. No Worries, These Things Happen! Let'S Try Exploring Another Aspect Of Your Expertise. Could You Discuss How You Handle And Process Lidar Data To Ensure Its Accuracy And Completeness?",
+                "candidate": "How Do You? How Do You? How Do You? How Do You? How Do You? Pasta, Past, I Mean, Pass."
+            },
+            {
+                "interviewer": "It Seems Like Your Previous Response Was A Bit Off Track. No Worries, These Things Happen! Let'S Dive Into A Different Question: Could You Describe How You Approach Noise Reduction And Data Preparation In Lidar Data Processing To Ensure Data Accuracy?",
+                "candidate": "The"
+            },
+            {
+                "interviewer": "It Seems Like Your Previous Response Might Not Align With The Question. No Problem, Let'S Tackle A Different Aspect Of Your Expertise. Could You Explain The General Properties Of Lidar Data That Are Essential For Effective Data Processing?",
+                "candidate": "The Properties Are In 3D Vehicle Is Movement Of Car Car Movement Of Car And The Indicator Is On Or Off And Its Physical Barrier The Vehicle Is Physical Barrier Or Not The Vehicle Is In The Physical Barrier Or Not And And What Is Vehicle Color And And Which Type Of Decal And In Tsa Properties Are The Types Of Traffic Sign, Traffic Sign, Font Or Traffic Sign Isn'T Font Or Back Sides, The Coverage Of Traffic Sign And That'S It."
+            }
+        ]
+    },
+    {
+        "skill": "Sensor Fusion Techniques",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Your Response. Let'S Explore A New Area Of Your Expertise: Could You Explain The Basic Steps Involved In Aligning Data From Lidar And Cameras To Ensure Consistency In Annotations?",
+                "candidate": "Pass The Sessions."
+            },
+            {
+                "interviewer": "Thank You For Your Response! It Seems Like We Might Need To Move On To Another Topic. Could You Discuss How You Determine The Synchronization Requirements When Combining Lidar And Camera Data For Consistent Annotations?",
+                "candidate": "In Our Project, Lider And Camera Data Both Of Them, First Of All, I Do Working Two-D-Camera Data, Then I Go For Chairlider Data And That'S It"
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Approach! It Seems Like We Could Delve Into Another Interesting Topic. How Do You Ensure That The Synchronization Between Lidar And Camera Data Is Precise Enough To Maintain Data Integrity During Analysis?",
+                "candidate": "The"
+            },
+            {
+                "interviewer": "Thank You For Your Response! Let'S Shift Gears And Explore A Different Question: Could You Explain The Concept Of Data Fusion And How It Applies To Integrating Information From Multiple Sensors Like Lidar And Cameras?",
+                "candidate": "No. No. No. No, No."
+            },
+            {
+                "interviewer": "It Seems Like There Might Be A Little Confusion. No Worries, Let'S Tackle A Different Question: Could You Describe The Role Of Time Synchronization In Combining Data From Multiple Sensors Like Lidar And Cameras?",
+                "candidate": "Five Questions. Thank You."
+            },
+            {
+                "interviewer": "I Appreciate Your Response. Let'S Explore Another Topic: Could You Discuss The Importance Of Calibration When Combining Data From Different Sensors Like Lidar And Cameras?",
+                "candidate": "Pazda Pazda"
+            },
+            {
+                "interviewer": "Thank You For Your Response! Let'S Shift Our Focus To A Different Topic. Could You Explain How Error Checking Is Integrated During The Process Of Sensor Fusion To Maintain Data Quality?",
+                "candidate": "Yes, I Do Error Data. I Do Error Data. First Of All, We Are Doing, We Are Doing, We Are Doing Annotation And Error Data Is Come Back Again And We Check The Properties We Check The Properties And We Check The Bounding Box Or 2D And 3D And Appropriate Them That'S It That'S It Thank You."
+            }
+        ]
+    },
+    {
+        "skill": "Spatial Coordinate Systems Knowledge",
+        "conversation": [
+            {
+                "interviewer": "Thank You For Your Response! It Seems Like The Answer Is Still Incomplete. Let'S Explore A Fresh Topic: Could You Explain How Spatial Coordinate Transformations Are Essential In Aligning Data Across Different Coordinate Systems, And How They Are Typically Implemented?",
+                "candidate": "I Have No Idea."
+            },
+            {
+                "interviewer": "Thank You For Letting Me Know. Let'S Explore Another Topic Together: Could You Describe How Transformations Between Different Spatial Coordinate Systems Are Crucial For Accurate Data Analysis In 3D Modeling?",
+                "candidate": "Pasta"
+            },
+            {
+                "interviewer": "I See Where You'Re Coming From. Let'S Explore A Different Topic: Could You Explain How Understanding Spatial Coordinate Systems Is Vital In Interpreting 3D Data Structures Effectively?",
+                "candidate": "The"
+            },
+            {
+                "interviewer": "It Seems Like Your Response Might Not Fully Address The Question. Let'S Try A Different Topic: Could You Discuss How Spatial Coordinate Systems Are Fundamental In The Interpretation Of Geographical Data In Mapping Applications?",
+                "candidate": "I Don'T Know."
+            },
+            {
+                "interviewer": "Thank You For Your Honesty. Let'S Delve Into A New Area: Could You Explain How Understanding Different Coordinate Reference Systems Can Enhance Spatial Data Analysis In Geographical Information Systems (Gis)?",
+                "candidate": "I Have No Idea. I Have No Idea."
+            },
+            {
+                "interviewer": "Understood, Let'S Move On To A Different Question: Could You Describe The Role Of Coordinate Reference Systems In Enhancing The Spatial Analysis Of Geographical Data Within Gis Applications?",
+                "candidate": "Yes, I Know That Question. Yes, I Know That Question Is Very Important For Us."
+            }
+        ]
+    },
+    {
+        "skill": "Custom_Question_0",
+        "conversation": [
+            {
+                "interviewer": "Could You Describe The Platform Or Software You'Ve Previously Used When Working On Lidar Annotation?",
+                "candidate": "It'S A Cognic. It'S A Cognic. You Know."
+            }
+        ]
+    }
+]

@@ -1,0 +1,133 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "Any experience in FastAPI?",
+                "candidate": "Yes, I have around one year of experience with FastAPI."
+            },
+            {
+                "interviewer": "Can you tell me what are decorator functions in Python?",
+                "candidate": "Decorators in Python are basically when you want to pass a function to another function as an argument. You're not sure what function needs to be called, or you might have a specific kind of requirement. That is the gist of decorators."
+            },
+            {
+                "interviewer": "Have you written any custom decorators?",
+                "candidate": "I mean, I have used decorators, but I haven't written any custom decorators."
+            },
+            {
+                "interviewer": "Can you tell me what are generators?",
+                "candidate": "Generators are basically like, in Python, I haven't used them myself, but I know the idea of them. It's like you want to return a value instead of simply returning it in a function with a return statement. You want to return it iteratively, like one by one. You can have a function called, you know, a def gen, and you can have three different statements. Whenever you call it, you can use the next keyword for it, and you're going to get a different output each time, but I have not used it in production."
+            },
+            {
+                "interviewer": "Do you know what are context managers?",
+                "candidate": "No, I'm not aware of that."
+            },
+            {
+                "interviewer": "Have you done any asynchronous programming?",
+                "candidate": "Yes, using AsyncIO."
+            },
+            {
+                "interviewer": "Can you tell me what does the get_event_loop function do in AsyncIO?",
+                "candidate": "AsyncIO was basically kind of used as a, I mean, we had some wrapper classes built around it, and I was mostly working with that, but I have a basic idea of the root of AsyncIO. So it's basically, you mentioned the get_event_loop, right?"
+            },
+            {
+                "interviewer": "If you don't know the thing, that's fine. Don't need to say something else.",
+                "candidate": "Okay."
+            },
+            {
+                "interviewer": "Have you used multiprocessing?",
+                "candidate": "Yeah."
+            },
+            {
+                "interviewer": "Can you tell me how multiprocessing works?",
+                "candidate": "Multiprocessing is basically trying to make use of all the processes available to the system. For each of the processes you're creating, you're going to have a different CPU, and it's kind of like creating a different Python instance that has its own CPU working on it. As opposed to multithreading, which is only working on a single processor, but you're trying to split the process into different threads."
+            },
+            {
+                "interviewer": "How many processes can you run in multiprocessing, and how do you know how many processes need to spawn?",
+                "candidate": "I mean, that would depend on the capabilities of the system, I believe."
+            },
+            {
+                "interviewer": "On which parameters of the system does it depend upon, like how many processes need to spawn?",
+                "candidate": "Let's say I'm working on my system, and it's got eight cores, so I would be able to use eight processors at the same time. It depends on the number of cores in the CPU."
+            },
+            {
+                "interviewer": "Do you know what is the global interpreter lock?",
+                "candidate": "Yeah. So when you're using multithreading in Python, you have the GIL set by default. It's kind of not allowing multiprocessing to take place in Python unless you have that disabled. That's the gist of what I know about GIL."
+            },
+            {
+                "interviewer": "Do you know how to handle exceptions centrally?",
+                "candidate": "Yeah, I mean, if you are accepting a certain type of exception, you would put that specific value, and you would have the corresponding logic written for it in the except statement."
+            },
+            {
+                "interviewer": "I mean to say, don't do it at every function. Have it at a centralized location and do the exception handling over there. Have you done any such thing?",
+                "candidate": "Sorry, I don't think I'm understanding the question correctly right now."
+            },
+            {
+                "interviewer": "What I'm asking is, how do you do exception handling at a centralized location?",
+                "candidate": "No, I'm not aware of that. It's usually, you kind of want to have it at the very outer layer, so it's going to catch all that is, but I'm not sure I understand this question specifically."
+            },
+            {
+                "interviewer": "Basically, you don't know. Actually, you can handle it through middleware using a decorator.",
+                "candidate": "Okay."
+            }
+        ]
+    },
+    {
+        "skill": "FastAPI",
+        "conversation": [
+            {
+                "interviewer": "Coming to FastAPI, can you tell me what is Pydantic?",
+                "candidate": "Pydantic is basically a library used, and that's something you have to integrate with FastAPI, so you can support data validation and type validation."
+            },
+            {
+                "interviewer": "Okay, and how to achieve dependency injection in FastAPI?",
+                "candidate": "Dependency injection is basically like, if you have a function that is getting called to fetch some statistics from a database, that function is going to have a dependency on the fact that the connection actually exists. So it would declare that in the calling of the function, you would have the depends equal to and the get DB connection over there."
+            },
+            {
+                "interviewer": "Do you know how to run tasks in the background in FastAPI?",
+                "candidate": "I mean, you have that, like you can simply import the background tasks module from the FastAPI library. I'm forgetting the exact syntax right now."
+            }
+        ]
+    },
+    {
+        "skill": "AWS",
+        "conversation": [
+            {
+                "interviewer": "And AWS?",
+                "candidate": "Yeah, AWS, I would say like two years."
+            },
+            {
+                "interviewer": "What all services have you worked with?",
+                "candidate": "So mostly it's been databases related. So things like Athena, Redshift, also some like Docker and Kubernetes managers, things like EKS and ECR and S3 for the storages. And I also worked a bit with IAM because I had to work on a feature for a product which had something related to access control."
+            },
+            {
+                "interviewer": "EKS for how many years?",
+                "candidate": "EKS, I would say one year."
+            },
+            {
+                "interviewer": "Have you done the setup, or do you just know how to use that?",
+                "candidate": "I did the setup for one of the applications I was working on."
+            },
+            {
+                "interviewer": "You have set up the entire Kubernetes cluster?",
+                "candidate": "Yeah, but that was mostly as a POC."
+            },
+            {
+                "interviewer": "Can you tell me what are config sets?",
+                "candidate": "Config sets are basically going to be like what you want the actual configuration of the EKS to be like, how you want the exact nodes and the ports to be set up. That would, I believe, be what you're referring to with config sets."
+            },
+            {
+                "interviewer": "Do you know how to specify the max CPU value?",
+                "candidate": "I mean, it's done through the config only. I don't remember the exact keyword for it."
+            },
+            {
+                "interviewer": "One question on S3. I have uploaded an image file into an S3 bucket. When I clicked on that S3 URL link, the file is getting downloaded, but I want the file to be previewed.",
+                "candidate": "I mean, you have the preview option, but in the case of images, I don't think that works."
+            },
+            {
+                "interviewer": "Basically, whenever you upload the proper content type of any file, don't set it. It'll by default download.",
+                "candidate": "Okay."
+            }
+        ]
+    }
+]

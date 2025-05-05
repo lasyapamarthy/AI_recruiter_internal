@@ -1,0 +1,94 @@
+[
+    {
+        "skill": "Cicd",
+        "conversation": [
+            {
+                "interviewer": "Great Experience, Smrutiranjan! How Do You Ensure Seamless Rollback In A Ci/Cd Pipeline When A Deployment Fails?",
+                "candidate": "Okay So To Achieve A Seamless Rollback In Ciicd Pipeline When A Deployment Fails So We Need To Deploy The Last Version Of The Code So Suppose We Have We Have The Version One Have Deployed Previously And Currently We Have Deployed The Version Two Of The Code To The Server And Version Two Have Some Bug Or Have Some So We Need To Roll Back The Version 2 By Deploying The Version 1 Code Again To The Target Server So For That We Need To Either We Need To Either We Need To Follow The Tagging Concept Or If You Are Deploying In Kubernetes We Can We Can Give The Qctl Rollback And The Image Name And Providing The Deployment File And All Thank You."
+            },
+            {
+                "interviewer": "Thanks For Sharing, Smrutiranjan! You'Re On The Right Track, But Could You Expand On How Version Control Strategies Might Play Into Seamless Rollbacks In Ci/Cd Pipelines?",
+                "candidate": "So Version Control Strategy. So Version Control Strategy, Yes. Like Yes Version Control Strategy We Can Keep The As I Mentioned You Can Keep The Suppose We Are Using The Private Repository Any Of The Repository Like Nexus Or We'Re Using Elastic Container Registry In Amazon So We Are Keeping The Record Of All The Versions So Whenever Whenever We Need To Roll Back The Particular Version We Need To Deploy It Through The Cicd Pipeline By Choosing So You Have Been The Icr In Such A Way So We Can We Can Choose The Choose The Versions Using The Parameters So That Particular Version We Can Deploy To The Target Server"
+            },
+            {
+                "interviewer": "Got It! Let'S Dive Into Another Topic. How Do You Handle Continuous Integration And Delivery When Dealing With Multi-Cloud Environments?",
+                "candidate": "So Continuous And Delivery We Can Deal In Multi-Cloud Environments Like Suppose So Yeah So In Multi-Cloud We Can Configure The Cicd So In All The Credentials By Providing So Providing The Different Like Cloud Provisioner'S Details In The Cicd Part So Whenever We'Ll Deploy To Deploy The Course To Multi Cloud Environment We Can Choose The Right Cloud Environment"
+            }
+        ]
+    },
+    {
+        "skill": "Aws",
+        "conversation": [
+            {
+                "interviewer": "Interesting Insights, Smrutiranjan! Let'S Explore Another Topic Together. How Do You Approach Cost Management And Optimization In Aws Environments At An Advanced Level?",
+                "candidate": "Okay So So The Cost Management There Is A Billing Section In A I A Ws Service It'S Providing So We Can We Can We Can We Can Verify What Are The Services Which Services And Taking Which How Many Cost Monthly Wise Or We Can Set The Set The Cost Limit The Certain Like Monthly What Are The Maximum Cost We Can Use We Can Set The Limit Also And Apart From That We Can We Can Optimize The Cost Limit By By Checking The Unnecessary Instances Running If Or Any Services Which Is Not Using Which Is Not In Use And Also By Yes By Reviewing All The Services"
+            },
+            {
+                "interviewer": "Thanks For The Detailed Response! You'Ve Highlighted Some Key Aspects Of Aws Cost Management And Optimization. You'Re On The Right Track, But Could You Delve Into How Reserved Instances Or Savings Plans Can Be Utilized As Part Of Cost Optimization Strategies In Aws?",
+                "candidate": "So Aws Providing The Pay As You Go. So You Can Choose Any Service Pay As You Go Or If A Reserve Instance Or Saving Plan Can Be The Savings Plans. Oh No."
+            },
+            {
+                "interviewer": "Good Attempt! Let'S Shift Gears And Discuss Another Topic. How Would You Implement Security Best Practices When Using Aws Services?",
+                "candidate": "Yeah For Security Based Practice We Need To Create Mainly We Need To Create The Iam Role For The Service Create The Security Policy And Also The Multi For We Have To Create The Multi-Factor Authentication For That And And Also Like The Security Group And And And Like Inbound Rule Outbound Rule We Need To Provide In Particular So Where We Want To Keep More Secure To The Server"
+            },
+            {
+                "interviewer": "Thanks For Your Response, Smrutiranjan! You'Ve Covered Several Key Elements Of Aws Security Practices. However, Let'S Shift Our Focus To A New Topic. Could You Explain How You Ensure High Availability And Disaster Recovery In Aws Environments?",
+                "candidate": "Yes To Availing The High Availability And Disaster Recovery We Can Choose The Auto Scaling Or Auto Scaling In Multi Region Also So Multi In Multi Availability Zone We Can Choose The Multi Availability Zone And Like There Are So Many Policies The Failover Policy And And And Like A Fail Over Policy And Different Different Load Balancing Policies There So To Avail The Disaster Recovery Part"
+            },
+            {
+                "interviewer": "Thanks For The Response, Smrutiranjan! Let'S Dive Into Another Interesting Topic. Can You Explain How Aws Control Tower Assists In Setting Up And Governing A Secure, Multi-Account Aws Environment?",
+                "candidate": "No, I Need To Explore, I Don'T Have An Idea. No, I Need To Explore, I Don'T Have An Idea."
+            }
+        ]
+    },
+    {
+        "skill": "Devops",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Your Honesty, Smrutiranjan! Let'S Explore Another Topic. How Do You Implement Infrastructure As Code (Iac) In A Devops Environment?",
+                "candidate": "So Implementing I A C In A Devops Environment First We Need To Install As We Are Using The I A Infrastructure As A Code Tool Terraform So So In Cloud Environment We Can Use The Cloud Formation Also But In Terraform We Can Set Up We Can Install The Terraform And By We Need To Provide The Module We Need To Create The Modularity Like Module Different Models For Different Services As Child Model And Parent Model And For Each Services And The Directory Structures Would Be Maintained Like The Variable Devad The Tf We Need To Provide The Variables For The Environments And Yeah We Can We Can Run The Terraform Life To Achieve The Target Resources"
+            },
+            {
+                "interviewer": "Good Effort, Smrutiranjan! Let'S Shift Our Focus To Another Area. Can You Explain The Role Of Monitoring And Logging In Maintaining A Healthy Devops Environment?",
+                "candidate": "Yes So The Role Of Monitoring Logging To Maintain A Healthy Devops Environment Is To Get Alert When Like When The Server Behaves So Are Like Suppose The Cpu Limit Got High And The Http Request Got High And The Suppose The Cluster And The Pod Resources Are Getting High So We Need To Provide The Threshold Limit For That So That We Can Get The Alert And We Can Visualize Our Server And The Health Status Of The Service Target Servers So That We Can Take The Corrective Action For The Time."
+            },
+            {
+                "interviewer": "You'Ve Addressed Some Key Aspects Of Monitoring And Logging In A Devops Environment. To Keep Our Discussion Dynamic, Let'S Explore Another Topic. How Do You Manage Configuration And State Consistency Across Multiple Environments In A Devops Ecosystem?",
+                "candidate": "So For Configuration Managing The Configuration And State Consistency Across Multiple Environments So We Are Using The Ancil As A Configuration Management Tool So Where We Have Many Playbooks So We Can Write The Playbooks As For The Configuration Changes And To Maintain It And Yes We Can Keep It In A Source Version Control Like Source Code Management Tool Like Github And The Ansible Will Take Care Of All The Configurations And And All The Configurations Of The Devops Ecosystem In Multiple Environments That'S Why We Are Using Ansible As A Configuration Configuration Management Tool So We Need To Mainly We Need To Focus On The Master Node We Need To Install It On The Master Node And It Will Be Taken Care By All The Worker Node"
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Approach, Smrutiranjan! Let'S Explore Another Area. How Do You Ensure Effective Collaboration And Communication Among Teams In A Devops Environment?",
+                "candidate": "Yes, So The Effective Collaboration And Communication Should Be Happened As A Devops Engineer You Should Be Closely Work With The Development Team And The Operation Teams Together So Whenever Any Issue Faces We Need To Work With The Development Team Until Whenever The Business Part After The Development Finished We Need To Coordinate With The Operation Team Or The Business Analyst Or The Product Owner To To For A Smoother Delivery Of The Product To The Production Environment And All"
+            }
+        ]
+    },
+    {
+        "skill": "Kubernetes",
+        "conversation": [
+            {
+                "interviewer": "You'Ve Made Some Important Points About Collaboration In A Devops Environment. Let'S Discuss Another Topic. How Do You Handle Scaling Issues In Kubernetes Clusters?",
+                "candidate": "Okay So Scaling Issues Like Supposed To Scale Up And Scale Down Ports We Are Using The Kubernetes Kfctl Scale Up And Hyphen Hypen The Like The Image Equal To Equal To The Pod Name So Yeah By Scaling Up And Scaling Down Parts Can Be Done Through Command Line And Also If You If You Give An Logic In The Like Horizontal Pod Or Scaling In The Deployment File So Kubernetes Will Be Handling That Whenever The Load Increases Or The Threshold Value Reaches"
+            },
+            {
+                "interviewer": "You'Re On The Right Track, Smrutiranjan, But Could You Elaborate On How Kubernetes Manages Auto-Scaling And What Components Are Involved?",
+                "candidate": "Yes, So As I Mentioned Kubernetes Handles Auto Scaling By Using The Horizontal Product Scaling And Vertical Product Scaling. It Is Managed By The Deployment File. So We Have To Write The Components On The Deployment File To Scale Up And Scale Down The Part Limits Whenever The Threshold Limit Reached. So In Deployment File The Components We Need To Write That Like If It Reaches Some Certain Percentage Of The Threshold Limit Matrix So It Should Be Auto Scale. And The Main Part Is The Horizontal Pod Autoscaling Part."
+            },
+            {
+                "interviewer": "I Appreciate Your Response, Smrutiranjan! Let'S Shift Our Focus To Another Aspect Of Kubernetes. Could You Explain The Role Of Namespaces In Kubernetes And How They Help In Managing Resources?",
+                "candidate": "Yes, So Namespace In K-1. So It Is Nothing But Like Where We Are Providing The Clusters Are Providing The Different Clusters Inside A Namespace, It Taken Care Of The Clusters And It'S Managing The Resources Like It Is Separated In It Differentiated From Out Of Different Names So So There Won'T Be Any Networking Like Connectivity Or Any Data Breaches Issue Will Be Happened Between Two Namespaces So It Will Take An Handle By The Namespace Thank You."
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Insights On Namespaces In Kubernetes. They Indeed Play A Crucial Role In Resource Management And Isolation. Let'S Move On To Another Topic. Could You Explain The Concept Of Kubernetes Operators And How They Enhance The Kubernetes Ecosystem?",
+                "candidate": "No Can We Explain This Sensor?"
+            },
+            {
+                "interviewer": "Let'S Move To Another Topic With A Fresh Start! Could You Discuss How You Ensure Kubernetes Cluster Security At A Senior Level?",
+                "candidate": "So Cluster Security Can Be Handled Like By Providing The The Main Network Connectivity Port To Pod Connection And So You Need To Inside We Need To Provide The Like The Port Which Part You Need To Be Listened And The Private Plot And The Ip Should Be Maintained Oh, Yeah, Just."
+            },
+            {
+                "interviewer": "Thanks For Your Input, Smrutiranjan! Let'S Explore Another Topic Together. Could You Explain How You Ensure Proper Network Policies And Configurations In Kubernetes?",
+                "candidate": "So The Network Policy Can Be Explained In The Network, Q1 Netis Network, Where We Can Provide The, Like Container Network Interference Cni We Are Using For Different Plugins. Suppose Different Plugins Are Installed, The Kaliqa Plugins Like The Bridge Plugin. We Need To Ensure That The Proper Network Plugins Are Installed To Configure The Kubernetes."
+            }
+        ]
+    }
+]

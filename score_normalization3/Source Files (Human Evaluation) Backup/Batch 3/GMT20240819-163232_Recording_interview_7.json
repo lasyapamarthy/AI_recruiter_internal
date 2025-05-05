@@ -1,0 +1,98 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "What's your total years of experience when it comes to Python and relevant years of experience when it comes to FastAPI?",
+                "candidate": "3.2, three years, three years, only three years, two months, both of them."
+            },
+            {
+                "interviewer": "Let's start with some of the fundamental concepts around Python, FastAPI, AWS, the kind of work you have done.",
+                "candidate": "Also, I'm so sorry about the postponing of this interview. Actually, my laptop's hard disk crashed and like it came out of nowhere."
+            },
+            {
+                "interviewer": "Can you explain what are decorators, what kind of work you have done using decorators?",
+                "candidate": "Decorators are tools that help to change the working of a code base or functions without actually changing the source code. It is used like @ on the top of it, like for unit testing we use @unittest or whatever you want to use, mock and all."
+            },
+            {
+                "interviewer": "Can you give me some examples of the decorators, custom decorators that you've created so far?",
+                "candidate": "No, I haven't created any custom decorators."
+            },
+            {
+                "interviewer": "Any idea around the concept of generator functions in Python?",
+                "candidate": "Generator functions are used when you don't want to create the whole object at once, rather iterate or get one object of an iterator at one time. It uses 'yield' instead of 'return'."
+            },
+            {
+                "interviewer": "Can you give me some example where you might've used this kind of thing?",
+                "candidate": "Not specifically in any of my development, but I know this because I learned about it back in my college."
+            },
+            {
+                "interviewer": "If I ask you around context managers, any idea around what are context managers?",
+                "candidate": "Context managers are used in file handling. When you use 'with' to open a file, it takes care of closing the file even if we forget to do that."
+            },
+            {
+                "interviewer": "Any idea around the concept of concurrency and parallelism in Python?",
+                "candidate": "Concurrency is doing tasks simultaneously. Parallelism is executing multiple tasks at a time. Python is single-threaded, so concurrency can be done using async and await, and parallelism can be implemented using process pool and multiprocessing."
+            },
+            {
+                "interviewer": "How does Python handle asynchronous considering it is a single-threaded language?",
+                "candidate": "When you define a function as asynchronous, it turns into a coroutine, which can be paused and resumed. The event loop takes care of which coroutine to stop and which to resume."
+            }
+        ]
+    },
+    {
+        "skill": "FastAPI",
+        "conversation": [
+            {
+                "interviewer": "What makes FastAPI different from traditional frameworks of Python, like Flask, Django?",
+                "candidate": "It's built on Python's type hints and uses Pydantic for data validation and Starlette for web routing. Pydantic takes care of data validation, and Starlette handles routing."
+            },
+            {
+                "interviewer": "How is Starlette different and better than Django's routing mechanism?",
+                "candidate": "It provides explicit documentation and client-side input management, reducing the need for explicit definitions and handling errors automatically."
+            },
+            {
+                "interviewer": "Any idea around the concept of dependency injection in FastAPI?",
+                "candidate": "You can define a function somewhere else and use it in different routes. That is dependency injection."
+            },
+            {
+                "interviewer": "You talked about Pydantic model. What is Pydantic model and how do you do the validations?",
+                "candidate": "Pydantic takes your value and validates it based on the field type. It reduces faulty requests to the server by performing input validation on the client side."
+            },
+            {
+                "interviewer": "Any sort of experience working with background tasks in FastAPI?",
+                "candidate": "There is a parameter called background task. You can define functions and pass them as a parameter to be performed asynchronously in the background."
+            },
+            {
+                "interviewer": "Have you ever worked with WebSockets?",
+                "candidate": "Not exactly, but I know how it works. It establishes a client-server connection where both can communicate with each other."
+            }
+        ]
+    },
+    {
+        "skill": "AWS",
+        "conversation": [
+            {
+                "interviewer": "What's your experience working with AWS in general and what services of AWS have you worked with?",
+                "candidate": "Explicitly, I've used S3 only. I didn't get to use EC2 because we were transitioning to AWS from Gaia servers."
+            },
+            {
+                "interviewer": "Any experience working with Kubernetes, particularly EKS?",
+                "candidate": "We had our own containerization cluster in Gaia. I didn't explicitly work with EKS, but we used ECS for containerization."
+            }
+        ]
+    },
+    {
+        "skill": "SQLAlchemy",
+        "conversation": [
+            {
+                "interviewer": "What's your experience with SQLAlchemy? Have you ever worked with it, used it?",
+                "candidate": "It is used to connect database servers to SQL, like FastAPI. It uses object relationship mapping, mapping objects to tables."
+            },
+            {
+                "interviewer": "How do you handle joins in such a scenario?",
+                "candidate": "I'm not aware of that. I didn't use it."
+            }
+        ]
+    }
+]

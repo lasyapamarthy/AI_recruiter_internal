@@ -1,0 +1,57 @@
+[
+    {
+        "skill": "Svelte",
+        "conversation": [
+            {
+                "interviewer": "What's the total years of experience working with Svelte?",
+                "candidate": "Actually, three years of experience as a Svelte developer."
+            },
+            {
+                "interviewer": "Let's start with some of the fundamentals around Svelte. Can you explain what is the reactivity system in Svelte? How does it work? And how is it different from React or Vue?",
+                "candidate": "Reactivity means tracking data changes of all the components and subscribing them to the components. When the data changes, it reflects on the components. A reactive program works by tracking data changes and responding to those changes. When the data changes, the code is automatically updated to reflect the new data. For example, if the user changes the text in an input field, the code can be returned automatically to update the page to reflect the text. In Svelte, we use Svelte instruments to tell the DOM when it will be updated. We mainly use the store to subscribe and use it as a reactive system. The dollar syntax is used to declare declarations."
+            },
+            {
+                "interviewer": "In terms of nested components, how do you manage reactive variables in Svelte?",
+                "candidate": "We can pass the reactive data to props. For example, you can pass the reactive values as props to nested components, and the child components receive those reactive props to update their own state or render the UI. We can also use the Svelte store to reduce the amount of data passing through the entire components. The child components subscribe to the store and react to changes."
+            },
+            {
+                "interviewer": "What are the differences between writable, readable, and derived stores in Svelte? And when would you use which one?",
+                "candidate": "Writable stores allow us to create a reusable store, a mutable state that can be updated and also subscribed to. We use the writable function from the Svelte store module to create a writable store. Readable stores are the part of the store that can be read and not written to, so kind of a constant. They are created by using the readable function from the Svelte store module. Derived stores are a way to create a new store based on the values of one or more other stores. They are created using the derived function from the Svelte store module. We use it when we need to transform or compute a new value based on the state of other values."
+            },
+            {
+                "interviewer": "In what scenario would you rather use a derived store over a writable store? Can you give me a use case?",
+                "candidate": "One common scenario where the derived store can be preferable over the writable store is when you need to compute a value based on the state of one or more other stores. We don't want the derived value to be directly modifiable. For example, in an e-commerce application where we need to display the total price of the items in the shopping cart, the total price is a derived value that depends on the items in the cart and their individual prices. Here we can use the derived store based on each cart item and display the total amount of their price."
+            },
+            {
+                "interviewer": "What's your experience with transitions and animations in Svelte, and how are they different from CSS transitions and animations?",
+                "candidate": "The key difference in Svelte transitions and animations is that they are integrated with the framework's reactivity system. In Svelte, reactivity is a very important concept, and this is where the transitions and animations of Svelte functionality differ from traditional CSS transitions and animations. Svelte can automatically manage the lifecycle of those effects, so they can be triggered and synchronized with the Svelte component state changes. Svelte provides different kinds of transition types such as fade, fly, slide, draw, and other modern concepts to build UI effects. The lifecycle management is automatically managed by the framework, ensuring that they start and end at the appropriate times. It is very useful for performance optimizations."
+            },
+            {
+                "interviewer": "Can you explain the routing mechanism in SvelteKit? How does it work, and how do you compare it with other frameworks?",
+                "candidate": "In SvelteKit, it is kind of similar to Next.js. SvelteKit routing is similar to Next.js. It provides convenient routing methods. It provides file and folder-based routing, so the structure of the application's pages is determined by the file structure. By default, it is placed in the routes directory, but we can change it. It provides a nested layout where the parent layout can grab one or more child pages. It supports both server-side rendering and client-side rendering. It allows for single-page application experiences and provides a good mechanism for error handling."
+            }
+        ]
+    },
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "The backend is in Python.",
+                "candidate": "Oh, I see."
+            }
+        ]
+    },
+    {
+        "skill": "Tailwind CSS",
+        "conversation": [
+            {
+                "interviewer": "How do you customize the Tailwind default theme?",
+                "candidate": "There is a configuration file in Tailwind. We can customize it to change the default Tailwind theme. Tailwind has the appropriate structure, theme, extent, colors, fonts, spacing, and we can customize these values to customize our default theme."
+            },
+            {
+                "interviewer": "What steps would you take to optimize Tailwind CSS for performance optimization, specifically for a large project?",
+                "candidate": "First of all, we should minimize the CSS file size. We should remove any unused or redundant styles. We can use PostCSS or Tailwind's built-in purging structure to remove unused CSS rules. We can split our CSS code to ensure that we remove any redundant code. Secondly, we can implement lazy loading for non-critical CSS, using lazy loading techniques to load those styles only when required."
+            }
+        ]
+    }
+]

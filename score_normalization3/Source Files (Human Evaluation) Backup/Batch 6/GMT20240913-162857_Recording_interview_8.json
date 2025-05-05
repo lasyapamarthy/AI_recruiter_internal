@@ -1,0 +1,92 @@
+[
+    {
+        "skill": "CI/CD",
+        "conversation": [
+            {
+                "interviewer": "Can you tell me how your production CI/CD pipeline looks like? If you want to deploy any application to production, what is the process you follow and what steps are involved?",
+                "candidate": "I have worked with two companies, both with very different architectures. I will describe the current company's architecture. We have our infrastructure set up in AWS. Some services are in Kubernetes, which we use for orchestration, but most services are in ECS. We use GitLab CI to manage our code and CI pipeline. Once the developer pushes the code, the build happens in GitLab CI, and the code is pushed to the ECR. We have a common ECR where all the codes with different tags are stored. To deploy the code to a specific environment, we use AWS CDK. We change the tag of the code, which pushes the new tag to ECS. ECS looks for the new tag in ECR, pulls it, and this is how our deployment works in my current organization."
+            }
+        ]
+    },
+    {
+        "skill": "Monitoring and Observability",
+        "conversation": [
+            {
+                "interviewer": "In terms of monitoring performance and observability, what do you use?",
+                "candidate": "We use New Relic to monitor our metrics and Lofty to monitor our logs."
+            }
+        ]
+    },
+    {
+        "skill": "AWS",
+        "conversation": [
+            {
+                "interviewer": "How many years of experience do you have with AWS?",
+                "candidate": "I have a total of six years of experience."
+            },
+            {
+                "interviewer": "What services have you worked with?",
+                "candidate": "EC2, VPC, Route 53, Load Balancer, Auto Scaling, AWS CodePipeline, CDK, WAF to some extent, S3, RDS, Lambda for serverless, Secrets Manager, SSM parameters, SNS, and others."
+            }
+        ]
+    },
+    {
+        "skill": "Kubernetes",
+        "conversation": [
+            {
+                "interviewer": "How many years of experience do you have with Kubernetes?",
+                "candidate": "I have around four years of experience with Kubernetes."
+            },
+            {
+                "interviewer": "Have you worked on Kubernetes setup with bare metal?",
+                "candidate": "No, I have worked with orchestration tools like EKS and Kops."
+            },
+            {
+                "interviewer": "Can you tell me about Helm charts and config maps in Kubernetes?",
+                "candidate": "Helm charts are used to manage configurations in Kubernetes. If we have many services with similar configurations, we create a Helm chart with different values for different applications but with the same common deployment template. Helm also helps in maintaining release versions and deployments."
+            },
+            {
+                "interviewer": "Do you know about Istio?",
+                "candidate": "I have some idea, but I haven't worked with it."
+            },
+            {
+                "interviewer": "How do you set up the network connection between pods to interact with each other?",
+                "candidate": "Kubernetes uses a network deployment, like CNI or AWS's VPC network, to give IPs to different pods. When all pods have IPs within the same network, they can communicate with each other."
+            },
+            {
+                "interviewer": "Do you have experience in troubleshooting Kubernetes, like when a pod restarts frequently?",
+                "candidate": "Yes, I have experience with that. Issues often occur at the pod level, like a pod being in a pending state for too long. This can be due to high incoming loads or the underlying host not being able to scale. We describe the pod to get an idea of the issue, like liveness or readiness probe failures, or out-of-memory issues. We check logs for application-specific issues."
+            }
+        ]
+    },
+    {
+        "skill": "Docker",
+        "conversation": [
+            {
+                "interviewer": "How is your experience with Docker Compose?",
+                "candidate": "Initially, I worked on setting up local environments with Docker Compose for microservices. I have some experience, but I haven't worked on it recently."
+            },
+            {
+                "interviewer": "Are you familiar with setting up Docker Compose with dependencies?",
+                "candidate": "Yes, I have done it. We ran applications in Docker containers locally using Docker Compose, which helped manage dependencies between services."
+            }
+        ]
+    },
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "Do you have experience in basic Python scripting?",
+                "candidate": "Yes, I have done a few projects in Python."
+            },
+            {
+                "interviewer": "Can you tell me which command you use to check which application is running on a specific port number?",
+                "candidate": "I don't remember the exact arguments, but we use the 'netstat' command with specific options to check the port and process."
+            },
+            {
+                "interviewer": "If I want to check for a particular pattern in a log file, what command would you use?",
+                "candidate": "We can use the 'grep' command to find specific patterns in a log file."
+            }
+        ]
+    }
+]

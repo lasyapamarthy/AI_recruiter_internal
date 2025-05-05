@@ -1,0 +1,32 @@
+[
+    {
+        "skill": "NLP",
+        "conversation": [
+            {
+                "interviewer": "Is there any relative experience with respect to machine learning, LLMs?",
+                "candidate": "I did not apply the entire machine learning logic, but at the time, we were using NLP and market sentiment analysis, a few libraries of ML, but not for anything extensive."
+            }
+        ]
+    },
+    {
+        "skill": "Machine Learning",
+        "conversation": [
+            {
+                "interviewer": "Is there any relative experience with respect to machine learning, LLMs?",
+                "candidate": "I did not apply the entire machine learning logic, but at the time, we were using NLP and market sentiment analysis, a few libraries of ML, but not for anything extensive."
+            },
+            {
+                "interviewer": "I'm not sure this particular position demands expertise skills in LLM area, developing a RAG-based application and also fine-tuning LLMs, so has very strong exposure towards Llama Index.",
+                "candidate": "I did not have any brief on that. I just got the invite."
+            },
+            {
+                "interviewer": "This particular position is more towards software engineering skills, but the majority comes from the machine learning background that actually co-occurs with LLM. We built the RAG into one of our hackathons.",
+                "candidate": "But I would say nothing is production-ready. I never worked on the... We're looking for someone who is really expertised in those areas."
+            },
+            {
+                "candidate": "After seeing this, I will also say, hey, I'm not great for that. Eventually, that was not in my resume itself. I don't know how it would proceed.",
+                "interviewer": "Yeah, even I saw your profile and I don't see like... We mentioned the tech stacks to be evaluated for LLM engineers. I'm surprised. Might be there are some miscommunication happened."
+            }
+        ]
+    }
+]

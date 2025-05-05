@@ -1,0 +1,93 @@
+[
+    {
+        "skill": "JavaScript",
+        "conversation": [
+            {
+                "interviewer": "Can you tell me what are event loops in JavaScript?",
+                "candidate": "Okay, so basically, like we know that JavaScript should not, like the compiler of JavaScript will not wait for the operation which needs to be taken some time. So JavaScript will not wait for any, like the web APIs, it will not wait for them, it will exit immediately, it will run to the next line. So suppose in our code, if we have some web APIs, let's say setTimeout or promises. So these are the part of web APIs. So the browser will take care of it. So what happens when JavaScript code starts? Everything will be executed in the call stack queue. And whenever there is a web API, the browser takes these web APIs. And based on the priority, we have micro queues and callback queues inside the browser. So whichever the web APIs which have the high priority, it will store in the micro queue. The process which has a less priority will store in the callback queue. So in between callback and in between micro queue callback and the call stack, there is a process which continuously checks the call stack queue. If the call stack queue is empty, it will check the process which is there in the micro queue and store that process in the call stack queue. And again, this loop will check if the call stack is empty or not. If the call stack is empty, then it again checks the callback micro queues and callback queue. If the micro queue is empty, then it takes the callback queue and stores the process to the call stack. So the loop which checks this process continuously is the event loop. So basically, the role of the event loop is to always run the web APIs parallelly and when the call stack is empty, it will store the callback process in the call stack queue. So this is what the event loop is doing. So it's a part of the browser."
+            },
+            {
+                "interviewer": "Do you know the micro task queue and micro task queue?",
+                "candidate": "Micro task queue. Yeah. So those tasks which have the highest priority, these are the micro queue micro task queue, the tasks which are not on the higher period like the p1 p2 priority tasks that are the micro task."
+            },
+            {
+                "interviewer": "Can you tell me what are closure functions?",
+                "candidate": "So basically, the closure function is the scenario where the inner function has the access power to take the variables which are defined around the lexical scope of the outer function. So suppose if we have function A and inside the function, we declare some variables. Let's say let A equal to 10, let B equal to 20. And inside the function, we have again one more function, function B. So in the function B, it had the power that like the function B is completely included in the function A so it will have the power to take the variables which are defined in their lexical scope. So variable A and B are in the lexical scope of the parent function. So inside function B, we can take the value of B and A. So this is what closure is. So basically, closure is used to make something protected. Like if we want to protect the value of A and B from the outside of the function we can use for the protection like to make the variable private kind of thing we can do. So this is what closure is."
+            },
+            {
+                "interviewer": "Do you know what is variable hoisting?",
+                "candidate": "So let's say so basically in variable hoisting what happens whenever we are declaring any variables or function so when JavaScript engine executed it will first declare all the variables on the top let's say and declare the variable on the top and it will define pass some undefined value to the variable let's say if we have a variable where a equal to 20 so in the hoisting process it will define a equal to undefined in the global scope where it is executed if we have a function it will declare the function if all the declaration is done then it will start executing so this is what hoisting is."
+            },
+            {
+                "interviewer": "Can you tell me what are promises and how they are different from async and await?",
+                "candidate": "So basically promises is a way it is nothing but it's an object kind of thing, which tells the program that whatever process is executing inside the promises, it will either be fulfilled, or resolve or it will reject. So these are the three set like that. So it will either be pending, either resolve or either rejected. So this is what promises like it will it it's an object, which say the function that these processes have the three stages only. And in async-await, basically async-await, we used to resolve the promises. Like it's a higher approach to define the promises. Let's say if we have multiple promises and every time we define dot then dot catch to take the value of the promises. So it will create the unnested, like the nested loop of the promises. So to overcome with this problem, JavaScript introduced async await. So basically async await is used to resolve the promises in a better way."
+            },
+            {
+                "interviewer": "How do you handle multiple promises at a time?",
+                "candidate": "So there we have either we can use from like, depending upon the business operation, we can use either time promise dot all promise dot race promise dot all settle. You have to promise dot any. So there are multiple ways."
+            },
+            {
+                "interviewer": "The difference between promise dot all and promise dot race.",
+                "candidate": "So promise.all inside promise.all what happened, it will wait for all the promises to be executed. And when all the promises are executed, then it will return the array of result. But in promises.race what happened if any of the promises either get executed first or either get failed first, so it will immediately send the result. So this is what race is. So it will not wait for all the promises to be reviewed. If any one of the promises is getting executed for it will terminate the operation and it will give the result first."
+            }
+        ]
+    },
+    {
+        "skill": "Next.js",
+        "conversation": [
+            {
+                "interviewer": "Coming to next.js Can you tell me how routing works?",
+                "candidate": "So basically, in the in the next.js there is a folder called page. So whatever the files we can create in the page folder, it will let the file name is the router name. So this is how router handle in the next.js. So we don't need to install any external library for that. Next.js already take care of the routing part."
+            },
+            {
+                "interviewer": "Can you tell me about server-side rendering in next.js how to enable?",
+                "candidate": "So basically, to enable to use server-side rendering in next.js, there is a prop called I'm not server-side get proper. Get server-side prop. So there is an external problem. Yeah, I had used this sort of get server-side props. So whatever is defined inside this, that thing is taking that is considered as a SSR in the code. So basically, it's a problem."
+            },
+            {
+                "interviewer": "Can you tell me about the get server-side props?",
+                "candidate": "Uh, let's say for that, we can simply write X, export a sync, uh, function. Then we can simply like get server-side props and inside that we can, uh, in the braces, we can write all the operations. Suppose if you want to fetch some data. Uh, from the API, we can simply write the API called it in data, or if you want to do some, uh, page rendering. So we can directly pass the page name or the function name inside the, uh, inside this proper. So it will be considered like a SSR."
+            },
+            {
+                "interviewer": "Do you know what is incremental site regeneration?",
+                "candidate": "Sorry incremental site regeneration incremental site actually I heard about this term but at this moment I was not getting the Like it was also the part of next.js. But like I heard about to be honest, like I heard about this thing, but I never use in the board."
+            }
+        ]
+    },
+    {
+        "skill": "React",
+        "conversation": [
+            {
+                "interviewer": "Coming to react, can you tell me the difference between useEffect and useCallback?",
+                "candidate": "useEffect and useCallback okay so basically useEffect is used to perform the side operation of the page let's say if you want to operate the life cycle of the react so we can use useEffect so basically useEffect is used to side operation to achieve the life cycle of react whereas useCallback is a way to make sure that the function should not be re-rendered if the prop value is not getting changed. Let's say if we have a scenario where we are passing the parent function in the child component and in the child component we have a function, that function getting rendered again and again if we make any small change in our child component. So to stop this re-rendering process, we can use useCallback hook, which can make sure that the function which is declared inside the child component should not be re-rendered. If there is any change in the child component, it will re-render only whenever the prop which we are passing in the call useCallback function is changed. So basically it is used to by doing this, the performance of the entire application will be increased. So this is how useCallback works."
+            },
+            {
+                "interviewer": "Have you used useRef?",
+                "candidate": "Yeah, I use in some part of the application. So basically this, this is also the hook of the function component. Well, it is used to take the DOM elements of the element. Uh, suppose if you have an input box and we want to do some operation in the input box, let's say we want to change the background color of the input was if the length of the input box is changed, uh, when users start typing. So in that case, what we can do is we can use, use the hook. We use ref hook and that use ref hook. We can pass through the input box and based on the number of character in the input box, we can do some operation. Like we can do the, some operation of the DOM element. Let's say we want to change the background color. So we can directly take document out. Then I don't know that by this idea and we can directly do the styling and all."
+            },
+            {
+                "interviewer": "Have you done any form validations in react?",
+                "candidate": "Oh, form validation. Yeah. so let's say we have a scenario where in the form we need the person name email id and let's say password so these three we need so for in the simple case what generally we are doing we can simply declare the input box we can add some validation like if the input value is not email so we can we can take the input value we can create a on handler function like based on the on change event we can call the function and it will take the character and check whether the input value is proper email or not. like we can pass a regex function where we can pass a proper syntax for the email ID. Similarly, we can do the operation in the password. If the password is following our test cases, like the password length should be greater than eight, it will contain a capital or small letter. It will contain a special character. So this kind of condition we can run right in the handle password function so based on this criteria we can validate the password things and similarly for the net like the name input box should not be empty email should not be empty and the password should not be empty and then if all the criteria is valid then we can simply enable the submit button So this is the basic approach. If you want to modify, there is an external library called formic. We can install that formic library. And after importing that format, it will give the direct access. Like we don't need to write up, uh, see, uh, on handle condition for each input box in the form if we can directly do by passing the props like for email we can directly write email it will take care of all the email criterias if we are passing passwords based on the password it will take care of the all criteria and we can simply write the condition for the password so this is how we can do"
+            },
+            {
+                "interviewer": "How use react query?",
+                "candidate": "React queries Yeah, I think these are used engineers."
+            },
+            {
+                "interviewer": "For state management, what do you have worked with?",
+                "candidate": "Basically, we are using a Redux for the state management Redux."
+            },
+            {
+                "interviewer": "In order how Redux works.",
+                "candidate": "So basically, Redux is nothing but it's an external library, which is helped to make a common centralized for the store. So Redux has the four stages. The first stage is the story stage. The second is the action stage. The third is the dispatch and the fourth is the reducer stage. So in the store stage where we can create the proper store for the application, which is the single one, which is like a file where we can declare the variable either in array or the object form. In the action form, we can write the function and based on that function, we can perform some operation that is taken care by the dispatch part. And in the reducer, based on the action and dispatch, we can manipulate the value of store. So generally what happens suppose if we want to take a value from the API and so that value we can write in the action part in the action part we can call the value we can directly store the value with the help of reducer in the store and that store we can directly import to any of the file of our application. easily and suppose if you want to modify this value so in our file we can call the action parameter and there we can pass the payload or the action operation and based on the payload and the action operation our action file is perform some action and it will dispatch and do the reducer operation and it will based on that operation we can manipulate the value of the store. So this is how Redux works. So, so it's a central library library in the same, it's a central store, which can store the common data for the entire application. So that by using this, we can overcome with the problem, which are like prop drilling or the context API kind of problem. and the data should be enabled for all the file either it is a nested file or the parent file the data should be seen and it is easy to display data directly and importing and exporting data directly from the file."
+            },
+            {
+                "interviewer": "Do you know what is lazy loading of components?",
+                "candidate": "So basically lazy loading is used to enhance the operation like the enhance the page speed of the application. So let's say if we have a multiple component in our application, but we only want to import that component when user is full to that part suppose in our screen in our page, let's say we have a 20 components and each code of 20 component is written in the different file. So suppose in one scenario, we can directly import all the component in our page. So when user load this page, it will take the time because all the components should be load at one time. So it will take a time to load the 20 component in one scenario. But and due to this the performance of the pages decrease, but let's say if we are using using lazy loading along with suspense. So what it will do is it will in the first time it will only open the parent component which is there on the top of the application when user start scrolling. based on the scrolling movement, it will import the other component. So let's say if we have a 20 component, if you are using lazy loading and suspect, so in first scenario, it will open the first component. If you scroll down, then it will open the second component. Again, if you scroll down, then it will open the third component. If we stop our scrolling, then we don't import the fourth component. So by doing this, our application is speed is increased. So this is how lazy loading works."
+            },
+            {
+                "interviewer": "Have you ever implemented infinite scroll?",
+                "candidate": "Oh yeah, infinite scroll I had implemented. So this is also like how infinite works. So basically we can suppose if we have a table or let's say if we have a page where we in the first time in the infinite scroll, we only import the data of the page one. with like the pages one on the page zero data and when users start slowly at that moment we can calculate the height of the screen and the user cursor movement and if the user move to the down then immediately we can increase the page number and we can pass this page number to the API that API send the page number to the server from the server we can take the data from the next page and once we get the data we can again like we can again concat the data to the object and then we can display the data to the screen so this is how infinite school works so whenever is user start scrolling when the school is moved to the bottom of the screen it will call the api take the data from the different page in concat the data and display the data And if we reach to the end of the screen at that moment, we can stop the screen. We can stop the API call and we can simply display some message like the page is completed or something like that. And the moment when data is coming from the API at that time, we can display a loading message so that user will aware that something is operated on the background. Yeah. Actually, we use this, uh, internet is calling in our merchant dashboard. So basically merchant have the access to check the payload of all the, uh, can users. So there we have a in Friday school. So it will like for the day one or day. for the complete month we have an internet school feature so he will discard start slowly and based on the moment we can catch the data and display so by doing this process our network quality is also improved and like the page performance is also increased"
+            }
+        ]
+    }
+]

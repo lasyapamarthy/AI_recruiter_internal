@@ -1,0 +1,104 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "We are looking for someone who is very good at Python, AWS, and Kubernetes. So I just wanted to understand your experience with Python.",
+                "candidate": "I've not worked much with Python in my corporate journey. But before that, when I was in college, I used to do my projects in Python. I learned ML as well for that."
+            },
+            {
+                "interviewer": "Any experience in FastAPI, Flask, or Django?",
+                "candidate": "Yeah, I have worked with Django in college, only Django and Flask both."
+            },
+            {
+                "interviewer": "Oh, FastAPI you haven't touched?",
+                "candidate": "No, I recently started studying about it, but have not implemented it."
+            }
+        ]
+    },
+    {
+        "skill": "Kubernetes",
+        "conversation": [
+            {
+                "interviewer": "And how about Kubernetes?",
+                "candidate": "Kubernetes, I'm working from 4.7 years."
+            },
+            {
+                "interviewer": "Are you still in touch with Kubernetes or currently you're still working on that?",
+                "candidate": "Yeah, currently also I'm in touch with Kubernetes. So we use Helm operators, all these charts we have in our project. So we created secrets, all the selector labels, everything in Kubernetes."
+            },
+            {
+                "interviewer": "Can you tell me, if you have a repo, how do you deploy that service into Kubernetes? You have just given you a repo.",
+                "candidate": "Is it a repo or application?"
+            },
+            {
+                "interviewer": "Yeah, consider it as a microservice of Node.js application. I want to deploy.",
+                "candidate": "So first of all, I have to containerize that. So, maybe I can create a container for that, like a Docker image I can create. And then I can create a manifest file for all that, like a YAML file, which will define the desired state of the application in the Kubernetes cluster. And it can include pod services, like how many pods will be there, how many replicas for that pods will be there. And then all the services, deployments, and all other resources I can create. And then I can deploy that manifest to the Kubernetes cluster using kubectl apply command. And, yeah, I think that will be the one. And then after that, if it is deployed as well, we can do the pod scaling as well, like horizontal and vertical pod scaling. I implemented in my project as well."
+            },
+            {
+                "interviewer": "How do you define that? How many max you want?",
+                "candidate": "Replicas."
+            },
+            {
+                "interviewer": "Where do you define?",
+                "candidate": "So in the YAML file, there we define."
+            },
+            {
+                "interviewer": "Do you know what is max vCPU means? What is vCPU value?",
+                "candidate": "Is it related to the virtual CPU study? So it does so that actually defines the maximum number of virtual processing units available in a system."
+            },
+            {
+                "interviewer": "I need a bit about that. If I set max vCPU as 0.25, what does it mean?",
+                "candidate": "So I think that is the factor like maybe for example in AWS. We can find instance types up to, I think, a hundred of vCPUs like for the larger instances. And while there are smaller instances as well, they have fewer vCPUs as compared to the larger vCPUs."
+            },
+            {
+                "interviewer": "Do you know what the value of 0.25 max vCPU means?",
+                "candidate": "In context of EC2, I think it is that that's a unit. I think 0.25 means 250 megahertz of processing power that we are defining to that virtual machine."
+            },
+            {
+                "interviewer": "Can you tell me what are config maps?",
+                "candidate": "So as I said, I have worked upon Helm operators. So there we define various config maps as well, like selector config map was there and, um, selector label config map was also there where we, uh, used to define the key value configuration of, let's say, um, uh, let's say I'm creating a config map and, uh, in the, in that YAML file, uh, using create kubectl, create config map there, where there I have to define the key value pairs. And then, um, after it is created, I have to mount that config map into my pods as well."
+            },
+            {
+                "interviewer": "Do you know what is HPA?",
+                "candidate": "Yeah, it is related to the pod scaling only, which is horizontal pod auto-scaling."
+            }
+        ]
+    },
+    {
+        "skill": "AWS",
+        "conversation": [
+            {
+                "interviewer": "And AWS also I have experienced for three years. What all services you have worked on AWS?",
+                "candidate": "In AWS, I have worked upon EC2, S3, and RDS instance."
+            },
+            {
+                "interviewer": "We do S3, RDS, and Kubernetes, you worked on Amazon Kubernetes or how is it?",
+                "candidate": "When I was doing the internship, then I created the Minikube local cluster and I worked upon that."
+            },
+            {
+                "interviewer": "Coming to AWS S3, I have uploaded an image into S3 bucket, which is a public bucket. And when I click on the S3 URL of that object, which I uploaded, it is downloading the image, but I want the image to be previewed.",
+                "candidate": "Maybe so when we go to S3, can I use some, like, a type of thing that we can do and via that URL, we can just go to that URL and can preview the image."
+            },
+            {
+                "interviewer": "No, there's something related to while uploading, you need to set the content type. If you don't set the content type, by default, it will be octet stream. So that's why it will by default get download. If you set the content type to image/jpeg, then it will preview."
+            },
+            {
+                "interviewer": "Do you know what are ACL controls on S3 bucket?",
+                "candidate": "No."
+            },
+            {
+                "interviewer": "EC2 we have worked, right?",
+                "candidate": "Yeah."
+            },
+            {
+                "interviewer": "Can you tell me how to set up the VPC inbound outbound rules for EC2?",
+                "candidate": "So in AWS console, there is an option called set inbound and outbound rules. So there we can just define what the IP address will be there and all other configurations related to that. Basically, there is a dashboard itself, like VPC dashboard itself, which we call in the AWS management console. And I can go to the VPC dashboard and there, there I have, I think I have a dropdown of inbound and outbound rules as well. And then I can select the security groups also related to that, like whichever are associated with the instances you want to configure. Then we can edit the inbound rules as well, like which are controlling the incoming traffic. There's an option also of inbound rules. We can click on that tab and then we can edit it."
+            },
+            {
+                "interviewer": "Do you know how to upgrade the volume in EC2 using edit configuration?",
+                "candidate": "So, what I said that in AWS management console, like we have the VPC dashboard there. So from there we have, like whatever the instance we want to edit it, we will go to that instance. Instances will be listed there after that. Maybe we can select that instance. We can edit that instance itself. And in the options of settings there, we see the resize. The instance option is there. We can click on that. And actions, I think actions are also given there for against that instance."
+            }
+        ]
+    }
+]

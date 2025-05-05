@@ -1,0 +1,66 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "How much experience do you have in Python?",
+                "candidate": "All is relevant in Python."
+            },
+            {
+                "interviewer": "What are generators in Python and where did you use them?",
+                "candidate": "A generator is like any function that will help me to generate a sequence. It's an iterator that will help me to iterate over something and generates a sequence of that particular thing."
+            },
+            {
+                "interviewer": "How do you achieve synchronization in Python?",
+                "candidate": "We can use the async function, and whenever calling it, I can use it with await."
+            },
+            {
+                "interviewer": "What is the difference between deep copy and shallow copy?",
+                "candidate": "In deep copy, if I am having some variable that is a copy of another variable, and now that variable is referenced to the original variable, whenever I'm updating that variable, the original variable is also getting updated. In shallow copy, only the copy of the variable is getting updated and the original variable remains as it is."
+            }
+        ]
+    },
+    {
+        "skill": "LLM",
+        "conversation": [
+            {
+                "interviewer": "How much experience do you have with LLMs?",
+                "candidate": "Since LLMs have come out, I would say two years in LLM."
+            },
+            {
+                "interviewer": "How do you fine-tune the LLM model?",
+                "candidate": "It depends on the use case. We have fine-tuned at two levels: a rephrase model and an answer generation model. We prepare the data using GPT models, fine-tune using LAMA 3.1, and use standard hyperparameters. We train the adapters using PEF techniques and merge them with the base model."
+            }
+        ]
+    },
+    {
+        "skill": "FastAPI",
+        "conversation": [
+            {
+                "interviewer": "Have you worked on FastAPI?",
+                "candidate": "Yes, we are using it to host our service."
+            },
+            {
+                "interviewer": "Can you explain the role of Pydantic in FastAPI?",
+                "candidate": "Pydantic helps us to validate the structure of that particular thing. It has a base model class that will help me to identify if I'm giving the JSON structure as input, it will help me to validate that."
+            },
+            {
+                "interviewer": "How do you implement authentication and authorization in FastAPI?",
+                "candidate": "We can use HTTPS for security, but for authentication, I don't think I have implemented it."
+            }
+        ]
+    },
+    {
+        "skill": "RAG",
+        "conversation": [
+            {
+                "interviewer": "Can you explain how re-ranking models are trained?",
+                "candidate": "I give the input as a random order of chunks and the output as the relevant order of the chunks. I prepare the dataset in this kind of order, with two to three chunks relevant to the query, and randomly generate six to seven chunks, inserting two to three of those chunks in random order."
+            },
+            {
+                "interviewer": "How do you ensure the correctness and relevance of the models?",
+                "candidate": "We use a triangle for the RAG framework, which includes contextual accuracy, relevant accuracy, and groundedness. We fetch context based on the question, generate an answer, and ensure the context is relevant to the question."
+            }
+        ]
+    }
+]

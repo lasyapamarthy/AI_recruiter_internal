@@ -1,0 +1,179 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "Great Experience, Vishal! How Do You Manage State In Python Applications?",
+                "candidate": "We Are Managing Gigigigigis And We Deploy The Changes In Our Aws Resources Through The Rns Pipeline And Gid Jenkins And Mostly Developers When Made The Changes In Python Program Python Application They Upload On Git And We Deploy That Code From Git To Aws Resources Through Cicd Pipeline And Jenkins. And Also We Record The Version Of The Through The Git Tags In Which Type Of Version We Are Deployed Today"
+            },
+            {
+                "interviewer": "Got It! How Do You Handle Concurrency In Python Applications?",
+                "candidate": "Yeah, We Don'T Handle Any Concurrency In Python Application. Actually Our Developer Team Also Look Into That Part."
+            },
+            {
+                "interviewer": "Thanks For Sharing That, Vishal. Let'S Dive Into Another Topic: Could You Explain The Role Of Decorators In Python And How They Can Be Used To Enhance Functions?",
+                "candidate": "Sorry, I Don'T Have Idea."
+            },
+            {
+                "interviewer": "Thanks For Your Honesty. Let'S Explore A Different Topic: Could You Describe How Python'S Garbage Collection Mechanism Manages Memory?",
+                "candidate": "Python'S Garbage Collection Managing Memory Is Used To Manage The Cases In Memory And Also We Are Getting Any Kind Of Error That Is Stored On Garbage Collection."
+            },
+            {
+                "interviewer": "Thanks For Your Response, Vishal. Let'S Explore A New Topic: Could You Explain How Exception Handling Works In Python?",
+                "candidate": "Exception Handling Is Using To Catching The Errors And That Through The On Runtime Ai Users Getting That Errors Are Catched By The Exception Handling. And We Are Getting This Type Of Error We Are Getting On For The User Users."
+            },
+            {
+                "interviewer": "Thank You For Your Response, Vishal. Let'S Explore Another Topic: Could You Explain How Python Handles Object-Oriented Programming Concepts?",
+                "candidate": "Sorry, I Don'T Have Idea. Actually, I Work On A S.Col Operations Team And I Am Not A Developer."
+            }
+        ]
+    },
+    {
+        "skill": "Jenkins",
+        "conversation": [
+            {
+                "interviewer": "Thank You For Sharing That, Vishal. Let'S Explore A Different Topic: Could You Explain How Jenkins Handles Continuous Integration For Large-Scale Projects?",
+                "candidate": "In Continuous Integration, We Create The Pipelines On Cicd Through The Jenkins In We Believe Where We Want To Catch The Code Like Gate And Another Thing. From B, We Can And Also Add That The User Repository And All Things In Cicd Pipeline And We Give Permission Key Book And Run That Cicd Pipeline And They Handle Two Operations Team To Run The Cicd Pipeline To Deploy New Changes."
+            },
+            {
+                "interviewer": "Got It, Vishal! Let'S Explore A New Topic: How Does Jenkins Facilitate Continuous Delivery In Devops?",
+                "candidate": "In Jenkins Facilities Continuously Used To Employing New Bug Fixes And New Changes In Our Code And Also We Run The Bad Jobs In Jenkins To Make The Changes Are Running Properly Or Working Properly Or Not. In Jenkins We Said Many Of The Test Cases And All Test Cases Are Passed In That Bad Jobs. So We Assume Like Our Employment Code Is Successfully Deployed."
+            },
+            {
+                "interviewer": "Thanks For Sharing That, Vishal. Let'S Explore A Different Aspect: Could You Describe How Jenkins Integrates With Other Devops Tools To Support Continuous Deployment?",
+                "candidate": "We Are Integrate The Devops Tool To Define In The Create When We Creating The Cicd Pipeline And We Give The Permissions To In Cicd Pipeline Kbgwc2C2. Devops Tools Are Support That And Like Git Is Used To Support That Where We Bring The Code To Deploy And Also Like Aws And Kubernetes Also Use To Be Able To Deploy. We Can Use That In As A Support. Thank You."
+            },
+            {
+                "interviewer": "Thanks For Your Response, Vishal. Let'S Dive Into A New Topic: How Does Jenkins Handle Scalability When Managing Multiple Projects?",
+                "candidate": "In Schellate Be Giving The Particular Name Of That Cicd, Chiicd, Jenkins Pipeline That Pipeline We Are Creating For And Also We Create The Bad Jobs On The Similar For Test Cases Like In One Micro Service We Create That Bad Jobs And We'Ll Be Deploying A New Changes On That Bad Jobs Also On That Micro Service So A Particular Bad Job We Run And All Test Cases Are Passed Pass, It Be Successfully Run On Dead. Like, My Case."
+            },
+            {
+                "interviewer": "Thanks For Your Response, Vishal. Let'S Dive Into A New Area: How Does Jenkins Manage Security For Pipelines And Jobs?",
+                "candidate": "We Add That Sequence In Jenkins Pipeline And Also We Add Many Of The Test Cases In Jobs. We Had That Cases Are Run To If We'Re Making Bad Jobs Are Successfully Run Or Not Or We Are Making That Changes Are Successfully Working Or Not."
+            },
+            {
+                "interviewer": "Thanks For Your Response, Vishal. Let'S Explore A New Topic: How Does Jenkins Support Automated Testing In A Ci/Cd Pipeline?",
+                "candidate": "Automist Testing Support Through The Cicd Pipeline We Create Bed Jobs On That Particular Cicd Pipeline And All Jobs Are Run After The Deployment In Our Infrastructure And Then That Test Cases All We Get The To The Console And We Can Capture That Bad Jobs Are Successfully Passed Or Not On."
+            },
+            {
+                "interviewer": "Thanks For Sharing, Vishal! Let'S Tackle A Different Topic: Can You Explain How Jenkins Supports Version Control Integration?",
+                "candidate": "Jenkins Support Version Control Integration And When We Creating Our New Version, We Add That Version In The Tag Of Jenkins."
+            }
+        ]
+    },
+    {
+        "skill": "Kubernetes",
+        "conversation": [
+            {
+                "interviewer": "You'Re On The Right Track, But Could You Elaborate On How Jenkins Integrates With Version Control Systems Beyond Just Tagging Versions?",
+                "candidate": "Sorry, I Don'T Remember."
+            },
+            {
+                "interviewer": "Thanks For Your Attempt, Vishal. Let'S Shift Gears: Could You Explain How Kubernetes Manages Container Orchestration And Deployment?",
+                "candidate": "In Kubernetes, The Qpapi Server And That Manage The Power Orchestration And Also The Deployment And Overall The Status Of Cluster Key On The Cluster To Perform Or Not. The Users Also Communicate The Qapi Server On That Cluster And Then The Deployment We Deploy That New Version Of The Codes."
+            },
+            {
+                "interviewer": "Thanks For Sharing, Vishal. Let'S Explore A New Topic: Can You Describe How Kubernetes Ensures High Availability And Resilience?",
+                "candidate": "We Are Using Horizontal Port Outstice Feeling That Ensure That High Ability And Reliance Is Available In That. And If We Need 100 Ports And That Time, So In That Particular Time They Auto Use The Other 1St And If We Don'T Need 100 Ports And We Need 50 Ports, Then After That Automatic The Force Are Coming Down And Around 50Pity, That Can Manage The High Ability And Reliance."
+            },
+            {
+                "interviewer": "Thank You For Your Response, Vishal. It Seems Like There'S Still Some Room For Exploration On That Topic. Let'S Dive Into A Fresh Area: Could You Explain How Kubernetes Handles Load Balancing Within A Cluster?",
+                "candidate": "Yeah, Coordinates Handle The Load Balance. In A Cluster, They Distribute All The Traffic Into All Ports Equally, Like B Getting 100, We Are Running A 50% And Be Getting 100 Requests Per Second, So They Frequently Send That Particular Pod Are To Request. And If We Need More Requests Are Increasing And Also Support Or Increase On That Particular Requests And Through The V-Port Scaling In That Fold."
+            },
+            {
+                "interviewer": "Thank You For Your Response, Vishal. Let'S Explore A New Topic Together: Could You Explain How Kubernetes Manages Networking And Service Discovery Within A Cluster?",
+                "candidate": "We Are Having A 4 Type Code To Cluster Ip Node Port. Notep Code Is Using To Communicate The External Users To Our Cluster And Cluster Ip Is Used To Giving Sexist Cluster To Internally Ports And Also Giving The Network In All Ports Are Equally. And We Are Also Using In Load Balancing To Allow The Traffic In Equally The Pod. Thank You."
+            },
+            {
+                "interviewer": "Thanks For Your Response, Vishal. Let'S Explore Another Topic: Could You Explain How Kubernetes Handles Storage And Data Persistence For Applications Running In A Cluster?",
+                "candidate": "Yeah, We Are Using The Knowledge Of That Node In Covernates And In That We Can Retry The Storage In Aps Volume Also."
+            },
+            {
+                "interviewer": "Interesting Take On Kubernetes Storage! Let'S Explore A Different Topic: Could You Explain How Kubernetes Handles Configuration Management For Applications Within A Cluster?",
+                "candidate": "In A Cluster We Have Been A Configuration Management Stored In Ectc, Etc. We Manage The Q Controller Manager. The Controller Manager, We Go Home And Manage The Application Within A Cluster And It'S Area And Manage The All Ports And Nodes."
+            }
+        ]
+    },
+    {
+        "skill": "Docker",
+        "conversation": [
+            {
+                "interviewer": "Thank You For Your Response, Vishal. It Seems Like There'S Still Room For Exploration On That Topic. Let'S Dive Into A Fresh Area: Could You Describe How Docker Supports Container Isolation And Security?",
+                "candidate": "Docorp Support Actually We Are Deploying The Smallest Unit For Engine That Pod We Are Using To Docker Engine That In That Docker Engine We Running The Operating System Or Supporting Files And All The Scenes In That Container"
+            },
+            {
+                "interviewer": "Thanks For Your Input, Vishal! Let'S Shift Gears And Explore Another Area: Could You Explain How Docker Manages Network Communication Between Containers?",
+                "candidate": "Yeah, Docker Managed The Network Communication Between Containers Through The Qq Proxy And They Get A Particular Ip Through The Q Proxy And Node Ip Is Also Assigned To On Pods And Pod Ip Is Work On Docker And Docker Container And That I Did The Equality How Many Containers Are Running In That Pod And All Container Id Having Same Ip. Thank You."
+            },
+            {
+                "interviewer": "I See Where You'Re Coming From, Vishal. Let'S Explore A Different Topic: Could You Explain How Docker Handles Storage And Data Persistence For Containers?",
+                "candidate": "Containers Are, We Create A Container That Can Cut The Storage From That Machine In That We Are Creating A Container. We Also Assume That Like How Many Storage We Need, According To Their Requirement, They Give The Storage. So That Particular Physical Server Or Ec2 Instance."
+            },
+            {
+                "interviewer": "Thanks For Your Response, Vishal. Let'S Explore Another Topic Together: Could You Describe How Docker Supports Multi-Stage Builds And Their Benefits?",
+                "candidate": "Sorry, I Don'T Have Idea."
+            },
+            {
+                "interviewer": "Thank You For Your Honesty, Vishal. Let'S Move On To Something Else: Could You Explain How Docker'S Architecture Enables Quick And Efficient Application Deployment?",
+                "candidate": "Marketage Level Quick To Efficient Application Deployment Because We Create That All Supporting Files That We Need To Run By A Particular Application On That Container Like We Need This Type Of Os Version Or Which Type Of Which Tools We Need To Run That Application."
+            },
+            {
+                "interviewer": "Thanks For Sharing That, Vishal. It Seems Like There'S Still Room For More Exploration On That Topic. Let'S Move On And Explore A Fresh Area: Could You Explain How Docker Handles Scalability For Applications Running In Containers?",
+                "candidate": "And In Scalability According To If We One Container Is Running And That Container Is During Any Issue. During Any Issue It'S Not Nothing And After That Hb Terminate The Automatically And New Container Domain Is. Thank You."
+            },
+            {
+                "interviewer": "Thanks For Your Response, Vishal. Let'S Shift Gears And Explore A New Topic: Could You Explain How Docker Compose Facilitates Multi-Container Application Deployment?",
+                "candidate": "Yeah, We Can Run In A Pod In Many Multi Containers And They, But We Are Performing Like One Container Run In A Board And In That Multi Container Communicate With The Church And We Support Files We Can Run In Different Containers Like This Type Of Files We Need To Run That Application."
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Thoughts, Vishal. Let'S Explore Another Area: How Does Docker Ensure Container Isolation And Security Within A Multi-Tenant Environment?",
+                "candidate": "Sorry, I Don'T Have A Alien."
+            }
+        ]
+    },
+    {
+        "skill": "Ci/Cd",
+        "conversation": [
+            {
+                "interviewer": "I Appreciate Your Response, Vishal. Let'S Explore A New Topic: How Do You Design And Implement Ci/Cd Pipelines To Ensure Efficient And Reliable Software Delivery?",
+                "candidate": "Here We Are Using Creating Cicd Pipeline Through The Jenkins We Can Create Cicd Pipeline And There'S Software Delivery We Using A Harness Pipeline And Set Cicd Pipeline We Through The Harness We Deploy That All Changes On Aws Storage"
+            },
+            {
+                "interviewer": "Thanks For Sharing, Vishal! It Seems There'S More To Explore On This Topic. Let'S Dive Into A New Area: How Do You Ensure Compliance And Security In A Ci/Cd Pipeline?",
+                "candidate": "I Don'T Have Idea."
+            },
+            {
+                "interviewer": "Let'S Look At Another Topic, Vishal: How Do You Handle Rollback Mechanisms In A Ci/Cd Pipeline To Ensure Stability During Deployments?",
+                "candidate": "We Have A Rollback Mechanism In The Cicd Pipeline Too Through The Tag Of We Are Using Which Type Of Version We Are Deadline Now And Previous Version Also. I'M Sure That Like Previous Version That We Are Being Under Running On Our Ewc Sources If Our Cicd Pipeline Is Built Automatically Rollback On The Previous Version."
+            },
+            {
+                "interviewer": "Thanks For Your Response, Vishal. Let'S Dive Into Another Topic: Could You Explain How To Handle Configuration And Secrets Management In A Ci/Cd Pipeline?",
+                "candidate": "We Are Handling The Secret Management In Cicd Pipeline, Kiwi, Who Is Responsible To Create That Cicd Pipeline And Run For The And Also Who Is Responsible To Run That Cicd Pipeline. And After That, If We Are Running, A Candidate Deployment Is Completed, So We Give The Permission That Candidate Deployment Is Passed And After That Primary Deployment Is Done."
+            },
+            {
+                "interviewer": "Thanks For Your Response, Vishal. Let'S Explore A New Topic Together: Could You Describe How Ci/Cd Pipelines Can Be Optimized For Performance And Efficiency?",
+                "candidate": "Another, Divide Into Multiple Tasks Like First We Deploy In, Can Be Deployed And Be Deployed Prior And Then They Have Bad Jobs And We Divide In Three Or Four Parts, It'S Increase The Performance And Efficiency."
+            },
+            {
+                "interviewer": "Thank You For Your Response, Vishal. Let'S Explore Another Topic Together: How Do You Implement Security Best Practices In Ci/Cd Pipelines To Protect Sensitive Data And Ensure Compliance?",
+                "candidate": "I Don'T Have An Idea."
+            },
+            {
+                "interviewer": "Let'S Explore A Different Topic, Vishal: How Do You Ensure Scalability And Efficiency In Ci/Cd Pipelines While Managing Concurrent Deployments?",
+                "candidate": "Through The Aws Associated Template, We Add That In Cicd Pipeline And They All Manage The Current Deployment. Like Primary Deployment Complete And We Give Authorized Like The Primary Deployment Complaint, You Can Start Primary. After The Military Deployment Completed, We Start, The Primary Deployment Completed, You Start The Bed Jobs And All Bed Jobs Are Running One By One. And All Bad Jobs Apart Which Means Our Deployment Is Completed."
+            },
+            {
+                "interviewer": "You'Re On The Right Track, Vishal, But The Answer Is Still Lacking Completeness Regarding How You Ensure Scalability And Efficiency In Ci/Cd Pipelines While Managing Concurrent Deployments. Let'S Explore A Fresh Topic: Could You Explain How You Design Ci/Cd Pipelines To Support Multi-Environment Deployments Effectively?",
+                "candidate": "Yeah, We Get The Pipelines First For Our Debt Environment And After That We Create That That We Add That Like The Environment, But Cdcd Pipeline Is Successfully Completed And We Develop The Successful And Not Get Any Issues And We Also Approved That Pipeline To Our Aging Aging Environment And Also We Run That Staging Environment And Successfully Run On That Stage Environment After That We Arrive At That Particular Pipeline On The Project Environment."
+            },
+            {
+                "interviewer": "Thanks For Sharing, Vishal. Let'S Explore A New Topic Together: Could You Explain How Ci/Cd Pipelines Can Be Monitored And Troubleshot Effectively To Ensure Seamless Operations?",
+                "candidate": "Yeah, We Have Cisd Pipeline Monitor Kbis, We Are Getting Any Issue Or Not And It'S Continuously Getting The Logs. Through That Logs We Can Monitor Which Type Of Issue We Are Getting That We Can Resolve That Issue."
+            },
+            {
+                "interviewer": "I See Where You'Re Coming From With Your Response, Vishal. Let'S Explore A New Topic Together: How Do You Ensure Continuous Integration And Delivery When Dealing With Rapidly Changing Codebases?",
+                "candidate": "Sorry, I Don'T Know How To Deal With Rapidly Changes In Code Basis. But We Are Using Tags In That, Which Type Of Version We Are Deploying And We Are Getting Through The Target That To Deploy In The Word."
+            }
+        ]
+    }
+]

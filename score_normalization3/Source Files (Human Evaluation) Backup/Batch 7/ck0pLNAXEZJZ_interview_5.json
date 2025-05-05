@@ -1,0 +1,139 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "Ahmad, Impressive Experience! How Do You Handle Security In Django?",
+                "candidate": "Okay, Security Like Sql Injection, Middlewings, Communication, Using Like Orms, A Lot Of Features To Handle Security, Using Protocols Like Http. We Are A Lot Of Players, Especially In The Middle War."
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Insights On Security In Django. Let'S Explore Another Topic: How Do You Ensure Scalability When Using Django In A Large-Scale Application?",
+                "candidate": "I'M Showing The Scalability It'S Not Only For Django, It'S How You Build Your System, How Your Database, Models Is Designed, Database Design, How You Build That Services, If You Build It In Microservices Architecture Or Monolithic, Build It By Using Risti Framework, Jangristic Framework, By Building Microservices And Expose Each Service Using Apis Using Risc Apis. So It'S A Big Topic, It'S Not Only For Django, It'S Mainly How You Build Your System Based On Metro Services Architecture Or How You Design Your Database."
+            },
+            {
+                "interviewer": "Great Insights On Scalability, Ahmad! Let'S Dive Into Another Interesting Topic: Can You Explain How Django'S Orm Can Optimize Query Performance In A Database-Heavy Application?",
+                "candidate": "Yes, For It'S A Big Feature For Django. It'S Like Layer Between Database And Web Application. It Handles Security And There Is A Lot Of Optimization You Can Use It Like Like Prefetched Related, Select Related, Avoiding N Plus Queries. So You Can Use The Orm Effectively You Will Get Good Results."
+            }
+        ]
+    },
+    {
+        "skill": "Restful Apis",
+        "conversation": [
+            {
+                "interviewer": "Great Explanation On Django'S Orm Optimization, Ahmad! Let'S Explore Another Topic: How Do You Handle Restful Api Versioning In A Complex Application Environment?",
+                "candidate": "In Versioning, It'S Very Important Topic For Backward Compatibility. If I Have Like Breaking The Changes, This Version For Specific Customer, I Don'T Want To Break The Response For Other Customers. So To Hand In Backward Compatibility Effectively, You Have Your Build Your Application, Inversion Like B1 B2 And Yeah Like This"
+            },
+            {
+                "interviewer": "Interesting Approach, Ahmad. Let'S Navigate A Different Path Now: How Do You Manage Authentication And Authorization In A Restful Api?",
+                "candidate": "In Restful Api You Can Use Like Permission Class, You Can Build Your Own Your Own Class, Permission Class, Authenticated Class And Use It In Your End Point. So If You Have A Specific Logic Or Custom Logic, For That You Can Override The Default Behavior For Authentication. And This Will, The Authentication And Authentication And Authorization It Will Be It Will Be Checked Before Handling The Logic On On The End Point Itself"
+            },
+            {
+                "interviewer": "Interesting Take On Authentication And Authorization In Restful Apis! Let'S Explore Another Fascinating Topic: Could You Discuss The Role Of Hateoas In Restful Web Services?",
+                "candidate": "Hetes, I Think Hites, It'S Interesting Topic. When Your Response Include Another Url For Another Loop. So You Can Send Like Url In Your Response To Your Client, Content Or Whatever It Is. It Will Include A Direct Url Or Something Like This. On Your Place."
+            },
+            {
+                "interviewer": "Thanks For Your Input, Ahmad! Let'S Shift Gears And Discuss Another Topic: How Do You Evaluate The Effectiveness Of A Third-Party Integration Within A Restful Api?",
+                "candidate": "Effectiveness Of Third Party Integration. I Think This You Can Measure The Effectiveness Of Third Party Integration By Interest."
+            },
+            {
+                "interviewer": "Interesting Perspective, Ahmad! Let'S Explore Another Topic: How Do You Monitor And Handle Rate Limiting In A Restful Api?",
+                "candidate": "In This For Api Ret Mit, For Me, From My Experience, In Api Gateway You Handle The Rate Limiting, So You Avoid Manner Those Attacks Like This."
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Thoughts, Ahmad. Let'S Explore Another Intriguing Topic: How Do You Design An Efficient Restful Api Error-Handling Mechanism To Improve Client Interactions?",
+                "candidate": "Error Handling Like Using A New Endpoint, Try Catch, And Based On The Business Needs Or The Product, If There Is An Error In The Api, How You Will Get Which Response Is Suitable For You. So Using The Try Catch And You Will Try To Make Cut. Make Custom Response For Your Client Or Like Reiterating For The If Like Looping And Something You Can Reiterate A Lot Of Our Saga Pattern In Micro Services"
+            }
+        ]
+    },
+    {
+        "skill": "Databases",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Sharing Your Thoughts, Ahmad! Let'S Explore Another Angle: Could You Explain The Significance Of Acid Properties In Database Transactions And How They Impact Data Consistency?",
+                "candidate": "Yes, As A Transaction Is A Big Feature For The Database Like Atomic, Consistency, Isolation And Durability. Consistency, So Once The Transaction Is Committed, The Whole Database Will Be Consistent With This Data."
+            },
+            {
+                "interviewer": "Thanks For Your Response, Ahmad. Let'S Delve Into Another Topic: How Do Database Indexing Techniques Improve Query Performance In Postgresql Or Mysql?",
+                "candidate": "Indexing In Other Methods, You Can Use It For Columns That Feed Heavy More Than Write Tv Because Indexing Is In Right Tv Columns It'S Not A Good Practice. Indexing Is Like Built That Structure Like Hash Map And It Will Order The Dictionary. I Think The Complex It Would Be Log In Logarithmic. So It Will Boost Your Searching Algorithm Instead Of Searching In The Whole Records. Always."
+            },
+            {
+                "interviewer": "Thanks For Your Input, Ahmad. Let'S Shift Our Focus To Another Intriguing Topic: Can You Explain How Orms Help In Maintaining Database Schema Integrity Across Different Environments?",
+                "candidate": "Coralms Help Maintaining Database Clean Integrity. The Forum, It'S Consistent. It Helped To Be To Make Your Database Consistent. So I Think This Is The Key For The Integrity, Because Different Environments."
+            },
+            {
+                "interviewer": "Appreciate Your Insights, Ahmad. Let'S Explore A Different Topic: How Do You Ensure Data Normalization While Designing A Database Schema?",
+                "candidate": "Normalization, Normalization, We Use Normalization For Reducing Redundancy Between Tables. So We Normalize The Tables And Build Foreign Key Between The Table, Like Build Relationship Between Them. So By This We Reduce The Redundancy And Cost Of Storage For Redundant Columns."
+            },
+            {
+                "interviewer": "Got It, Ahmad. Let'S Explore Another Aspect: Could You Discuss The Concept Of Database Sharding And Its Impact On Performance And Scalability?",
+                "candidate": "Okay, Sharding You Can Like Shard Your Database Into Multiple Charts. Each Chart This Will Distribute A Record Based On Your Function Or Hash Function Like Alphabetically Or Something Else. So This Instead Of Like Searching In Let'S Say One Million Records, If I Build Like 10 Shards, It Will Do Searching On 100,000 People. So It Is Good For Parents."
+            }
+        ]
+    },
+    {
+        "skill": "Cloud Platforms",
+        "conversation": [
+            {
+                "interviewer": "Intriguing Thoughts On Sharding, Ahmad! Let'S Dive Into A New Topic: Can You Discuss The Differences And Use Cases Of Aws, Gcp, And Azure In Cloud Solutions?",
+                "candidate": "There Is No Big Difference Between Them. It'S Like A Tool Of The Syntax Or How To Use It. But All These Cloud Solutions Includes Like S3 Buckets Or Buckets Or Serverless Like In Awse Or Building Built That We Serve Also. All The Same But In Different Ways."
+            },
+            {
+                "interviewer": "Thanks For Your Perspective, Ahmad. Let'S Explore A Different Angle: Could You Discuss The Implications Of Cloud-Native Architecture On Application Development And Deployment?",
+                "candidate": "Application Development It Depends On How You Build Your Application So You Build You Build Your Cloud Based On It So If I Have Like One Server For Database If I Make It I Make It I Make It Replica For This So It I Will Read It From The Replica And Write In The And The Main Database. So This Will, How I Am Using, How I Am Building My Application To Make It Scalable, It Will This Be Replicated On The Cloud Architecture."
+            },
+            {
+                "interviewer": "Thanks For Sharing Your Thoughts, Ahmad. Let'S Explore Another Topic Together: How Do You Approach Designing A Cloud Architecture That Needs To Accommodate Both High Availability And Fault Tolerance?",
+                "candidate": "High Availability And Call If I Make More Than One Instance For One Server. So Based On Cap Theorem, Here We Sacrifice The Consistency And We Give The Availability Like Five-Nines Availability More Important Topic. So Here We Build More Than One Instance For Like Database And Then Like We Schedule Replicating The Slaves Nodes Based On The Master Node Repeatedly"
+            },
+            {
+                "interviewer": "Thanks For Your Perspective, Ahmad. Let'S Explore A New Topic Together: How Do You Choose Between Using Serverless Computing And Traditional Server-Based Infrastructure For A Given Application?",
+                "candidate": "Serverless We Use This For Like A Building Function As Infrastructure. So I Have Like Small Functions. It Will Do One Task Like Sending Emails Or Something Like This. So It Will On Request It Will Hit The Serverless Function And It Will Be A Server List And It Will It Will Do The Job. So No Need To Run Server 24 Hours. But For Big Application, I Want The Traditional Server Based On The Interaction, The User Interaction With Your Application, Actually. How They Will Use It."
+            },
+            {
+                "interviewer": "Thank You For Your Response, Ahmad. Let'S Explore A New Topic: Could You Discuss How Containerization With Tools Like Docker Can Impact Cloud Deployment Strategies?",
+                "candidate": "It Will Make The Deployment Steps A Lot Easier, So You Will Build The Docker File That Handles All Steps For Building Your For Deployment. So By Building The Instance, The Docker Image, So It Will Take It All In A Lot One Docker File Handle Everything For You."
+            }
+        ]
+    },
+    {
+        "skill": "Llm",
+        "conversation": [
+            {
+                "interviewer": "Thanks For Your Input, Ahmad. Let'S Explore Another Topic Together: How Do You Ensure The Ethical Use Of Ai Models, Particularly In The Context Of Large Language Models (Llms)?",
+                "candidate": "I'M Not Very Familiar With Llm, But I Think This Will Be How You Prompt And How You Are Talking With The Machine Learning. So This Depends On How You Control B And How You'Ll Sanitize Your Data. Your Data And Defiltration Like To Conizing Them."
+            },
+            {
+                "interviewer": "Thanks For Your Thoughts, Ahmad. Let'S Explore A Fresh Topic: How Do You Ensure The Robustness And Reliability Of Llms During Deployment In A Production Environment?",
+                "candidate": "I'M Not Sure About This Question."
+            },
+            {
+                "interviewer": "Interesting Response, Ahmad! Let'S Explore A New Topic: How Do You Approach The Task Of Fine-Tuning A Large Language Model (Llm) For A Specific Application?",
+                "candidate": "So You Build One General Pump And You Start By Making Cases And Based On It You Will Fine Tune This Prompt To Give You While You'Re Talking To Lln To Make It Specific For This Application On It For This Site."
+            },
+            {
+                "interviewer": "Thanks For Your Response, Ahmad. Let'S Shift Gears And Explore A New Topic: How Do You Ensure Data Privacy And Security When Using Large Language Models In Applications?",
+                "candidate": "By Not Sending Personal Data Or Something Like This Or Not Sure About My Best Practices For Other Than My Best Practice For Other Than That."
+            },
+            {
+                "interviewer": "Thanks For Your Response, Ahmad. Let'S Dive Into Another Intriguing Topic: Can You Explain How Transformer Architectures Have Revolutionized The Development Of Large Language Models?",
+                "candidate": "The I Don'T Know How Many Days I Don'T Know The Other People"
+            },
+            {
+                "interviewer": "Thanks For Your Response, Ahmad. Let'S Explore A New Topic Together: Can You Explain The Key Differences Between Unsupervised Learning And Supervised Learning Within The Context Of Llms?",
+                "candidate": "I Don'T Know If I Don'T Know. I Don'T Know."
+            },
+            {
+                "interviewer": "No Worries, Ahmad! Let'S Embark On A New Topic: Can You Explain The Importance Of Model Interpretability In Large Language Models And Its Impact On Ai Ethics?",
+                "candidate": "I Don'T Know. We Don'T Know."
+            },
+            {
+                "interviewer": "Got It, Ahmad. Let'S Journey Into A Different Topic: Could You Elaborate On The Benefits And Challenges Of Using Federated Learning With Large Language Models?",
+                "candidate": "I Don'T Know."
+            },
+            {
+                "interviewer": "I Understand, Ahmad. Let'S Dive Into A Fresh Topic: How Do You Approach The Challenge Of Ensuring Continuous Learning And Adaptability In Llms Once They'Re Deployed?",
+                "candidate": "Why Make... ...Onkast In It? I'M Not Sure Exactly."
+            }
+        ]
+    }
+]

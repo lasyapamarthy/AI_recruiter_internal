@@ -1,0 +1,101 @@
+[
+    {
+        "skill": "JavaScript",
+        "conversation": [
+            {
+                "interviewer": "Can you tell me what are event loops in JavaScript and how they work?",
+                "candidate": "Okay, mainly the event loops are used for the fundamental mechanism to execute the code, and it has the single-threaded nature of JavaScript. It works in a single thread or on a call stack basis. The other one is web APIs and task queues are used for the HTTP request or the event listeners. When the web APIs complete the task, it places a callback function into a task queue. The event loop continuously monitors the call stack and the task queue. If our call stack is empty, it will push the first callback function from the task queue once the call stack allows it to be executed. There is one more called microtask queue for handling the promises under certain tasks in the event loops."
+            },
+            {
+                "interviewer": "Do you know what is microtask and microtask queue?",
+                "candidate": "It's a similar kind of mechanism for handling smaller high-priority tasks that will be executed asynchronously. It will be handled in the microtask queues as a specialized queue separate from the task queue, which is used by the event loop. A microtask is a type of asynchronous task that needs to be executed after the currently executing script completes, but before the rendering task in the regular task queue is processed. Microtasks are typically used for operations that need to happen quickly after the current execution. In that, promises and mutation observers come into the picture. Microtasking work, you know, mostly a microtask queue is separate from the main task queue handling for these callbacks, like events such as setTimeout, setInterval, or user interactions. Execution order will be after the current script execution completes. The event loop first checks if there are any microtasks in the microtask queue. If there are, it executes all the microtasks in the queue before moving to the next task in a regular task queue. There is one more called microtask draining. The microtask queue is drained in a single run, meaning all microtasks are executed one after the other until the queue is empty. Even if any new microtasks are added during the execution, this is different from the task queue."
+            },
+            {
+                "interviewer": "Tell me which one executes first, a promise or a callback function?",
+                "candidate": "First, it will execute the promise, then the callback function."
+            },
+            {
+                "interviewer": "Can you tell me why?",
+                "candidate": "Because promises first make the call to the asynchronous task, and inside that, we do the callback functions."
+            },
+            {
+                "interviewer": "Do you know what is variable hoisting?",
+                "candidate": "Yeah, variable hoisting is when we declare any variable without executing it right or doing the console.log. If I have x console.log x, then I am defining the variable. At that time, this hoisting comes into the picture; it won't execute that variable. It's a mechanism, it's like hoisting works, it works with where we have declaration hoisting, right? So, as I said, console.log x output, if you give that particular variable, it won't print. After defining our variable, then we give the console.log. It prints the variable. Here we come into function scope under block scope, so variables declared in the function scope are accessible throughout the entire function in which they are declared, even before their actual declaration in the code. Unlike let and const, which do not have block-level scope. If a variable is declared inside a block, it is still accessible outside the block, the var one."
+            },
+            {
+                "interviewer": "Can you tell me what closure functions are?",
+                "candidate": "Yeah, closure functions are like nesting functions. They will be called inside our JavaScript functions. For example, if you have a function A, and inside that function, we need to run an anonymous function, right? So this closure concept helps us to run that in JavaScript. It's mainly we have lexical scope in this. Functions are executed within the scope in which they are defined, not necessarily the scope in which they are called. That is a lexical scope. And function, inside function, it's an inner function defined inside an outer function. It owns a local variable and the variables of the outer functions and the global variables we can do that. Closure formation is that the outer function completes the execution. Its local variables are normally removed from memory. However, you know, in the inner function continues the reference of this variable. They are not removed from memory because closures close over the variables retaining the state."
+            },
+            {
+                "interviewer": "Do you know what is the advantage of using closure functions?",
+                "candidate": "So advantages I can say that for any calculations that need to be run rapidly for our functions, we can use the closures."
+            },
+            {
+                "interviewer": "Do you know what are promises?",
+                "candidate": "Yeah."
+            },
+            {
+                "interviewer": "And how different are they from async await?",
+                "candidate": "Promises are a single-way request. Async and await are also promises, but async and await are built on top of promises, so it is another level of promises to get the values."
+            },
+            {
+                "interviewer": "Can you tell me how to run multiple promises at a time?",
+                "candidate": "Uh, so, um, we have a function called promise.all, where we can do multiple APIs into the queue promise using the promise. Then we can resolve that."
+            },
+            {
+                "interviewer": "Can you tell me what's the difference between promise.all and promise.race?",
+                "candidate": "In promise.all, if any one of the API calls fails, it won't execute it. In promise.race, if it fails also, it will check for the next API."
+            }
+        ]
+    },
+    {
+        "skill": "Angular",
+        "conversation": [
+            {
+                "interviewer": "Coming to Angular. Can you tell me what are observables and how different they are from promises?",
+                "candidate": "Yeah, so observable is a concept of doing multicast. In case of, you know, we have observable works on the subscribes method. So if you define an observable, then if you don't subscribe, the method itself won't get called. Unlike promises, observables take multiple values in a single instance. In observable itself, we have another concept called subjects, where we can define the values, define a function, then without calling that function, we can define a value. Then we can retrieve the details."
+            },
+            {
+                "interviewer": "Can you tell me what is the difference between subject and behavior subject?",
+                "candidate": "Subjects are unicast and it's a hot observables. In subject, if we define a function in the next statement, if you try to do a subject.next, it will print only that value. In case of behavior subject, we can give initial value and it will help us to, before doing subscribe, if we give the dot next method, it will retrieve the last emitted value. In case of, there is one more same subject like, replace subject where it will hold all emitted values in that subject."
+            },
+            {
+                "interviewer": "For state management, what do you have to work with?",
+                "candidate": "So for state management, mostly I have used services. Recently, the NGRX came into picture with Redux. I have worked in ReactJS for state management. But Angular, it's a similar concept of state management. There are other state management APIs also for Angular. That is the one and another angular has been introduced a signal concept to handle the state. That's a lightweight, you know, state management."
+            },
+            {
+                "interviewer": "Have you used RxJS?",
+                "candidate": "Yes."
+            },
+            {
+                "interviewer": "Can you tell me what you know, for what purpose you have used RxJS?",
+                "candidate": "So RxJS mainly to manipulate the data from the server and using those RxJS from operator map, contact map, fork join. These are the operators that I have used to manipulate the data. In case of any multiple API calls, we use the merge map and the fork join. In case if you have a search bar, after three letters, we need to get the details. If we delete, we use the switch map operator, switch map function to delete and retrieve the details, get the response."
+            },
+            {
+                "interviewer": "Can you tell me what are the Angular hooks or Angular events?",
+                "candidate": "Yeah, Angular events totally have nine lifecycle methods: ngOnCheck, ngOnInit, ngDoCheck, ngAfterViewInit, ngAfterViewChecked, ngAfterContentInit, ngAfterContentChecked, and the last one is the ngOnDestroy."
+            },
+            {
+                "interviewer": "Why, when this all will be called?",
+                "candidate": "Yeah, so first three, you know, the initial ngOnInit, and these are the one-time hooks. ngOnInit and ngDoCheck will be called whenever we type the values in the input, right? So doCheck will be called. ngAfterViewInit and ngAfterViewChecked, ngAfterContentInit, ngAfterContentChecked will be called whenever child components are loaded into our page. That time, these four lifecycle methods will be called. The last one is the ngOnDestroy, so whenever we close the component, it will destroy the subscriptions method, or we need to define the subscriptions method over the ngOnDestroy."
+            },
+            {
+                "interviewer": "Do you know what are structural directives?",
+                "candidate": "Yeah, structural directive is to alter the behavior of the DOM. Mostly structural directive comes with the ngIf and ngFor, ngSwitch methods. This will be directly manipulating the DOMs to be visible or not visible and changing the contents in the DOM."
+            },
+            {
+                "interviewer": "Can you tell me how to do two-way binding?",
+                "candidate": "So we can use the ngModel method in Angular to make the two-way binding. That is the syntax of property binding and the event listener syntax inside the ngModel needs to be covered with that square bracket and event emitter bracket. In that way, if we define any variable in DS five, that can be updated in view. If we update in view, that will be reflected in the controller also."
+            }
+        ]
+    },
+    {
+        "skill": "Firebase",
+        "conversation": [
+            {
+                "interviewer": "Coming to Firebase, what kind of work you have done with Firebase?",
+                "candidate": "So Firebase, you know, like push notifications analytics, and I have worked on Firestore for one of my demo projects without using the NoSQL, you know, directly creating the JSON objects and getting the values to the application. And crash analytics, Firebase crash analytics for the mobile part that I have used."
+            }
+        ]
+    }
+]

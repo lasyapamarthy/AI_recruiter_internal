@@ -1,0 +1,58 @@
+[
+    {
+        "skill": "Swift",
+        "conversation": [
+            {
+                "interviewer": "What's your total years of experience in Swift programming?",
+                "candidate": "Three years of experience. I graduated with my master's from Jamia Millia Islamia in 2021 and then started working at Royces in 2021. I've been working as an iOS developer for the past three years there."
+            },
+            {
+                "interviewer": "When it comes to Swift programming, would you please pick one of your recent projects and explain your contributions?",
+                "candidate": "The product I am working on is called Account A360, a CRM product dealing with wineries in the US. It's owned by the company and the winery, but we also provide the same application for different clients with different backend data. My contributions include developing and delivering modules like a note module where sales reps go to the store, are assigned tasks, and can post notes visible to higher hierarchies. I've also worked on a meeting scheduler called pre-plan meeting and photo tagging."
+            },
+            {
+                "interviewer": "I want you to develop a multi-threaded application in Swift using Grand Central Dispatch, GCD, and also implement some synchronization mechanisms like Semaphores.",
+                "candidate": "I'm not so much aware of this multithreading."
+            },
+            {
+                "interviewer": "Are you comfortable with data structures?",
+                "candidate": "Yeah, I can. I mean, the logical questions, right?"
+            }
+        ]
+    },
+    {
+        "skill": "Objective-C",
+        "conversation": [
+            {
+                "interviewer": "What about experience in Objective-C?",
+                "candidate": "In 2021, the project I started working on, Objective-C was getting obsolete. So, no."
+            },
+            {
+                "interviewer": "Still, some of the applications are in Objective-C running. They're migrating. So, I just wanted to check with you.",
+                "candidate": "I've seen code. It's not like I've not seen it. Even the project I was working on was in Objective-C before, and we started revamping it. But not much knowledge in that."
+            }
+        ]
+    },
+    {
+        "skill": "Data Structures",
+        "conversation": [
+            {
+                "interviewer": "Given an unsorted linked list, the task is to remove duplicates from the list. You need to create the input, create a linked list with the numbers given, and remove duplicates, preserving the first occurrence.",
+                "candidate": "Can I use a set or something? If we want to remove duplicate elements, that is one solution. We can put the elements in the set."
+            },
+            {
+                "interviewer": "The second occurrence of 12 has been removed.",
+                "candidate": "I'm not much familiar with linked lists. Usually, we use data structures like arrays, dictionaries, and sets. Linked list is something I don't use much, but I know the concepts. I'm just getting confused."
+            }
+        ]
+    },
+    {
+        "skill": "Logical Problem Solving",
+        "conversation": [
+            {
+                "interviewer": "Given a value of V rupees and an infinite supply of each of the denominations, the task is to find the minimum number of coins or notes needed to make the change.",
+                "candidate": "I'll run through the loop and check if the given number is less than the denomination. For example, if it's 70, it's less than 100, so we don't need more than a 100 denomination note. I'll go with the second least number, which is 50. Then 70 minus 50 is 20. I'll check if 20 is in the array, and if so, it's completed. If it was 22 or 23, I would subtract 20 and be left with 2, then check again. If 2 exists, I need a 2 rupee coin. The loop runs three times, so the count is three."
+            }
+        ]
+    }
+]

@@ -1,0 +1,77 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "Can you tell what are decorator functions in Python?",
+                "candidate": "Yes. A decorator is a function that you can use. For example, you use the add operator. It's a function that helps you to modify the behavior of another one. This allows you to add functionality, update functionality, and make existing functions reusable."
+            },
+            {
+                "interviewer": "Do you know what are generators?",
+                "candidate": "Yes. A generator is a special type defined using functions and the yield keyword. For example, you have your function and you use the yield keyword. You can use it in a loop. It's more focused on memory efficiency."
+            },
+            {
+                "interviewer": "Have you used it?",
+                "candidate": "No, not yet."
+            },
+            {
+                "interviewer": "Do you know what are context managers?",
+                "candidate": "Yes, for example, when you want to read a file, I know that it's an example to use a context."
+            },
+            {
+                "interviewer": "Why do we need to use the context manager?",
+                "candidate": "Well, for example, to manage resources, to ensure that they are required to be released."
+            },
+            {
+                "interviewer": "Have you done any synchronous programming in Python or asynchronous programming?",
+                "candidate": "Yes. For example, in FastAPI, it uses a library. I think you have it all."
+            },
+            {
+                "interviewer": "Can you tell me what does the gather function of asyncio do?",
+                "candidate": "Yes, it's similar to JavaScript. It's used to, for example, if I want to call a service, I have to wait for the response from the service."
+            },
+            {
+                "interviewer": "Have you done any multiprocessing?",
+                "candidate": "Yes."
+            },
+            {
+                "interviewer": "Okay, can you tell me how multiprocessing works?",
+                "candidate": "Yeah, just give me one minute because sometimes I get confused between multiprocessing and multithreading. In multiprocessing, it involves multiple processes, each with its own memory space. The tricky point is that the heavyweight has its own memory. For example, to use it, you just import the multiprocessing library. You create an instance, for example, using the multiprocessing process method, and then you use your target. It can be used on a loop or another function. In multithreading, it involves multiple threads running in the same process. That's mainly the difference because it is sharing the same memory space."
+            },
+            {
+                "interviewer": "Do you know what is Global Interpreter Lock?",
+                "candidate": "Yes, it uses a single thread and is waiting for the response."
+            },
+            {
+                "interviewer": "Do you know what is Pydantic?",
+                "candidate": "Yes, it's for data validation and settings."
+            },
+            {
+                "interviewer": "Do you know how to achieve dependency injection in FastAPI?",
+                "candidate": "Yes. For example, you have to use the depends from FastAPI. You have to use the dependency inside of a route."
+            },
+            {
+                "interviewer": "Do you know how to run background tasks in FastAPI?",
+                "candidate": "No, I have not used background tasks in FastAPI."
+            }
+        ]
+    },
+    {
+        "skill": "AWS",
+        "conversation": [
+            {
+                "interviewer": "What else services have you used on AWS?",
+                "candidate": "AWS, I have used AWS Lambda, S3 Buckets, Simple Notification Service, CloudWatch to get logs, AQS, ECR, ECS, and other services, the functions as well. Even Bridge. Also Redshift, RDS, DynamoDB, Athena. Athena is similar to RDS, but Athena works more as a data mart. It's serverless because when you use that service, you pay for what you are using."
+            }
+        ]
+    },
+    {
+        "skill": "Kubernetes",
+        "conversation": [
+            {
+                "interviewer": "Can you tell me how to set up a Kubernetes cluster?",
+                "candidate": "Yes. You have to install the kubectl. Then you install the aksctl to create the cluster. For example, if you want to use the command line, you create a cluster with the name of your cluster. You use the region, the node group, also the node type, and the number of nodes. This will create a cluster with the name that you are setting up there. Once you have created your cluster, you have to configure the kubectl to interact with your AKS cluster. You use a UDS, ETS. Also, you have to use the region. You have to specify the region. You have to update the key of config. You have to specify the name of your cluster. This command updates your key of config, a file with the information required to connect to your EKS cluster. Also, you have to verify your configuration with the kubectl get-nodes. This has to show you the list of nodes that are part of your cluster. Then you have to deploy a sample application, for example. You create your deployment and also the survey to test setup. You have to define it in your YAML file. You have to, for example, define the API version, the kind, also on the metadata, the name of the deployment. Also, they specify you have to set up the number of the replicas, the selector, for example, the type of the server. Also, just to finish, you have to expose your application by using the port. But this is on the service jam."
+            }
+        ]
+    }
+]

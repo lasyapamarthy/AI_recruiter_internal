@@ -1,0 +1,108 @@
+[
+    {
+        "skill": "JAVA",
+        "conversation": [
+            {
+                "interviewer": "So currently, which languages are you working with?",
+                "candidate": "Currently, I'm working with Node.js, JavaScript, and Java."
+            },
+            {
+                "interviewer": "How many years of overall experience do you have?",
+                "candidate": "Around 4.5 years, I guess."
+            },
+            {
+                "interviewer": "How many years into Java?",
+                "candidate": "Java would be around three years."
+            },
+            {
+                "interviewer": "Any experience with databases?",
+                "candidate": "I have worked extensively on MySQL, Redis, Elasticsearch."
+            },
+            {
+                "interviewer": "How many years into MySQL?",
+                "candidate": "MySQL is around four and a half years."
+            },
+            {
+                "interviewer": "So, in Java, is it like Spring Boot or Vertex or what kind of framework have you worked with?",
+                "candidate": "Spring Boot."
+            },
+            {
+                "interviewer": "Familiar with Core Java as well?",
+                "candidate": "Yeah, pretty much familiar."
+            },
+            {
+                "interviewer": "Can you explain what JVM is and how garbage collection works in Java?",
+                "candidate": "There is a classification of how we store our variables. Primitive type variables are stored in a stack, and objects are stored in a heap. Whenever we are in a stack, we have a context. For example, if we have a function that uses some object, we won't have the object directly in that context. We would have a pointer pointing to that in the heap. Garbage collection iteratively checks if the memory allocated in the heap has a reference in the stack. If not, it removes it from memory. JVM stands for Java Virtual Machine. It compiles and runs bytecode and manages memory."
+            },
+            {
+                "interviewer": "Can you tell me the difference between String, StringBuilder, and StringBuffer?",
+                "candidate": "String is an immutable object. If you change a string, it creates a new object. StringBuffer and StringBuilder are arrays that store a stream of characters. They allow appending characters without recreating the string, which is a memory overhead."
+            },
+            {
+                "interviewer": "Does Java support multiple inheritance?",
+                "candidate": "You can implement multiple interfaces, but you can't inherit multiple classes."
+            },
+            {
+                "interviewer": "What are streams, and what functions have you used in streams?",
+                "candidate": "Stream is used to establish a connection between a server and a client. In Java, streams allow operations like map, filter, and collect on a list of variables."
+            },
+            {
+                "interviewer": "What is the difference between map and flatMap?",
+                "candidate": "Map transforms each element, while flatMap transforms each element into a stream and flattens the result."
+            },
+            {
+                "interviewer": "Can you tell me the difference between Runnable and Thread?",
+                "candidate": "To spin up a thread, you can either implement Runnable or extend Thread. Both provide different functions but achieve the same result of creating a new thread."
+            },
+            {
+                "interviewer": "Do you know about iterators like fail-fast and fail-safe?",
+                "candidate": "I have no idea about it."
+            },
+            {
+                "interviewer": "Do you know the difference between parallel stream and stream?",
+                "candidate": "In parallel stream, operations on a single element can run in parallel. In a regular stream, operations are serialized."
+            },
+            {
+                "interviewer": "Can you tell me how to set up profiles in Spring Boot?",
+                "candidate": "You declare different profiles in a YAML file and specify which profile to use in the Spring Boot main run."
+            },
+            {
+                "interviewer": "Do you know what aspect-oriented programming is?",
+                "candidate": "I think I would know it, but I just don't know it by the name aspect."
+            },
+            {
+                "interviewer": "You're talking about dependency injection.",
+                "candidate": "Dependency injection allows you to choose an implementation based on a string in an annotation, avoiding rewriting code."
+            }
+        ]
+    },
+    {
+        "skill": "Node.js",
+        "conversation": [
+            {
+                "interviewer": "Can you tell me about event loops?",
+                "candidate": "In Node.js, it's a single-threaded language, but it uses multiple threads. IO operations are handled by other threads, and the event loop manages responses."
+            },
+            {
+                "interviewer": "Do you know about microtask and macro task queues?",
+                "candidate": "I think no."
+            },
+            {
+                "interviewer": "Do you know how Node.js handles asynchronous programming?",
+                "candidate": "It uses the Chrome V8 engine with event loops to manage blocking and non-blocking code."
+            },
+            {
+                "interviewer": "Can you tell me about middleware?",
+                "candidate": "Between each API and service layer, you can define rules that run on specific URL patterns. This layer is called middleware."
+            },
+            {
+                "interviewer": "Do you know what promises are and how they differ from async/await?",
+                "candidate": "In promises, you can execute multiple async tasks and wait for them to complete. In async/await, you wait for a single async task to complete before moving on."
+            },
+            {
+                "interviewer": "Do you know how to run multiple promises at a time?",
+                "candidate": "You can have an array of promises, wrap it in a promise, and await it. You can use promise.all or allSettled."
+            }
+        ]
+    }
+]

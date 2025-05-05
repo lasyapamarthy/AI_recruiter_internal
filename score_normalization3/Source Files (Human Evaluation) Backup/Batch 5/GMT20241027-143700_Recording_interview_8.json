@@ -1,0 +1,73 @@
+[
+    {
+        "skill": "Python",
+        "conversation": [
+            {
+                "interviewer": "How many years do you have in Python?",
+                "candidate": "For the whole duration of my career, I'm primarily using Python. So about four years, three months. Also, I worked as a teaching assistant and research assistant here, and Python was the primary language that I used."
+            },
+            {
+                "interviewer": "What are decorator functions?",
+                "candidate": "Decorator functions are like a wrapper around functions to provide some extra functionality. For example, let's say you have a function X and you have some decorator method named time it. You would have a decorator function to implement this functionality and pass this function X as the input to this, and it would calculate the execution time and return it back. All you have to do is put a time it on top of the function."
+            },
+            {
+                "interviewer": "Do you know what generators are?",
+                "candidate": "Generators are like an on-the-fly execution of some function over a set of iterators. For example, in the machine learning context, if you have a large dataset with millions of rows and you want to do something like lazy loading and you don't want to load all of that into memory, you can use a generator which will fetch the object for you. Unless you use it, you won't be actually loading them into memory. It just has the pointers to all of those objects in the iterator."
+            },
+            {
+                "interviewer": "Do you know what a context manager is?",
+                "candidate": "It would basically reduce the scope to a certain context. We use context managers for just limiting the scope of a set of variables or files to a certain context, and outside that context, you can't access those variables and they would get terminated."
+            },
+            {
+                "interviewer": "Do you use AsyncIO or multiprocessing?",
+                "candidate": "I use multiprocessing and AsyncIO but not much. I mostly worked on multiprocessing."
+            },
+            {
+                "interviewer": "Can you tell me how you select how many processes you need to run in multiprocessing?",
+                "candidate": "Technically, each process is its own thing, right? So what you need is at least one core to run each of the processes. How you decide this is based on what the kind of load is. If it's something heavy on the compute side, you would probably need at least a core, especially for machine learning applications. You try to run some benchmark testing or regression testing to see how much load there is, how many requests you get, and how much latency and throughput you need."
+            }
+        ]
+    },
+    {
+        "skill": "Machine Learning",
+        "conversation": [
+            {
+                "interviewer": "What's the difference between supervised learning and unsupervised learning?",
+                "candidate": "Supervised learning is when you know what the input and output are. You're trying to fit a model or algorithm such that it maps or approximates the output given a set of inputs. For unsupervised learning, you don't necessarily have a target or label or output that you need to predict. It's about finding patterns in the given set of data. An example of supervised learning would be a classification task, whereas for unsupervised learning, it could be k-means clustering."
+            },
+            {
+                "interviewer": "Any supervised algorithms you have worked with?",
+                "candidate": "I worked on LSTMs, neural networks, decision trees, SVMs, and different variants of SVMs and multilayer perceptrons."
+            },
+            {
+                "interviewer": "What is overfitting or underfitting or bias or variance?",
+                "candidate": "Overfitting is when your model tries to fit all the nitty-gritties of data and exactly mimic it, lacking generalization. Underfitting is when your model hasn't had enough capacity to fit the given set of data and performs worse on the training data itself. Bias is how much your model is trying to stick to the given set of assumptions in the data, and variance is how much it tries to differ based on the variations in the data."
+            },
+            {
+                "interviewer": "Do you know what hyperparameter optimization is?",
+                "candidate": "Hyperparameter optimization is about finding the best solution for a set of hyperparameters, like the number of layers, size of each layer, and learning rate. You try to get some strategy like doing a grid search or neural architecture search to narrow down the hyperparameter search space for quick optimization."
+            },
+            {
+                "interviewer": "What are the different metrics you have used to measure the accuracy of supervised models?",
+                "candidate": "I've used accuracy, precision, recall, F-scores, area under the receiver operating characteristic curve, grammaticality and fluency measures for specific domains, BLEU score for translation, and ROUGE for summarization. For RAG, we have metrics like factuality and context relevance."
+            }
+        ]
+    },
+    {
+        "skill": "Large Language Models (LLMs)",
+        "conversation": [
+            {
+                "interviewer": "What kind of work have you done with LLMs?",
+                "candidate": "We are using OpenAI's 3.5 and Gemini for summarization in our RAG pipeline. We use LLMs in the IR stage to enhance questions and add context, and in the answer generation phase to generate a summarized and cohesive answer. I also used LLMs for explainability, classification tasks, and visualizing internals based on gradients for speech recognition LLMs like Whisper and models like Llama."
+            },
+            {
+                "interviewer": "Do you have any model running locally to build a RAG-based chat model?",
+                "candidate": "Unfortunately, I work with the client, so I don't have a pipeline running locally. It's just on the client's machines."
+            },
+            {
+                "interviewer": "How do you prevent hallucination of chat models?",
+                "candidate": "You can set the temperature to zero to reduce variation and ensure it's rooted in the given set of inputs. On the output side, we have rules to prevent hallucinations, ensuring answers are rooted in the data and filtering out those that aren't."
+            }
+        ]
+    }
+]

@@ -13,6 +13,7 @@ library(stargazer)
 library(broom)
 library(kableExtra)
 library(gridExtra)
+library(oaxaca)
 
 # Figures directory:
 figures_dir <- "/Users/emilpalikot/Research/AI-Recruiter/src/figures"
@@ -282,6 +283,29 @@ cat(latex_output, file = latex_file_path, append = TRUE)
 cat("\\caption*{\\textit{Note:} Standard deviations in parentheses. AI Score is the sum of skill levels in React, JavaScript, and CSS (Senior=3, Mid-level=2, Junior=1, None=0).}\n", file = latex_file_path, append = TRUE)
 cat("\\end{table}\n", file = latex_file_path, append = TRUE)
 
+# Add difference between means in treatment and control groups with standard error:
+difference <-  as.numeric(sapply(means_treatment, function(x) treatment_stats[[x]])) -  as.numeric(sapply(means_control, function(x) control_stats[[x]]))
+se <- sqrt(as.numeric(sapply(sds_treatment, function(x) treatment_stats[[x]]))^2 + as.numeric(sapply(sds_control, function(x) control_stats[[x]]))^2)
+
+# Round to 3 decimal places:
+difference <- round(difference, 3)
+se <- round(se, 3)
+
+# Add difference and standard error to the table:
+difference <- append(NA, difference)
+se <- append(NA, se)
+latex_table <- cbind(
+  latex_table,
+  difference = difference,
+  se = se
+)
+
+
+# Print the table as latex:
+cat(knitr::kable(latex_table, format = "latex"))
+
+# Save the table to a file:
+cat(knitr::kable(latex_table, format = "latex"), file = file.path(figures_dir, "summary_statistics_table.tex"))
 
 ################################ Balance treatment and control groups ################################
 
@@ -355,7 +379,7 @@ cat(knitr::kable(result_table, format = "markdown"))
 
 
 final_interview <- read.csv("/Users/emilpalikot/Research/AI-Recruiter/micro1-controll-experiment-EDA/top_candidates_interviewed.csv")
-
+resume_scores <- read.csv("/Users/emilpalikot/Research/AI-Recruiter/Manual-Resume-ranked.csv")
 final_interview %>% filter(email_id =="")
 # Degree of missmatch between the files:
 
@@ -451,98 +475,203 @@ ate_table <- data.frame(
 # Final table for the paper:
 ate_table <- t(ate_table)
 
+# Round to 3 decimal places:
+ate_table[2:nrow(ate_table),] <- round(as.numeric(ate_table[2:nrow(ate_table),]), 3)
 
-## method wiht matching
+# Print the table in markdown format
+cat(knitr::kable(ate_table, format = "markdown"))
 
-final_interview <- final_interview %>% select(email_id, Result)
-#final_interview$outcome <- ifelse(final_interview$Result == "Pass", 1, ifelse(final_interview$Result == "Fail", 0, NA))
-final_interview$outcome <- ifelse(final_interview$Result == "Pass", 1, 0)
-# we need to decide how to handle the NAs, I think it makes sense to treat them as fail; logically this means that the in the first round a candidate was selected that did not care
 
-final_interview <- final_interview %>% select(email_id, outcome) %>% na.omit()
+# Robustness check top 35 from manual:
+final_interview <- read.csv("/Users/emilpalikot/Research/AI-Recruiter/micro1-controll-experiment-EDA/top_candidates_interviewed.csv")
+resume_scores <- read.csv("/Users/emilpalikot/Research/AI-Recruiter/Manual-Resume-ranked.csv")
 
-# Do we have any duplicates?
-final_interview %>% group_by(email_id) %>% summarise(n = n()) %>% filter(n > 1)
+resume_match <- resume_scores %>% select(email_id,resume_score )
 
-# Filter out duplicates:
-final_interview <- final_interview %>% group_by(email_id) %>% slice_head(n = 1) %>% ungroup()
-final_interview <- final_interview %>% left_join(merged_data, by = "email_id")
+# Without matching to the main file; as i'm dropping to many candiates
+final_est <- final_interview %>% select(Interview.Type, interviewer, Result, Gender, Age..Years., Country, email_id) %>% left_join(resume_match, by ="email_id")
 
-final_interview$resume_score <- as.numeric(final_interview$resume_score)
-t.test(final_interview$resume_score[final_interview$treatment == 1], final_interview$resume_score[final_interview$treatment == 0])
+# Analyze duplicates:
+length(unique(final_est$email_id))
+# Assign a differnet random number to the empty email_ids:
+final_est$email_id <- ifelse(final_est$email_id == "", 
+                            sapply(1:nrow(final_est), function(i) {
+                              if(final_est$email_id[i] == "") {
+                                paste0("random_", round(runif(1, 0, 1000000)))
+                              } else {
+                                final_est$email_id[i]
+                              }
+                            }), 
+                            final_est$email_id)
+final_est %>% group_by(email_id) %>% summarise(n = n()) %>% filter(n > 1)
 
-ate_ols <- lm(outcome ~ treatment, data = final_interview)
-ate_ols_cov <- lm(outcome ~ treatment + years_of_exp + age+ education_level + gender + resume_score, data = final_interview)
+## How often are the duplicates both in treatment and control?
+final_est$treatment <- as.numeric(ifelse(final_est$Interview.Type == "AI + Human Interview", 1, 0))
+final_est %>% group_by(email_id) %>% summarise(n = n(), groups = mean(treatment)) %>% filter(n > 1)
+final_est %>% filter(email_id == "")
+# Drop duplicates:
+final_est <- final_est %>% group_by(email_id) %>% slice_head(n = 1) %>% ungroup()
+final_est %>% summarise(n = n(), n_treatment = sum(treatment), n_control = sum(1-treatment))
+
+# Data prep:.
+final_est$outcome <- ifelse(final_est$Result == "Pass", 1, 0)
+final_est$outcome_2 <- ifelse(final_est$Result == "Pass", 1, ifelse(final_est$Result == "Fail",0,NA))
+final_est$male <- ifelse(final_est$Gender == "Male", 1, 0)
+final_est$age <- ifelse(is.na(final_est$Age..Years.), "Not shared", final_est$Age..Years.)
+
+# Select top 35 candidates from control group by resume_score
+# Keep all candidates from treatment group
+treatment_candidates <- final_est %>% filter(treatment == 1)
+
+# Select top 35 candidates from control group by resume_score
+control_candidates <- final_est %>% 
+  filter(treatment == 0) %>%
+  arrange(desc(resume_score)) %>%
+  slice_head(n = 35)
+
+# Combine treatment group with top 35 control candidates
+final_est <- rbind(treatment_candidates, control_candidates)
+
+# Verify the counts
+cat("Treatment candidates:", nrow(treatment_candidates), "\n")
+cat("Control candidates (top 35):", nrow(control_candidates), "\n")
+cat("Total candidates in final dataset:", nrow(final_est), "\n")
+
+
+ate_ols <- lm(outcome ~ treatment, data = final_est)
+ate_ols_2 <- lm(outcome_2 ~ treatment, data = final_est)
+stargazer(ate_ols, ate_ols_2, type = "text")
+
+mean(final_est$outcome[final_est$treatment == 1], na.rm = TRUE)
+mean(final_est$outcome[final_est$treatment == 0], na.rm = TRUE)
+
+# Number of observations across treatment groups:
+final_est %>% group_by(treatment) %>% summarise(n = n())
+
+ate_ols_cov <- lm(outcome ~ treatment + age+ Gender, data = final_est)
 
 stargazer(ate_ols, ate_ols_cov, type = "text")
 
-# Prepare dataset for grf:
-final_interview_grf <- final_interview %>% select(outcome, treatment, years_of_exp, age, education_level, gender, resume_score)
+# Share of candidates in treatment group that passed
+mean(final_est$outcome[final_est$treatment == 1])
+mean(final_est$outcome[final_est$treatment == 0])
 
-# Change covariate to numeric:
-final_interview_grf$years_of_exp <- as.numeric(final_interview_grf$years_of_exp)
-final_interview_grf$age <- as.numeric(final_interview_grf$age)
-final_interview_grf$resume_score <- as.numeric(final_interview_grf$resume_score)
-final_interview_grf$high_school <- ifelse(final_interview_grf$education_level == "High School", 1, 0)
-final_interview_grf$bachelor <- ifelse(final_interview_grf$education_level == "Bachelor's", 1, 0)
-final_interview_grf$master <- ifelse(final_interview_grf$education_level == "Master's", 1, 0)
-final_interview_grf$phd <- ifelse(final_interview_grf$education_level == "PhD", 1, 0)
 
-# Drop education_level column
-final_interview_grf <- final_interview_grf %>% select(-education_level)
+# change age to one-hot encodings:
+# Values from unique(final_est$age): "23-27" "28-32" "33+" "18-22" ""
+final_est$age_18_22 <- ifelse(final_est$age == "18-22", 1, 0)
+final_est$age_23_27 <- ifelse(final_est$age == "23-27", 1, 0)
+final_est$age_28_32 <- ifelse(final_est$age == "28-32", 1, 0)
+final_est$age_33_plus <- ifelse(final_est$age == "33+", 1, 0)
+final_est$age_not_shared <- ifelse(final_est$age == "", 1, 0)
 
-final_interview_grf$male <- ifelse(final_interview_grf$gender == "Male", 1, 0)
+X <- final_est %>% select(age_18_22, age_23_27, age_28_32, age_33_plus, age_not_shared, male) %>% as.matrix()
+Y <- final_est %>% select(outcome) %>% as.matrix()
+W <- final_est %>% select(treatment) %>% as.matrix()
 
-final_interview_grf <- final_interview_grf %>% na.omit()
-
-X <- final_interview_grf %>% select(years_of_exp, age, high_school, bachelor, master, phd, male, resume_score) %>% as.matrix()
-Y <- final_interview_grf %>% select(outcome) %>% as.matrix()
-W <- final_interview_grf %>% select(treatment) %>% as.matrix()
-
-# Tau forest
 tau_forest <- causal_forest(X, Y, W, num.trees = 1000)
 
-# Average treatment effect:
+    # Average treatment effect:
 ate_grf <- average_treatment_effect(tau_forest, target.sample = "treated")
 
-# Combine ATE estimates from all different methods:
-ate_estimates <- data.frame(
+# Table for the paper: Baselien value (mean in control group) and treatment effect both wiht standard errors and the number of observations for the three methods ols, ols with covariates and grf
+
+  # Calculate baseline value (mean in control group)
+baseline_value <- mean(final_est$outcome[final_est$treatment == 0], na.rm = TRUE)
+
+# Calculate treatment effect
+treatment_effect <- mean(final_est$outcome[final_est$treatment == 1], na.rm = TRUE) - baseline_value
+
+# Calculate standard errors
+se_baseline <- sd(final_est$outcome[final_est$treatment == 0], na.rm = TRUE) / sqrt(sum(!is.na(final_est$outcome[final_est$treatment == 0])))
+se_treatment <- sd(final_est$outcome[final_est$treatment == 1], na.rm = TRUE) / sqrt(sum(!is.na(final_est$outcome[final_est$treatment == 1])))
+se_effect <- sqrt(se_baseline^2 + se_treatment^2) 
+
+# Combine results into a table
+ate_table <- data.frame(
   Method = c("Difference in Means", "OLS with covariates", "GRF"),
   Estimate = c(coef(ate_ols)[2], coef(ate_ols_cov)[2], ate_grf[1]),
-  SE = c(summary(ate_ols)$coefficients[2, 2], summary(ate_ols_cov)$coefficients[2, 2], ate_grf[2])
+  SE = c(summary(ate_ols)$coefficients[2, 2], summary(ate_ols_cov)$coefficients[2, 2], ate_grf[2]),
+  Baseline = c(baseline_value, baseline_value, baseline_value),
+  Baseline_SE = c(se_baseline, se_baseline, se_baseline),
+  Observations = c(nrow(final_est), nrow(final_est), nrow(final_est))
 )
+
+# Final table for the paper:
+ate_table <- t(ate_table)
+
+# Round to 3 decimal places:
+ate_table[2:nrow(ate_table),] <- round(as.numeric(ate_table[2:nrow(ate_table),]), 3)
 
 # Print the table in markdown format
-cat(knitr::kable(ate_estimates, format = "markdown"))
+cat(knitr::kable(ate_table, format = "markdown"))
 
-# Create a table with baseline values (control group) and treatment effects
-# First, calculate baseline values for the control group
-control_mean <- mean(final_interview$outcome[final_interview$treatment == 0], na.rm = TRUE)
-control_se <- sd(final_interview$outcome[final_interview$treatment == 0], na.rm = TRUE) / 
-              sqrt(sum(final_interview$treatment == 0, na.rm = TRUE))
+# Save this as latex table for an academic paper:
+library(xtable)
+library(kableExtra)
 
-# Get number of observations
-n_control <- sum(final_interview$treatment == 0, na.rm = TRUE)
-n_treated <- sum(final_interview$treatment == 1, na.rm = TRUE)
-n_total <- n_control + n_treated
+# Create a properly formatted LaTeX table
+latex_table <- kable(ate_table, format = "latex", booktabs = TRUE, 
+                    caption = "Average Treatment Effects Across Different Estimation Methods",
+                    label = "tab:ate_results") %>%
+  kable_styling(full_width = FALSE) %>%
+  add_header_above(c(" " = 1, "Estimation Results" = ncol(ate_table) - 1)) %>%
+  footnote(general = "Note: This table presents average treatment effects estimated using three different methods. 
+           Baseline values represent mean outcomes in the control group.",
+           threeparttable = TRUE,
+           footnote_as_chunk = TRUE)
 
-# Create the academic-style table (AER format)
-aer_table <- data.frame(
-  Method = ate_estimates$Method,
-  Baseline = rep(sprintf("%.3f", control_mean), nrow(ate_estimates)),
-  `Baseline SE` = rep(sprintf("(%.3f)", control_se), nrow(ate_estimates)),
-  `Treatment Effect` = sprintf("%.3f", ate_estimates$Estimate),
-  `Treatment SE` = sprintf("(%.3f)", ate_estimates$SE),
-  Observations = rep(n_total, nrow(ate_estimates))
-)
+# Save to file
+cat(latex_table, file = "ate_results_table.tex")
 
-# Print the table in markdown format with AER styling
-cat("## Table 1: Treatment Effects on Interview Outcomes\n\n")
-cat(knitr::kable(aer_table, format = "markdown", align = c('l', 'c', 'c', 'c', 'c', 'c')))
-cat("\n\n")
-cat(paste0("*Notes:* Standard errors in parentheses. Control group mean: ", 
-          sprintf("%.3f", control_mean), ". Number of observations: ", 
-          n_total, " (", n_control, " control, ", n_treated, " treated)."))
+# Also print to console
+cat(latex_table)
+
+
+
+
+
+
+
+# Select 35 candidates in the control group at random:
+
+# Set seed for reproducibility
+set.seed(123)
+
+# Select all candidates from treatment group
+treatment_candidates_random <- final_est %>% filter(treatment == 1)
+
+# Select 35 candidates from control group at random
+control_candidates_random <- final_est %>% 
+  filter(treatment == 0) %>%
+  sample_n(35)
+
+# Combine treatment group with randomly selected control candidates
+final_est_random <- rbind(treatment_candidates_random, control_candidates_random)
+
+# Verify the counts
+cat("Treatment candidates:", nrow(treatment_candidates_random), "\n")
+cat("Control candidates (random 35):", nrow(control_candidates_random), "\n")
+cat("Total candidates in random dataset:", nrow(final_est_random), "\n")
+
+# Run the same analysis with randomly selected control group
+ate_ols_random <- lm(outcome ~ treatment, data = final_est_random)
+ate_ols_2_random <- lm(outcome_2 ~ treatment, data = final_est_random)
+stargazer(ate_ols_random, ate_ols_2_random, type = "text")
+
+# Compare means
+cat("Treatment mean (random):", mean(final_est_random$outcome[final_est_random$treatment == 1], na.rm = TRUE), "\n")
+cat("Control mean (random):", mean(final_est_random$outcome[final_est_random$treatment == 0], na.rm = TRUE), "\n")
+
+# Number of observations across treatment groups in random sample:
+final_est_random %>% group_by(treatment) %>% summarise(n = n())
+
+# Run model with covariates
+ate_ols_cov_random <- lm(outcome ~ treatment + age + Gender, data = final_est_random)
+
+# Compare models
+stargazer(ate_ols_random, ate_ols_cov_random, type = "text")
+
 
 ################################# Mechanisms #################################
 
@@ -914,3 +1043,5 @@ plot_titles_3 <- c("Gender (Male)", "High School", "Bachelor's Degree",
                 "Age", "Resume Score")
 
 plots_3 <- mapply(create_bucket_plot, variables, plot_titles_3, SIMPLIFY = FALSE)
+
+

@@ -1,0 +1,24 @@
+\begin{table}
+\centering
+\caption{\label{tab:tab:ate_results}Average Treatment Effects Across Different Estimation Methods}
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{llll}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{2}{c}{Estimation Results} \\
+\cmidrule(l{3pt}r{3pt}){2-3}
+Method & Difference in Means & OLS with covariates & GRF\\
+Estimate & 0.2 & 0.26 & 0.262\\
+SE & 0.118 & 0.122 & 0.118\\
+Baseline & 0.343 & 0.343 & 0.343\\
+Baseline\_SE & 0.081 & 0.081 & 0.081\\
+\addlinespace
+Observations & 70 & 70 & 70\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[para]
+\item \textit{Note: } 
+\item makecell[l]{Note: This table presents average treatment effects estimated using three different methods. \           Baseline values represent mean outcomes in the control group.}
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

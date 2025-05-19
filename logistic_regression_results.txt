@@ -1,0 +1,68 @@
+
+Logistic Regression Results
+===================================================
+                           Dependent variable:     
+                       ----------------------------
+                                  passed           
+                            (1)            (2)     
+---------------------------------------------------
+Intercept                 0.710***                 
+                          (0.251)                  
+                                                   
+Hierarchical Cluster 2     -0.440                  
+                          (0.418)                  
+                                                   
+Hierarchical Cluster 3     -0.357                  
+                          (0.440)                  
+                                                   
+Hierarchical Cluster 4     -0.070                  
+                          (0.441)                  
+                                                   
+Hierarchical Cluster 5    -1.491**                 
+                          (0.619)                  
+                                                   
+Hierarchical Cluster 6    0.725***                 
+                          (0.270)                  
+                                                   
+Hierarchical Cluster 7    0.836***                 
+                          (0.254)                  
+                                                   
+Hierarchical Cluster 8    -15.185                  
+                         (272.351)                 
+                                                   
+Resume Score               -0.746                  
+                          (0.501)                  
+                                                   
+km_cluster2                             -0.859**   
+                                         (0.389)   
+                                                   
+km_cluster3                             -0.630**   
+                                         (0.247)   
+                                                   
+km_cluster4                               0.276    
+                                         (0.194)   
+                                                   
+km_cluster5                             -1.867***  
+                                         (0.352)   
+                                                   
+km_cluster6                              -15.722   
+                                        (390.315)  
+                                                   
+km_cluster7                              -15.735   
+                                        (420.077)  
+                                                   
+km_cluster8                              0.405**   
+                                         (0.201)   
+                                                   
+resume_score               0.011*        0.010*    
+                          (0.006)        (0.006)   
+                                                   
+Constant                 -4.338***      -3.680***  
+                          (0.572)        (0.536)   
+                                                   
+---------------------------------------------------
+Observations               5,219          5,219    
+Log Likelihood            -864.499      -855.035   
+Akaike Inf. Crit.        1,750.999      1,728.070  
+===================================================
+Note:                   *p<0.1; **p<0.05; ***p<0.01

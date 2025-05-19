@@ -14,6 +14,8 @@ library(broom)
 library(kableExtra)
 library(gridExtra)
 library(oaxaca)
+library(gbm)
+library(sampleSelection)
 
 # Figures directory:
 figures_dir <- "/Users/emilpalikot/Research/AI-Recruiter/src/figures"
@@ -757,7 +759,7 @@ ols_dropped_out <- lm(dropped_out ~ years_of_exp + age + high_school + bachelor 
 # Same with logit
 logit_dropped_out <- glm(dropped_out ~ years_of_exp + age + high_school + bachelor + master  + male + resume_score, data = treated_users, family = "binomial")
 
-stargazer(ols_dropped_out, logit_dropped_out, type = "latex")
+stargazer(ols_dropped_out, logit_dropped_out, type = "text")
 
 # no resume score:
 ols_dropped_out_no_resume <- lm(dropped_out ~ years_of_exp + age + high_school + bachelor + master  + male, data = treated_users)
@@ -791,8 +793,420 @@ dropped_out_forest_plot <- ggplot(coef_df, aes(x = term, y = estimate)) +
 ggsave(filename = "dropped_out_forest_plot.png", plot = dropped_out_forest_plot, path = figures_dir)
 
 
+#################### Dropping out -- rational expectations or aversion? ####################
+treated_users$passed_AI <- ifelse(treated_users$is_passed == TRUE, 1, 0)
+summary(treated_users$passed_AI[treated_users$is_completed == 1])
+sum(treated_users$passed_AI)
+participated <- treated_users %>% filter(is_completed == 1)
+not_participated <- treated_users %>% filter(is_completed == 0)
 
-#################### Who benefits from the AI vetting? ####################
+ols_passed_AI <- lm(passed_AI ~ years_of_exp + age + high_school + bachelor + master  + male + resume_score, data = participated)
+logit_passed_AI <- glm(passed_AI ~ years_of_exp + age + high_school + bachelor + master  + male + resume_score, data = participated, family = "binomial")
+
+stargazer(ols_passed_AI, logit_passed_AI, type = "text")
+
+# Give output in markdown format:
+cat(knitr::kable(stargazer(ols_passed_AI, logit_passed_AI, type = "text"), format = "markdown"))
+
+
+# Train GBM model
+gbm_model <- gbm(
+  passed_AI ~ years_of_exp + age + high_school + bachelor + master  + male + resume_score,
+  data = participated,
+  distribution = "bernoulli",
+  n.trees = 1000,
+  interaction.depth = 3,
+  shrinkage = 0.01,
+  cv.folds = 5
+)
+
+# Evaluate model performance
+best_iter <- gbm.perf(gbm_model, method = "cv")
+print(paste("Best iteration based on CV:", best_iter))
+
+# Calculate performance metrics
+predictions <- predict(gbm_model, newdata = participated, n.trees = best_iter, type = "response")
+pred_class <- ifelse(predictions > 0.5, 1, 0)
+conf_matrix <- confusionMatrix(factor(pred_class), factor(participated$passed_AI))
+print(conf_matrix)
+
+# Variable importance
+var_importance <- summary(gbm_model, n.trees = best_iter, plotit = FALSE)
+print("Variable importance:")
+print(var_importance)
+
+summary(lm(participated$passed_AI ~ predicted_probabilities_participated))
+
+# predict on the not participated:
+
+predicted_probabilities <- predict(gbm_model, newdata = not_participated, n.trees = 1000, type = "response")
+predicted_probabilities_participated <- predict(gbm_model, newdata = participated, n.trees = 1000, type = "response")
+
+# add to tables
+not_participated$predicted_probabilities <- predicted_probabilities
+participated$predicted_probabilities <- predicted_probabilities_participated
+
+# Create dataframes for plotting
+plot_data_not_participated <- data.frame(probability = predicted_probabilities, group = "Non-Participants")
+plot_data_participated <- data.frame(probability = predicted_probabilities_participated, group = "Participants")
+plot_data_combined <- rbind(plot_data_not_participated, plot_data_participated)
+
+# Create professional density plot
+density_plot <- ggplot(plot_data_combined, aes(x = probability, fill = group)) +
+  geom_density(alpha = 0.7, adjust = 1.5) +
+  scale_fill_manual(values = c("Non-Participants" = "#3182bd", "Participants" = "#de2d26")) +
+  labs(title = "Predicted Probability of Passing AI Screening",
+       subtitle = "Comparison between Participants and Non-Participants",
+       x = "Predicted Probability",
+       y = "Density",
+       fill = "") +
+  theme_bw() +
+  theme(text = element_text(family = "Times", size = 12),
+        plot.title = element_text(size = 14, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"),
+        axis.title = element_text(size = 12, face = "bold"),
+        axis.text = element_text(size = 10),
+        panel.grid.minor = element_blank(),
+        panel.border = element_rect(linewidth = 1),
+        legend.position = "top",
+        legend.text = element_text(size = 11),
+        plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), "cm"))
+
+# Add vertical lines for means
+group_means <- aggregate(probability ~ group, data = plot_data_combined, FUN = mean)
+density_plot <- density_plot +
+  geom_vline(data = group_means, 
+             aes(xintercept = probability, color = group),
+             linetype = "dashed", size = 1) +
+  scale_color_manual(values = c("Non-Participants" = "#3182bd", "Participants" = "#de2d26"))
+
+# Save the plot
+ggsave(filename = "predicted_probabilities_density.png", plot = density_plot, 
+       path = figures_dir, width = 8, height = 6, dpi = 300)
+
+
+
+# Create a professional plot of predicted probabilities
+predicted_prob_plot <- ggplot(not_participated, aes(x = predicted_probabilities)) +
+  geom_histogram(binwidth = 0.05, fill = "gray80", color = "black", alpha = 0.8) +
+  geom_vline(xintercept = mean(not_participated$predicted_probabilities), 
+             linetype = "dashed", color = "darkred", size = 1) +
+  annotate("text", x = mean(not_participated$predicted_probabilities) + 0.1, 
+           y = max(hist(not_participated$predicted_probabilities, plot = FALSE)$counts) * 0.9, 
+           label = paste("Mean =", round(mean(not_participated$predicted_probabilities), 2)),
+           hjust = 0, size = 3.5) +
+  labs(title = "Predicted Probability of Passing AI Screening",
+       subtitle = "Non-Participating Candidates",
+       x = "Predicted Probability",
+       y = "Frequency") +
+  theme_bw() +
+  theme(text = element_text(family = "Times", size = 12),
+        plot.title = element_text(size = 14, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"),
+        axis.title = element_text(size = 12, face = "bold"),
+        axis.text = element_text(size = 10),
+        panel.grid.minor = element_blank(),
+        panel.border = element_rect(linewidth = 1),
+        plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), "cm"))
+
+# Save the plot
+ggsave(filename = "src/figures/predicted_probabilities_plot.png", plot = predicted_prob_plot, 
+       path = figures_dir, width = 7, height = 5, dpi = 300)
+
+# Display the plot
+predicted_prob_plot
+
+# Who are those that are in top quartile of predicted probabilities and drop out? Who are those that are in bottom quartile and drop out?
+# Create a dataframe for the heatmap
+df_quartile_heatmap <- data.frame(
+  covariate = character(),
+  avg = numeric(),
+  stderr = numeric(),
+  group = character(),
+  scaling = numeric(),
+  labels = character(),
+  stringsAsFactors = FALSE
+)
+
+# Define the groups and their data
+groups <- list(
+  "Top Quartile - Dropped Out" = not_participated %>% filter(predicted_probabilities > quantile(predicted_probabilities, 0.75)),
+  "Bottom Quartile - Dropped Out" = not_participated %>% filter(predicted_probabilities < quantile(predicted_probabilities, 0.25)),
+  "Top Quartile - Participated" = {participated$predicted_probabilities <- as.numeric(participated$predicted_probabilities); 
+                                  participated %>% filter(predicted_probabilities > quantile(predicted_probabilities, 0.75))},
+  "Bottom Quartile - Participated" = participated %>% filter(predicted_probabilities < quantile(predicted_probabilities, 0.25))
+)
+
+# Define covariates to analyze
+covariates <- c("years_of_exp", "age", "high_school", "bachelor", "master", "male", "resume_score")
+
+# Calculate means and standard errors for each group and covariate
+for (cov in covariates) {
+  # Get means across all groups for this covariate
+  all_means <- sapply(groups, function(df) mean(df[[cov]], na.rm = TRUE))
+  
+  # For each group
+  for (group_name in names(groups)) {
+    group_data <- groups[[group_name]]
+    n <- nrow(group_data)
+    
+    # Calculate mean and standard error
+    avg_val <- mean(group_data[[cov]], na.rm = TRUE)
+    stderr_val <- sd(group_data[[cov]], na.rm = TRUE) / sqrt(sum(!is.na(group_data[[cov]])))
+    
+    # Calculate z-score for scaling
+    z_score <- (avg_val - mean(all_means)) / sd(all_means)
+    if (is.na(z_score)) z_score <- 0  # Handle case where all values are the same
+    
+    # Add to dataframe
+    df_quartile_heatmap <- rbind(df_quartile_heatmap, data.frame(
+      covariate = cov,
+      avg = avg_val,
+      stderr = stderr_val,
+      group = group_name,
+      scaling = z_score,
+      labels = paste0(signif(avg_val, 3), "\n", "(", signif(stderr_val, 3), ")"),
+      stringsAsFactors = FALSE
+    ))
+  }
+}
+
+# Make covariate names more readable
+df_quartile_heatmap$covariate <- factor(df_quartile_heatmap$covariate, 
+                                       levels = covariates,
+                                       labels = c("Years of Experience", "Age", "High School", 
+                                                 "Bachelor's", "Master's", "Male", "Resume Score"))
+
+# Create the heatmap
+quartile_heatmap <- ggplot(df_quartile_heatmap) +
+  aes(covariate, group) +
+  geom_tile(aes(fill = scaling)) + 
+  geom_text(aes(label = labels), size = 4) +
+  scale_fill_gradient(low = "#E1BE6A", high = "#40B0A6") +
+  theme_minimal() + 
+  ylab("") + xlab("") +
+  theme(axis.text.x = element_text(size = 14, angle = 45, hjust = 1),
+        axis.text.y = element_text(size = 14),
+        text = element_text(size = 14),
+        legend.position = "none")
+
+# Save the heatmap
+ggsave(filename = "quartile_comparison_heatmap.png", plot = quartile_heatmap, 
+       path = figures_dir, width = 10, height = 8, dpi = 300)
+
+# Display the heatmap
+quartile_heatmap
+
+
+# Predict probabilitie to pass to all treated users:
+treated_users$predicted_probabilities <- predict(gbm_model, newdata = treated_users, n.trees = 1000, type = "response")
+
+ols_dropped_out_predicted <- lm(dropped_out ~ predicted_probabilities + years_of_exp + age + high_school + bachelor + master  + male + resume_score, data = treated_users)
+
+logit_dropped_out_predicted <- glm(dropped_out ~ predicted_probabilities + years_of_exp + age + high_school + bachelor + master  + male + resume_score, data = treated_users, family = "binomial")
+
+stargazer(ols_dropped_out_predicted, logit_dropped_out_predicted, type = "text")
+
+# no covariates:
+ols_dropped_out_predicted_no_cov <- lm(dropped_out ~ predicted_probabilities, data = treated_users)
+logit_dropped_out_predicted_no_cov <- glm(dropped_out ~ predicted_probabilities, data = treated_users, family = "binomial")
+
+stargazer(ols_dropped_out_predicted_no_cov, logit_dropped_out_predicted_no_cov, type = "text")
+
+treated_users$dropped_out <- ifelse(treated_users$is_completed == 0, 1, 0)
+treated_users$passed_AI <- ifelse(treated_users$is_passed == TRUE, 1, 0)
+treated_users$passed_AI <- ifelse(treated_users$dropped_out == 1, NA, treated_users$passed_AI)
+
+treated_users <- treated_users %>% 
+  mutate(
+    # 1 = accepted / interviewed  (outcome observed)
+    accepted = ifelse(is_completed == 1, 1, 0),
+
+    # outcome: 1 = passed, 0 = failed, NA if not interviewed
+    pass_AI  = case_when(
+                 accepted == 0        ~ NA_real_,  # not observed
+                 is_passed == TRUE     ~ 1,
+                 TRUE                  ~ 0
+               ),
+
+    # make them proper two-level factors so selection() is happy
+    accepted = factor(accepted,  levels = c(0, 1)),
+    pass_AI  = factor(pass_AI,   levels = c(0, 1))
+  )
+
+library(pbivnorm)     # only dependency; installs in seconds
+
+treated_users_no_na <- treated_users %>% select(accepted, pass_AI, years_of_exp, age, high_school, bachelor, master, male, resume_score)
+
+treated_users_no_na <- treated_users_no_na %>% filter(!is.na(years_of_exp) & !is.na(age) & !is.na(high_school) & !is.na(bachelor) & !is.na(master) & !is.na(male) & !is.na(resume_score))
+
+y1 <- treated_users_no_na$accepted              # 1 = showed up, 0 = no-show
+y2 <- treated_users_no_na$pass_AI               # 1 = passed, 0 = failed, NA if no-show
+
+
+X1 <- model.matrix(~ years_of_exp + age + high_school +
+                     bachelor + master + male + resume_score,
+                   data = treated_users_no_na)
+
+X2 <- X1                                   # same regressors in both eqns
+logLik_biprobit <- function(theta, y1, y2, X1, X2) {
+
+  k  <- ncol(X1)
+  g  <- theta[          1:k]               # γ  (selection)
+  b  <- theta[  k + (1:k)]                # β  (outcome)
+  at <- theta[2*k + 1]                    # atanh(ρ)  (keeps |ρ|<1)
+  rho <- tanh(at)
+
+  eta1 <- as.vector(X1 %*% g)
+  eta2 <- as.vector(X2 %*% b)
+
+  # joint probabilities
+  p11 <- pbivnorm::pbivnorm( eta1,  eta2,  rho)          # A=1 , P=1
+  p10 <- pbivnorm::pbivnorm( eta1, -eta2, -rho)          # A=1 , P=0
+  p00 <- pnorm(-eta1)                                    # A=0       (no show)
+
+  # assemble individual log-lik contributions
+  ll  <- numeric(length(y1))
+  ll[y1 == 1 & y2 == 1] <- log(p11[y1 == 1 & y2 == 1])
+  ll[y1 == 1 & y2 == 0] <- log(p10[y1 == 1 & y2 == 0])
+  ll[y1 == 0]           <- log(p00[y1 == 0])
+
+  -sum(ll)                           # optim minimises
+}
+
+# separate probits for starting values
+g0 <- coef(glm(y1 ~ X1 - 1, family = binomial(link = "probit")))
+b0 <- coef(glm(y2[y1 == 1] ~ X2[y1 == 1, ] - 1, family = binomial(link = "probit")))
+theta0 <- c(g0, b0, atanh(0.1))      # start ρ at 0.1
+
+fit <- optim(theta0, logLik_biprobit,
+             method = "BFGS",
+             hessian = TRUE,
+             y1 = y1, y2 = y2, X1 = X1, X2 = X2,
+             control = list(maxit = 500, fnscale = 1))
+
+conv_ok <- fit$convergence == 0
+if(!conv_ok) warning("optim did not converge!")
+
+theta_hat <- fit$par
+vcov_hat  <- solve(fit$hessian)       # covariance matrix
+se_hat    <- sqrt(diag(vcov_hat))
+
+k <- ncol(X1)
+out_coeff <- data.frame(
+  Coef = c(theta_hat[1:k],           # γ
+           theta_hat[k + (1:k)],     # β
+           rho = tanh(theta_hat[2*k+1])),
+  SE   = c(se_hat[1:k],
+           se_hat[k + (1:k)],
+           se_hat[2*k+1] * (1 - tanh(theta_hat[2*k+1])^2) )  # delta rule
+)
+out_coeff$z  <- out_coeff$Coef / out_coeff$SE
+out_coeff$p  <- 2 * pnorm(-abs(out_coeff$z))
+
+rownames(out_coeff) <-
+  c(paste0("γ:", colnames(X1)),
+    paste0("β:", colnames(X2)),
+    "rho")
+
+print(out_coeff, digits = 3)
+
+
+
+# ------------------------------------------------------------------
+# helper: one bootstrap replication --------------------------------
+# ------------------------------------------------------------------
+boot_two_step <- function(data, indices,
+                          n.trees = 250,
+                          depth   = 3,
+                          shrink  = 0.01) {
+
+  # 1. resample rows ----------------------------------------------
+  d <- data[indices, ]
+
+  # 2. re-fit GBM on *participants only* ---------------------------
+  train <- subset(d, accepted == 1)           # accepted == 1 == showed up
+  gbm_fit <- gbm(
+    passed_AI ~ years_of_exp + age + high_school +
+                bachelor + master + male + resume_score,
+    data             = train,
+    distribution     = "bernoulli",
+    n.trees          = n.trees,
+    interaction.depth= depth,
+    shrinkage        = shrink,
+    cv.folds         = 5,
+    verbose          = FALSE
+  )
+  best_iter <- gbm.perf(gbm_fit, plot.it = FALSE)
+
+  # 3. predict for *everybody* in this bootstrap world -------------
+  d$pred_prob <- predict(gbm_fit, newdata = d,
+                         n.trees = best_iter, type = "response")
+
+  # 4a. second-stage OLS ------------------------------------------
+  ols_fit <- lm(dropped_out ~ pred_prob + years_of_exp + age +
+                              high_school + bachelor + master +
+                              male + resume_score,
+                data = d)
+
+  # 4b. second-stage logit ----------------------------------------
+  logit_fit <- glm(dropped_out ~ pred_prob + years_of_exp + age +
+                                 high_school + bachelor + master +
+                                 male + resume_score,
+                   data = d, family = binomial)
+
+  # 5. store the coefficient(s) you care about --------------------
+  c(ols = coef(ols_fit)["pred_prob"],
+    logit = coef(logit_fit)["pred_prob"])
+}
+
+# ------------------------------------------------------------------
+# run the bootstrap ------------------------------------------------
+# ------------------------------------------------------------------
+set.seed(42)
+B <- 250          # 500–1000 is typical; raise for final paper
+library(boot)
+boot_res <- boot(
+  data      = treated_users,
+  statistic = function(data, indices) {
+    cat("Running bootstrap sample", which(duplicated(list(indices)) == FALSE), "of", B, "\n")
+    boot_two_step(data, indices)
+  },
+  R         = B,
+  parallel  = "multicore",    # "multicore" or "snow" for speed
+  ncpus     = 4               # if you switch to multicore
+)
+
+# ------------------------------------------------------------------
+# results ----------------------------------------------------------
+# ------------------------------------------------------------------
+# point estimates from the original full sample -------------------
+orig_coef <- attr(boot_res$t0, "dimnames")[[1]]   # "ols" "logit"
+orig_coef <- boot_res$t0
+
+# bootstrap SEs ----------------------------------------------------
+boot_se  <- apply(boot_res$t, 2, sd, na.rm = TRUE)
+
+# percentile CIs ---------------------------------------------------
+ci_ols   <- boot.ci(boot_res, type = "perc", index = 1)$percent[4:5]
+ci_logit <- boot.ci(boot_res, type = "perc", index = 2)$percent[4:5]
+
+out <- data.frame(
+  model   = c("OLS", "Logit"),
+  coef    = orig_coef,
+  se_boot = boot_se,
+  ci_lo   = c(ci_ols[1],   ci_logit[1]),
+  ci_hi   = c(ci_ols[2],   ci_logit[2]),
+  p_empir = 2 * pmin(
+              colMeans(boot_res$t >= orig_coef, na.rm = TRUE),
+              colMeans(boot_res$t <= orig_coef, na.rm = TRUE))
+)
+
+print(out, digits = 3)
+
+
+
+#####Who benefits from the AI vetting? ####################
 
 # Raw difference in resume scores
 

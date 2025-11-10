@@ -28,8 +28,8 @@ figures_dir <- "/Users/emilpalikot/Research/AI-Recruiter/src/figures"
 treatment_group <- read.csv("/Users/emilpalikot/Research/AI-Recruiter/micro1-controll-experiment-EDA/job_101(AI)_w_age_gender.csv")
 control_group <- read.csv("/Users/emilpalikot/Research/AI-Recruiter/micro1-controll-experiment-EDA/job_110(Manual)_w_age_gender.csv")
 final_interview <- read.csv("/Users/emilpalikot/Research/AI-Recruiter/micro1-controll-experiment-EDA/top_candidates_interviewed.csv")
-ai_scores <- read.csv("/Users/emilpalikot/Research/AI-Recruiter/Ai-Vetted-ranked.csv")
-human_scores <- read.csv("/Users/emilpalikot/Research/AI-Recruiter/Manual-Resume-ranked.csv")
+ai_scores <- read.csv("/Users/emilpalikot/Research/AI-Recruiter/experiments/resume_vetting/Ai-Vetted-ranked.csv")
+human_scores <- read.csv("/Users/emilpalikot/Research/AI-Recruiter/experiments/resume_vetting/Manual-Resume-ranked.csv")
 
 
 # Merge treatment group with control group
@@ -698,9 +698,9 @@ plot1 <- ggplot() +
                aes(x = resume_score, fill = "Selected by Human"), alpha = 0.6, adjust = 3) +
   geom_density(data = merged_data %>% filter(final_interview == 0 & treatment == 1),
                aes(x = resume_score, fill = "Not Selected"), alpha = 0.6, adjust = 3) +
-  geom_vline(xintercept = selected_by_ai, linetype = "dashed", color = "blue") +
-  geom_vline(xintercept = selected_by_human, linetype = "dashed", color = "red") +
-  geom_vline(xintercept = not_selected, linetype = "dashed", color = "darkgray") +
+  geom_vline(xintercept = selected_by_ai, linetype = "dashed", color = "blue", size = 2) +
+  geom_vline(xintercept = selected_by_human, linetype = "dashed", color = "red", size = 2) +
+  geom_vline(xintercept = not_selected, linetype = "dashed", color = "darkgray", size = 2) +
   labs(title = "Resume Scores: AI vs Human Selection",
        x = "Resume Score",
        y = "Density") +
@@ -710,7 +710,7 @@ plot1 <- ggplot() +
         legend.position = "bottom",
         text = element_text(size = 24),
         axis.title = element_text(size = 26),
-        plot.title = element_text(size = 28, face = "bold"))
+        plot.title = element_text(size = 28, face = "bold")) + xlim(50,100)
 
 # Create the second plot: Completed vs Dropped Out
 plot2 <- ggplot() +
@@ -718,8 +718,8 @@ plot2 <- ggplot() +
                aes(x = resume_score, fill = "Completed"), alpha = 0.6, adjust = 3) +
   geom_density(data = merged_data %>% filter(is_completed == 0 & treatment == 1),
                aes(x = resume_score, fill = "Dropped Out"), alpha = 0.6, adjust = 3) +
-  geom_vline(xintercept = completed, linetype = "dashed", color = "green") +
-  geom_vline(xintercept = dropped_out, linetype = "dashed", color = "orange") +
+  geom_vline(xintercept = completed, linetype = "dashed", color = "green", size = 2) +
+  geom_vline(xintercept = dropped_out, linetype = "dashed", color = "orange", size = 2) +
   labs(title = "Resume Scores: Completed vs Dropped Out",
        x = "Resume Score",
        y = "Density") +
@@ -729,7 +729,7 @@ plot2 <- ggplot() +
         legend.position = "bottom",
         text = element_text(size = 24),
         axis.title = element_text(size = 26),
-        plot.title = element_text(size = 28, face = "bold"))
+        plot.title = element_text(size = 28, face = "bold")) + xlim(50,100)
 
 # Combine the plots into a single figure
 combined_plot <- grid.arrange(plot2, plot1, ncol = 2)

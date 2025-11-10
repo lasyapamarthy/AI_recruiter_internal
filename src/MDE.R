@@ -3,6 +3,44 @@ library(dplyr)
 # Final stage data
 final_interview <- read.csv("/Users/emilpalikot/Research/AI-Recruiter/micro1-controll-experiment-EDA/top_candidates_interviewed.csv")
 final_interview$treatment <- ifelse(final_interview$Interview.Type == "AI + Human Interview", 1, 0)
+
+
+# Add resume score to the data:
+treat <- read.csv(file.path(root, "experiments/resume_vetting/Ai-Vetted-ranked.csv")) %>%
+  distinct(email_id, .keep_all = TRUE) %>%
+  select( email_id,resume_score,is_passed, is_completed, ai_vetting_results) %>%
+  mutate(treatment = 1)
+
+control <- read.csv(file.path(root, "experiments/resume_vetting/Manual-Resume-ranked.csv")) %>%
+  distinct(email_id, .keep_all = TRUE)  %>%
+  select(email_id,resume_score) %>%
+  mutate(is_passed = NA, is_completed = NA, ai_vetting_results = NA, treatment = 0)
+
+# Combine treatment and control
+rs_data <- rbind(treat, control) 
+rs_data <- rs_data %>% distinct(email_id, .keep_all = TRUE) %>% select(email_id, resume_score)
+
+final_interview <- left_join(final_interview, rs_data, by = "email_id")
+
+# Set seed for reproducibility
+set.seed(123)
+
+# Select all candidates from treatment group
+treatment_candidates <- final_interview %>% filter(treatment == 1)
+
+# Select top 35 candidates from control group by resume_score
+control_candidates <- final_interview %>% 
+  filter(treatment == 0) %>%
+  arrange(desc(resume_score)) %>%
+  slice_head(n = 35)
+# Combine treatment group with randomly selected control candidates
+final_interview <- rbind(treatment_candidates, control_candidates)
+
+# Verify the counts
+cat("Treatment candidates:", nrow(treatment_candidates), "\n")
+cat("Control candidates (random 35):", nrow(control_candidates), "\n")
+cat("Total candidates in random dataset:", nrow(final_interview), "\n")
+
 # Number of candidates interviewed in treatment and control groups:
 n_treatment <- final_interview %>% filter(treatment == 1) %>% nrow()
 n_control <- final_interview %>% filter(treatment == 0) %>% nrow()
@@ -29,7 +67,9 @@ t.test(final_interview$Pass[final_interview$treatment == 1], final_interview$Pas
 ######################## Rubin & Imbens permutation test ########################
 
 
-perm_test <- function(treat, outcome, B = 10000, seed = 123) {
+
+
+perm_test <- function(treat, outcome, B = 50000, seed = 123) {
   stopifnot(length(treat) == length(outcome),
             setequal(unique(treat), c(0, 1)))
 
@@ -109,3 +149,6 @@ legend("topright",
 
 # Close the device to save the file
 dev.off()
+
+
+

@@ -20,7 +20,7 @@ treatment_group <- read.csv(
   file.path(root_dir,
             "micro1-controll-experiment-EDA/job_101(AI)_w_age_gender.csv")
 )
-ai_scores <- read.csv(file.path(root_dir, "Ai-Vetted-ranked.csv"))
+ai_scores <- read.csv(file.path(root_dir, "experiments/resume_vetting/Ai-Vetted-ranked.csv"))
 
 ########################################################
 ## 2.  Drop duplicate candidates                      ##

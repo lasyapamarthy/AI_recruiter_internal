@@ -1,0 +1,67 @@
+[2025-05-27 17:03:08] 🚀 Starting Safari scraper for uncollected profiles...
+[2025-05-27 17:03:08] 📏 File size threshold: 100KB
+[2025-05-27 17:03:08] 📋 Found 443 profiles to scrape
+[2025-05-27 17:03:08] 🎯 Will scrape 443 new profiles
+[2025-05-27 17:04:39] 🚀 Starting Safari scraper for uncollected profiles...
+[2025-05-27 17:04:39] 🔒 Using private browsing mode (incognito)
+[2025-05-27 17:04:39] 📏 File size threshold: 100KB
+[2025-05-27 17:04:39] 📋 Found 443 profiles to scrape
+[2025-05-27 17:04:39] 🎯 Will scrape 443 new profiles
+[2025-05-27 17:04:45] 
+🔄 Starting scraping process...
+[2025-05-27 17:04:45] 
+[1/443] Scraping: Aaron Socher
+[2025-05-27 17:04:45]    URL: https://linkedin.com/in/aaron-socher
+[2025-05-27 17:04:52] ⚠️  Skipped (too small): linkedin.com_in_aaron-socher.html (64.4KB) - likely auth page
+[2025-05-27 17:04:52]    Waiting 6 seconds...
+[2025-05-27 17:04:58] 
+[2/443] Scraping: Aryan Rathore
+[2025-05-27 17:04:58]    URL: https://linkedin.com/in/aryan-rathore01
+[2025-05-27 17:05:05] ⚠️  Skipped (too small): linkedin.com_in_aryan-rathore01.html (64.4KB) - likely auth page
+[2025-05-27 17:05:05]    Waiting 5 seconds...
+[2025-05-27 17:05:10] 
+[3/443] Scraping: Aleksandr Voronchikhin
+[2025-05-27 17:05:10]    URL: https://linkedin.com/in/kvarutar/
+[2025-05-27 17:05:17] ⚠️  Skipped (too small): linkedin.com_in_kvarutar_.html (64.4KB) - likely auth page
+[2025-05-27 17:05:17]    Waiting 6 seconds...
+[2025-05-27 17:05:23] 
+[4/443] Scraping: Jose Andres Rodriguez Valencia
+[2025-05-27 17:05:23]    URL: https://linkedin.com/in/jose-andres-rodriguez-valencia-4b7b3b331
+[2025-05-27 17:05:30] ⚠️  Skipped (too small): linkedin.com_in_jose-andres-rodriguez-valencia-4b7b3b331.html (64.4KB) - likely auth page
+[2025-05-27 17:05:30]    Waiting 6 seconds...
+[2025-05-27 17:05:36] 
+[5/443] Scraping: Anuj Balmiki
+[2025-05-27 17:05:36]    URL: https://linkedin.com/in/anuj-balmiki-805277230
+[2025-05-27 17:05:43] ⚠️  Skipped (too small): linkedin.com_in_anuj-balmiki-805277230.html (64.4KB) - likely auth page
+[2025-05-27 17:05:43]    Waiting 6 seconds...
+[2025-05-27 17:05:49] 
+[6/443] Scraping: Dibyakanta Barik
+[2025-05-27 17:05:49]    URL: https://linkedin.com/in/dibyakanta-barik-658b51211/
+[2025-05-27 17:05:56] ⚠️  Skipped (too small): linkedin.com_in_dibyakanta-barik-658b51211_.html (64.4KB) - likely auth page
+[2025-05-27 17:05:56]    Waiting 4 seconds...
+[2025-05-27 17:06:00] 
+[7/443] Scraping: Pavan Sai Gajula
+[2025-05-27 17:06:00]    URL: https://linkedin.com/in/pavan-sai-gajula-a022b51a3
+[2025-05-27 17:06:17] ⚠️  Skipped (too small): linkedin.com_in_pavan-sai-gajula-a022b51a3.html (0.0KB) - likely auth page
+[2025-05-27 17:06:17]    Waiting 4 seconds...
+[2025-05-27 17:06:21] 
+[8/443] Scraping: Parth Gujjar
+[2025-05-27 17:06:21]    URL: https://linkedin.com/in/parthvgujjar/
+[2025-05-27 17:06:27] ⚠️  Skipped (too small): linkedin.com_in_parthvgujjar_.html (64.4KB) - likely auth page
+[2025-05-27 17:06:27]    Waiting 5 seconds...
+[2025-05-27 17:06:32] 
+[9/443] Scraping: Monali Tayade
+[2025-05-27 17:06:32]    URL: https://linkedin.com/in/monali-tayade-873577166
+[2025-05-27 17:06:39] ⚠️  Skipped (too small): linkedin.com_in_monali-tayade-873577166.html (64.4KB) - likely auth page
+[2025-05-27 17:06:39]    Waiting 3 seconds...
+[2025-05-27 17:06:42] 
+[10/443] Scraping: Murat Can Şahin
+[2025-05-27 17:06:42]    URL: https://linkedin.com/in/muratcansahinn/
+[2025-05-27 17:06:48] ⚠️  Skipped (too small): linkedin.com_in_muratcansahinn_.html (64.4KB) - likely auth page
+[2025-05-27 17:06:48] 
+📊 Progress: 10/443 profiles
+[2025-05-27 17:06:48]    Success: 0, Failed: 10
+[2025-05-27 17:06:48]    Waiting 4 seconds...
+[2025-05-27 17:06:52] 
+[11/443] Scraping: Javed Ansari
+[2025-05-27 17:06:52]    URL: https://linkedin.com/in/mdansarijaved

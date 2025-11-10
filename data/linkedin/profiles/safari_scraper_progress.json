@@ -1,0 +1,73 @@
+{
+  "batch": 1,
+  "profiles_saved": 0,
+  "profiles_failed": 10,
+  "verification_stats": {
+    "verified": 0,
+    "failed": 10,
+    "retried": 0,
+    "details": [
+      {
+        "url": "https://www.linkedin.com/in/monali-tayade-873577166",
+        "valid": false,
+        "message": "File does not exist",
+        "applescript": "NO_RESULT"
+      },
+      {
+        "url": "https://www.linkedin.com/in/sanghyo-k-lee",
+        "valid": false,
+        "message": "File does not exist",
+        "applescript": "NO_RESULT"
+      },
+      {
+        "url": "https://www.linkedin.com/in/alberttran1",
+        "valid": false,
+        "message": "File does not exist",
+        "applescript": "NO_RESULT"
+      },
+      {
+        "url": "https://www.linkedin.com/in/tdev",
+        "valid": false,
+        "message": "File does not exist",
+        "applescript": "NO_RESULT"
+      },
+      {
+        "url": "https://www.linkedin.com/in/malihe-ghaderi",
+        "valid": false,
+        "message": "File does not exist",
+        "applescript": "NO_RESULT"
+      },
+      {
+        "url": "https://www.linkedin.com/in/brunaflor",
+        "valid": false,
+        "message": "File does not exist",
+        "applescript": "NO_RESULT"
+      },
+      {
+        "url": "https://www.linkedin.com/in/george-yakubu-0a52a8176",
+        "valid": false,
+        "message": "File does not exist",
+        "applescript": "NO_RESULT"
+      },
+      {
+        "url": "https://www.linkedin.com/in/sharmajitesh01",
+        "valid": false,
+        "message": "File does not exist",
+        "applescript": "NO_RESULT"
+      },
+      {
+        "url": "https://www.linkedin.com/in/zeeshan-ahmad-react",
+        "valid": false,
+        "message": "File does not exist",
+        "applescript": "NO_RESULT"
+      },
+      {
+        "url": "https://www.linkedin.com/in/anton--byshok",
+        "valid": false,
+        "message": "File does not exist",
+        "applescript": "NO_RESULT"
+      }
+    ]
+  },
+  "timestamp": "2025-05-28T12:03:16.621792"
+}

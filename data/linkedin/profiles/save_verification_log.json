@@ -1,0 +1,82 @@
+[
+  {
+    "batch": 1,
+    "url": "https://www.linkedin.com/in/monali-tayade-873577166",
+    "filepath": "/Users/emilpalikot/Research/AI-Recruiter/data/linkedin/output/collected_htmls/linkedin.com_in_monali-tayade-873577166.html",
+    "is_valid": false,
+    "message": "File does not exist | AS: NO_RESULT",
+    "timestamp": "2025-05-28T12:03:16.619935"
+  },
+  {
+    "batch": 1,
+    "url": "https://www.linkedin.com/in/sanghyo-k-lee",
+    "filepath": "/Users/emilpalikot/Research/AI-Recruiter/data/linkedin/output/collected_htmls/linkedin.com_in_sanghyo-k-lee.html",
+    "is_valid": false,
+    "message": "File does not exist | AS: NO_RESULT",
+    "timestamp": "2025-05-28T12:03:16.620175"
+  },
+  {
+    "batch": 1,
+    "url": "https://www.linkedin.com/in/alberttran1",
+    "filepath": "/Users/emilpalikot/Research/AI-Recruiter/data/linkedin/output/collected_htmls/linkedin.com_in_alberttran1.html",
+    "is_valid": false,
+    "message": "File does not exist | AS: NO_RESULT",
+    "timestamp": "2025-05-28T12:03:16.620447"
+  },
+  {
+    "batch": 1,
+    "url": "https://www.linkedin.com/in/tdev",
+    "filepath": "/Users/emilpalikot/Research/AI-Recruiter/data/linkedin/output/collected_htmls/linkedin.com_in_tdev.html",
+    "is_valid": false,
+    "message": "File does not exist | AS: NO_RESULT",
+    "timestamp": "2025-05-28T12:03:16.620586"
+  },
+  {
+    "batch": 1,
+    "url": "https://www.linkedin.com/in/malihe-ghaderi",
+    "filepath": "/Users/emilpalikot/Research/AI-Recruiter/data/linkedin/output/collected_htmls/linkedin.com_in_malihe-ghaderi.html",
+    "is_valid": false,
+    "message": "File does not exist | AS: NO_RESULT",
+    "timestamp": "2025-05-28T12:03:16.620720"
+  },
+  {
+    "batch": 1,
+    "url": "https://www.linkedin.com/in/brunaflor",
+    "filepath": "/Users/emilpalikot/Research/AI-Recruiter/data/linkedin/output/collected_htmls/linkedin.com_in_brunaflor.html",
+    "is_valid": false,
+    "message": "File does not exist | AS: NO_RESULT",
+    "timestamp": "2025-05-28T12:03:16.620841"
+  },
+  {
+    "batch": 1,
+    "url": "https://www.linkedin.com/in/george-yakubu-0a52a8176",
+    "filepath": "/Users/emilpalikot/Research/AI-Recruiter/data/linkedin/output/collected_htmls/linkedin.com_in_george-yakubu-0a52a8176.html",
+    "is_valid": false,
+    "message": "File does not exist | AS: NO_RESULT",
+    "timestamp": "2025-05-28T12:03:16.620975"
+  },
+  {
+    "batch": 1,
+    "url": "https://www.linkedin.com/in/sharmajitesh01",
+    "filepath": "/Users/emilpalikot/Research/AI-Recruiter/data/linkedin/output/collected_htmls/linkedin.com_in_sharmajitesh01.html",
+    "is_valid": false,
+    "message": "File does not exist | AS: NO_RESULT",
+    "timestamp": "2025-05-28T12:03:16.621096"
+  },
+  {
+    "batch": 1,
+    "url": "https://www.linkedin.com/in/zeeshan-ahmad-react",
+    "filepath": "/Users/emilpalikot/Research/AI-Recruiter/data/linkedin/output/collected_htmls/linkedin.com_in_zeeshan-ahmad-react.html",
+    "is_valid": false,
+    "message": "File does not exist | AS: NO_RESULT",
+    "timestamp": "2025-05-28T12:03:16.621229"
+  },
+  {
+    "batch": 1,
+    "url": "https://www.linkedin.com/in/anton--byshok",
+    "filepath": "/Users/emilpalikot/Research/AI-Recruiter/data/linkedin/output/collected_htmls/linkedin.com_in_anton--byshok.html",
+    "is_valid": false,
+    "message": "File does not exist | AS: NO_RESULT",
+    "timestamp": "2025-05-28T12:03:16.621360"
+  }
+]

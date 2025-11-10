@@ -1,0 +1,14 @@
+Gentle LinkedIn Scraping Session Report
+==================================================
+
+Duration: 0.0 minutes
+Total URLs processed: 0
+Average time per profile: 0.0 seconds
+
+auth_wall: 0
+empty_file: 0
+error: 0
+ok: 0
+unknown_page: 0
+
+Success rate: 0.0%

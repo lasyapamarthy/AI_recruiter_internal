@@ -1,0 +1,43 @@
+
+# Load data
+transcripts = pd.read_csv(
+    "transcripts_6400_records.csv",
+    encoding="latin-1",
+    engine="python",
+    on_bad_lines="skip"
+)
+ai_results = pd.read_csv("Ai-Vetted-ranked.csv") 
+
+# How many transcipts?
+print("Number of transcripts")
+print(len(transcripts))
+
+
+# Transcripts to Outcomes
+
+merged = pd.merge(
+    transcripts,
+    ai_results,
+    on="job_application_id",
+    how="inner"
+)
+print("\nNumber of transcripts matched to outcomes:")
+print(len(merged))
+
+# Outcomes
+print("\nOutcome counts (is_passed):")
+print(merged["is_passed"].value_counts()) 
+
+# How long are transcripts?
+merged["word_count"] = merged["interview_transcript"].astype(str).apply(
+    lambda text: len(text.split())
+)
+ 
+# Tests
+
+print("\nTranscript length (word count):")
+print("Average:", merged["word_count"].mean())
+print("Minimum:", merged["word_count"].min())
+print("Maximum:", merged["word_count"].max())
+
+
